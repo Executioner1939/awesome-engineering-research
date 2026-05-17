@@ -53,4 +53,4 @@ Five workflows under `.github/workflows/`:
 | `index-regen-and-review` | every PR | Regenerates `README.md` from `INDEX/`, then Claude reviews against the standard |
 | `new-releases-triage` | daily 05:30 UTC | Surfaces new releases in interest areas into `TRIAGE.md` |
 
-Workflows requiring Claude need `ANTHROPIC_API_KEY` in repo secrets.
+Workflows that use `anthropics/claude-code-action` (`index-regen-and-review` and `new-releases-triage`) authenticate via a Claude Code OAuth token stored as `CLAUDE_CODE_OAUTH_TOKEN` in repo secrets — generated locally with `claude setup-token`. No Anthropic API key required if your Claude Code subscription covers usage. The other three workflows (`link-check`, `star-sweep`, `frontmatter-lint`) need only the default `GITHUB_TOKEN`.
