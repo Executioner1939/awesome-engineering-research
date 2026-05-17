@@ -120,15 +120,15 @@ def render_category(domain: str, sources: list[dict], tools: list[dict]) -> str:
     if not sources_in and not tools_in:
         return ""
 
-    parts = [f"### {domain}\n", DOMAIN_BLURB.get(domain, ""), ""]
+    parts = ["---", "", f"### {domain}\n", DOMAIN_BLURB.get(domain, ""), ""]
 
     if tools_in:
         tools_sorted = sorted(tools_in, key=lambda r: int(r.get("stars", 0) or 0), reverse=True)
-        parts.append(f"<details><summary><strong>Repos</strong> ({len(tools_sorted)})</summary>\n")
+        parts.append(f"#### Repos ({len(tools_sorted)})\n")
         parts.append("| Repo | Language | Stars | Last pushed | Description |")
-        parts.append("|---|---|---|---|---|")
+        parts.append("| :--- | :--- | ---: | :--- | :--- |")
         parts.extend(render_repo_row(r) for r in tools_sorted)
-        parts.append("</details>\n")
+        parts.append("")
 
     if sources_in:
         articles = [r for r in sources_in if r.get("type") == "article"]
@@ -139,11 +139,11 @@ def render_category(domain: str, sources: list[dict], tools: list[dict]) -> str:
             if not group:
                 continue
             group_sorted = sorted(group, key=lambda r: r.get("added", ""), reverse=True)
-            parts.append(f"<details><summary><strong>{label}</strong> ({len(group_sorted)})</summary>\n")
+            parts.append(f"#### {label} ({len(group_sorted)})\n")
             parts.append("| Title | Type | Date | Labels |")
-            parts.append("|---|---|---|---|")
+            parts.append("| :--- | :--- | :--- | :--- |")
             parts.extend(render_source_row(r) for r in group_sorted)
-            parts.append("</details>\n")
+            parts.append("")
 
     return "\n".join(parts)
 
@@ -206,10 +206,6 @@ def replace_block(text: str, name: str, content: str) -> str:
 
 
 HARDCODED_README = """\
-<!-- This file is regenerated from INDEX/ by `.github/scripts/regen-readme.py`. -->
-<!-- Sections between `<!-- BEGIN: name -->` / `<!-- END: name -->` markers are -->
-<!-- managed by the regen script. Edit the surrounding prose freely. -->
-
 # awesome-engineering-research
 
 A curated and machine-maintained reading + tools corpus covering distributed systems, language runtimes, functional programming, observability, infrastructure, AI applications, and adjacent areas. Sources and starred repos are deduplicated, labelled against a fixed taxonomy, periodically re-validated for liveness, and rendered to this README from `INDEX/`.
@@ -222,6 +218,8 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 <!-- BEGIN: stats -->
 <!-- END: stats -->
 
+---
+
 ## Table of contents
 
 <!-- BEGIN: toc -->
@@ -229,37 +227,30 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 - [Triage queue](#triage-queue)
 - [Archived](#archived)
-- [How to contribute](#how-to-contribute)
-- [Underlying model](#underlying-model)
 - [License](#license)
+
+---
 
 ## Categories
 
 <!-- BEGIN: categories -->
 <!-- END: categories -->
 
+---
+
 ## Triage queue
 
 <!-- BEGIN: triage -->
 <!-- END: triage -->
+
+---
 
 ## Archived
 
 <!-- BEGIN: archived -->
 <!-- END: archived -->
 
-## How to contribute
-
-Use the `add-source` skill:
-
-- Slash command: `/add-source <url>` from inside this repo with Claude Code.
-- Or open a PR adding a row to `INDEX/sources.md` or `INDEX/tools.md` following the column shape in `.claude/templates/source.md` / `.claude/templates/repo.md`. The `frontmatter-lint` workflow will validate it.
-
-Dead links and EOL repos are never deleted — they move to `_archived/` with a `last_seen` date and a `reason`. See `.claude/skills/dead-link-sweep/SKILL.md` and `.claude/skills/star-sweep/SKILL.md`.
-
-## Underlying model
-
-This is an awesome-list face on top of an agent-readable knowledge graph. The canonical spec lives at `.claude/skills/research-standard/SKILL.md`. The label vocabulary is at `.claude/skills/research-standard/TAXONOMY/domains.md`. Seven GitHub Actions keep the corpus current: cron sweeps (`link-check`, `star-sweep`, `new-releases-triage`) open `agent-authored` PRs; an `auto-review` quality gate validates each PR against the relevant part of the standard, auto-merges on approval, or posts a `@claude` request-changes review that triggers `claude-respond` to apply the fixes — closing the loop without human intervention.
+---
 
 ## License
 
