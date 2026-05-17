@@ -1,0 +1,685 @@
+[Skip to main content](https://moonrepo.dev/docs/proto/wasm-plugin#__docusaurus_skipToContent_fallback)
+
+info
+
+Documentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).
+
+On this page
+
+If you want more control over how your tool works, a WASM plugin is the way to go.
+
+success
+
+Refer to our [official WASM guide](https://moonrepo.dev/docs/guides/wasm-plugins) for more information on how our WASM
+plugins work, critical concepts to know, and more. Once you have a good understanding, you may
+continue this proto specific guide.
+
+## Concepts [​](https://moonrepo.dev/docs/proto/wasm-plugin\#concepts "Direct link to Concepts")
+
+The following concepts are unique to proto, but be sure to also read about the general concepts in
+our [WASM plugins guide](https://moonrepo.dev/docs/guides/wasm-plugins#concepts).
+
+### Tool context [​](https://moonrepo.dev/docs/proto/wasm-plugin\#tool-context "Direct link to Tool context")
+
+For plugin functions, we provide what we call the tool context, which is information that is
+constantly changing depending on the current step or state of proto's execution. The context cannot
+be accessed with a stand-alone function, and is instead passed as a `context` field in the input of
+many plugin functions.
+
+```rust
+#[plugin_fn]
+pub fn download_prebuilt(Json(input): Json<DownloadPrebuiltInput>) -> FnResult<Json<DownloadPrebuiltOutput>> {
+    let version = input.context.version;
+    // ...
+}
+```
+
+The following fields are available on the
+[context object](https://docs.rs/proto_pdk/latest/proto_pdk/struct.ToolContext.html):
+
+- `proto_version` \- The version of proto executing the plugin. Note that this version may be for the
+[`proto_core` crate](https://crates.io/crates/proto_core), and not the CLI. Patch numbers will
+drift, but major and minor numbers should be in sync.
+- `temp_dir` \- A virtual path to a temporary directory unique to this tool.v0.45.0
+- `tool_dir` \- A virtual path to the tool's directory for the current version.
+- `version` \- The current version or alias. If not resolved, will be "latest".
+
+caution
+
+The `version` field is either a fully-qualified version (1.2.3), an alias ("latest", "stable"), or
+canary ("canary"). Be sure to account for all these variations when implementing plugin functions!
+
+### Tool configuration [​](https://moonrepo.dev/docs/proto/wasm-plugin\#tool-configuration "Direct link to Tool configuration")
+
+Users can configure tools through the [`[tools.*]`](https://moonrepo.dev/docs/proto/config#tools) section of their `.prototools`,
+which can then be accessed within the WASM plugin using the
+[`get_tool_config`](https://docs.rs/proto_pdk/latest/proto_pdk/fn.get_tool_config.html) function.
+
+This function requires a struct to deserialize into. It should implement `Default`, enable serde
+defaults, and map keys from `kebab-case`. If you want to error on unknown settings, also enable
+`deny_unknown_fields`.
+
+```rust
+#[derive(Debug, Default, serde::Deserialize)]
+#[serde(default, deny_unknown_fields, rename_all = "kebab-case")]
+struct NodeToolConfig {
+    pub bundled_npm: bool,
+}
+
+let config = get_tool_config::<NodeToolConfig>()?;
+config.bundled_npm;
+```
+
+### Backend configurationv0.53.0 [​](https://moonrepo.dev/docs/proto/wasm-plugin\#backend-configuration "Direct link to backend-configuration")
+
+Like tool configuration, users can configure backends through the
+[`[backends.*]`](https://moonrepo.dev/docs/proto/config#backends) section of their `.prototools`, which can then be accessed
+within the WASM plugin using the
+[`get_backend_config`](https://docs.rs/proto_pdk/latest/proto_pdk/fn.get_backend_config.html)
+function.
+
+```rust
+#[derive(Debug, Default, serde::Deserialize)]
+#[serde(default, deny_unknown_fields, rename_all = "kebab-case")]
+struct ExampleBackendConfig {
+    pub setting: bool,
+}
+
+let config = get_backend_config::<ExampleBackendConfig>()?;
+```
+
+## Creating a plugin [​](https://moonrepo.dev/docs/proto/wasm-plugin\#creating-a-plugin "Direct link to Creating a plugin")
+
+success
+
+Refer to our [official WASM guide](https://moonrepo.dev/docs/guides/wasm-plugins#creating-a-plugin) for steps on how to
+create a Rust based plugin.
+
+## Implementing tool functions [​](https://moonrepo.dev/docs/proto/wasm-plugin\#implementing-tool-functions "Direct link to Implementing tool functions")
+
+Plugins are powered by a set of functions that are called from the host, and are annotated with
+`#[plugin_fn]`. These are known as plugin functions, or guest functions.
+
+### Registering the tool [​](https://moonrepo.dev/docs/proto/wasm-plugin\#registering-the-tool "Direct link to Registering the tool")
+
+The first step in a plugin's life-cycle is to register metadata about the plugin with the
+`register_tool` function. This function is called immediately after a plugin is loaded at runtime,
+and must return a human-readable name and plugin type.
+
+```rust
+#[plugin_fn]
+pub fn register_tool(_: ()) -> FnResult<Json<RegisterToolOutput>> {
+    Ok(Json(RegisterToolOutput {
+        name: "Node.js".into(),
+        type_of: PluginType::Language,
+        minimum_proto_version: Some(Version::new(0, 42, 0)),
+        plugin_version: Version::parse(env!("CARGO_PKG_VERSION")).ok(),
+        ..RegisterToolOutput::default()
+    }))
+}
+```
+
+This function also receives the plugin ID as input, allowing for conditional logic based on the ID.
+The ID is the [key the plugin was configured with](https://moonrepo.dev/docs/proto/plugins#enabling-plugins), and what is passed
+to `proto` commands (e.g. `proto install <id>`).
+
+```rust
+#[plugin_fn]
+pub fn register_tool(Json(input): Json<RegisterToolInput>) -> FnResult<Json<RegisterToolOutput>> {
+  input.id
+  // ...
+}
+```
+
+### Configuration schemav0.53.0 [​](https://moonrepo.dev/docs/proto/wasm-plugin\#configuration-schema "Direct link to configuration-schema")
+
+If you are using [tool configuration](https://moonrepo.dev/docs/proto/wasm-plugin#tool-configuration), you can register the shape of the
+configuration using the [`schematic`](https://crates.io/crates/schematic) crate and the
+`define_tool_config` function. This shape will be used to generate outputs such as JSON schemas, or
+TypeScript types.
+
+```rust
+#[plugin_fn]
+pub fn define_tool_config(_: ()) -> FnResult<Json<DefineToolConfigOutput>> {
+    Ok(Json(DefineToolConfigOutput {
+        schema: Some(schematic::SchemaBuilder::generate::<NodeToolConfig>()),
+    }))
+}
+```
+
+Schematic is a heavy library, so we suggest adding the dependency like so:
+
+```toml
+[dependencies]
+schematic = { version = "<version>", default-features = false, features = ["schema"] }
+```
+
+### Installation strategy [​](https://moonrepo.dev/docs/proto/wasm-plugin\#installation-strategy "Direct link to Installation strategy")
+
+#### Downloading pre-builts [​](https://moonrepo.dev/docs/proto/wasm-plugin\#downloading-pre-builts "Direct link to Downloading pre-builts")
+
+Our plugin layer _only_ supports downloading pre-built tools, typically as an archive, and does
+_not_ support building from source. The `download_prebuilt` function _must_ be defined, whichs
+configures how the tool should be downloaded and installed.
+
+The following fields are available:
+
+- `archive_prefix` \- If the tool is distributed as an archive (zip, tar, etc), this is the name of
+the direct folder within the archive that contains the tool, and will be removed when unpacking
+the archive. If there is no prefix folder within the archive, this setting can be omitted.
+- `download_url` (required) - A secure URL to download the tool/archive.
+- `download_name` \- File name of the archive to download. If not provided, will attempt to extract
+it from the URL.
+- `checksum` \- The checksum hash itself. Will be used if no other option was provided.v0.47.0
+- `checksum_url` \- A secure URL to download the checksum file for verification. If the tool does not
+support checksum verification, this setting can be omitted.
+- `checksum_public_key` \- Public key used for verifying checksums. Only used for `.minisig` files.
+
+```rust
+#[plugin_fn]
+pub fn download_prebuilt(Json(input): Json<DownloadPrebuiltInput>) -> FnResult<Json<DownloadPrebuiltOutput>> {
+     let env = get_host_environment()?;
+
+    check_supported_os_and_arch(
+        NAME,
+        &env,
+        permutations! [\
+            HostOS::Linux => [HostArch::X64, HostArch::Arm64, HostArch::Arm, HostArch::Powerpc64, HostArch::S390x],\
+            HostOS::MacOS => [HostArch::X64, HostArch::Arm64],\
+            HostOS::Windows => [HostArch::X64, HostArch::X86, HostArch::Arm64],\
+        ],
+    )?;
+
+    let version = input.context.version;
+    let arch = env.arch;
+    let os = env.os;
+
+    let prefix = match os {
+        HostOS::Linux => format!("node-v{version}-linux-{arch}"),
+        HostOS::MacOS => format!("node-v{version}-darwin-{arch}"),
+        HostOS::Windows => format!("node-v{version}-win-{arch}"),
+        other => {
+            return Err(PluginError::UnsupportedPlatform("Node.js".into(), other.into()))?;
+        }
+    };
+
+    let filename = if os == HostOS::Windows {
+        format!("{prefix}.zip")
+    } else {
+        format!("{prefix}.tar.xz")
+    };
+
+    Ok(Json(DownloadPrebuiltOutput {
+        archive_prefix: Some(prefix),
+        download_url: format!("https://nodejs.org/dist/v{version}/{filename}"),
+        download_name: Some(filename),
+        checksum_url: Some(format!("https://nodejs.org/dist/v{version}/SHASUMS256.txt")),
+        ..DownloadPrebuiltOutput::default()
+    }))
+}
+```
+
+##### Unpacking an archive [​](https://moonrepo.dev/docs/proto/wasm-plugin\#unpacking-an-archive "Direct link to Unpacking an archive")
+
+Our plugin layer will do its best to detect file extensions, unpack the downloaded file (if an
+archive), and install the tool to the correct directory. However, we're unable to account for _all_
+edge cases, so for situations where the install params above are not sufficient, you may define an
+`unpack_archive` function.
+
+This function receives an input with the following fields:
+
+- `input_file` \- Virtual path to the downloaded file. Maps to `~/.proto/temp/<id>/<file>`.
+- `output_dir` \- Virtual directory to unpack the archive into, or copy the binary to. Maps to
+`~/.proto/tools/<id>/<version>`.
+
+```rust
+#[plugin_fn]
+pub fn unpack_archive(Json(input): Json<UnpackArchiveInput>) -> FnResult<()> {
+    untar(input.input_file, input.output_dir)?;
+    Ok(())
+}
+```
+
+#### Build from source [​](https://moonrepo.dev/docs/proto/wasm-plugin\#build-from-source "Direct link to Build from source")
+
+Coming soon!
+
+#### Native installation [​](https://moonrepo.dev/docs/proto/wasm-plugin\#native-installation "Direct link to Native installation")
+
+For tools that can't be installed through downloading pre-builts or building from source, and
+require a more unique/native approach (say running a script), you may define the `native_install`
+function.
+
+This function allows you to execute host commands, make HTTP requests, and more, to install the
+tool. All that's required to return whether the installation was successful or not, and an optional
+error message.
+
+```rust
+#[plugin_fn]
+pub fn native_install(Json(input): Json<NativeInstallInput>) -> FnResult<Json<NativeInstallOutput>> {
+    let result = exec_captured("command", ["args"])?;
+
+    Ok(Json(NativeInstallOutput {
+        installed: result.exit_code == 0,
+        error: if result.stderr.is_empty() {
+            None
+        } else {
+            Some(result.stderr)
+        },
+        ..Default::default()
+    }))
+}
+```
+
+### Locating executables [​](https://moonrepo.dev/docs/proto/wasm-plugin\#locating-executables "Direct link to Locating executables")
+
+Even though a tool has been installed, we must inform proto of where to find executables. This can
+be achieved with the required `locate_executables` function. The `exes` field defines the location
+of the executables, relative from the installation directory.
+
+```rust
+#[plugin_fn]
+pub fn locate_executables(
+    Json(_): Json<LocateExecutablesInput>,
+) -> FnResult<Json<LocateExecutablesOutput>> {
+    let env = get_host_environment()?;
+
+    Ok(Json(LocateExecutablesOutput {
+        exes: HashMap::from_iter([\
+            // Primary\
+            (\
+                "node".into(),\
+                ExecutableConfig::new_primary(\
+                    // Helper that chooses between distinct Unix or Windows values\
+                    env.os.for_native("bin/node", "node.exe"),\
+                    // Or the same value with optional Windows extension\
+                    // env.os.get_file_name("node", "exe")\
+                )\
+            ),\
+            // Secondary\
+            (\
+                "corepack".into(),\
+                ExecutableConfig::new(env.os.for_native("bin/corepack", "corepack.exe"))\
+            ),\
+        ]),
+        ..LocateExecutablesOutput::default()
+    }))
+}
+```
+
+> The main executable of the tool must be marked as primary, either with
+> `ExecutableConfig::new_primary`, or setting the `ExecutableConfig.primary` field to true.
+
+Furthermore, the `locate_executables` function can define a list of lookups for the globals
+installation directory. proto will loop through each lookup, and return the first directory that
+exists on the current file system. proto will also expand environment variables in the format of
+`$VAR_NAME`. If a variable is not defined, or has an empty value, the lookup will be skipped. To
+demonstrate this, we'll use [Deno](https://deno.land/manual@v1.35.0/tools/script_installer).
+
+```rust
+#[plugin_fn]
+pub fn locate_executables(
+    Json(_): Json<LocateExecutablesInput>,
+) -> FnResult<Json<LocateExecutablesOutput>> {
+    let env = get_host_environment()?;
+
+    Ok(Json(LocateExecutablesOutput {
+        globals_lookup_dirs: vec!["$DENO_INSTALL_ROOT/bin".into(), "$HOME/.deno/bin".into()],
+        // ...
+        ..LocateExecutablesOutput::default()
+    }))
+}
+```
+
+### Loading and resolving versions [​](https://moonrepo.dev/docs/proto/wasm-plugin\#loading-and-resolving-versions "Direct link to Loading and resolving versions")
+
+Now that the tool can be downloaded and installed, we must configure how to resolve available
+versions to actually be installed. To provide a list of versions and language specific aliases, the
+`load_versions` function must be defined.
+
+```rust
+#[plugin_fn]
+pub fn load_versions(Json(_): Json<LoadVersionsInput>) -> FnResult<Json<LoadVersionsOutput>> {
+    let mut output = LoadVersionsOutput::default();
+    let response: Vec<NodeDistVersion> = fetch_json("https://nodejs.org/dist/index.json")?;
+
+    for (index, item) in response.iter().enumerate() {
+        let version = VersionSpec::parse(&item.version[1..])?; // Starts with v
+
+        if index == 0 {
+            output.latest = Some(version.clone());
+        }
+
+        output.versions.push(version);
+    }
+
+    Ok(Json(output))
+}
+```
+
+Furthermore, we support an optional function named `resolve_version`, that can be defined to
+intercept the version resolution process. This function receives an input with an initial candidate,
+either an alias or version, and can replace it with a new candidate. The candidate must be a valid
+alias or version as defined in `load_versions`.
+
+```rust
+#[plugin_fn]
+pub fn resolve_version(
+    Json(input): Json<ResolveVersionInput>,
+) -> FnResult<Json<ResolveVersionOutput>> {
+    let mut output = ResolveVersionOutput::default();
+
+    if let UnresolvedVersionSpec::Alias(alias) = input.initial {
+        let candidate = if alias == "node" {
+            "latest"
+        } else if alias == "lts-*" || alias == "lts/*" {
+            "stable"
+        } else if alias.starts_with("lts-") || alias.starts_with("lts/") {
+            &alias[4..]
+        } else {
+            return Ok(Json(output));
+        };
+
+        output.candidate = Some(UnresolvedVersionSpec::Alias(candidate.to_owned()));
+    }
+
+    Ok(Json(output))
+}
+```
+
+### Detecting versions [​](https://moonrepo.dev/docs/proto/wasm-plugin\#detecting-versions "Direct link to Detecting versions")
+
+And lastly, we can configure how to [detect a version](https://moonrepo.dev/docs/proto/detection) contextually at runtime, using
+the `detect_version_files` function and optional `parse_version_file` function. The
+`detect_version_files` function can return a list of files to locate within a directory.
+
+```rust
+#[plugin_fn]
+pub fn detect_version_files(input: Json<DetectVersionInput>) -> FnResult<Json<DetectVersionOutput>> {
+    Ok(Json(DetectVersionOutput {
+        files: vec![\
+            ".nvmrc".into(),\
+            ".node-version".into(),\
+            "package.json".into(),\
+        ],
+        ignore: vec!["node_modules".into()],
+    }))
+}
+```
+
+By default our plugin layer will assume the version file's contents contain the literal version, and
+nothing else, like "1.2.3". If any of the files in the `detect_version_files` list require custom
+parsing (for example, `package.json` above), you can define the `parse_version_file` function.
+
+This function receives the file name and contents as input, and must return the parsed version (if
+applicable).
+
+```rust
+#[plugin_fn]
+pub fn parse_version_file(Json(input): Json<ParseVersionFileInput>) -> FnResult<Json<ParseVersionFileOutput>> {
+    let mut version = None;
+
+    if input.file == "package.json" {
+        let json: PackageJson = serde_json::from_str(&input.content)?;
+
+        if let Some(engines) = json.engines {
+            if let Some(constraint) = engines.get("node") {
+                version = Some(UnresolvedVersionSpec::parse(constraint)?);
+            }
+        }
+    } else {
+        version = Some(UnresolvedVersionSpec::parse(input.content.trim())?);
+    }
+
+    Ok(Json(ParseVersionFileOutput { version }))
+}
+```
+
+## Implementing backend functions [​](https://moonrepo.dev/docs/proto/wasm-plugin\#implementing-backend-functions "Direct link to Implementing backend functions")
+
+Plugins are powered by a set of functions that are called from the host, and are annotated with
+`#[plugin_fn]`. These are known as plugin functions, or guest functions.
+
+### Registering the backendv0.52.0 [​](https://moonrepo.dev/docs/proto/wasm-plugin\#registering-the-backend "Direct link to registering-the-backend")
+
+> Backends will also need to implement [`register_tool`](https://moonrepo.dev/docs/proto/wasm-plugin#registering-the-tool) for the managed tool
+> within the backend.
+
+The first step in a plugin's life-cycle is to register metadata about the plugin with the
+`register_backend` function. This function requires a unique backend identifier, which is typically
+the identifier of the current tool being managed.
+
+```rust
+#[plugin_fn]
+pub fn register_backend(
+    Json(input): Json<RegisterBackendInput>,
+) -> FnResult<Json<RegisterBackendOutput>> {
+    Ok(Json(RegisterBackendOutput {
+        backend_id: get_plugin_id()?,
+        ..Default::default()
+    }))
+}
+```
+
+#### Referencing install scripts [​](https://moonrepo.dev/docs/proto/wasm-plugin\#referencing-install-scripts "Direct link to Referencing install scripts")
+
+Some tools rely on command line scripts for installation, like `asdf`. To make these scripts
+available (at `~/.proto/backends`), you can define the `source` field in the
+`RegisterBackendOutput`, which accepts a Git repository URL, or an HTTP URL to an archive to unpack.
+Additionally, the `exes` field must be defined with a list of scripts that will be executed within
+the backend.
+
+As an example, here's how the `asdf` backend is implemented:
+
+```rust
+
+#[plugin_fn]
+pub fn register_backend(
+    Json(input): Json<RegisterBackendInput>,
+) -> FnResult<Json<RegisterBackendOutput>> {
+    Ok(Json(RegisterBackendOutput {
+        backend_id: get_plugin_id()?,
+        exes: vec![\
+            "bin/download".into(),\
+            "bin/exec-env".into(),\
+            "bin/install".into(),\
+            "bin/latest-stable".into(),\
+            "bin/list-all".into(),\
+            "bin/list-bin-paths".into(),\
+            "bin/list-legacy-filenames".into(),\
+            "bin/parse-legacy-file".into(),\
+            "bin/uninstall".into(),\
+        ],
+        source: Some(SourceLocation::Git(GitSource {
+            url: "https://github.com/asdf-vm/asdf-nodejs.git".into(),
+            ..Default::default()
+        })),
+    }))
+}
+```
+
+These scripts can then be accessed on the file system using the following virtual path.
+
+```rust
+PathBuf::from("/proto/backends/<backend_id>/<tool_id>/bin/install")
+```
+
+### Configuration schemav0.53.0 [​](https://moonrepo.dev/docs/proto/wasm-plugin\#configuration-schema-1 "Direct link to configuration-schema-1")
+
+If you are using [backend configuration](https://moonrepo.dev/docs/proto/wasm-plugin#backend-configuration), you can register the shape of the
+configuration using the [`schematic`](https://crates.io/crates/schematic) crate and the
+`define_backend_config` function. This shape will be used to generate outputs such as JSON schemas,
+or TypeScript types.
+
+```rust
+#[plugin_fn]
+pub fn define_backend_config(_: ()) -> FnResult<Json<DefineBackendConfigOutput>> {
+    Ok(Json(DefineBackendConfigOutput {
+        schema: Some(schematic::SchemaBuilder::generate::<MyBackendConfig>()),
+    }))
+}
+```
+
+Schematic is a heavy library, so we suggest adding the dependency like so:
+
+```toml
+[dependencies]
+schematic = { version = "<version>", default-features = false, features = ["schema"] }
+```
+
+## Testing [​](https://moonrepo.dev/docs/proto/wasm-plugin\#testing "Direct link to Testing")
+
+The best way to test the plugin is to execute it through `proto` directly. To do this, you'll need
+to configure a `.prototools` file at the root of your plugin's repository that maps the plugin to a
+debug build:
+
+```toml
+[plugins.tools]
+<id> = "file://./target/wasm32-wasip1/debug/<name>.wasm"
+```
+
+And everytime you make a change to the plugin, you'll need to rebuild it with:
+
+```shell
+cargo build --target wasm32-wasip1
+```
+
+With these 2 pieces in place, you can now execute `proto` commands. Be sure you're running them from
+the directory with the `.prototools` file, and that you're passing `--log trace`. Logs are extremely
+helpful for figuring out what's going on.
+
+```shell
+proto --log trace install <id>
+proto --log trace list-remote <id>
+...
+```
+
+### Unit tests [​](https://moonrepo.dev/docs/proto/wasm-plugin\#unit-tests "Direct link to Unit tests")
+
+Testing WASM plugins is a bit tricky, but we've taken it upon ourselves to streamline this process
+as much as possible with built-in test utilities, and Rust macros for generating common test cases.
+To begin, install all necessary development dependencies:
+
+```shell
+cargo add --dev proto_pdk_test_utils starbase_sandbox tokio
+```
+
+And as mentioned above, everytime you make a change to the plugin, you'll need to rebuild it with:
+
+```shell
+cargo build --target wasm32-wasip1
+```
+
+#### Testing plugin functions [​](https://moonrepo.dev/docs/proto/wasm-plugin\#testing-plugin-functions "Direct link to Testing plugin functions")
+
+The common test case is simply calling plugin functions with a provided input and asserting the
+output is correct. This can be achieved by creating a plugin instance with `create_plugin` and
+calling the appropriate method.
+
+```rust
+use proto_pdk_test_utils::*;
+use starbase_sandbox::create_empty_sandbox;
+
+#[tokio::test(flavor = "multi_thread")]
+async fn registers_metadata() {
+    let sandbox = create_empty_proto_sandbox();
+    let plugin = sandbox.create_plugin("id").await;
+
+    assert_eq!(
+        plugin.register_tool(RegisterToolInput::default()).await,
+        RegisterToolOutput {
+            name: "Name".into(),
+            ..RegisterToolOutput::default()
+        }
+    );
+}
+```
+
+info
+
+We suggest using this pattern for static functions that return a deterministic output from a
+provided input, and not for dynamic functions that make HTTP requests or execute host commands.
+
+#### Generating cases from macros [​](https://moonrepo.dev/docs/proto/wasm-plugin\#generating-cases-from-macros "Direct link to Generating cases from macros")
+
+To reduce the burden of writing custom tests for common flows, like downloading a pre-built,
+resolving versions, and generating shims, we provide a set of Rust decl macros that will generate
+the tests for you.
+
+To test downloading and installing, use `generate_download_install_tests!`. This macro requires a
+plugin ID and a real version to test with.
+
+```rust
+use proto_pdk_test_utils::*;
+
+generate_download_install_tests!("id", "1.2.3");
+```
+
+To test version resolving, use `generate_resolve_versions_tests!`. This macro requires a plugin ID,
+and a mapping of version/aliases assertions to expectations.
+
+```rust
+generate_resolve_versions_tests!("id", {
+    "0.4" => "0.4.12",
+    "0.5.1" => "0.5.1",
+    "stable" => "1.0.0",
+});
+```
+
+To test installing and uninstalling globals, use `generate_globals_test!`. This macro requires a
+plugin ID, the dependency to install, and an optional environment variable to the globals directory.
+
+```rust
+// Doesn't support all use cases! If this doesn't work, implement a test case manually.
+generate_globals_test!("id", "dependency", "GLOBAL_INSTALL_ROOT");
+```
+
+And lastly, to test shims, use `generate_shims_test!`. This requires a plugin ID and a list of shim
+file names. This macro generates snapshots using [Insta](https://insta.rs/).
+
+```rust
+generate_shims_test!("id", ["primary", "secondary"]);
+```
+
+## Building and publishing [​](https://moonrepo.dev/docs/proto/wasm-plugin\#building-and-publishing "Direct link to Building and publishing")
+
+success
+
+Refer to our [official WASM guide](https://moonrepo.dev/docs/guides/wasm-plugins#building-and-publishing) for steps on how
+to build and publish your plugin.
+
+## Resources [​](https://moonrepo.dev/docs/proto/wasm-plugin\#resources "Direct link to Resources")
+
+Some helpful resources for learning about and building plugins.
+
+- [Official proto WASM plugins](https://github.com/moonrepo/plugins)
+- Plugin development kit
+  - [`proto_pdk` docs](https://docs.rs/proto_pdk/)
+  - [`proto_pdk_test_utils` docs](https://docs.rs/proto_pdk_test_utils/)
+
+- [Concepts](https://moonrepo.dev/docs/proto/wasm-plugin#concepts)
+  - [Tool context](https://moonrepo.dev/docs/proto/wasm-plugin#tool-context)
+  - [Tool configuration](https://moonrepo.dev/docs/proto/wasm-plugin#tool-configuration)
+  - [Backend configuration](https://moonrepo.dev/docs/proto/wasm-plugin#backend-configuration)
+- [Creating a plugin](https://moonrepo.dev/docs/proto/wasm-plugin#creating-a-plugin)
+- [Implementing tool functions](https://moonrepo.dev/docs/proto/wasm-plugin#implementing-tool-functions)
+  - [Registering the tool](https://moonrepo.dev/docs/proto/wasm-plugin#registering-the-tool)
+  - [Configuration schema](https://moonrepo.dev/docs/proto/wasm-plugin#configuration-schema)
+  - [Installation strategy](https://moonrepo.dev/docs/proto/wasm-plugin#installation-strategy)
+    - [Downloading pre-builts](https://moonrepo.dev/docs/proto/wasm-plugin#downloading-pre-builts)
+      - [Unpacking an archive](https://moonrepo.dev/docs/proto/wasm-plugin#unpacking-an-archive)
+    - [Build from source](https://moonrepo.dev/docs/proto/wasm-plugin#build-from-source)
+    - [Native installation](https://moonrepo.dev/docs/proto/wasm-plugin#native-installation)
+  - [Locating executables](https://moonrepo.dev/docs/proto/wasm-plugin#locating-executables)
+  - [Loading and resolving versions](https://moonrepo.dev/docs/proto/wasm-plugin#loading-and-resolving-versions)
+  - [Detecting versions](https://moonrepo.dev/docs/proto/wasm-plugin#detecting-versions)
+- [Implementing backend functions](https://moonrepo.dev/docs/proto/wasm-plugin#implementing-backend-functions)
+  - [Registering the backend](https://moonrepo.dev/docs/proto/wasm-plugin#registering-the-backend)
+    - [Referencing install scripts](https://moonrepo.dev/docs/proto/wasm-plugin#referencing-install-scripts)
+  - [Configuration schema](https://moonrepo.dev/docs/proto/wasm-plugin#configuration-schema-1)
+- [Testing](https://moonrepo.dev/docs/proto/wasm-plugin#testing)
+  - [Unit tests](https://moonrepo.dev/docs/proto/wasm-plugin#unit-tests)
+    - [Testing plugin functions](https://moonrepo.dev/docs/proto/wasm-plugin#testing-plugin-functions)
+    - [Generating cases from macros](https://moonrepo.dev/docs/proto/wasm-plugin#generating-cases-from-macros)
+- [Building and publishing](https://moonrepo.dev/docs/proto/wasm-plugin#building-and-publishing)
+- [Resources](https://moonrepo.dev/docs/proto/wasm-plugin#resources)

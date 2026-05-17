@@ -1,0 +1,66 @@
+# Release feed configuration for the new-releases-triage skill.
+# Edit to tune coverage. The default set targets the user's interest areas:
+# Rust ecosystem, distributed systems, observability, build tooling, FP heritage,
+# DevOps / IaC, knowledge-graph / RAG, LLM application architecture.
+#
+# Per-entry fields:
+#   name           — short label used in the run report.
+#   feed_url       — RSS, Atom, or JSON. HTML scraping is best-effort.
+#   interest_area  — one of: rust, distributed-systems, observability, build-tooling,
+#                    fp, devops, knowledge-graph, llm-apps, security
+#   keywords       — extra filter applied to title + description, comma list.
+
+- name: this-week-in-rust
+  feed_url: https://this-week-in-rust.org/rss.xml
+  interest_area: rust
+  keywords: ""
+
+- name: rust-blog
+  feed_url: https://blog.rust-lang.org/feed.xml
+  interest_area: rust
+  keywords: ""
+
+- name: typelevel-blog
+  feed_url: https://typelevel.org/blog/feed.xml
+  interest_area: fp
+  keywords: ""
+
+- name: scala-blog
+  feed_url: https://www.scala-lang.org/feed/index.xml
+  interest_area: fp
+  keywords: ""
+
+- name: opentelemetry-blog
+  feed_url: https://opentelemetry.io/blog/index.xml
+  interest_area: observability
+  keywords: ""
+
+- name: moonrepo-releases
+  feed_url: https://github.com/moonrepo/moon/releases.atom
+  interest_area: build-tooling
+  keywords: ""
+
+- name: opentofu-releases
+  feed_url: https://github.com/opentofu/opentofu/releases.atom
+  interest_area: devops
+  keywords: ""
+
+- name: tokio-blog
+  feed_url: https://tokio.rs/_next/feed.xml
+  interest_area: rust
+  keywords: async,runtime
+
+- name: anthropic-news
+  feed_url: https://www.anthropic.com/news/rss.xml
+  interest_area: llm-apps
+  keywords: ""
+
+- name: github-trending-rust
+  feed_url: https://mshibanami.github.io/GitHubTrendingRSS/daily/rust.xml
+  interest_area: rust
+  keywords: ""
+
+- name: github-trending-go
+  feed_url: https://mshibanami.github.io/GitHubTrendingRSS/daily/go.xml
+  interest_area: distributed-systems
+  keywords: "distributed,consensus,replication,event-sourcing,cqrs,kafka"

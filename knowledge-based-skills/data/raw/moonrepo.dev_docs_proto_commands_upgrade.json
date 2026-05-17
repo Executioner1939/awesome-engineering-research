@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/proto/commands/upgrade",
+  "title": "Up/downgrade to a specific version",
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/proto/commands/upgrade#__docusaurus_skipToContent_fallback)\n\ninfo\n\nDocumentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).\n\nOn this page\n\nThe `proto upgrade` (or `proto up`) command can be used to upgrade your current proto binary to the\nlatest version, or check if you're currently outdated.\n\n```shell\n$ proto upgrade\n\n# Up/downgrade to a specific version\n$ proto upgrade 0.39.0\n```\n\ninfo\n\nThe previous binary will be moved to `~/.proto/tools/proto/<version>`, while the new binary will be\ninstalled to `~/.proto/bin`.\n\n### Arguments [​](https://moonrepo.dev/docs/proto/commands/upgrade\\#arguments \"Direct link to Arguments\")\n\n- `<version>` \\- The version of proto to explicitly upgrade or downgrade to.v0.39.3\n\n### Options [​](https://moonrepo.dev/docs/proto/commands/upgrade\\#options \"Direct link to Options\")\n\n- `--check` \\- Check if there's a new version without executing the upgrade.\n- `--json` \\- Print the upgrade information as JSON.\n\n- [Arguments](https://moonrepo.dev/docs/proto/commands/upgrade#arguments)\n- [Options](https://moonrepo.dev/docs/proto/commands/upgrade#options)",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T14:07:43.065863+00:00",
+  "source_path": ".firecrawl/moonrepo.dev-docs-proto-commands-upgrade.md"
+}

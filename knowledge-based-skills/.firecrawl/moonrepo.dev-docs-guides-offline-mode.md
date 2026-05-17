@@ -1,0 +1,45 @@
+[Skip to main content](https://moonrepo.dev/docs/guides/offline-mode#__docusaurus_skipToContent_fallback)
+
+info
+
+Documentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).
+
+On this page
+
+moon assumes that an internet connection is always available, as we download and install tools into
+the toolchain, resolve versions against upstream manifests, and automatically install dependencies.
+While this is useful, having a constant internet connection isn't always viable.
+
+To support workflows where internet isn't available or is spotty, moon will automatically check for
+an active internet connection, and drop into offline mode if necessary.
+
+## What's disabled when offline [​](https://moonrepo.dev/docs/guides/offline-mode\#whats-disabled-when-offline "Direct link to What's disabled when offline")
+
+When offline, moon will skip or disable the following:
+
+- Automatic dependency installation will be skipped.
+- Toolchain will skip resolving, downloading, and installing tools, and instead use the local cache.
+  - If no local cache available, will fallback to binaries found on `PATH`.
+  - If not available on `PATH`, will fail to run.
+- Upgrade and version checks will be skipped.
+
+## Toggling modes [​](https://moonrepo.dev/docs/guides/offline-mode\#toggling-modes "Direct link to Toggling modes")
+
+While we automatically check for an internet connection, both online and offline modes can be forced
+with the `PROTO_OFFLINE` environment variable. Setting the variable to `1` or `true` will force
+offline mode, while `0` and `false` will force online mode.
+
+## Environment variables [​](https://moonrepo.dev/docs/guides/offline-mode\#environment-variables "Direct link to Environment variables")
+
+Some additional variables to interact with offline checks.
+
+- `PROTO_OFFLINE_TIMEOUT` \- Customize the timeout for offline checks (in milliseconds). Defaults to
+`750`.
+- `PROTO_OFFLINE_HOSTS` \- Customize additional hosts/IPs to check for offline status. Separate
+multiple hosts with a `,`.
+- `PROTO_OFFLINE_IP_VERSION` \- Customize which IP version to support, `4` or `6`. If not defined,
+supports both.
+
+- [What's disabled when offline](https://moonrepo.dev/docs/guides/offline-mode#whats-disabled-when-offline)
+- [Toggling modes](https://moonrepo.dev/docs/guides/offline-mode#toggling-modes)
+- [Environment variables](https://moonrepo.dev/docs/guides/offline-mode#environment-variables)

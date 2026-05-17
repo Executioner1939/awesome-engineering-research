@@ -1,0 +1,68 @@
+[Skip to main content](https://moonrepo.dev/docs/proto/commands/plugin/list#__docusaurus_skipToContent_fallback)
+
+info
+
+Documentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).
+
+On this page
+
+v0.23.0
+
+The `proto plugin list [...id]` command will list all available and configured plugins, for both
+third-party and built-in tools. Will load all `./.prototools` traversing upwards, and the
+`~/.proto/.prototools` file.
+
+Furthermore, it can list tool information, along with their installed versions, relevant timestamps,
+available aliases, and store location.
+
+```text
+$ proto plugin list --versions
+
+Bun ────────────────────────────────────
+
+  ID: bun
+  Source URL: https://github.com/moonrepo/plugins/releases/download/bun_tool-v0.14.0/bun_tool.wasm
+  Store directory: /Users/miles/.proto/tools/bun
+  Versions:
+    1.1.42 - installed 12/25/24, fallback version
+
+Deno ───────────────────────────────────
+
+  ID: deno
+  Source URL: https://github.com/moonrepo/plugins/releases/download/deno_tool-v0.13.0/deno_tool.wasm
+  Store directory: /Users/miles/.proto/tools/deno
+  Versions:
+    1.30.0 - installed 02/01/24, last used 11/28/24
+    1.40.0 - installed 02/01/24, last used 12/09/24
+    1.43.1 - installed 12/25/24, fallback version
+
+Go ─────────────────────────────────────
+
+  ID: go
+  Source URL: https://github.com/moonrepo/plugins/releases/download/go_tool-v0.14.0/go_tool.wasm
+  Store directory: /Users/miles/.proto/tools/go
+  Versions:
+    1.18.0 - installed 12/25/24, fallback version
+    1.19.0 - installed 12/22/24
+    1.20.12 - installed 12/09/23
+    1.23.4 - installed 12/24/24
+```
+
+A list of tool IDs can be provided to filter the output list.
+
+```shell
+$ proto plugin list node npm
+```
+
+### Arguments [​](https://moonrepo.dev/docs/proto/commands/plugin/list\#arguments "Direct link to Arguments")
+
+- `[id...]` \- IDs of tools.
+
+### Options [​](https://moonrepo.dev/docs/proto/commands/plugin/list\#options "Direct link to Options")
+
+- `--aliases` \- Print the list with resolved aliases.
+- `--versions` \- Print the list with installed versions.
+- `--json` \- Print the list in JSON format.
+
+- [Arguments](https://moonrepo.dev/docs/proto/commands/plugin/list#arguments)
+- [Options](https://moonrepo.dev/docs/proto/commands/plugin/list#options)

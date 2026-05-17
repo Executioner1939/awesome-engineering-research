@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/commands/clean",
+  "title": "Delete cache with a custom lifetime",
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/commands/clean#__docusaurus_skipToContent_fallback)\n\ninfo\n\nDocumentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).\n\nOn this page\n\nThe `moon clean` command will clean the current workspace by deleting stale cache. For the most\npart, the action pipeline will clean automatically, but this command can be used to reset the\nworkspace entirely.\n\n```shell\n$ moon clean\n\n# Delete cache with a custom lifetime\n$ moon clean --lifetime '24 hours'\n```\n\n### Options [​](https://moonrepo.dev/docs/commands/clean\\#options \"Direct link to Options\")\n\n- `--all` \\- Clean all cached items and reset state. v2.0.0\n- `--lifetime` \\- The maximum lifetime of cached artifacts before being marked as stale. Defaults to\n\"7 days\".\n\n- [Options](https://moonrepo.dev/docs/commands/clean#options)",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T13:43:20.411584+00:00",
+  "source_path": ".firecrawl/moonrepo.dev/docs/commands/clean/index.md"
+}

@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/commands/sync/config-schemas",
+  "title": null,
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/commands/sync/config-schemas#__docusaurus_skipToContent_fallback)\n\ninfo\n\nDocumentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).\n\nOn this page\n\nv1.27.0\n\nThe `moon sync config-schemas` command will manually generate JSON schemas to `.moon/cache/schemas`\nfor all our different configuration files.\n\n```shell\n$ moon sync config-schemas\n```\n\n### Options [​](https://moonrepo.dev/docs/commands/sync/config-schemas\\#options \"Direct link to Options\")\n\n- `--force` \\- Bypass cache and force create files.\n\n- [Options](https://moonrepo.dev/docs/commands/sync/config-schemas#options)",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T13:43:18.946612+00:00",
+  "source_path": ".firecrawl/moonrepo.dev/docs/commands/sync/config-schemas/index.md"
+}

@@ -1,0 +1,168 @@
+[Skip to main content](https://moonrepo.dev/docs/commands/overview#__docusaurus_skipToContent_fallback)
+
+info
+
+Documentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).
+
+On this page
+
+The following options are available for _all_ moon commands.
+
+- `--cache <mode>` \- The mode for [cache operations](https://moonrepo.dev/docs/commands/overview#caching).
+- `--color` \- Force [colored output](https://moonrepo.dev/docs/commands/overview#colors) for moon (not tasks).
+- `--concurrency`, `-c` \- Maximum number of threads to utilize.
+- `--dump` \- Dump a [trace profile](https://moonrepo.dev/docs/commands/overview#profiling) to the working directory.
+- `--help` \- Display the help menu for the current command.
+- `--log <level>` \- The lowest [log level to output](https://moonrepo.dev/docs/commands/overview#logging).
+- `--log-file <file>` \- Write logs to the defined file.
+- `--quiet`, `-q` \- Hide all non-important moon specific terminal output.
+- `--theme` \- Terminal theme to write output in. v1.35.0
+- `--version` \- Display the version of the CLI.
+
+## Caching [​](https://moonrepo.dev/docs/commands/overview\#caching "Direct link to Caching")
+
+We provide a powerful [caching layer](https://moonrepo.dev/docs/concepts/cache), but sometimes you need to debug failing or
+broken tasks, and this cache may get in the way. To circumvent this, we support the `--cache` global
+option, or the `MOON_CACHE` environment variable, both of which accept one of the following values.
+
+- `off` \- Turn off caching entirely. Every task will run fresh, including dependency installs.
+- `read` \- Read existing items from the cache, but do not write to them.
+- `read-write` (default) - Read and write items to the cache.
+- `write` \- Do not read existing cache items, but write new items to the cache.
+
+```shell
+$ moon run app:build --cache off
+# Or
+$ MOON_CACHE=off moon run app:build
+```
+
+## Colors [​](https://moonrepo.dev/docs/commands/overview\#colors "Direct link to Colors")
+
+Colored output is a complicated subject, with differing implementations and standards across tooling
+and operating systems. moon aims to normalize this as much as possible, by doing the following:
+
+- By default, moon colors are inherited from your terminal settings (`TERM` and `COLORTERM`
+environment variables).
+- Colors can be force enabled by passing the `--color` option (preferred), or `MOON_COLOR` or
+`FORCE_COLOR` environment variables.
+
+```shell
+$ moon app:build --color run
+# Or
+$ MOON_COLOR=2 moon run app:build
+```
+
+When forcing colors with `MOON_COLOR` or `FORCE_COLOR`, you may set it to one of the following
+numerical values for the desired level of color support. This is automatically inferred if you use
+`--color`.
+
+- `0` \- No colors
+- `1` \- 16 colors (standard terminal colors)
+- `2` \- 256 colors
+- `3` \- 16 million colors (truecolor)
+
+### Themesv1.35.0 [​](https://moonrepo.dev/docs/commands/overview\#themes "Direct link to themes")
+
+By default, moon assumes a dark themed terminal is being used, and will output colors accordingly.
+However, if you use a light theme, these colors are hard to read. To mitigate this, we support
+changing the theme with the `--theme` global option, or the `MOON_THEME` environment variable.
+
+```shell
+$ moon run app:build --theme light
+# Or
+$ MOON_THEME=light moon run app:build
+```
+
+### Piped output [​](https://moonrepo.dev/docs/commands/overview\#piped-output "Direct link to Piped output")
+
+When tasks (child processes) are piped, colors and ANSI escape sequences are lost, since the target
+is not a TTY and we do not implement a PTY. This is a common pattern this is quite annoying.
+However, many tools and CLIs support a `--color` option to work around this limitation and to always
+force colors, even when not a TTY.
+
+To mitigate this problem as a whole, and to avoid requiring `--color` for every task, moon supports
+the [`pipeline.inheritColorsForPipedTasks`](https://moonrepo.dev/docs/config/workspace#inheritcolorsforpipedtasks)
+configuration setting. When enabled, all piped child processes will inherit the color settings of
+the currently running terminal.
+
+## Concurrency [​](https://moonrepo.dev/docs/commands/overview\#concurrency "Direct link to Concurrency")
+
+The `--concurrency` option or `MOON_CONCURRENCY` environment variable can be used to control the
+maximum amount of threads to utilize in our thread pool. If not defined, defaults to the number of
+operating system cores.
+
+```shell
+$ moon run app:build --concurrency 1
+# Or
+$ MOON_CONCURRENCY=1 moon run app:build
+```
+
+## Debugging [​](https://moonrepo.dev/docs/commands/overview\#debugging "Direct link to Debugging")
+
+At minimum, most debugging can be done by passing [`--log trace`](https://moonrepo.dev/docs/commands/overview#logging) on the command line and
+sifting through the logs. We also provide the following environment variables to toggle output.
+
+- `MOON_DEBUG_PROCESS_ENV` \- By default moon hides the environment variables (except for `MOON_`)
+passed to processes to avoid leaking sensitive information. However, knowing what environment
+variables are passed around is helpful in debugging. Declare this variable to reveal the entire
+environment.
+- `MOON_DEBUG_PROCESS_INPUT` \- By default moon truncates the stdin passed to processes to avoid
+thrashing the console with a large input string. However, knowing what input is passed around is
+helpful in debugging. Declare this variable to reveal the entire input.
+- `MOON_DEBUG_PROTO_INSTALL` \- Debug the proto installation process.
+- `MOON_DEBUG_REMOTE` \- Debug our remote caching implementation by including additional logging
+output, and printing internal connection errors.
+- `MOON_DEBUG_WASM` \- Debug our WASM plugins by including additional logging output, and optionally
+dumping memory/core profiles.
+
+## Logging [​](https://moonrepo.dev/docs/commands/overview\#logging "Direct link to Logging")
+
+By default, moon aims to output as little as possible, as we want to preserve the original output of
+the command's being ran, excluding warnings and errors. This is managed through log levels, which
+can be defined with the `--log` global option, or the `MOON_LOG` environment variable. The following
+levels are supported, in priority order.
+
+- `off` \- Turn off logging entirely.
+- `error` \- Only show error logs.
+- `warn` \- Only show warning logs and above.
+- `info` (default) - Only show info logs and above.
+- `debug` \- Only show debug logs and above.
+- `trace` \- Show all logs, including network requests and child processes.
+- `verbose` \- Like `trace` but also includes span information. v1.35.0
+
+```shell
+$ moon run app:build --log trace
+# Or
+$ MOON_LOG=trace moon run app:build
+```
+
+### Writing logs to a file [​](https://moonrepo.dev/docs/commands/overview\#writing-logs-to-a-file "Direct link to Writing logs to a file")
+
+moon can dump the logs from a command to a file using the `--logFile` option, or the `MOON_LOG_FILE`
+environment variable. The dumped logs will respect the `--log` option and filter the logs piped to
+the output file.
+
+```shell
+$ moon run app:build --logFile=output.log
+# Or
+$ MOON_LOG_FILE=output.log moon run app:build
+```
+
+## Profilingv1.26.0 [​](https://moonrepo.dev/docs/commands/overview\#profiling "Direct link to profiling")
+
+When the `--dump` option or `MOON_DUMP` environment variable is set, moon will generate a trace
+profile and dump it to the current working directory. This profile can be opened with Chrome (via
+`chrome://tracing`) or [Perfetto](https://ui.perfetto.dev/).
+
+This profile will display many of the operations within moon as a flame chart, allowing you to
+inspect and debug slow operations.
+
+- [Caching](https://moonrepo.dev/docs/commands/overview#caching)
+- [Colors](https://moonrepo.dev/docs/commands/overview#colors)
+  - [Themes](https://moonrepo.dev/docs/commands/overview#themes)
+  - [Piped output](https://moonrepo.dev/docs/commands/overview#piped-output)
+- [Concurrency](https://moonrepo.dev/docs/commands/overview#concurrency)
+- [Debugging](https://moonrepo.dev/docs/commands/overview#debugging)
+- [Logging](https://moonrepo.dev/docs/commands/overview#logging)
+  - [Writing logs to a file](https://moonrepo.dev/docs/commands/overview#writing-logs-to-a-file)
+- [Profiling](https://moonrepo.dev/docs/commands/overview#profiling)

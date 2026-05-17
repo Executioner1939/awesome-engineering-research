@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/commands/docker/setup",
+  "title": null,
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/commands/docker/setup#__docusaurus_skipToContent_fallback)\n\ninfo\n\nDocumentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).\n\nOn this page\n\nThe `moon docker setup` command will efficiently install dependencies for focused projects. This is\nan all-in-one command for toolchain and dependency installations, and should replace `npm install`\nand other commands.\n\n```shell\n$ moon docker setup\n```\n\ninfo\n\nView the official [Docker usage guide](https://moonrepo.dev/docs/guides/docker) for a more in-depth example of how to\nutilize this command.\n\ncaution\n\nThis command _must be_ ran after [`moon docker scaffold`](https://moonrepo.dev/docs/commands/docker/scaffold) and is typically ran within a\n`Dockerfile`! The [`moon docker file`](https://moonrepo.dev/docs/commands/docker/file) command can be used to generate a `Dockerfile`.\n\n### Configuration [​](https://moonrepo.dev/docs/commands/docker/setup\\#configuration \"Direct link to Configuration\")\n\n- [`*`](https://moonrepo.dev/docs/config/toolchain) in `.moon/toolchains.*`\n\n- [Configuration](https://moonrepo.dev/docs/commands/docker/setup#configuration)",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T13:43:21.398465+00:00",
+  "source_path": ".firecrawl/moonrepo.dev/docs/commands/docker/setup/index.md"
+}

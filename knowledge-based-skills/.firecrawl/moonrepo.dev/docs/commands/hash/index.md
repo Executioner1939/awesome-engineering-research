@@ -1,0 +1,92 @@
+[Skip to main content](https://moonrepo.dev/docs/commands/hash#__docusaurus_skipToContent_fallback)
+
+info
+
+Documentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).
+
+On this page
+
+v2.0.0
+
+Use the `moon hash` command to inspect the contents and sources of a generated hash, also known as
+the hash manifest. This is extremely useful in debugging task inputs.
+
+```shell
+$ moon hash 0b55b234f1018581c45b00241d7340dc648c63e639fbafdaf85a4cd7e718fdde
+
+# Query hash using short form
+$ moon hash 0b55b234
+```
+
+By default, this will output the contents of the hash manifest (which is JSON), and the fully
+qualified resolved hash.
+
+```json
+Hash: 0b55b234f1018581c45b00241d7340dc648c63e639fbafdaf85a4cd7e718fdde
+
+{
+  "command": "build",
+  "args": ["./build"]
+  // ...
+}
+```
+
+The command can also be output raw JSON by passing the `--json` flag.
+
+### Comparing hashes [​](https://moonrepo.dev/docs/commands/hash\#comparing-hashes "Direct link to Comparing hashes")
+
+The command can also be used to compare two hashes by diffing their contents. Simply pass two hashes
+as arguments.
+
+```shell
+# Diff between 2 hashes
+$ moon hash 0b55b234f1018581c45b00241d7340dc648c63e639fbafdaf85a4cd7e718fdde 2388552fee5a02062d0ef402bdc7232f0a447458b058c80ce9c3d0d4d7cfe171
+
+# Diff between 2 hashes using short form
+$ moon hash 0b55b234 2388552f
+```
+
+By default, this will output the contents of a hash file (which is JSON), highlighting the
+differences between the left and right hashes. Lines that match will be printed in white, while the
+left differences printed in green, and right differences printed in red. If you use `git diff`, this
+will feel familiar to you.
+
+```diff
+Left:  0b55b234f1018581c45b00241d7340dc648c63e639fbafdaf85a4cd7e718fdde
+Right: 2388552fee5a02062d0ef402bdc7232f0a447458b058c80ce9c3d0d4d7cfe171
+
+{
+	"command": "build",
+	"args": [\
++		"./dist"\
+-		"./build"\
+	],
+	...
+}
+```
+
+The differences can also be output in JSON by passing the `--json` flag. The output has the
+following structure:
+
+```ts
+{
+	left: string,
+	left_hash: string,
+	left_diffs: string[],
+	right: string,
+	right_hash: string,
+	right_diffs: string[],
+}
+```
+
+### Options [​](https://moonrepo.dev/docs/commands/hash\#options "Direct link to Options")
+
+- `--json` \- Display the diff in JSON format.
+
+### Configuration [​](https://moonrepo.dev/docs/commands/hash\#configuration "Direct link to Configuration")
+
+- [`hasher`](https://moonrepo.dev/docs/config/workspace#hasher) in `.moon/workspace.*`
+
+- [Comparing hashes](https://moonrepo.dev/docs/commands/hash#comparing-hashes)
+- [Options](https://moonrepo.dev/docs/commands/hash#options)
+- [Configuration](https://moonrepo.dev/docs/commands/hash#configuration)

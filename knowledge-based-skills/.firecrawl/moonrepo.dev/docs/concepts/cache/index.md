@@ -1,0 +1,107 @@
+[Skip to main content](https://moonrepo.dev/docs/concepts/cache#__docusaurus_skipToContent_fallback)
+
+info
+
+Documentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).
+
+On this page
+
+moon's able to achieve high performance and blazing speeds by implementing a cache that's powered by
+our own unique smart hashing layer. All cache is stored in `.moon/cache`, relative from the
+workspace root (be sure to git ignore this folder).
+
+## Hashing [​](https://moonrepo.dev/docs/concepts/cache\#hashing "Direct link to Hashing")
+
+Incremental builds are possible through a concept known as hashing, where in multiple sources are
+aggregated to generate a unique hash. In the context of moon, each time a target is ran we generate
+a hash, and if this hash already exists we abort early (cache hit), otherwise we continue the run
+(cache miss).
+
+The tiniest change may trigger a different hash, for example, changing a line of code (when an
+input), or updating a package version, so don't worry if you see _a lot_ of hashes.
+
+Our smart hashing currently takes the following sources into account:
+
+- Command (`command`) being ran and its arguments (`args`).
+- Input sources (`inputs`).
+- Output targets (`outputs`).
+- Environment variables (`env`).
+- Dependencies between projects (`dependsOn`) and tasks (`deps`).
+- **For Deno tasks**:
+  - Deno version.
+  - `deno.json`/`deps.ts` imports, import maps, and scopes.
+  - `tsconfig.json` compiler options (when applicable).
+- **For Bun and Node.js tasks**:
+  - Bun/Node.js version.
+  - `package.json` dependencies (including development and peer).
+  - `tsconfig.json` compiler options (when applicable).
+
+caution
+
+Be aware that greedy inputs (`**/*`, the default) will include _everything_ in the target directory
+as a source. We do our best to filter out VCS ignored files, and `outputs` for the current task, but
+files may slip through that you don't expect. We suggest using explicit `inputs` and routinely
+auditing the hash files for accuracy!
+
+## Archiving & hydration [​](https://moonrepo.dev/docs/concepts/cache\#archiving--hydration "Direct link to Archiving & hydration")
+
+On top of our hashing layer, we have another concept known as archiving, where in we create a
+tarball archive of a task's outputs and store it in `.moon/cache/outputs`. These are akin to build
+artifacts.
+
+When we encounter a cache hit on a hash, we trigger a mechanism known as hydration, where we
+efficiently unpack an existing tarball archive into a task's outputs. This can be understood as a
+timeline, where every point in time will have its own hash + archive that moon can play back.
+
+Furthermore, if we receive a cache hit on the hash, and the hash is the same as the last run, and
+outputs exist, we exit early without hydrating and assume the project is already hydrated. In the
+terminal, you'll see a message for "cached".
+
+## File structure [​](https://moonrepo.dev/docs/concepts/cache\#file-structure "Direct link to File structure")
+
+The following diagram outlines our cache folder structure and why each piece exists.
+
+```shell
+.moon/cache/
+	# Stores hash manifests of every ran task. Exists purely for debugging purposes.
+	hashes/
+		# Contents includes all sources used to generate the hash.
+		<hash>.json
+
+	# File system locks for parallel processes.
+	locks/
+		<file>.lock
+
+	# Stores `tar.gz` archives of a task's outputs based on its generated hash.
+	outputs/
+		<hash>.tar.gz
+
+	# JSON schemas for validating configuration files.
+	schemas/
+		<schema>.json
+
+	# State information about anything and everything within moon. Toolchain,
+	# dependencies, projects, running targets, etc.
+	states/
+		# Files at the root pertain to the entire workspace.
+		<state>.json
+
+		# Files for a project are nested within a folder by the project name.
+		<project>/
+			# Informational snapshot of the project, its tasks, and its configs.
+			# Can be used at runtime by tasks that require this information.
+			snapshot.json
+
+			<task>/
+				# Contents of the child process, including the exit code and
+				# unique hash that is referenced above.
+				lastRun.json
+
+				# Outputs of last run target.
+				stderr.log
+				stdout.log
+```
+
+- [Hashing](https://moonrepo.dev/docs/concepts/cache#hashing)
+- [Archiving & hydration](https://moonrepo.dev/docs/concepts/cache#archiving--hydration)
+- [File structure](https://moonrepo.dev/docs/concepts/cache#file-structure)

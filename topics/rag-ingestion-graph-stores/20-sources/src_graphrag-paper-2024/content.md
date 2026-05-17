@@ -1,0 +1,5 @@
+Excerpt from arXiv:2404.16130 (abstract):
+
+> The use of retrieval-augmented generation (RAG) to retrieve relevant information from an external knowledge source enables large language models (LLMs) to answer questions over private and/or previously unseen document collections. However, RAG fails on global questions directed at an entire text corpus, such as 'What are the main themes in the dataset?', since this is inherently a query-focused summarization (QFS) task, rather than an explicit retrieval task. [...] GraphRAG, a graph-based approach to question answering over private text corpora that scales with both the generality of user questions and the quantity of source text. [The methodology] uses an LLM to construct a graph index in two stages: first deriving an entity knowledge graph from documents, then pregenerating community summaries for related entity groups. Individual community summaries generate partial responses that are subsequently consolidated into a final user response.
+
+Source: https://arxiv.org/abs/2404.16130

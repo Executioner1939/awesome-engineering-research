@@ -1,0 +1,44 @@
+[Skip to main content](https://moonrepo.dev/docs/proto/commands/list-remote#__docusaurus_skipToContent_fallback)
+
+On this page
+
+danger
+
+This command was removed in v0.44, use [`proto versions`](https://moonrepo.dev/docs/proto/commands/versions) instead!
+
+The `proto list-remote <tool>` (or `proto lsr`) command will list available versions by resolving
+versions from the tool's remote release manifest.
+
+```shell
+$ proto list-remote node
+...
+18.10.0
+18.11.0
+18.12.0
+18.12.1
+18.13.0
+18.14.0
+18.14.1
+18.14.2
+19.0.0
+19.0.1
+19.1.0
+19.2.0
+19.3.0
+19.4.0
+19.5.0
+19.6.0
+19.6.1
+19.7.0
+```
+
+### Arguments [​](https://moonrepo.dev/docs/proto/commands/list-remote\#arguments "Direct link to Arguments")
+
+- `<tool>` \- Type of tool.
+
+### Options [​](https://moonrepo.dev/docs/proto/commands/list-remote\#options "Direct link to Options")
+
+- `--aliases` \- Include aliases in the list.
+
+- [Arguments](https://moonrepo.dev/docs/proto/commands/list-remote#arguments)
+- [Options](https://moonrepo.dev/docs/proto/commands/list-remote#options)

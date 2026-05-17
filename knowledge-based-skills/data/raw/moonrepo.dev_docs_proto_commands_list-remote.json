@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/proto/commands/list-remote",
+  "title": null,
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/proto/commands/list-remote#__docusaurus_skipToContent_fallback)\n\nOn this page\n\ndanger\n\nThis command was removed in v0.44, use [`proto versions`](https://moonrepo.dev/docs/proto/commands/versions) instead!\n\nThe `proto list-remote <tool>` (or `proto lsr`) command will list available versions by resolving\nversions from the tool's remote release manifest.\n\n```shell\n$ proto list-remote node\n...\n18.10.0\n18.11.0\n18.12.0\n18.12.1\n18.13.0\n18.14.0\n18.14.1\n18.14.2\n19.0.0\n19.0.1\n19.1.0\n19.2.0\n19.3.0\n19.4.0\n19.5.0\n19.6.0\n19.6.1\n19.7.0\n```\n\n### Arguments [​](https://moonrepo.dev/docs/proto/commands/list-remote\\#arguments \"Direct link to Arguments\")\n\n- `<tool>` \\- Type of tool.\n\n### Options [​](https://moonrepo.dev/docs/proto/commands/list-remote\\#options \"Direct link to Options\")\n\n- `--aliases` \\- Include aliases in the list.\n\n- [Arguments](https://moonrepo.dev/docs/proto/commands/list-remote#arguments)\n- [Options](https://moonrepo.dev/docs/proto/commands/list-remote#options)",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T14:06:18.281787+00:00",
+  "source_path": ".firecrawl/moonrepo.dev-docs-proto-commands-list-remote.md"
+}

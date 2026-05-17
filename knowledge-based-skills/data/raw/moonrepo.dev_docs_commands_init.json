@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/commands/init",
+  "title": "In another directory",
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/commands/init#__docusaurus_skipToContent_fallback)\n\ninfo\n\nDocumentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).\n\nOn this page\n\nThe `moon init` command will initialize moon into a repository and scaffold necessary config files\nby creating a `.moon` folder.\n\n```shell\n$ moon init\n\n# In another directory\n$ moon init ./app\n```\n\n### Arguments [​](https://moonrepo.dev/docs/commands/init\\#arguments \"Direct link to Arguments\")\n\n- `[dest]` \\- Destination to initialize and scaffold into. Defaults to `.` (current working\ndirectory).\n\n### Options [​](https://moonrepo.dev/docs/commands/init\\#options \"Direct link to Options\")\n\n- `--force` \\- Overwrite existing config files if they exist.\n- `--minimal` \\- Generate minimal configurations and sane defaults.\n- `--yes` \\- Skip all prompts and enables tools based on file detection.\n\n- [Arguments](https://moonrepo.dev/docs/commands/init#arguments)\n- [Options](https://moonrepo.dev/docs/commands/init#options)",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T13:43:14.701025+00:00",
+  "source_path": ".firecrawl/moonrepo.dev/docs/commands/init/index.md"
+}

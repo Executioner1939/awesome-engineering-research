@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/proto/commands/list",
+  "title": null,
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/proto/commands/list#__docusaurus_skipToContent_fallback)\n\nOn this page\n\ndanger\n\nThis command was removed in v0.44, use [`proto versions`](https://moonrepo.dev/docs/proto/commands/versions) instead!\n\nThe `proto list <tool>` (or `proto ls`) command will list installed versions by scanning the\nmanifest at `~/.proto/tools/<tool>/manifest.json` for possible versions.\n\n```shell\n$ proto list node\n16.16.0\n18.2.0\n19.4.0\n```\n\n### Arguments [​](https://moonrepo.dev/docs/proto/commands/list\\#arguments \"Direct link to Arguments\")\n\n- `<tool>` \\- Type of tool.\n\n### Options [​](https://moonrepo.dev/docs/proto/commands/list\\#options \"Direct link to Options\")\n\n- `--aliases` \\- Include aliases in the list.\n\n- [Arguments](https://moonrepo.dev/docs/proto/commands/list#arguments)\n- [Options](https://moonrepo.dev/docs/proto/commands/list#options)",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T14:06:19.800210+00:00",
+  "source_path": ".firecrawl/moonrepo.dev-docs-proto-commands-list.md"
+}

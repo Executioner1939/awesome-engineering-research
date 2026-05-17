@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/commands/sync/vcs-hooks",
+  "title": null,
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/commands/sync/vcs-hooks#__docusaurus_skipToContent_fallback)\n\ninfo\n\nDocumentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).\n\nOn this page\n\nv1.9.0\n\nThe `moon sync vcs-hooks` command will manually sync hooks for the configured\n[VCS](https://moonrepo.dev/docs/config/workspace#vcs), by generating and referencing hook scripts from the\n[`vcs.hooks`](https://moonrepo.dev/docs/config/workspace#hooks) setting. Refer to the official\n[VCS hooks](https://moonrepo.dev/docs/guides/vcs-hooks) guide for more information.\n\n```shell\n$ moon sync vcs-hooks\n```\n\n### Options [​](https://moonrepo.dev/docs/commands/sync/vcs-hooks\\#options \"Direct link to Options\")\n\n- `--clean` \\- Clean and remove previously generated hooks.\n- `--force` \\- Bypass cache and force create hooks.\n\n### Configuration [​](https://moonrepo.dev/docs/commands/sync/vcs-hooks\\#configuration \"Direct link to Configuration\")\n\n- [`vcs.hooks`](https://moonrepo.dev/docs/config/workspace#hooks) in `.moon/workspace.*`\n\n- [Options](https://moonrepo.dev/docs/commands/sync/vcs-hooks#options)\n- [Configuration](https://moonrepo.dev/docs/commands/sync/vcs-hooks#configuration)",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T13:43:21.382127+00:00",
+  "source_path": ".firecrawl/moonrepo.dev/docs/commands/sync/vcs-hooks/index.md"
+}

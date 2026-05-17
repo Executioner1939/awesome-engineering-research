@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/commands/ext",
+  "title": null,
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/commands/ext#__docusaurus_skipToContent_fallback)\n\ninfo\n\nDocumentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).\n\nOn this page\n\nv1.20.0\n\nThe `moon ext <id>` command will execute an extension (a WASM plugin) that has been configured in\n[`.moon/extensions.*`](https://moonrepo.dev/docs/config). View our official [extensions guide](https://moonrepo.dev/docs/guides/extensions) for\nmore information.\n\n```shell\n$ moon ext download -- --url https://github.com/moonrepo/moon/archive/refs/tags/v1.19.3.zip\n```\n\nExtensions typically support command line arguments, which _must_ be passed after a `--` separator\n(as seen above). Any arguments before the separator will be passed to the `moon ext` command itself.\n\ncaution\n\nThis command requires an internet connection if the extension's `.wasm` file must be downloaded from\na URL, and it hasn't been cached locally.\n\n### Arguments [​](https://moonrepo.dev/docs/commands/ext\\#arguments \"Direct link to Arguments\")\n\n- `<id>` \\- Name of the extension to execute.\n- `[-- <args>]` \\- Arguments to pass to the extension.\n\n### Configuration [​](https://moonrepo.dev/docs/commands/ext\\#configuration \"Direct link to Configuration\")\n\n- [`*`](https://moonrepo.dev/docs/config/workspace#extensions) in `.moon/extensions.*`\n\n- [Arguments](https://moonrepo.dev/docs/commands/ext#arguments)\n- [Configuration](https://moonrepo.dev/docs/commands/ext#configuration)",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T13:43:13.916047+00:00",
+  "source_path": ".firecrawl/moonrepo.dev/docs/commands/ext/index.md"
+}

@@ -1,0 +1,47 @@
+# moondocs local infra. Single service: FalkorDB.
+#
+# Style mirrored from DaveScheer/Backend/docker/infra/docker-compose.yml:
+#   - top-level `name:`
+#   - x-common YAML anchor for shared shape (networks, restart, logging)
+#   - role-prefixed service name, project-prefixed container name
+#   - hostnames set short so app code uses them in DSNs verbatim
+#   - ports defaulted from mise.toml via ${VAR:-fallback}
+#
+# FalkorDB exposes two ports: 6379 (Redis-protocol query channel) and
+# 3000 (browser UI). Both honour mise overrides.
+
+name: moondocs
+
+x-common: &common
+  networks:
+    - moondocs
+  restart: unless-stopped
+  logging:
+    options:
+      max-size: 50m
+      max-file: "3"
+
+services:
+  persistence-falkordb:
+    !!merge <<: *common
+    image: falkordb/falkordb:latest
+    container_name: moondocs-falkordb
+    hostname: falkordb
+    ports:
+      - "${FALKOR_PORT:-6379}:6379"
+      - "${FALKOR_BROWSER_PORT:-3000}:3000"
+    volumes:
+      - falkordb-data:/var/lib/falkordb/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+networks:
+  moondocs:
+    name: moondocs
+
+volumes:
+  falkordb-data:

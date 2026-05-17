@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/proto/commands/debug",
+  "title": null,
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/proto/commands/debug#__docusaurus_skipToContent_fallback)\n\ninfo\n\nDocumentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).\n\n[**📄️config** \\\\\nThe proto debug config command will list all .prototools configuration files (in TOML format)](https://moonrepo.dev/docs/proto/commands/debug/config)[**📄️env** \\\\\nThe proto debug env command will print information about your current proto environment. Primarily](https://moonrepo.dev/docs/proto/commands/debug/env)",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T14:06:28.588426+00:00",
+  "source_path": ".firecrawl/moonrepo.dev-docs-proto-commands-debug.md"
+}

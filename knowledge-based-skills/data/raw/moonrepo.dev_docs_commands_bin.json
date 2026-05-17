@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/commands/bin",
+  "title": null,
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/commands/bin#__docusaurus_skipToContent_fallback)\n\ninfo\n\nDocumentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).\n\nOn this page\n\nThe `moon bin <toolchain>` command will return an absolute path to a tool's binary within the\ntoolchain. If a tool has not been configured or installed, this will return a 1 or 2 exit code with\nno value respectively.\n\n```shell\n$ moon bin node\n/Users/example/.proto/tools/node/x.x.x/bin/node\n```\n\n> A tool is considered \"not configured\" when not in use, for example, querying yarn/pnpm when the\n> package manager is configured for \"npm\". A tool is considered \"not installed\", when it has not\n> been downloaded and installed into the tools directory.\n\n### Arguments [​](https://moonrepo.dev/docs/commands/bin\\#arguments \"Direct link to Arguments\")\n\n- `<toolchain>` \\- Name of the toolchain to query.\n\n- [Arguments](https://moonrepo.dev/docs/commands/bin#arguments)",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T13:43:19.754392+00:00",
+  "source_path": ".firecrawl/moonrepo.dev/docs/commands/bin/index.md"
+}

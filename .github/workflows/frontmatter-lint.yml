@@ -1,0 +1,43 @@
+name: frontmatter-lint
+
+on:
+  pull_request:
+    paths:
+      - "INDEX/**"
+      - "_archived/**"
+      - ".claude/skills/research-standard/**"
+      - ".claude/templates/**"
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Validate INDEX row shapes
+        id: lint
+        run: |
+          python3 .github/scripts/lint-index.py \
+            --sources INDEX/sources.md \
+            --tools INDEX/tools.md \
+            --archived-sources _archived/sources.md \
+            --archived-tools _archived/tools.md \
+            --taxonomy .claude/skills/research-standard/TAXONOMY/domains.md \
+            --output /tmp/lint-report.md
+          status=$?
+          echo "errors=$(jq -r '.errors' /tmp/lint-summary.json)" >> "$GITHUB_OUTPUT"
+          exit $status
+
+      - name: Comment lint report on PR
+        if: always()
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: frontmatter-lint
+          path: /tmp/lint-report.md

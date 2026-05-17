@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/commands/docker/prune",
+  "title": null,
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/commands/docker/prune#__docusaurus_skipToContent_fallback)\n\ninfo\n\nDocumentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).\n\nOn this page\n\nThe `moon docker prune` command will reduce the overall filesize of the Docker environment by\ninstalling production only dependencies for projects that were scaffolded, and removing any\napplicable extraneous files.\n\n```shell\n$ moon docker prune\n```\n\ninfo\n\nView the official [Docker usage guide](https://moonrepo.dev/docs/guides/docker) for a more in-depth example of how to\nutilize this command.\n\ncaution\n\nThis command _must be_ ran after [`moon docker scaffold`](https://moonrepo.dev/docs/commands/docker/scaffold) and is typically ran within a\n`Dockerfile`! The [`moon docker file`](https://moonrepo.dev/docs/commands/docker/file) command can be used to generate a `Dockerfile`.\n\n### Configuration [​](https://moonrepo.dev/docs/commands/docker/prune\\#configuration \"Direct link to Configuration\")\n\n- [`docker.prune`](https://moonrepo.dev/docs/config/workspace#prune) in `.moon/workspace.*`\n\n- [Configuration](https://moonrepo.dev/docs/commands/docker/prune#configuration)",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T13:43:19.303406+00:00",
+  "source_path": ".firecrawl/moonrepo.dev/docs/commands/docker/prune/index.md"
+}

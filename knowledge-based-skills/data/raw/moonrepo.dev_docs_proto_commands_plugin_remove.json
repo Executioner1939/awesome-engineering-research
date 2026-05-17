@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/proto/commands/plugin/remove",
+  "title": null,
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/proto/commands/plugin/remove#__docusaurus_skipToContent_fallback)\n\ninfo\n\nDocumentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).\n\nOn this page\n\nv0.23.0\n\nThe `proto plugin remove <id>` command will remove the provided tool ID from the `[plugins]` section\nof the chosen (`.prototools`).\n\n```shell\n$ proto plugin remove node\n```\n\n> Built-in plugins _cannot_ be removed!\n\n### Arguments [​](https://moonrepo.dev/docs/proto/commands/plugin/remove\\#arguments \"Direct link to Arguments\")\n\n- `<id>` \\- ID of the tool.\n\n### Options [​](https://moonrepo.dev/docs/proto/commands/plugin/remove\\#options \"Direct link to Options\")\n\n- `--from` \\- [Location of `.prototools`](https://moonrepo.dev/docs/proto/config#locations) to update.v0.41.0\n- `--type` \\- Type of plugin to remove, either `tool` (default) or `backend`.v0.52.0\n\n- [Arguments](https://moonrepo.dev/docs/proto/commands/plugin/remove#arguments)\n- [Options](https://moonrepo.dev/docs/proto/commands/plugin/remove#options)",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T14:06:21.127364+00:00",
+  "source_path": ".firecrawl/moonrepo.dev-docs-proto-commands-plugin-remove.md"
+}

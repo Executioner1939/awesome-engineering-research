@@ -1,0 +1,61 @@
+name: star-sweep
+
+on:
+  schedule:
+    - cron: "0 7 * * 1"  # Monday 07:00 UTC
+  workflow_dispatch:
+    inputs:
+      staleness_years:
+        description: "Stale threshold (years since last push)"
+        type: string
+        default: "3"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: star-sweep
+  cancel-in-progress: false
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Pull current stars
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api users/Executioner1939/starred --paginate \
+            --jq '.[] | {full_name, html_url, description, language, stargazers_count, pushed_at, archived, topics, license: (.license.spdx_id // null)}' \
+            > /tmp/stars-current.jsonl
+          wc -l /tmp/stars-current.jsonl
+
+      - name: Apply diff
+        id: apply
+        run: |
+          python3 .github/scripts/apply-star-sweep.py \
+            --stars /tmp/stars-current.jsonl \
+            --tools INDEX/tools.md \
+            --archived _archived/tools.md \
+            --staleness-years ${{ inputs.staleness_years || 3 }} \
+            --report-md _archived/star-sweep-report-$(date +%F).md
+          echo "added=$(jq -r '.added' /tmp/star-summary.json)" >> "$GITHUB_OUTPUT"
+          echo "removed=$(jq -r '.removed' /tmp/star-summary.json)" >> "$GITHUB_OUTPUT"
+          echo "stale=$(jq -r '.stale' /tmp/star-summary.json)" >> "$GITHUB_OUTPUT"
+
+      - name: Open PR
+        if: steps.apply.outputs.added != '0' || steps.apply.outputs.removed != '0' || steps.apply.outputs.stale != '0'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: star-sweep/${{ github.run_number }}
+          delete-branch: true
+          commit-message: "chore(stars): sync — +${{ steps.apply.outputs.added }} -${{ steps.apply.outputs.removed }}"
+          title: "chore(stars): sync (+${{ steps.apply.outputs.added }} / -${{ steps.apply.outputs.removed }} / stale ${{ steps.apply.outputs.stale }})"
+          body-path: /tmp/star-summary.md
+          labels: star-sweep,automated

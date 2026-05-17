@@ -1,0 +1,78 @@
+[Skip to main content](https://moonrepo.dev/docs/proto/commands/plugin/info#__docusaurus_skipToContent_fallback)
+
+info
+
+Documentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).
+
+On this page
+
+v0.23.0
+
+The `proto plugin info <id>` command will display information about a tool and its plugin.
+
+```text
+$ proto plugin info node
+
+Plugin ─────────────────────────────────
+
+  ID: node
+  Name: Node.js
+  Type: Language
+  Version: 0.13.0
+  Source URL: https://github.com/moonrepo/plugins/releases/download/node_tool-v0.13.0/node_tool.wasm
+
+Inventory ──────────────────────────────
+
+  Detected version: 23.5.0
+  Fallback version: 23.5.0
+  Store directory: /Users/name/.proto/tools/node
+  Executable file: /Users/name/.proto/tools/node/23.5.0/bin/node
+  Executables directory: /Users/name/.proto/tools/node/23.5.0/bin
+  Global packages directory: /Users/name/.proto/tools/node/globals/bin
+  Shims:
+    - /Users/name/.proto/shims/node
+  Binaries:
+    - /Users/name/.proto/bin/node
+    - /Users/name/.proto/bin/node-20
+    - /Users/name/.proto/bin/node-20.15
+    - /Users/name/.proto/bin/node-20.8
+    - /Users/name/.proto/bin/node-23
+    - /Users/name/.proto/bin/node-23.4
+    - /Users/name/.proto/bin/node-23.5
+  Installed versions:
+    20.8.0 - installed 12/19/24, last used 12/19/24
+    20.15.0 - installed 12/25/24, last used 12/25/24
+    23.4.0 - installed 12/19/24, last used 12/19/24
+    23.5.0 - installed 12/25/24, last used 12/25/24, fallback version
+  Remote aliases:
+    argon = 4.9.1
+    boron = 6.17.1
+    carbon = 8.17.0
+    dubnium = 10.24.1
+    erbium = 12.22.12
+    fermium = 14.21.3
+    gallium = 16.20.2
+    hydrogen = 18.20.5
+    iron = 20.18.1
+    jod = 22.12.0
+    latest = 23.5.0
+    stable = 22.12.0
+
+Configuration ──────────────────────────
+
+  Local aliases:
+    example = 19.0.0
+  Environment variables: —
+  Settings: —
+```
+
+### Arguments [​](https://moonrepo.dev/docs/proto/commands/plugin/info\#arguments "Direct link to Arguments")
+
+- `<id>` \- ID of tool.
+
+### Options [​](https://moonrepo.dev/docs/proto/commands/plugin/info\#options "Direct link to Options")
+
+- `--json` \- Print the info in JSON format.
+
+- [Arguments](https://moonrepo.dev/docs/proto/commands/plugin/info#arguments)
+- [Options](https://moonrepo.dev/docs/proto/commands/plugin/info#options)

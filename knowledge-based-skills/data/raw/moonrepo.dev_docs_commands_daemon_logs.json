@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/commands/daemon/logs",
+  "title": null,
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/commands/daemon/logs#__docusaurus_skipToContent_fallback)\n\ninfo\n\nDocumentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).\n\nv2.2.0\n\nThe `moon daemon logs` command tails the daemon's log file in real time, streaming new entries as\nthey are written. The daemon must be running for this command to work.\n\n```shell\n$ moon daemon logs\n```\n\nThe log file is located at `.moon/cache/daemon/server.log` and contains detailed trace-level output,\nincluding file watcher events, graph rebuilds, and RPC requests.\n\ninfo\n\nOn macOS/Linux this command uses `tail -f` under the hood. On Windows it uses PowerShell's\n`Get-Content -Wait`.\n\nIf the daemon is not running or the log file does not exist, a warning is displayed and no action is\ntaken.",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T13:43:14.005808+00:00",
+  "source_path": ".firecrawl/moonrepo.dev/docs/commands/daemon/logs/index.md"
+}

@@ -1,0 +1,10 @@
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+.claude/agent-memory/

@@ -1,0 +1,63 @@
+---
+id: archived-sources
+title: Archived sources
+type: index
+status: stable
+created: 2026-05-15
+updated: 2026-05-17
+total_active: 0
+total_archived: 44
+---
+
+# Archived sources
+
+Sources that failed liveness checks. Tombstones, terminal state — entries here are never deleted, never restored. If a previously archived URL becomes live again, treat it as a new addition via `add-source`. See `.claude/skills/dead-link-sweep/SKILL.md`.
+
+<!-- BEGIN: rows -->
+| id | title | url | type | published | added | labels | status | last_seen | reason | notes |
+|---|---|---|---|---|---|---|---|---|---|---|
+| src_5-coding-hacks-to-reduce-gc-overhead | 5 Coding Hacks to Reduce GC Overhead | https://blog.takipi.com/5-coding-hacks-to-reduce-gc-overhead/ | article | unknown | 2018-07 | language-runtimes | archived | 2026-05-17 | connection_failure |  |
+| src_5-tips-for-reducing-your-java-garbage-collection-overhead | 5 Tips for Reducing Your Java Garbage Collection Overhead | https://blog.takipi.com/5-tips-for-reducing-your-java-garbage-collection-overhead/ | article | unknown | 2018-07 | language-runtimes | archived | 2026-05-17 | connection_failure |  |
+| src_a-guide-to-oauth-2-0-grants | A Guide To OAuth 2.0 Grants | https://alexbilbie.com/guide-to-oauth-2-grants/ | article | unknown | 2018-10 | security | archived | 2026-05-17 | connection_failure |  |
+| src_akka-http-request-response-scope-operations-vs-deferred-operations | Akka HTTP Request/Response Scope Operations, vs. Deferred Operations | https://richardimaoka.github.io/blog/akka-http-operation-scope/ | article | unknown | 2018-08 | distributed-systems,fp-scala,standards | archived | 2026-05-17 | 404 |  |
+| src_arrays-and-replication-a-mongodb-performance-pitfall | Arrays and Replication: A MongoDB Performance Pitfall | https://www.compose.com/articles/arrays-and-replication-a-mongodb-performance-pitfall/ | article | unknown | 2018-05 | data-storage,databases,language-runtimes | archived | 2026-05-17 | connection_failure |  |
+| src_avoiding-unnecessary-object-instantiation-with-specialized-generics | Avoiding Unnecessary Object Instantiation with Specialized Generics | https://blog.scalac.io/2017/05/25/scala-specialization.html | article | unknown | 2018-08 | fp-scala,language-runtimes,security | archived | 2026-05-17 | connection_failure |  |
+| src_battle-of-the-tokenizers | Battle of the Tokenizers | http://demeranville.com/battle-of-the-tokenizers-delimited-text-parser-performance/ | article | unknown | 2018-04 | language-runtimes,parsers | archived | 2026-05-17 | 404 |  |
+| src_building-a-scalable-highly-reliable-asynchronous-user-service | Building a scalable, highly reliable, asynchronous user service | https://tech.showmax.com/2018/12/building-scalable-highly-reliable-asynchronous-user-service/ | article | unknown | 2019-03 | concurrency,fp-scala,language-runtimes | archived | 2026-05-17 | connection_failure |  |
+| src_consider-yourself-a-developer-you-should-solve-the-project-euler-problems | Consider Yourself a Developer? You Should Solve the Project Euler Problems | https://blog.usejournal.com/consider-yourself-a-developer-you-should-solve-the-project-euler-problems-ed8d13397c9c | article | unknown | 2018-12 | algorithms,kernel-systems | archived | 2026-05-17 | connection_failure |  |
+| src_convolutional-neural-networks-from-the-ground-up | Convolutional Neural Networks from the ground up | https://towardsdatascience.com/convolutional-neural-networks-from-the-ground-up-c67bb41454e1 | article | unknown | 2018-08 | ai-applications | archived | 2026-05-17 | 404 |  |
+| src_divide-encode-how-to-encode-videos-blazingly-fast | Divide & Encode: How to Encode Videos Blazingly Fast | https://tech.showmax.com/2019/01/divide-encode-1/ | article | unknown | 2019-03 | misc | archived | 2026-05-17 | connection_failure |  |
+| src_enforcing-a-locking-context-on-variables-in-scala | Enforcing a Locking Context on Variables in Scala | http://vlkan.com/blog/post/2015/09/09/enforce-locking/ | article | unknown | 2018-05 | fp-scala,language-runtimes | archived | 2026-05-17 | 404 |  |
+| src_exploring-scala-macros | Exploring Scala Macros | http://blog.echo.sh/2013/11/04/exploring-scala-macros-map-to-case-class-conversion.html | article | unknown | 2018-04 | fp-scala,language-runtimes | archived | 2026-05-17 | 404 |  |
+| src_gang-of-four-patterns-in-a-functional-light-part-1 | Gang of Four Patterns in a Functional Light: Part 1 | https://www.voxxed.com/2016/04/gang-four-patterns-functional-light-part-1/ | article | unknown | 2018-09 | ai-applications,architecture-ddd | archived | 2026-05-17 | timeout |  |
+| src_gang-of-four-patterns-in-a-functional-light-part-2 | Gang of Four Patterns in a Functional Light: Part 2 | https://www.voxxed.com/2016/05/gang-four-patterns-functional-light-part-2/ | article | unknown | 2018-09 | ai-applications,architecture-ddd | archived | 2026-05-17 | connection_failure |  |
+| src_gang-of-four-patterns-in-a-functional-light-part-3 | Gang of Four Patterns in a Functional Light: Part 3 | https://www.voxxed.com/2016/05/gang-four-patterns-functional-light-part-3/ | article | unknown | 2018-09 | ai-applications,architecture-ddd | archived | 2026-05-17 | connection_failure |  |
+| src_gang-of-four-patterns-in-a-functional-light-part-4 | Gang of Four Patterns in a Functional Light: Part 4 | https://www.voxxed.com/2016/05/gang-four-patterns-functional-light-part-4/ | article | unknown | 2018-09 | ai-applications,architecture-ddd | archived | 2026-05-17 | connection_failure |  |
+| src_how-to-migrate-from-android-job-to-workmanager | How to migrate from Android-Job to WorkManager | https://articles.caster.io/android/how-to-migrate-from-android-job-to-workmanager/ | article | unknown | 2018-06 | language-runtimes | archived | 2026-05-17 | connection_failure |  |
+| src_how-to-review-the-code-and-not-destroy-the-universe | How to review the code and not destroy the universe | https://blog.scalac.io/improving-code-reviews.html | article | unknown | 2018-08 | fp-scala,language-runtimes | archived | 2026-05-17 | connection_failure |  |
+| src_how-we-found-a-missing-scala-class | How We Found a Missing Scala Class | https://heapanalytics.com/blog/engineering/missing-scala-class-noclassdeffounderror | article | unknown | 2018-09 | fp-scala,language-runtimes | archived | 2026-05-17 | 404 |  |
+| src_improving-akka-dispatchers | Improving Akka dispatchers | https://blog.scalac.io/improving-akka-dispatcher.html | article | unknown | 2018-08 | distributed-systems,fp-scala,language-runtimes | archived | 2026-05-17 | connection_failure |  |
+| src_json-web-tokens-vs-session-cookies-in-practice | JSON Web Tokens vs. Session Cookies: In Practice | https://ponyfoo.com/articles/json-web-tokens-vs-session-cookies | article | unknown | 2018-06 | misc | archived | 2026-05-17 | 404 |  |
+| src_kong-ce-0-13-0-released | Kong CE 0.13.0 released | https://konghq.com/blog/kong-ce-0-13-0-released/ | article | unknown | 2018-05 | infrastructure,kubernetes | archived | 2026-05-17 | 404 |  |
+| src_kotlin-android-development-6-months-into-it | Kotlin Android development - 6 months into it | http://blog.karumi.com/kotlin-android-development-6-months-into-it/ | article | unknown | 2018-05 | language-runtimes | archived | 2026-05-17 | 404 |  |
+| src_monad-error-for-the-rest-of-us | Monad Error for the rest of us | https://www.codacy.com/blog/monad-error-for-the-rest-of-us/ | article | unknown | 2018-09 | error-handling,fp-scala,language-runtimes,typelevel | archived | 2026-05-17 | 404 |  |
+| src_monads-for-functional-programming-in-scala | Monads for functional programming in scala | http://daniberg.com/2018/10/02/monads-for-fp-in-scala.html | article | unknown | 2018-10 | fp-scala,language-runtimes,typelevel | archived | 2026-05-17 | 404 |  |
+| src_reactive-streams-for-rabbitmq-with-monix | Reactive streams for RabbitMQ with Monix | https://blog.scalac.io/monix-rabbitmq-streams.html | article | unknown | 2018-08 | distributed-systems,fp-scala,frontend,language-runtimes,rabbitmq | archived | 2026-05-17 | connection_failure |  |
+| src_referential-transparency | Referential Transparency | https://pierangeloc.github.io/blog/2018/06/01/on-RT-and-FP | article | unknown | 2018-06 | misc | archived | 2026-05-17 | 404 |  |
+| src_saga-compensate-for-failures-in-a-terse-and-composable-way | Saga, Compensate for failures in a terse and composable way | http://vectos.net/posts/2018-08-10-saga.html | article | unknown | 2018-08 | distributed-systems,event-sourcing | archived | 2026-05-17 | 404 |  |
+| src_the-art-of-computer-programming-by-donald-knuth | ‘The Art of Computer Programming’ by Donald Knuth | https://medium.freecodecamp.org/the-art-of-computer-programming-by-donald-knuth-82e275c8764f | article | unknown | 2019-01 | algorithms | archived | 2026-05-17 | 404 |  |
+| src_these-four-clean-code-tips-will-dramatically-improve-your-engineering-team-s-pro | These four “clean code” tips will dramatically improve your engineering team’s productivity | https://engineering.videoblocks.com/these-four-clean-code-tips-will-dramatically-improve-your-engineering-teams-productivity-b5bd121dd150 | article | unknown | 2018-08 | misc | archived | 2026-05-17 | connection_failure |  |
+| src_typelevel-ecosystem-a-high-level-overview | Typelevel ecosystem: a high-level overview | https://blog.scalac.io/typelevel-ecosystem.html | article | unknown | 2018-05 | fp-scala,language-runtimes | archived | 2026-05-17 | connection_failure |  |
+| src_understand-containers-1-oci-specification | Understand Containers 1: OCI Specification | http://pierrchen.blogspot.com/2018/04/oci-open-container-spec-that-rules-all.html | article | unknown | 2018-09 | infrastructure | archived | 2026-05-17 | 404 |  |
+| src_understand-containers-2-linux-namespaces | Understand Containers 2: Linux Namespaces | http://pierrchen.blogspot.com/2018/04/linux-namespaces-in-action-using-runc.html | article | unknown | 2018-09 | frontend,infrastructure,kernel-systems | archived | 2026-05-17 | 404 |  |
+| src_understand-containers-3-linux-cgroups | Understand Containers 3: Linux cgroups | http://pierrchen.blogspot.com/2018/04/container-deep-dive-2-linux-cgroups.html | article | unknown | 2018-09 | frontend,infrastructure,kernel-systems | archived | 2026-05-17 | 404 |  |
+| src_understand-containers-4-linux-capabilities | Understand Containers 4: Linux Capabilities | http://pierrchen.blogspot.com/2018/05/container-deep-dive-3-linux-capabilities.html | article | unknown | 2018-09 | frontend,infrastructure,kernel-systems | archived | 2026-05-17 | 404 |  |
+| src_understand-containers-5-mount-and-jail | Understand Containers 5: Mount and Jail | http://pierrchen.blogspot.com/2018/05/understand-container-4.html | article | unknown | 2018-09 | infrastructure | archived | 2026-05-17 | 404 |  |
+| src_understand-containers-6-user-and-root | Understand Containers 6: User and Root | http://pierrchen.blogspot.com/2018/05/understand-container-5.html | article | unknown | 2018-09 | infrastructure | archived | 2026-05-17 | 404 |  |
+| src_understand-containers-7-hooks-and-network | Understand Containers 7: Hooks and Network | http://pierrchen.blogspot.com/2018/05/understand-container-6-hooks-and-network.html | article | unknown | 2018-09 | infrastructure | archived | 2026-05-17 | 404 |  |
+| src_understand-containers-8-use-cni-to-setup-network | Understand Containers 8: Use CNI to setup network | http://pierrchen.blogspot.com/2018/06/understand-container-7-cni.html | article | unknown | 2018-09 | infrastructure | archived | 2026-05-17 | 404 |  |
+| src_use-the-decorator-pattern-for-clean-i-o-boundaries | Use the Decorator Pattern for clean I/O boundaries | http://rea.tech/use-the-decorator-pattern-for-clean-i-o-boundaries/ | article | unknown | 2018-06 | architecture-ddd | archived | 2026-05-17 | 404 |  |
+| src_using-facebook-login-with-existing-login-systems | Using Facebook Login with Existing Login Systems | https://developers.facebook.com/docs/facebook-login/multiple-providers | article | unknown | 2018-10 | observability | archived | 2026-05-17 | 404 |  |
+| src_what-i-learned-making-my-own-jit-language | What I Learned Making My Own JIT Language | http://www.mikedrivendevelopment.com/2018/06/what-i-learned-making-my-own-jit.html | article | unknown | 2018-07 | compilers,language-runtimes | archived | 2026-05-17 | connection_failure |  |
+| src_why-you-should-know-monix | Why you should know Monix | https://blog.scalac.io/2017/06/01/why-should-you-care-about-monix.html | article | unknown | 2018-08 | fp-scala,language-runtimes | archived | 2026-05-17 | connection_failure |  |
+<!-- END: rows -->

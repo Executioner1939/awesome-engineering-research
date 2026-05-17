@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/proto/commands/clean",
+  "title": null,
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/proto/commands/clean#__docusaurus_skipToContent_fallback)\n\ninfo\n\nDocumentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).\n\nOn this page\n\nThe `proto clean` command can be used to uninstall stale and unused tools, plugins, and more. By\ndefault, it will remove items that haven't been used in the last 30 days.\n\n```shell\n$ proto clean\n```\n\nFurthermore, the command can be used to target a specific artifact type.\n\n```shell\n$ proto clean plugins\n```\n\n### Arguments [​](https://moonrepo.dev/docs/proto/commands/clean\\#arguments \"Direct link to Arguments\")\n\n- `[target]` \\- Type of target. Accepts `cache`, `plugins`, `temp`, or `tools`.v0.44.0\n\n### Options [​](https://moonrepo.dev/docs/proto/commands/clean\\#options \"Direct link to Options\")\n\n- `--days` \\- Number of days before a tool is considered stale.\n- `--json` \\- Print the clean result in JSON format. v0.44.0\n- `--yes` \\- Avoid and confirm all prompts.\n\n- [Arguments](https://moonrepo.dev/docs/proto/commands/clean#arguments)\n- [Options](https://moonrepo.dev/docs/proto/commands/clean#options)",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T14:06:32.151137+00:00",
+  "source_path": ".firecrawl/moonrepo.dev-docs-proto-commands-clean.md"
+}

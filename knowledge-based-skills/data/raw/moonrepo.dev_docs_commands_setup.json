@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/commands/setup",
+  "title": null,
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/commands/setup#__docusaurus_skipToContent_fallback)\n\ninfo\n\nDocumentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).\n\nOn this page\n\nThe `moon setup` command can be used to setup the developer and pipeline environments. It achieves\nthis by downloading and installing all configured toolchains.\n\n```shell\n$ moon setup\n```\n\ninfo\n\nThis command should rarely be used, as the environment is automatically setup when running other\ncommands, like detecting affected projects, running a task, or generating a build artifact.\n\n### Configuration [​](https://moonrepo.dev/docs/commands/setup\\#configuration \"Direct link to Configuration\")\n\n- [`*`](https://moonrepo.dev/docs/config/toolchain) in `.moon/toolchains.*`\n\n- [Configuration](https://moonrepo.dev/docs/commands/setup#configuration)",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T13:43:20.168365+00:00",
+  "source_path": ".firecrawl/moonrepo.dev/docs/commands/setup/index.md"
+}

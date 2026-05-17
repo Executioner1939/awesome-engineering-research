@@ -1,0 +1,162 @@
+[Skip to main content](https://moonrepo.dev/docs/guides/vcs-hooks#__docusaurus_skipToContent_fallback)
+
+info
+
+Documentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).
+
+On this page
+
+v1.9.0
+
+VCS hooks (most popular with [Git](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)) are a
+mechanism for running scripts at pre-defined phases in the VCS's lifecycle, most commonly
+pre-commit, pre-push, or pre-merge. With moon, we provide a built-in solution for managing hooks,
+and syncing them across developers and machines.
+
+- [Learn more about Git hooks](https://git-scm.com/docs/githooks)
+
+## Defining hooks [​](https://moonrepo.dev/docs/guides/vcs-hooks\#defining-hooks "Direct link to Defining hooks")
+
+Hooks can be configured with the [`vcs.hooks`](https://moonrepo.dev/docs/config/workspace#hooks) setting in
+[`.moon/workspace.*`](https://moonrepo.dev/docs/config/workspace). This setting requires a map of hook names (in the format
+required by your VCS), to a list of arbitrary commands to run within the hook script. Commands are
+used as-is and are not formatted or interpolated in any way.
+
+To demonstrate this, let's configure a `pre-commit` hook that runs a moon `lint` task for affected
+projects, and also verifies that the commit message abides by a specified format (using
+[pre-commit](https://pre-commit.com/) and the
+[commitlint hook](https://github.com/alessandrojcm/commitlint-pre-commit-hook), for example).
+
+.moon/workspace.yml
+
+```yaml
+vcs:
+  hooks:
+    pre-commit:
+      - 'pre-commit run'
+      - 'moon run :lint --affected'
+    commit-msg:
+      - 'pre-commit run --hook-stage commit-msg --commit-msg-filename $ARG1'
+```
+
+info
+
+All commands are executed from the repository root (not moon's workspace root) and must exist on
+`PATH`. If `moon` is installed locally, you can execute it using a repository relative path, like
+`./node_modules/@moonrepo/cli/moon`.
+
+### Accessing argumentsv1.40.3 [​](https://moonrepo.dev/docs/guides/vcs-hooks\#accessing-arguments "Direct link to accessing-arguments")
+
+To ease interoperability between operating systems and terminal shells, we set passed arguments as
+environment variables.
+
+In your hook commands, you can access these arguments using the `$ARG<n>` format, where `<n>` is the
+1-indexed position of the argument. For example, to access the first argument, you would use
+`$ARG1`, the second argument would be `$ARG2`, and so on. `$ARG0` exists and points to the current
+script.
+
+## Enabling hooks [​](https://moonrepo.dev/docs/guides/vcs-hooks\#enabling-hooks "Direct link to Enabling hooks")
+
+Hooks are a divisive subject, as some developers love them, and others hate them. Finding a viable
+solution for everyone can be difficult, so with moon, we opted to support 2 distinct options, but
+only 1 can be used at a time. Choose the option that works best for your project, team, or company!
+
+### Automatically for everyone [​](https://moonrepo.dev/docs/guides/vcs-hooks\#automatically-for-everyone "Direct link to Automatically for everyone")
+
+If you'd like hooks to be enforced for every contributor of the repository, then simply enable the
+[`vcs.sync`](https://moonrepo.dev/docs/config/workspace#sync) setting in [`.moon/workspace.*`](https://moonrepo.dev/docs/config/workspace). This
+will automatically generate hook scripts and link them with the local VCS checkout, everytime a
+[task](https://moonrepo.dev/docs/concepts/target) is ran.
+
+.moon/workspace.yml
+
+```yaml
+vcs:
+  hooks: [...]
+  sync: true
+```
+
+caution
+
+Automatically activating hooks on everyone's computer is considered a sensitive action, because it
+enables the execution of arbitrary code on the computers of the team members. Be careful about the
+hook commands you define in the [`.moon/workspace.*`](https://moonrepo.dev/docs/config/workspace) file.
+
+### Manually by each developer [​](https://moonrepo.dev/docs/guides/vcs-hooks\#manually-by-each-developer "Direct link to Manually by each developer")
+
+If you'd prefer contributors to have a choice in whether or not they want to use hooks, then simply
+do nothing, and guide them to run the [`moon sync hooks`](https://moonrepo.dev/docs/commands/sync/vcs-hooks) command. This
+command will generate hook scripts and link them with the local VCS checkout.
+
+```shell
+$ moon sync hooks
+```
+
+## Disabling hooks [​](https://moonrepo.dev/docs/guides/vcs-hooks\#disabling-hooks "Direct link to Disabling hooks")
+
+If you choose to stop using hooks, you'll need to cleanup the previously generated hook scripts, and
+reset the VCS checkout. To start, disable the `vcs.sync` setting.
+
+.moon/workspace.yml
+
+```yaml
+vcs:
+  sync: false
+```
+
+And then run the following command, which will delete files from your local filesystem. Every
+developer that is using hooks will need to run this command.
+
+```shell
+$ moon sync hooks --clean
+```
+
+## How it works [​](https://moonrepo.dev/docs/guides/vcs-hooks\#how-it-works "Direct link to How it works")
+
+When hooks are [enabled](https://moonrepo.dev/docs/guides/vcs-hooks#enabling-hooks), the following processes will take place.
+
+1. The configured [hooks](https://moonrepo.dev/docs/guides/vcs-hooks#defining-hooks) will be generated as individual script files in the
+`.moon/hooks` directory. Whether or not you commit or ignore these script files is your choice.
+They are written to the `.moon` directory so that they can be reviewed, audited, and easily
+tested, but _are required_.
+
+2. We then sync these generated hook scripts with the current VCS. For Git, we set `core.hooksPath`
+to point to the `.moon/hooks` directory, which tells Git to look for hook scripts in that
+directory instead of the default `.git/hooks` directory.
+
+
+info
+
+The `.moon/hooks` scripts are generated as Bash scripts (use a `.sh` file extension) on Unix, and
+PowerShell scripts (use a `.ps1` file extension) on Windows.
+
+## Examples [​](https://moonrepo.dev/docs/guides/vcs-hooks\#examples "Direct link to Examples")
+
+### Pre-commit [​](https://moonrepo.dev/docs/guides/vcs-hooks\#pre-commit "Direct link to Pre-commit")
+
+A perfect use case for the `pre-commit` hook is to check linting and formatting of the files being
+committed. If either of these tasks fail, the commit will abort until they are fixed. Be sure to use
+the [`--affected`](https://moonrepo.dev/docs/run-task#running-based-on-affected-files-only) option so that we _only run_ on
+changed projects!
+
+.moon/workspace.yml
+
+```yaml
+vcs:
+  hooks:
+    pre-commit:
+      - 'moon run :lint :format --affected --status=staged'
+```
+
+> By default this will run on the _entire_ project (all files). If you want to filter it to only the
+> changed files, enable the [`affectedFiles`](https://moonrepo.dev/docs/config/project#affectedfiles) task option.
+
+- [Defining hooks](https://moonrepo.dev/docs/guides/vcs-hooks#defining-hooks)
+  - [Accessing arguments](https://moonrepo.dev/docs/guides/vcs-hooks#accessing-arguments)
+- [Enabling hooks](https://moonrepo.dev/docs/guides/vcs-hooks#enabling-hooks)
+  - [Automatically for everyone](https://moonrepo.dev/docs/guides/vcs-hooks#automatically-for-everyone)
+  - [Manually by each developer](https://moonrepo.dev/docs/guides/vcs-hooks#manually-by-each-developer)
+- [Disabling hooks](https://moonrepo.dev/docs/guides/vcs-hooks#disabling-hooks)
+- [How it works](https://moonrepo.dev/docs/guides/vcs-hooks#how-it-works)
+- [Examples](https://moonrepo.dev/docs/guides/vcs-hooks#examples)
+  - [Pre-commit](https://moonrepo.dev/docs/guides/vcs-hooks#pre-commit)

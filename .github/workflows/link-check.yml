@@ -1,0 +1,66 @@
+name: link-check
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"  # Monday 06:00 UTC
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "sources | tools | both"
+        type: choice
+        default: both
+        options: [sources, tools, both]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: link-check
+  cancel-in-progress: false
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Install lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --max-concurrency 20
+            --timeout 30
+            --max-retries 1
+            --accept 200..=299,401,403
+            --format json
+            --output lychee-report.json
+            INDEX/sources.md INDEX/tools.md
+          fail: false
+
+      - name: Compute moves
+        id: compute
+        run: |
+          python3 .github/scripts/apply-link-sweep.py \
+            --report lychee-report.json \
+            --sources INDEX/sources.md \
+            --tools INDEX/tools.md \
+            --archived-sources _archived/sources.md \
+            --archived-tools _archived/tools.md \
+            --report-md _archived/sweep-report-$(date +%F).md
+          echo "moved=$(jq -r '.moved' /tmp/sweep-summary.json)" >> "$GITHUB_OUTPUT"
+          echo "checked=$(jq -r '.checked' /tmp/sweep-summary.json)" >> "$GITHUB_OUTPUT"
+
+      - name: Open PR if any rows moved
+        if: steps.compute.outputs.moved != '0'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: link-sweep/${{ github.run_number }}
+          delete-branch: true
+          commit-message: "chore(archive): sweep ${{ steps.compute.outputs.moved }} dead links"
+          title: "chore(archive): link-sweep — moved ${{ steps.compute.outputs.moved }} of ${{ steps.compute.outputs.checked }} URLs"
+          body-path: /tmp/sweep-summary.md
+          labels: link-sweep,automated

@@ -1,0 +1,84 @@
+name: index-regen-and-review
+
+on:
+  pull_request:
+    paths:
+      - "INDEX/**"
+      - "_archived/**"
+      - ".claude/templates/README.template.md"
+      - ".github/scripts/regen-readme.py"
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+
+concurrency:
+  group: index-regen-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  regen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      changed: ${{ steps.regen.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Regenerate README from INDEX
+        id: regen
+        run: |
+          python3 .github/scripts/regen-readme.py \
+            --sources INDEX/sources.md \
+            --tools INDEX/tools.md \
+            --template .claude/templates/README.template.md \
+            --taxonomy .claude/skills/research-standard/TAXONOMY/domains.md \
+            --triage TRIAGE.md \
+            --output README.md
+          if git diff --quiet README.md; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit regenerated README
+        if: steps.regen.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore(readme): regenerate from INDEX [skip ci]"
+          git push
+
+  review:
+    needs: regen
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          fetch-depth: 0
+
+      - name: Claude review against research-standard
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          mode: review
+          allowed_tools: "Read,Grep,Glob"
+          prompt: |
+            Review this PR against the conventions in `.claude/skills/research-standard/SKILL.md` and the row shapes in `.claude/templates/source.md` and `.claude/templates/repo.md`. Focus on:
+            - Frontmatter / column conformance on any new INDEX or _archived rows.
+            - Labels drawn from `.claude/skills/research-standard/TAXONOMY/domains.md` (plus the refinement labels documented there).
+            - No row appearing in both `INDEX/<file>.md` and `_archived/<file>.md`.
+            - Commit messages following the `add(<type>): <title>` / `chore(...)` convention.
+            - The README diff is purely a regeneration (between `<!-- BEGIN: -->` / `<!-- END: -->` markers).
+
+            File-line discipline: every finding cites `path:line`. Three-line summary at the top with verdict (approve / request changes / block) and reason.

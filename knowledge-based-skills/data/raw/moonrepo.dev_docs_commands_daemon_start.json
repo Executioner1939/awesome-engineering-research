@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/commands/daemon/start",
+  "title": null,
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/commands/daemon/start#__docusaurus_skipToContent_fallback)\n\ninfo\n\nDocumentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).\n\nv2.2.0\n\nThe `moon daemon start` command will start the daemon background process if it's not already\nrunning. If a daemon is already running for this workspace, the existing process is reused.\n\n```shell\n$ moon daemon start\n```\n\ninfo\n\nYou typically don't need to run this command manually. When the daemon is\n[enabled](https://moonrepo.dev/docs/guides/daemon#enabling-the-daemon), it starts automatically with any `moon` command.\n\ncaution\n\nThe daemon must be enabled in your [workspace configuration](https://moonrepo.dev/docs/config/workspace) before it can\nbe started. If the `daemon` setting is not enabled, this command will display a warning and exit.",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T13:43:22.387552+00:00",
+  "source_path": ".firecrawl/moonrepo.dev/docs/commands/daemon/start/index.md"
+}

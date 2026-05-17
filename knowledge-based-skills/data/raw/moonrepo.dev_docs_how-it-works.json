@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/how-it-works",
+  "title": null,
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/how-it-works#__docusaurus_skipToContent_fallback)\n\ninfo\n\nDocumentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).\n\n[**📄️Languages** \\\\\nAlthough moon is currently focusing on the JavaScript ecosystem, our long-term vision is to be a](https://moonrepo.dev/docs/how-it-works/languages)[**📄️Project graph** \\\\\nThe project graph is a representation of all configured](https://moonrepo.dev/docs/how-it-works/project-graph)[**📄️Task graph** \\\\\nThe task graph is a representation of all configured](https://moonrepo.dev/docs/how-it-works/task-graph)[**📄️Action graph** \\\\\nWhen you run a task on the command line, we generate an action graph to](https://moonrepo.dev/docs/how-it-works/action-graph)",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T14:06:19.031766+00:00",
+  "source_path": ".firecrawl/moonrepo.dev-docs-how-it-works.md"
+}

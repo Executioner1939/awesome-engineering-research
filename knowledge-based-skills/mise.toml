@@ -1,0 +1,46 @@
+# moondocs — shell-level env defaults for local dev infra.
+# mise auto-activates this so `docker compose`, `python -m moondocs`,
+# and any plain `cargo run`-style invocation see the same ports and
+# credentials.
+#
+# Pattern mirrored from DaveScheer/mise.toml: lowercase service block,
+# explicit per-service section, ports overridable per invocation
+# (e.g. `FALKOR_PORT=9379 docker compose up`).
+
+[tools]
+python = "3.12"
+
+[env]
+# --- FalkorDB ---------------------------------------------------------------
+# Spec defaults: Redis protocol 6379, browser UI 3000. Override here per
+# project to avoid collision with guardis-redis on the same machine.
+FALKOR_HOST = "localhost"
+FALKOR_PORT = "6379"
+FALKOR_BROWSER_PORT = "3000"
+FALKOR_GRAPH = "moondocs"
+
+# --- Anthropic / LLM ---------------------------------------------------------
+# Sonnet for both structural-extraction subagents and nano-graphrag's
+# best_model_func. ANTHROPIC_API_KEY is not defaulted — must be set in
+# .env or the user shell.
+ANTHROPIC_MODEL = "claude-sonnet-4-6"
+ANTHROPIC_MAX_TOKENS = "8192"
+
+# --- Firecrawl --------------------------------------------------------------
+# Standard tier: 5 concurrent, 100 req/min. Subagent fanout in scrape.py
+# respects this ceiling. FIRECRAWL_API_KEY not defaulted.
+FIRECRAWL_CONCURRENCY = "5"
+FIRECRAWL_RPM = "100"
+
+# --- Embeddings -------------------------------------------------------------
+# fastembed BGE-small. Local-only, no API key needed. The same model is
+# used for both nano-graphrag's embedding_func and the entity-resolution
+# cosine-similarity pass in resolve.py.
+EMBEDDING_MODEL = "BAAI/bge-small-en-v1.5"
+EMBEDDING_DIM = "384"
+RESOLVE_COSINE_THRESHOLD = "0.92"
+
+# --- Scrape targets ---------------------------------------------------------
+MOON_DOCS_ROOT = "https://moonrepo.dev/docs"
+MOON_GUIDES_ROOT = "https://moonrepo.dev/guides"
+MOON_SITEMAP_URL = "https://moonrepo.dev/sitemap.xml"

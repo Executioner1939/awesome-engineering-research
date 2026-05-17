@@ -1,0 +1,162 @@
+[Skip to main content](https://moonrepo.dev/docs/proto/faq#__docusaurus_skipToContent_fallback)
+
+info
+
+Documentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).
+
+On this page
+
+## General [​](https://moonrepo.dev/docs/proto/faq\#general "Direct link to General")
+
+### Where did the name "proto" come from? [​](https://moonrepo.dev/docs/proto/faq\#where-did-the-name-proto-come-from "Direct link to Where did the name \"proto\" come from?")
+
+We wanted to keep with the space theme, and spent quite some time digging through Wikipedia and
+ultimately landed on the page for [protostar](https://en.wikipedia.org/wiki/Protostar) (this is why
+our logo's a star). We really liked the definition of protostar, as it basically means "the
+beginning phase of a star". Even the the prefix proto means "first" or "earliest form of".
+
+This was great as that's the impression we had in mind for our tool. proto is the first piece
+required for setting up your developer environment. The toolchain is the first layer in the
+foundation.
+
+From an aesthetic standpoint, proto's typography works well with moon, as most of the letters are
+circle shaped. Double points for proto having two o's like the other products!
+
+### Are you worried about confusion with other tools like protobufs? [​](https://moonrepo.dev/docs/proto/faq\#are-you-worried-about-confusion-with-other-tools-like-protobufs "Direct link to Are you worried about confusion with other tools like protobufs?")
+
+Nah.
+
+### What is a tool? [​](https://moonrepo.dev/docs/proto/faq\#what-is-a-tool "Direct link to What is a tool?")
+
+A tool in the context of proto is either a language, dependency/package manager (typically for a
+language), or third-party CLI. The tool is something that can be downloaded and installed _by_
+_version_ onto a machine.
+
+Furthermore, a tool should have a primary executable file that can be executed with `proto run` or
+through proto's shims. Additionally, a tool can also provide secondary executable files. For
+example, `npm` (the primary) also provides `npx` and `node-gyp` (secondaries).
+
+### What is a backend? [​](https://moonrepo.dev/docs/proto/faq\#what-is-a-backend "Direct link to What is a backend?")
+
+A backend is a special type of tool that provides additional integration with 3rd-party plugins,
+greatly expanding what can be installed and managed with proto.
+
+### What is a plugin? [​](https://moonrepo.dev/docs/proto/faq\#what-is-a-plugin "Direct link to What is a plugin?")
+
+A plugin is a WASM (or JSON, TOML, YAML) file for a tool or backend.
+
+The terms tool and plugin are often used interchangeably, but plugin primarily refers to the WASM
+portion of a tool, while tool refers to the entire package: metadata, business logic, branding, so
+on an so forth.
+
+### Will you support more languages? [​](https://moonrepo.dev/docs/proto/faq\#will-you-support-more-languages "Direct link to Will you support more languages?")
+
+Yes! We'd love to support as many as possible, and if you'd like to help, join our Discord
+community! Feel free to create a [plugin](https://moonrepo.dev/docs/proto/plugins) in the mean time.
+
+### Will you support other kinds of tools? [​](https://moonrepo.dev/docs/proto/faq\#will-you-support-other-kinds-of-tools "Direct link to Will you support other kinds of tools?")
+
+No, we will only support languages, dependency managers, and CLIs, which should be enough. However,
+you can create a [plugin](https://moonrepo.dev/docs/proto/plugins) to support other kinds of tools.
+
+### Do you support "build from source"? [​](https://moonrepo.dev/docs/proto/faq\#do-you-support-build-from-source "Direct link to Do you support \"build from source\"?")
+
+As of version 0.45, we do! Simple pass `--build` to `proto install`. However, building from source
+is a complicated process and is unique per tool, so not all tools support it.
+
+### How to run a canary release after installing it? [​](https://moonrepo.dev/docs/proto/faq\#how-to-run-a-canary-release-after-installing-it "Direct link to How to run a canary release after installing it?")
+
+Once a tool has been installed with `canary`, the canary version can be explicitly referenced using
+our [version detection rules](https://moonrepo.dev/docs/proto/detection). The easiest approach is to prefix the shim with an
+environment variable:
+
+```shell
+$ PROTO_BUN_VERSION=canary bun ./index.ts
+```
+
+Or to explicitly configure the version in [`.prototools`](https://moonrepo.dev/docs/proto/config):
+
+```toml
+bun = "canary"
+```
+
+### What kind of features are supported for HTTP requests? [​](https://moonrepo.dev/docs/proto/faq\#what-kind-of-features-are-supported-for-http-requests "Direct link to What kind of features are supported for HTTP requests?")
+
+proto makes a lot of HTTP requests, for information such as available versions/releases, and for
+downloading the blobs/archives themselves. Because of this, we do our best to support all kinds of
+internet connections, proxy and intranet usage, and more, through the following:
+
+- All GET and HEAD requests are cached to `~/.proto/cache/requests` based on the
+[HTTP cache semantics](https://github.com/kornelski/rusty-http-cache-semantics) and relevant RFCs.
+- We support the
+[netrc file format](https://www.gnu.org/software/inetutils/manual/html_node/The-_002enetrc-file.html)
+and will automatically load `~/.netrc` if it exists.
+- We support an offline mode that will short-circuit certain workflows if there's no internet
+connection. We check for a connection by pinging DNS endpoints, but this can be configured with
+[`[settings.offline]`](https://moonrepo.dev/docs/proto/config#settingsoffline).
+- We attempt to automatically load root and system certifications so that secure connections work
+correctly. This can be configured with [`[settings.http]`](https://moonrepo.dev/docs/proto/config#settingshttp).
+
+## Troubleshooting [​](https://moonrepo.dev/docs/proto/faq\#troubleshooting "Direct link to Troubleshooting")
+
+### Network requests keep failing, how can I bypass? [​](https://moonrepo.dev/docs/proto/faq\#network-requests-keep-failing-how-can-i-bypass "Direct link to Network requests keep failing, how can I bypass?")
+
+When a tool is executed, we validate the version to ensure it's correct. We achieve this by making
+network requests to a remote service to gather the list of valid versions. If you're having network
+issues, or the request is timing out, you can bypass these checks with the following:
+
+- Pass a fully-qualified version as an environment variable. The version must be installed for this
+to work.
+
+
+
+
+
+```shell
+PROTO_NODE_VERSION=20.0.0 node --version
+```
+
+
+
+
+
+
+
+
+
+If executing a Node.js package manager, you'll need to set versions for both Node.js and the
+manager. This is required since manager's execute `node` processes under the hood.
+
+
+
+
+
+```shell
+PROTO_NODE_VERSION=20.0.0 PROTO_NPM_VERSION=10.0.0 npm --version
+```
+
+- Pass the `PROTO_BYPASS_VERSION_CHECK` environment variable. This will bypass the network request
+to load versions, but does not bypass other requests. However, this is typically enough.
+
+
+
+
+
+```shell
+PROTO_BYPASS_VERSION_CHECK=1 node --version
+```
+
+
+- [General](https://moonrepo.dev/docs/proto/faq#general)
+  - [Where did the name "proto" come from?](https://moonrepo.dev/docs/proto/faq#where-did-the-name-proto-come-from)
+  - [Are you worried about confusion with other tools like protobufs?](https://moonrepo.dev/docs/proto/faq#are-you-worried-about-confusion-with-other-tools-like-protobufs)
+  - [What is a tool?](https://moonrepo.dev/docs/proto/faq#what-is-a-tool)
+  - [What is a backend?](https://moonrepo.dev/docs/proto/faq#what-is-a-backend)
+  - [What is a plugin?](https://moonrepo.dev/docs/proto/faq#what-is-a-plugin)
+  - [Will you support more languages?](https://moonrepo.dev/docs/proto/faq#will-you-support-more-languages)
+  - [Will you support other kinds of tools?](https://moonrepo.dev/docs/proto/faq#will-you-support-other-kinds-of-tools)
+  - [Do you support "build from source"?](https://moonrepo.dev/docs/proto/faq#do-you-support-build-from-source)
+  - [How to run a canary release after installing it?](https://moonrepo.dev/docs/proto/faq#how-to-run-a-canary-release-after-installing-it)
+  - [What kind of features are supported for HTTP requests?](https://moonrepo.dev/docs/proto/faq#what-kind-of-features-are-supported-for-http-requests)
+- [Troubleshooting](https://moonrepo.dev/docs/proto/faq#troubleshooting)
+  - [Network requests keep failing, how can I bypass?](https://moonrepo.dev/docs/proto/faq#network-requests-keep-failing-how-can-i-bypass)

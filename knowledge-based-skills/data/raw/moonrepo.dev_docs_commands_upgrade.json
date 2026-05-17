@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/commands/upgrade",
+  "title": null,
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/commands/upgrade#__docusaurus_skipToContent_fallback)\n\ninfo\n\nDocumentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).\n\nThe `moon upgrade` command can be used to upgrade your current moon binary (if installed globally)\nto the latest version.\n\n```shell\n$ moon upgrade\n```\n\ncaution\n\nThis command will only work if moon was installed in the `~/.moon` directory, using our official\n[installation script](https://moonrepo.dev/docs/install). If installed another way, you'll need to upgrade manually.",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T13:43:14.354411+00:00",
+  "source_path": ".firecrawl/moonrepo.dev/docs/commands/upgrade/index.md"
+}

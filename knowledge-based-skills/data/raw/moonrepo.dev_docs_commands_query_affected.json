@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/commands/query/affected",
+  "title": "Return affected",
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/commands/query/affected#__docusaurus_skipToContent_fallback)\n\ninfo\n\nDocumentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).\n\nOn this page\n\nv2.0.0\n\nUse the `moon query affected` sub-command to query for all affected projects and tasks based on the\nstate of the workspace and VCS.\n\n```shell\n# Return affected\n$ moon query affected\n\n# Return affected including dependency relationships\n$ moon query affected --upstream deep\n```\n\nThis will output a map of projects and tasks as JSON. The output has the following structure:\n\n```ts\n{\n\tprojects: Record<Id, AffectedState>,\n\ttasks: Record<Target, AffectedState>,\n}\n```\n\n### Options [​](https://moonrepo.dev/docs/commands/query/affected\\#options \"Direct link to Options\")\n\n- `--downstream` \\- Include downstream dependents. Supports \"none\" (default), \"direct\", \"deep\".\n- `--upstream` \\- Include upstream dependencies. Supports \"none\" (default), \"direct\", \"deep\".\n\n- [Options](https://moonrepo.dev/docs/commands/query/affected#options)",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T13:43:13.570204+00:00",
+  "source_path": ".firecrawl/moonrepo.dev/docs/commands/query/affected/index.md"
+}

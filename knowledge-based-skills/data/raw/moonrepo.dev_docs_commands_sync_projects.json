@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/commands/sync/projects",
+  "title": null,
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/commands/sync/projects#__docusaurus_skipToContent_fallback)\n\ninfo\n\nDocumentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).\n\nOn this page\n\nv1.8.0\n\nThe `moon sync projects` command will force sync _all_ projects in the workspace to help achieve a\nhealthy repository state. This applies the following:\n\n- Ensures cross-project dependencies are linked based on\n[`dependsOn`](https://moonrepo.dev/docs/config/project#dependson).\n- Ensures language specific configuration files are present and accurate.\n- Ensures root configuration and project configuration are in sync.\n- Any additional language specific semantics that may be required.\n\n```shell\n$ moon sync projects\n```\n\n> This command should rarely be ran, as [`moon run`](https://moonrepo.dev/docs/commands/run) will sync affected projects\n> automatically! However, when migrating or refactoring, manual syncing may be necessary.\n\n### Configuration [​](https://moonrepo.dev/docs/commands/sync/projects\\#configuration \"Direct link to Configuration\")\n\n- [`projects`](https://moonrepo.dev/docs/config/workspace#projects) in `.moon/workspace.*`\n\n- [Configuration](https://moonrepo.dev/docs/commands/sync/projects#configuration)",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T13:43:17.374374+00:00",
+  "source_path": ".firecrawl/moonrepo.dev/docs/commands/sync/projects/index.md"
+}

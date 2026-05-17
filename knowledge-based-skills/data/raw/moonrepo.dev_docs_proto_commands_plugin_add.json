@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/proto/commands/plugin/add",
+  "title": null,
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/proto/commands/plugin/add#__docusaurus_skipToContent_fallback)\n\ninfo\n\nDocumentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).\n\nOn this page\n\nv0.23.0\n\nThe `proto plugin add <id> <plugin>` command will add the provided ID and plugin locator string to\nthe `[plugins]` section of a chosen `.prototools`.\n\n```shell\n$ proto plugin add node \"https://github.com/moonrepo/node-plugin/releases/latest/download/node_plugin.wasm\"\n```\n\n> Learn more about [plugin locator strings](https://moonrepo.dev/docs/proto/plugins#enabling-plugins).\n\n### Arguments [​](https://moonrepo.dev/docs/proto/commands/plugin/add\\#arguments \"Direct link to Arguments\")\n\n- `<id>` \\- ID of the tool.\n- `<plugin>` \\- How to locate the plugin.\n\n### Options [​](https://moonrepo.dev/docs/proto/commands/plugin/add\\#options \"Direct link to Options\")\n\n- `--to` \\- [Location of `.prototools`](https://moonrepo.dev/docs/proto/config#locations) to update.v0.41.0\n- `--type` \\- Type of plugin to add, either `tool` (default) or `backend`.v0.52.0\n\n- [Arguments](https://moonrepo.dev/docs/proto/commands/plugin/add#arguments)\n- [Options](https://moonrepo.dev/docs/proto/commands/plugin/add#options)",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T14:06:22.511075+00:00",
+  "source_path": ".firecrawl/moonrepo.dev-docs-proto-commands-plugin-add.md"
+}

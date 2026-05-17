@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/commands/templates",
+  "title": null,
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/commands/templates#__docusaurus_skipToContent_fallback)\n\ninfo\n\nDocumentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).\n\nOn this page\n\nv1.24.0\n\nThe `moon templates` command will list all templates available for [code generation](https://moonrepo.dev/docs/commands/generate).\nThis list will include the template title, description, default destination, where it's source files\nare located, and more.\n\n```shell\n$ moon templates\n```\n\n### Options [​](https://moonrepo.dev/docs/commands/templates\\#options \"Direct link to Options\")\n\n- `--filter` \\- Filter templates by a search term.\n- `--json` \\- Print templates in JSON format.\n\n### Configuration [​](https://moonrepo.dev/docs/commands/templates\\#configuration \"Direct link to Configuration\")\n\n- [`generator`](https://moonrepo.dev/docs/config/workspace#generator) in `.moon/workspace.*`\n\n- [Options](https://moonrepo.dev/docs/commands/templates#options)\n- [Configuration](https://moonrepo.dev/docs/commands/templates#configuration)",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T13:43:17.752856+00:00",
+  "source_path": ".firecrawl/moonrepo.dev/docs/commands/templates/index.md"
+}

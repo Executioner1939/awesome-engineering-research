@@ -1,0 +1,196 @@
+[Skip to main content](https://moonrepo.dev/docs/guides/debug-task#__docusaurus_skipToContent_fallback)
+
+info
+
+Documentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).
+
+On this page
+
+Running [tasks](https://moonrepo.dev/docs/concepts/task) is the most common way to interact with moon, so what do you do
+when your task isn't working as expected? Diagnose it of course! Diagnosing the root cause of a
+broken task can be quite daunting, but do not fret, as the following steps will help guide you in
+this endeavor.
+
+## Using an AI skillv2.2.0 [​](https://moonrepo.dev/docs/guides/debug-task\#using-an-ai-skill "Direct link to using-an-ai-skill")
+
+We provide an AI agent skill called `debug-task` that helps you systematically diagnose failing or
+misbehaving moon tasks. If you've ever spent time hunting down why a task is producing stale
+results, getting unexpected cache misses, or behaving differently in CI, this skill is for you.
+
+To install this skill, run the following command:
+
+```shell
+$ npx skills add moonrepo/moon --skill debug-task
+```
+
+The skill walks you through a 5-step diagnostic workflow:
+
+1. Inspect the resolved task configuration (after inheritance merging)
+2. Run with maximum verbosity to see exactly what moon is doing
+3. Inspect cache state and hash manifests
+4. Match symptoms to root causes using a built-in decision tree
+5. Validate that the fix actually resolves the issue
+
+It covers 15+ specific problem types across cache issues, configuration mistakes, execution
+problems, and CI vs local discrepancies. Most issues resolve by step 3, with deeper reference
+material available on demand.
+
+To use it, simply describe your task problem in Claude Code, Codex, OpenCode, or another compatible
+AI agent — mention the task target, what you expected, and what actually happened. The skill will
+take it from there.
+
+```shell
+/debug-task Help me debug why the `app:build` task is not being cached
+```
+
+## Verify configuration [​](https://moonrepo.dev/docs/guides/debug-task\#verify-configuration "Direct link to Verify configuration")
+
+Before we dive into the internals of moon, we should first verify that the task is actually
+configured correctly. Our configuration layer is very strict, but it can't catch everything, so jump
+to the [`moon.*`](https://moonrepo.dev/docs/config/project#tasks) documentation for more information.
+
+To start, moon will create a snapshot of the project and its tasks, with all [tokens](https://moonrepo.dev/docs/concepts/token)
+resolved, and paths expanded. This snapshot is located at
+`.moon/cache/states/<project>/snapshot.json`. With the snapshot open, inspect the root `tasks`
+object for any inconsistencies or inaccuracies.
+
+Some issues to look out for:
+
+- Have `command` and `args` been parsed correctly?
+- Have [tokens](https://moonrepo.dev/docs/concepts/token) resolved correctly? If not, verify syntax or try another token type.
+- Have `inputFiles`, `inputGlobs`, and `inputVars` expanded correctly from [`inputs`](https://moonrepo.dev/docs/config/project#inputs)?
+- Have `outputFiles` and `outputGlobs` expanded correctly from [`outputs`](https://moonrepo.dev/docs/config/project#outputs)?
+- Is the `toolchains` correct for the command? If incorrect, explicitly set the
+[`toolchain`](https://moonrepo.dev/docs/config/project#toolchain).
+- Are `options` and `state` correct?
+
+info
+
+Resolved information can also be inspected with the [`moon task <target> --json`](https://moonrepo.dev/docs/commands/task)
+command.
+
+### Verify inherited configuration [​](https://moonrepo.dev/docs/guides/debug-task\#verify-inherited-configuration "Direct link to Verify inherited configuration")
+
+If the configuration from the previous step looks correct, you can skip this step, otherwise let's
+verify that the inherited configuration is also correct. In the `snapshot.json` file, inspect the
+root `inherited` object, which is structured as follows:
+
+- `config` \- A mapping of configuration files that were loaded, in order. Each config represents a
+partial object (not expanded or resolved). Only files that exist will be mapped here.
+- `layers` \- A mapping of task IDs to configuration files that have been inherited.
+
+## Inspect trace logs [​](https://moonrepo.dev/docs/guides/debug-task\#inspect-trace-logs "Direct link to Inspect trace logs")
+
+If configuration looks good, let's move on to inspecting the trace logs, which can be a non-trivial
+amount of effort. Run the task to generate the logs, bypass the cache, and include debug
+information:
+
+```shell
+MOON_DEBUG_PROCESS_ENV=true MOON_DEBUG_PROCESS_INPUT=true moon run <target> --log trace --force
+```
+
+Once ran, a large amount of information will be logged to the terminal. However, most of it can be
+ignored, as we're only interested in the "is this task affected by changes" logs. This breaks down
+as follows:
+
+1. First, we gather changed files from the local checkout, which is typically
+`git status --porcelain --untracked-files` (from the `moon_process` module).
+2. Secondly, we gather all files from the project directory, using the
+`git ls-files --full-name --cached --modified --others --exclude-standard <path> --deduplicate`
+command (also from the `moon_process` module). This command can also be ran locally to verify the
+output.
+3. Lastly, all files from the previous 2 commands will be hashed using the `git hash-object`
+command. If you passed the `MOON_DEBUG_PROCESS_INPUT` environment variable, you'll see a massive
+log entry of all files being hashed. This is what we use to generate moon's specific hash.
+
+If all went well, you should see a log entry that looks like this:
+
+```text
+moon_task_runner::task_runner  Generated a unique hash  task_target="<task>" hash="<hash>"
+```
+
+The important piece is the hash, which is a 64-character SHA256 hash, and represents the unique hash
+of this task/target. This is what moon uses to determine a cache hit/miss, and whether or not to
+skip re-running a task.
+
+Let's copy the hash and move on to the next step.
+
+## Inspect the hash manifest [​](https://moonrepo.dev/docs/guides/debug-task\#inspect-the-hash-manifest "Direct link to Inspect the hash manifest")
+
+With the hash in hand, let's dig deeper into moon's internals, by inspecting the hash manifest at
+`.moon/cache/hashes/<hash>.json`, or running the [`moon hash`](https://moonrepo.dev/docs/commands/hash) command:
+
+```shell
+moon hash <hash>
+```
+
+The manifest is JSON and its contents are all the information used to generate its unique hash. This
+information is an array, and breaks down as follows:
+
+- The first item in the array is the task itself. The important fields to diagnose here are `deps`
+and `inputs`.
+  - Dependencies are other tasks (and their hash) that this task depends on.
+  - Inputs are all the files (and their hash from `git hash-object`) this task requires to run.
+- The remaining array items are toolchain/language specific, some examples are:
+  - **Node.js** \- The current Node.js version and the resolved versions/hashes of all `package.json`
+    dependencies.
+  - **Rust** \- The current Rust version and the resolved versions/hashes of all `Cargo.toml`
+    dependencies.
+  - **TypeScript** \- Compiler options for changing compilation output.
+
+Some issues to look out for:
+
+- Do the dependencies match the task's configured [`deps`](https://moonrepo.dev/docs/config/project#deps) and [`implicitDeps`](https://moonrepo.dev/docs/config/tasks#implicitdeps)?
+- Do the inputs match the task's configured [`inputs`](https://moonrepo.dev/docs/config/project#inputs) and
+[`implicitInputs`](https://moonrepo.dev/docs/config/tasks#implicitinputs)? If not, try tweaking the config.
+- Are the toolchain/language specific items correct?
+- Are dependency versions/hashes correctly parsed from the appropriate lockfile?
+
+### Diffing a previous hash [​](https://moonrepo.dev/docs/guides/debug-task\#diffing-a-previous-hash "Direct link to Diffing a previous hash")
+
+Another avenue for diagnosing a task is to diff the hash against a hash from a previous run. Since
+we require multiple hashes, we'll need to run the task multiple times,
+[inspect the logs](https://moonrepo.dev/docs/guides/debug-task#inspect-trace-logs), and extract the hash for each. If you receive the same hash
+for each run, you'll need to tweak configuration or change files to produce a different hash.
+
+Once you have 2 unique hashes, we can pass them to the [`moon hash`](https://moonrepo.dev/docs/commands/hash) command. This
+will produce a `git diff` styled output, allowing for simple line-by-line comparison debugging.
+
+```shell
+moon hash <hash-left> <hash-right>
+```
+
+```diff
+Left:  0b55b234f1018581c45b00241d7340dc648c63e639fbafdaf85a4cd7e718fdde
+Right: 2388552fee5a02062d0ef402bdc7232f0a447458b058c80ce9c3d0d4d7cfe171
+
+[\
+	{\
+		"command": "build",\
+		"args": [\
++			"./dist"\
+-			"./build"\
+		],\
+		...\
+	}\
+]
+```
+
+This is extremely useful in diagnoising why a task is running differently than before, and is much
+easier than inspecting the hash manifest files manually!
+
+## Ask for help [​](https://moonrepo.dev/docs/guides/debug-task\#ask-for-help "Direct link to Ask for help")
+
+If you've made it this far, and still can't figure out why a task is not working correctly, please
+ask for help!
+
+- [Join the Discord community](https://discord.gg/qCh9MEynv2) (if lost)
+- [Report an issue](https://github.com/moonrepo/moon/issues/new/choose) (if an actual bug)
+
+- [Using an AI skill](https://moonrepo.dev/docs/guides/debug-task#using-an-ai-skill)
+- [Verify configuration](https://moonrepo.dev/docs/guides/debug-task#verify-configuration)
+  - [Verify inherited configuration](https://moonrepo.dev/docs/guides/debug-task#verify-inherited-configuration)
+- [Inspect trace logs](https://moonrepo.dev/docs/guides/debug-task#inspect-trace-logs)
+- [Inspect the hash manifest](https://moonrepo.dev/docs/guides/debug-task#inspect-the-hash-manifest)
+  - [Diffing a previous hash](https://moonrepo.dev/docs/guides/debug-task#diffing-a-previous-hash)
+- [Ask for help](https://moonrepo.dev/docs/guides/debug-task#ask-for-help)

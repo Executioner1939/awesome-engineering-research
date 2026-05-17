@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/guides/examples/react",
+  "title": null,
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/guides/examples/react#__docusaurus_skipToContent_fallback)\n\ninfo\n\nDocumentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).\n\nReact is an application or library concern, and not a build system one, since the bundling of React\nis abstracted away through another tool like webpack. Because of this, moon has no guidelines around\nutilizing React directly. You can use React however you wish!\n\nHowever, with that being said, we do suggest the following:\n\n- Add `react` and related dependencies to each project, not the root. This includes `@types/react`\nas well. This will ensure accurate [hashing](https://moonrepo.dev/docs/concepts/cache#hashing).\n\n- Yarn\n- Yarn (classic)\n- npm\n- pnpm\n- Bun\n\n```shell\nyarn workspace <project> add react\n```\n\n```shell\nyarn workspace <project> add react\n```\n\n```shell\nnpm install --workspace <project> react\n```\n\n```shell\npnpm add --filter <project> react\n```\n\n```shell\nbun install react\n```\n\n- Configure Babel with the `@babel/preset-react` preset.\n- Configure [TypeScript](https://moonrepo.dev/docs/guides/examples/typescript) compiler options with `\"jsx\": \"react-jsx\"`.",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T14:06:32.330628+00:00",
+  "source_path": ".firecrawl/moonrepo.dev-docs-guides-examples-react.md"
+}

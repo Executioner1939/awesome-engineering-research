@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/proto/commands/debug/env",
+  "title": null,
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/proto/commands/debug/env#__docusaurus_skipToContent_fallback)\n\ninfo\n\nDocumentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).\n\nOn this page\n\nv0.26.0\n\nThe `proto debug env` command will print information about your current proto environment. Primarily\nthe store location, relevant file paths, and environment variables.\n\n```text\n$ proto debug env\n\nStore ─────────────────────────────────────────────────────────────────────\n\n  Root: /Users/name/.proto\n  Bins: /Users/name/.proto/bin\n  Shims: /Users/name/.proto/shims\n  Plugins: /Users/name/.proto/plugins\n  Tools: /Users/name/.proto/tools\n  Temp: /Users/name/.proto/temp\n\nEnvironment ───────────────────────────────────────────────────────────────\n\n  Proto version: 0.44.0\n  Operating system: macos\n  Architecture: arm64\n  Config sources:\n    - /Users/name/Projects/example/.prototools\n    - /Users/name/.proto/.prototools\n  Virtual paths:\n    /userhome = /Users/name\n    /proto = /Users/name/.proto\n  Environment variables:\n    PROTO_APP_LOG = proto=info,schematic=info,starbase=info,warpgate=info,extism::pdk=info\n    PROTO_HOME = /Users/name/.proto\n    PROTO_OFFLINE_TIMEOUT = 750\n    PROTO_VERSION = 0.44.0\n```\n\n### Options [​](https://moonrepo.dev/docs/proto/commands/debug/env\\#options \"Direct link to Options\")\n\n- `--json` \\- Print the list in JSON format.\n\n- [Options](https://moonrepo.dev/docs/proto/commands/debug/env#options)",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T14:06:19.158685+00:00",
+  "source_path": ".firecrawl/moonrepo.dev-docs-proto-commands-debug-env.md"
+}

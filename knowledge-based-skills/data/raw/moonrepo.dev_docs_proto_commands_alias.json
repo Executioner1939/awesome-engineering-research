@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/proto/commands/alias",
+  "title": null,
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/proto/commands/alias#__docusaurus_skipToContent_fallback)\n\ninfo\n\nDocumentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).\n\nOn this page\n\nThe `proto alias <tool> <alias> <version>` (or `proto a`) command will define a custom alias that\nmaps to a specific version for the provided tool. Aliases can be used anywhere a version is\naccepted.\n\n```shell\n$ proto alias node work 16.16\n```\n\nBy default this will update the local [`./.prototools`](https://moonrepo.dev/docs/proto/config) file. Pass `--to` to customize\nthe location.\n\n### Arguments [​](https://moonrepo.dev/docs/proto/commands/alias\\#arguments \"Direct link to Arguments\")\n\n- `<tool>` \\- Type of tool.\n- `<alias>` \\- Name of the alias. Supports alphanumeric chars.\n- `<version>` \\- Version to map to the alias.\n\n## Options [​](https://moonrepo.dev/docs/proto/commands/alias\\#options \"Direct link to Options\")\n\n- `--to` \\- [Location of `.prototools`](https://moonrepo.dev/docs/proto/config#locations) to update. Supports `global`, `local`,\nand `user`.v0.41.0\n\n- [Arguments](https://moonrepo.dev/docs/proto/commands/alias#arguments)\n- [Options](https://moonrepo.dev/docs/proto/commands/alias#options)",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T14:06:27.249986+00:00",
+  "source_path": ".firecrawl/moonrepo.dev-docs-proto-commands-alias.md"
+}

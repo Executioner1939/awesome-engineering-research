@@ -1,0 +1,232 @@
+[Skip to main content](https://moonrepo.dev/docs/proto/tool-spec#__docusaurus_skipToContent_fallback)
+
+info
+
+Documentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).
+
+On this page
+
+3 min
+
+Since proto is a toolchain for multiple tools, each with differing version formats, we must align
+them on a standard specification that can resolve and store safely. To handle this, we've
+implemented our own solution called the tool and version specification. This specification currently
+supports semantic and calendar based versions, each with their own guidelines and caveats.
+
+info
+
+If you're implementing a plugin for a specific tool that has a different version format, you'll need
+to re-format it into one of the specifications below.
+
+## Backendsv0.47.0 [​](https://moonrepo.dev/docs/proto/tool-spec\#backends "Direct link to backends")
+
+A backend is an internal system that allows proto to use plugins from 3rd-party package/version
+managers within proto, greatly expanding the amount of tools that proto can install and support.
+This functionality is achieved through special WASM plugins under the hood.
+
+To make use of a backend, prefix the tool identifier in `.prototools` with the backend's unique
+identifier. For example, we can install Zig via asdf.
+
+.prototools
+
+```toml
+# >= v0.52
+"asdf:zig" = "0.13.0"
+
+# <= v0.51
+zig = "asdf:0.13.0"
+```
+
+### `asdf` [​](https://moonrepo.dev/docs/proto/tool-spec\#asdf "Direct link to asdf")
+
+The `asdf` backend will utilize the [asdf version manager](https://asdf-vm.com/) for downloading and
+installing a tool, loading versions, and locating executables. This backend implementation _does_
+_not_ use the `asdf` binary itself, and instead emulates the environment as best we can. Because of
+this, some tools may not be usable through proto.
+
+.prototools
+
+```toml
+"asdf:<id>" = "20"
+```
+
+By default, the ID pinned in `.prototools` is the
+[asdf shortname](https://asdf-vm.com/plugins/create.html#plugin-shortname-index) used when cloning a
+repository. If the ID is different than the shortname (`node` vs `nodejs`), you can configure the
+`shortname` setting.
+
+.prototools
+
+```toml
+"asdf:node" = "20"
+
+[tools."asdf.node"]
+shortname = "nodejs"
+```
+
+The following settings are supported:
+
+- `shortname` (string) - The name of the [asdf plugin](https://github.com/asdf-vm/asdf-plugins) if
+different than the configured ID.
+- `repository` (string) - The Git repository URL in which to locate
+[scripts](https://asdf-vm.com/plugins/create.html#scripts-overview). If not defined, is extracted
+from the shortname plugin index.
+- `exes` (string\[\]) - List of executable file names (relative from `bin`) to be linked as a
+shim/bin. If not defined, we'll automatically scan the `bin` directory.
+
+### `cargo`v0.57.0 [​](https://moonrepo.dev/docs/proto/tool-spec\#cargo "Direct link to cargo")
+
+The `cargo` backend will install CLIs from [crates.io](https://crates.io/) using
+[`cargo install`](https://doc.rust-lang.org/cargo/commands/cargo-install.html) under the hood. The
+ID after the prefix is the crate name as published to the registry.
+
+.prototools
+
+```toml
+"cargo:<id>" = "0.31"
+```
+
+For example, to install [`cargo-dist`](https://crates.io/crates/cargo-dist):
+
+.prototools
+
+```toml
+"cargo:cargo-dist" = "0.31"
+```
+
+### `npm`v0.57.0 [​](https://moonrepo.dev/docs/proto/tool-spec\#npm "Direct link to npm")
+
+The `npm` backend will install CLIs from the [npm registry](https://www.npmjs.com/) using the `npm`
+package manager under the hood. The ID after the prefix is the package name as published to the
+registry.
+
+.prototools
+
+```toml
+"npm:<id>" = "6"
+```
+
+For example, to install [`typescript`](https://www.npmjs.com/package/typescript):
+
+.prototools
+
+```toml
+"npm:typescript" = "6"
+```
+
+## Semantic versions [​](https://moonrepo.dev/docs/proto/tool-spec\#semantic-versions "Direct link to Semantic versions")
+
+The most common format is [semver](https://semver.org/), also known as a semantic version. This
+format requires major, minor, and patch numbers, with optional pre-release and build metadata.
+
+.prototools
+
+```toml
+tool = "1.2.3"
+```
+
+### Syntax [​](https://moonrepo.dev/docs/proto/tool-spec\#syntax "Direct link to Syntax")
+
+- `<major>.<minor>.<patch>` \- 1.2.3
+- `<major>.<minor>.<patch>-<pre>` \- 1.2.3-alpha.0
+- `<major>.<minor>.<patch>-<pre>+<build>` \- 1.2.3-alpha.0+nightly456
+- `<major>.<minor>.<patch>+<build>` \- 1.2.3+nightly456
+
+### Guidelines [​](https://moonrepo.dev/docs/proto/tool-spec\#guidelines "Direct link to Guidelines")
+
+- major, minor, patch - `0-9` of any length
+- pre, build - `a-z`, `0-9`, `-`, `.`
+
+> [Learn more about this format!](https://semver.org/#backusnaur-form-grammar-for-valid-semver-versions)
+
+## Calendar versionsv0.37.0 [​](https://moonrepo.dev/docs/proto/tool-spec\#calendar-versions "Direct link to calendar-versions")
+
+Another popular format is [calver](https://calver.org/), also known as a calendar version, which
+uses the calendar year, month, and day as version numbers. This format also supports pre-release and
+build metadata, but with different syntax than semver.
+
+.prototools
+
+```toml
+tool = "2025-02-26"
+```
+
+### Syntax [​](https://moonrepo.dev/docs/proto/tool-spec\#syntax-1 "Direct link to Syntax")
+
+- `<year>-<month>` \- 2024-02
+- `<year>-<month>-<day>` \- 2024-02-26
+- `<year>-<month>-<day>.<build>` \- 2024-02-26.123
+- `<year>-<month>-<day>_<build>` \- 2024-02-26\_123
+- `<year>-<month>-<day>.<build>-<pre>` \- 2024-02-26.123-alpha.0
+- `<year>-<month>-<day>_<build>-<pre>` \- 2024-02-26\_123-alpha.0
+- `<year>-<month>-<day>-<pre>` \- 2024-02-26-alpha.0
+
+### Guidelines [​](https://moonrepo.dev/docs/proto/tool-spec\#guidelines-1 "Direct link to Guidelines")
+
+- year - `0-9` of 1-4 length
+  - If the year is not YYYY format, it will use the year 2000 as the base. For example, `24` becomes
+    `2024`, and `124` becomes `2124`.
+- month - `0-9` of 1-2 length
+  - Supports with and without a leading zero (`02` vs `2`).
+  - Does not support invalid months (`0` or `13`).
+- day - `0-9` of 1-2 length
+  - Can be omitted, even with build/pre.
+  - Supports with and without a leading zero (`02` vs `2`).
+  - Does not support invalid days (`0` or `32`).
+- build - `0-9` of any length
+  - Also known as a "micro" number.
+  - The leading dot `.` format is preferred.
+- pre - `a-z`, `0-9`, `-`, `.`
+
+> [Learn more about this format!](https://calver.org/#scheme)
+
+## Requirements and ranges [​](https://moonrepo.dev/docs/proto/tool-spec\#requirements-and-ranges "Direct link to Requirements and ranges")
+
+Besides an explicit version, we also support partial versions known as version requirements or
+version ranges. These are quite complex as we need to support both semver and calver in unison, as
+well as support partial/incomplete numbers (missing patch/day, missing minor/month, etc). We do our
+best to support as many combinations as possible.
+
+.prototools
+
+```toml
+tool-a = "^1"
+tool-b = "~2.1"
+tool-c = ">=2000-10"
+```
+
+### Syntax [​](https://moonrepo.dev/docs/proto/tool-spec\#syntax-2 "Direct link to Syntax")
+
+- Requirement - `[<op>]<pattern>` \- `1.2.3`, `>4.5`, `~3`, `^2000-10`, etc
+- AND range - `<requirement>[,] <requirement> ...` \- `>=1, <2`, `^1.3 <=1.3.9`, etc
+- OR range - `<requirement> || <requirement> ...` \- `^1.2 || ^2.3`, `~2000-10 || ~2010-2`, etc
+
+### Guidelines [​](https://moonrepo.dev/docs/proto/tool-spec\#guidelines-2 "Direct link to Guidelines")
+
+- op - `=`, `>`, `>=`, `<=`, `<`, `~`, `^`
+  - If omitted, defaults to `~` when a partial version is provided (i.e. allow the minimum specified
+    version component to increase)
+  - If a full version is provided, defaults to `^` (i.e. allow any newer version that is nominally
+    compatible)
+  - To specify an _exact_ version, use the `=` operator explicitly.
+- pattern
+  - Dot-separated semver, with optional major and patch numbers.
+  - Dash-separated calver, with optional month and day numbers.
+  - Pre-release and build metadata are only supported when suffixed to full versions.
+
+For example, if you want to use `npm` 11.6.2 but 11.6.3 has an issue, use:
+`npm = "^11.6.4 || =11.6.2"`
+
+- [Backends](https://moonrepo.dev/docs/proto/tool-spec#backends)
+  - [`asdf`](https://moonrepo.dev/docs/proto/tool-spec#asdf)
+  - [`cargo`](https://moonrepo.dev/docs/proto/tool-spec#cargo)
+  - [`npm`](https://moonrepo.dev/docs/proto/tool-spec#npm)
+- [Semantic versions](https://moonrepo.dev/docs/proto/tool-spec#semantic-versions)
+  - [Syntax](https://moonrepo.dev/docs/proto/tool-spec#syntax)
+  - [Guidelines](https://moonrepo.dev/docs/proto/tool-spec#guidelines)
+- [Calendar versions](https://moonrepo.dev/docs/proto/tool-spec#calendar-versions)
+  - [Syntax](https://moonrepo.dev/docs/proto/tool-spec#syntax-1)
+  - [Guidelines](https://moonrepo.dev/docs/proto/tool-spec#guidelines-1)
+- [Requirements and ranges](https://moonrepo.dev/docs/proto/tool-spec#requirements-and-ranges)
+  - [Syntax](https://moonrepo.dev/docs/proto/tool-spec#syntax-2)
+  - [Guidelines](https://moonrepo.dev/docs/proto/tool-spec#guidelines-2)

@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/proto/commands/debug/config",
+  "title": null,
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/proto/commands/debug/config#__docusaurus_skipToContent_fallback)\n\ninfo\n\nDocumentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).\n\nOn this page\n\nv0.25.0\n\nThe `proto debug config` command will list all `.prototools` configuration files (in TOML format)\nthat have been loaded, in order of precedence, with the final merged configuration printed at the\nend.\n\n```text\n$ proto debug config\n\n/Users/name/.proto/.prototools ───────────────────────────────────────────\n\n  node = \"20.0.0\"\n  npm = \"bundled\"\n\n  [tools.node.aliases]\n  stable = \"~20\"\n\n  [settings]\n  auto-clean = false\n\nFinal configuration ───────────────────────────────────────────────────────\n\n  node = \"20.0.0\"\n  npm = \"bundled\"\n\n  [tools.node.aliases]\n  stable = \"~20\"\n\n  [plugins.tools]\n  node = \"https://github.com/moonrepo/node-plugin/releases/download/v0.6.1/node_plugin.wasm\"\n\n  [settings]\n  auto-clean = false\n  auto-install = false\n  detect-strategy = \"first-available\"\n\n  [settings.http]\n  allow-invalid-certs = false\n  proxies = []\n```\n\n### Options [​](https://moonrepo.dev/docs/proto/commands/debug/config\\#options \"Direct link to Options\")\n\n- `--json` \\- Print the list in JSON format.\n\n- [Options](https://moonrepo.dev/docs/proto/commands/debug/config#options)",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T14:06:23.958404+00:00",
+  "source_path": ".firecrawl/moonrepo.dev-docs-proto-commands-debug-config.md"
+}

@@ -1,0 +1,73 @@
+name: new-releases-triage
+
+on:
+  schedule:
+    - cron: "30 5 * * *"  # daily 05:30 UTC
+  workflow_dispatch:
+    inputs:
+      since:
+        description: "Window for new releases (e.g. 7d, 30d)"
+        type: string
+        default: "7d"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: triage
+  cancel-in-progress: false
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Auto-prune old TRIAGE rows
+        run: |
+          python3 .github/scripts/prune-triage.py \
+            --triage TRIAGE.md \
+            --max-age-days 60 \
+            --pruned-out _archived/triage-pruned-$(date +%F).md
+
+      - name: Fetch release feeds
+        id: feeds
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 .github/scripts/fetch-release-feeds.py \
+            --config .claude/skills/new-releases-triage/sources.yml \
+            --since ${{ inputs.since || '7d' }} \
+            --output /tmp/candidates.jsonl
+          echo "count=$(wc -l < /tmp/candidates.jsonl)" >> "$GITHUB_OUTPUT"
+
+      - name: Dedupe and classify
+        if: steps.feeds.outputs.count != '0'
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          mode: agent
+          allowed_tools: "Read,Edit,Write,Bash,Skill"
+          prompt: |
+            Read `/tmp/candidates.jsonl`. For each candidate:
+            1. Skip if it's already present in `INDEX/tools.md` (active or archived) or `TRIAGE.md`.
+            2. Classify the `interest_area` from the candidate's URL, description, topics, language.
+            3. Append a row to the right section of `TRIAGE.md` using the row shape defined in `.claude/skills/new-releases-triage/SKILL.md`.
+
+            Use the `new-releases-triage` skill at `.claude/skills/new-releases-triage/SKILL.md` for the full procedure.
+
+            After processing, write a one-line summary per interest area to `/tmp/triage-summary.md`.
+
+      - name: Open PR if any candidates appended
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: triage/${{ github.run_number }}
+          delete-branch: true
+          commit-message: "triage: +N new candidates"
+          title: "triage: ${{ steps.feeds.outputs.count }} candidates surveyed ($(date +%F))"
+          body-path: /tmp/triage-summary.md
+          labels: triage,automated

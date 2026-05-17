@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Env / secrets
+.env
+.env.local
+
+# Derived data (regenerable from data/raw/).
+# data/raw/ is intentionally committed — scraped Firecrawl JSON is the
+# reproducibility floor for the PoC and is small enough to track.
+data/parsed/
+data/extracted/
+data/prose/
+
+# IDE
+.idea/
+.vscode/
+.DS_Store

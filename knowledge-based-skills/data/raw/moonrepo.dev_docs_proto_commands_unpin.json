@@ -1,0 +1,9 @@
+{
+  "url": "https://moonrepo.dev/docs/proto/commands/unpin",
+  "title": null,
+  "markdown": "[Skip to main content](https://moonrepo.dev/docs/proto/commands/unpin#__docusaurus_skipToContent_fallback)\n\ninfo\n\nDocumentation is currently for [moon v2](https://moonrepo.dev/blog/moon-v2.0) and latest proto. Documentation for moon v1 has been frozen and can be [found here](https://moonrepo.github.io/website-v1/).\n\nOn this page\n\nv0.36.0\n\nThe `proto unpin <tool>` command will unpin a version of a tool.\n\n```shell\n$ proto unpin go\n$ proto unpin node --tool-native\n```\n\nBy default this will update the local [`./.prototools`](https://moonrepo.dev/docs/proto/config) file. Pass `--from` to customize\nthe location.\n\n### Arguments [​](https://moonrepo.dev/docs/proto/commands/unpin\\#arguments \"Direct link to Arguments\")\n\n- `<tool>` \\- Type of tool.\n\n### Options [​](https://moonrepo.dev/docs/proto/commands/unpin\\#options \"Direct link to Options\")\n\n- `--from` \\- [Location of `.prototools`](https://moonrepo.dev/docs/proto/config#locations) to update. Supports `global`, `local`,\nand `user`.v0.41.0\n- `--tool-native` \\- Use a tool specific location, like the `devEngines` field in the `package.json`\nfor JavaScript tools.v0.55.0\n\n- [Arguments](https://moonrepo.dev/docs/proto/commands/unpin#arguments)\n- [Options](https://moonrepo.dev/docs/proto/commands/unpin#options)",
+  "html": "",
+  "links": [],
+  "scraped_at": "2026-05-16T14:07:40.428481+00:00",
+  "source_path": ".firecrawl/moonrepo.dev-docs-proto-commands-unpin.md"
+}
