@@ -43,14 +43,34 @@ Open a PR that:
 
 ## CI
 
-Five workflows under `.github/workflows/`:
+Seven workflows under `.github/workflows/` form a closed loop: cron sweeps open PRs labelled `agent-authored`, a quality gate reviews them against the standard, an @claude responder applies fixes, and the gate auto-merges once it passes.
 
 | workflow | trigger | what it does |
 |---|---|---|
-| `link-check` | weekly Mon 06:00 UTC | HEAD-checks every URL, opens a PR moving dead ones to `_archived/` |
-| `star-sweep` | daily 07:00 UTC | Diffs current GH stars against `INDEX/tools.md`, opens a PR only on non-zero delta |
-| `frontmatter-lint` | every PR | Validates new INDEX/ rows against the standard |
-| `index-regen-and-review` | every PR | Regenerates `README.md` from `INDEX/`, then Claude reviews against the standard |
-| `new-releases-triage` | daily 05:30 UTC | Surfaces new releases in interest areas into `TRIAGE.md` |
+| `link-check` | weekly Mon 06:00 UTC | HEAD-checks every URL; opens a PR moving dead rows to `_archived/`, tagged `agent-authored` |
+| `star-sweep` | daily 07:00 UTC | Diffs current GH stars against `INDEX/tools.md`; opens a PR on non-zero delta, tagged `agent-authored` |
+| `new-releases-triage` | daily 05:30 UTC | Surfaces new releases in interest areas into `TRIAGE.md`; opens a PR tagged `agent-authored` |
+| `frontmatter-lint` | every PR | Validates INDEX/ row shapes against the standard |
+| `index-regen` | every PR touching INDEX/ | Regenerates `README.md` from `INDEX/`, commits to the PR branch |
+| `auto-review` | every PR with `agent-authored` label | Lint + Claude review against only the part of the standard the diff touches. Auto-approves and merges if clean. Posts a `@claude` request-changes review if not |
+| `claude-respond` | `@claude` mention on `agent-authored` PR | Agent applies the requested fixes on the PR branch, which re-triggers `auto-review` until it passes or a human steps in |
 
-Workflows that use `anthropics/claude-code-action` (`index-regen-and-review` and `new-releases-triage`) authenticate via a Claude Code OAuth token stored as `CLAUDE_CODE_OAUTH_TOKEN` in repo secrets — generated locally with `claude setup-token`. No Anthropic API key required if your Claude Code subscription covers usage. The other three workflows (`link-check`, `star-sweep`, `frontmatter-lint`) need only the default `GITHUB_TOKEN`.
+**The loop**:
+
+```
+cron sweep -> PR opened (agent-authored)
+              |
+              v
+       index-regen + frontmatter-lint + auto-review
+              |
+              +---- APPROVED ----> squash-merge, branch deleted
+              |
+              +---- CHANGES_REQUESTED + @claude ----> claude-respond
+                                                          |
+                                                          v
+                                                  push fixes -> re-run auto-review
+```
+
+**Auth**:
+
+The four workflows that use `anthropics/claude-code-action` (`index-regen`, `new-releases-triage`, `auto-review`, `claude-respond`) authenticate via a Claude Code OAuth token stored as `CLAUDE_CODE_OAUTH_TOKEN` in repo secrets — generated locally with `claude setup-token`. No Anthropic API key required if your Claude Code subscription covers usage. The other three workflows (`link-check`, `star-sweep`, `frontmatter-lint`) need only the default `GITHUB_TOKEN`. (`index-regen` does not actually call claude-code-action; it's pure Python — included in the OAuth list for accuracy only if you later extend it.)

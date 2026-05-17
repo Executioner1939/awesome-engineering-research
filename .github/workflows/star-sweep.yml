@@ -58,4 +58,4 @@ jobs:
           commit-message: "chore(stars): sync — +${{ steps.apply.outputs.added }} -${{ steps.apply.outputs.removed }}"
           title: "chore(stars): sync (+${{ steps.apply.outputs.added }} / -${{ steps.apply.outputs.removed }} / stale ${{ steps.apply.outputs.stale }})"
           body-path: /tmp/star-summary.md
-          labels: star-sweep,automated
+          labels: star-sweep,automated,agent-authored

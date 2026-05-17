@@ -70,4 +70,4 @@ jobs:
           commit-message: "triage: +N new candidates"
           title: "triage: ${{ steps.feeds.outputs.count }} candidates surveyed ($(date +%F))"
           body-path: /tmp/triage-summary.md
-          labels: triage,automated
+          labels: triage,automated,agent-authored

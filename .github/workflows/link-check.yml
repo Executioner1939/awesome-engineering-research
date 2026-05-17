@@ -63,4 +63,4 @@ jobs:
           commit-message: "chore(archive): sweep ${{ steps.compute.outputs.moved }} dead links"
           title: "chore(archive): link-sweep — moved ${{ steps.compute.outputs.moved }} of ${{ steps.compute.outputs.checked }} URLs"
           body-path: /tmp/sweep-summary.md
-          labels: link-sweep,automated
+          labels: link-sweep,automated,agent-authored

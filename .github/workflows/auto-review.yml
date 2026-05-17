@@ -1,0 +1,139 @@
+name: auto-review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  id-token: write
+
+concurrency:
+  group: auto-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  gate:
+    if: contains(github.event.pull_request.labels.*.name, 'agent-authored')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          fetch-depth: 0
+
+      - name: Determine scope of change
+        id: scope
+        run: |
+          files=$(gh pr diff ${{ github.event.pull_request.number }} --name-only --repo ${{ github.repository }})
+          {
+            echo "files<<EOF"
+            echo "$files"
+            echo "EOF"
+            echo "touches_index=$(echo "$files" | grep -E '^INDEX/' >/dev/null && echo yes || echo no)"
+            echo "touches_archived=$(echo "$files" | grep -E '^_archived/' >/dev/null && echo yes || echo no)"
+            echo "touches_skills=$(echo "$files" | grep -E '^\.claude/skills/' >/dev/null && echo yes || echo no)"
+            echo "touches_workflows=$(echo "$files" | grep -E '^\.github/workflows/' >/dev/null && echo yes || echo no)"
+            echo "touches_triage=$(echo "$files" | grep -E '^TRIAGE\.md$' >/dev/null && echo yes || echo no)"
+          } >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deterministic lint
+        id: lint
+        continue-on-error: true
+        run: |
+          python3 .github/scripts/lint-index.py \
+            --sources INDEX/sources.md \
+            --tools INDEX/tools.md \
+            --archived-sources _archived/sources.md \
+            --archived-tools _archived/tools.md \
+            --taxonomy .claude/skills/research-standard/TAXONOMY/domains.md \
+            --output /tmp/lint-report.md
+
+      - name: Reject on lint failure with @claude prompt
+        if: steps.lint.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          {
+            echo "Frontmatter lint reported errors. Auto-merge withheld."
+            echo ""
+            cat /tmp/lint-report.md
+            echo ""
+            echo "@claude please address the lint errors above and push fixes to this branch."
+          } > /tmp/review-body.md
+          gh pr review "$PR" --request-changes --body-file /tmp/review-body.md
+          gh pr edit "$PR" --add-label needs-claude
+          exit 1
+
+      - name: Claude reviews against the standard
+        if: steps.lint.outcome == 'success'
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          mode: review
+          allowed_tools: "Read,Grep,Glob,Bash"
+          prompt: |
+            You are the quality gate for this agent-authored PR. The PR is labelled `agent-authored`, opened by one of the cron workflows (link-check, star-sweep, new-releases-triage) or a `/add-source` / `/sweep-links` invocation.
+
+            Your job: validate the diff against ONLY the part of the standard that applies to the files actually changed. Do not score files that are not in the diff.
+
+            Changed files:
+            ${{ steps.scope.outputs.files }}
+
+            Applicable parts of the standard, by changed-file family:
+
+            - If `INDEX/sources.md` or `_archived/sources.md` is in the diff:
+              Validate against `.claude/templates/source.md` — column order, required fields (id, title, url, type, added, labels, status; for archived: also last_seen, reason), id uniqueness, labels drawn from `.claude/skills/research-standard/TAXONOMY/domains.md`.
+
+            - If `INDEX/tools.md` or `_archived/tools.md` is in the diff:
+              Validate against `.claude/templates/repo.md` — column order, required fields (id, full_name, url, stars, last_pushed, labels, status; for archived: also last_seen, reason), id uniqueness, labels from the taxonomy.
+
+            - If `TRIAGE.md` is in the diff: validate against the row shape in `.claude/skills/new-releases-triage/SKILL.md` (Added, Name, URL, Stars/desc, Action).
+
+            - If a `.claude/skills/**/SKILL.md` is in the diff: SKILL.md frontmatter must include `name` and `description`. Reject if either is empty.
+
+            - If `README.md` is in the diff: it must be a pure regeneration (only BEGIN/END marker contents differ from the previous version). Anything else is a manual edit and must move out of the agent loop.
+
+            - If `.github/workflows/**` or `.github/scripts/**` is in the diff: this PR is out of scope for the agent loop. Request changes and ask the author to open a human-reviewed PR instead.
+
+            Rules:
+            1. Files outside the families above (e.g. `topics/**`, `knowledge-based-skills/**`, `CONVENTIONS/**`, `LICENSE`, `CONTRIBUTING.md`) being modified by an agent PR is a red flag — request changes.
+            2. Same row appearing in both `INDEX/<file>.md` and `_archived/<file>.md` is a hard reject.
+            3. Tombstone rows in `_archived/` must carry a non-empty `last_seen` and `reason`.
+
+            File-line discipline: every finding cites `path:line`. Three-line summary at the top: verdict (APPROVE / REQUEST_CHANGES), reason, file count.
+
+            If everything conforms, post an APPROVING review with a one-line summary.
+            Otherwise, post a CHANGES_REQUESTED review. The review body MUST end with: `@claude please address the findings above and push fixes to this branch.`
+
+      - name: Auto-merge on approval
+        if: steps.lint.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          # Poll for the review verdict (the action posts asynchronously; give it 60s)
+          for i in 1 2 3 4 5 6; do
+            decision=$(gh pr view "$PR" --json reviewDecision -q '.reviewDecision' --repo ${{ github.repository }})
+            if [ "$decision" = "APPROVED" ] || [ "$decision" = "CHANGES_REQUESTED" ]; then
+              break
+            fi
+            sleep 10
+          done
+          echo "Review decision: $decision"
+          if [ "$decision" = "APPROVED" ]; then
+            gh pr merge "$PR" --squash --delete-branch --auto --repo ${{ github.repository }}
+            gh pr edit "$PR" --remove-label needs-claude --repo ${{ github.repository }} || true
+          elif [ "$decision" = "CHANGES_REQUESTED" ]; then
+            gh pr edit "$PR" --add-label needs-claude --repo ${{ github.repository }}
+            echo "Changes requested; claude-respond.yml will pick up the @claude mention."
+          else
+            echo "No decisive verdict yet (state=$decision). Leaving PR open for next sync."
+          fi

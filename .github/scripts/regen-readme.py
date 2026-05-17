@@ -259,7 +259,7 @@ Dead links and EOL repos are never deleted — they move to `_archived/` with a 
 
 ## Underlying model
 
-This is an awesome-list face on top of an agent-readable knowledge graph. The canonical spec lives at `.claude/skills/research-standard/SKILL.md`. The label vocabulary is at `.claude/skills/research-standard/TAXONOMY/domains.md`. Five GitHub Actions keep the corpus current (`link-check`, `star-sweep`, `frontmatter-lint`, `index-regen-and-review`, `new-releases-triage`).
+This is an awesome-list face on top of an agent-readable knowledge graph. The canonical spec lives at `.claude/skills/research-standard/SKILL.md`. The label vocabulary is at `.claude/skills/research-standard/TAXONOMY/domains.md`. Seven GitHub Actions keep the corpus current: cron sweeps (`link-check`, `star-sweep`, `new-releases-triage`) open `agent-authored` PRs; an `auto-review` quality gate validates each PR against the relevant part of the standard, auto-merges on approval, or posts a `@claude` request-changes review that triggers `claude-respond` to apply the fixes — closing the loop without human intervention.
 
 ## License
 
