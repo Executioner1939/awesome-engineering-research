@@ -1,6 +1,6 @@
 ---
 name: star-sweep
-description: Diff your current GitHub stars against INDEX/tools.md, emit a PR adding newly-starred repos and flagging unstarred ones. Also re-checks staleness (last_pushed > 3 years or archived) and moves stale repos to _archived/tools.md. Use weekly via the star-sweep GitHub Action.
+description: Diff your current GitHub stars against INDEX/tools.md, emit a PR adding newly-starred repos and flagging unstarred ones. Also re-checks staleness (last_pushed > 3 years or archived) and moves stale repos to _archived/tools.md. Use daily via the star-sweep GitHub Action.
 ---
 
 # star-sweep

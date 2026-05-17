@@ -48,7 +48,7 @@ Five workflows under `.github/workflows/`:
 | workflow | trigger | what it does |
 |---|---|---|
 | `link-check` | weekly Mon 06:00 UTC | HEAD-checks every URL, opens a PR moving dead ones to `_archived/` |
-| `star-sweep` | weekly Mon 07:00 UTC | Diffs current GH stars against `INDEX/tools.md`, opens PR |
+| `star-sweep` | daily 07:00 UTC | Diffs current GH stars against `INDEX/tools.md`, opens a PR only on non-zero delta |
 | `frontmatter-lint` | every PR | Validates new INDEX/ rows against the standard |
 | `index-regen-and-review` | every PR | Regenerates `README.md` from `INDEX/`, then Claude reviews against the standard |
 | `new-releases-triage` | daily 05:30 UTC | Surfaces new releases in interest areas into `TRIAGE.md` |
