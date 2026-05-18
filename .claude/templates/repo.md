@@ -20,7 +20,9 @@ applies_to: INDEX/tools.md, _archived/tools.md
 | `language` | string or empty | Primary language as reported by GitHub. Empty for multi-lang / docs-only repos. |
 | `stars` | integer | Snapshot at last sync. |
 | `last_pushed` | ISO-8601 date | `pushed_at` from the GitHub API. |
-| `labels` | comma-separated slugs | Drawn from `TAXONOMY/domains.md`. At least one. |
+| `category` | slug | Exactly one value from `TAXONOMY/categories.md`. Determines the README section the row renders under. |
+| `kind` | enum | `tool \| library \| framework \| unsorted`. Drives the sub-heading under the category. |
+| `labels` | comma-separated slugs | Refinement labels (language, framework specifics). Optional; can be empty. |
 | `status` | enum | `active \| archived \| superseded` |
 | `notes` | string | One-line freeform. Optional. |
 
@@ -33,7 +35,7 @@ applies_to: INDEX/tools.md, _archived/tools.md
 ## Example row
 
 ```markdown
-| tokio-rs-tokio | tokio-rs/tokio | https://github.com/tokio-rs/tokio | A runtime for writing reliable asynchronous applications with Rust. | Rust | 27500 | 2026-05-10 | fp-rust,async-runtimes,distributed-systems | active |  |
+| tokio-rs-tokio | tokio-rs/tokio | https://github.com/tokio-rs/tokio | A runtime for writing reliable asynchronous applications with Rust. | Rust | 27500 | 2026-05-10 | async-runtimes | library | rust,fp-rust | active |  |
 ```
 
 ## Archived row shape

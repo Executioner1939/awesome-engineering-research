@@ -23,35 +23,118 @@ from pathlib import Path
 from datetime import date
 
 
-DOMAINS = [
-    "developer-tooling",
-    "web-extraction",
-    "knowledge-systems",
-    "data-storage",
-    "distributed-systems",
-    "language-runtimes",
-    "observability",
-    "ai-applications",
-    "frontend",
-    "infrastructure",
-    "security",
-    "standards",
+# Fine-grained categories in render order. Source-of-truth lives at
+# .claude/skills/research-standard/TAXONOMY/categories.md; this list must stay
+# in sync with that file.
+CATEGORIES: list[tuple[str, str]] = [
+    # (parent group label, category slug)
+    ("Data plane", "relational-databases"),
+    ("Data plane", "columnar-databases"),
+    ("Data plane", "time-series-databases"),
+    ("Data plane", "vector-databases"),
+    ("Data plane", "graph-databases"),
+    ("Data plane", "document-databases"),
+    ("Data plane", "wide-column-databases"),
+    ("Data plane", "kv-stores"),
+    ("Data plane", "caches"),
+    ("Data plane", "embedded-databases"),
+    ("Data plane", "search-engines"),
+    ("Data plane", "object-stores"),
+    ("Data plane", "message-queues"),
+    ("Data plane", "stream-processing"),
+    ("Data plane", "multi-model-databases"),
+    ("Language & runtime", "async-runtimes"),
+    ("Language & runtime", "effect-systems"),
+    ("Language & runtime", "compilers"),
+    ("Language & runtime", "parsers"),
+    ("Language & runtime", "static-analyzers"),
+    ("Language & runtime", "type-checkers"),
+    ("Language & runtime", "garbage-collectors"),
+    ("Distributed systems", "consensus"),
+    ("Distributed systems", "event-sourcing"),
+    ("Distributed systems", "cqrs"),
+    ("Distributed systems", "workflow-engines"),
+    ("Distributed systems", "service-meshes"),
+    ("Distributed systems", "api-gateways"),
+    ("Distributed systems", "rpc-frameworks"),
+    ("Distributed systems", "service-discovery"),
+    ("Observability", "distributed-tracing"),
+    ("Observability", "metrics"),
+    ("Observability", "logging"),
+    ("Observability", "profiling"),
+    ("Observability", "continuous-profiling"),
+    ("Observability", "apm"),
+    ("Observability", "opentelemetry-libs"),
+    ("AI / LLM", "agent-frameworks"),
+    ("AI / LLM", "llm-app-frameworks"),
+    ("AI / LLM", "rag-retrieval"),
+    ("AI / LLM", "embeddings"),
+    ("AI / LLM", "model-serving"),
+    ("AI / LLM", "mcp-tooling"),
+    ("AI / LLM", "llm-evaluation"),
+    ("AI / LLM", "prompt-engineering"),
+    ("AI / LLM", "llm-clients-sdks"),
+    ("Infrastructure", "container-orchestration"),
+    ("Infrastructure", "iac"),
+    ("Infrastructure", "gitops"),
+    ("Infrastructure", "build-systems"),
+    ("Infrastructure", "monorepo-tooling"),
+    ("Infrastructure", "container-runtimes"),
+    ("Infrastructure", "package-registries"),
+    ("Security", "authentication"),
+    ("Security", "authorization-policy"),
+    ("Security", "secrets-management"),
+    ("Security", "supply-chain-security"),
+    ("Security", "code-signing"),
+    ("Security", "vulnerability-scanning"),
+    ("Security", "cryptography-libs"),
+    ("Security", "network-security"),
+    ("Developer experience", "cli-frameworks"),
+    ("Developer experience", "code-editors"),
+    ("Developer experience", "linters-formatters"),
+    ("Developer experience", "code-review-automation"),
+    ("Developer experience", "documentation-generators"),
+    ("Developer experience", "shells-terminals"),
+    ("Developer experience", "dotfiles"),
+    ("Functional programming", "algebraic-effects"),
+    ("Functional programming", "optics-lenses"),
+    ("Functional programming", "streaming-libs"),
+    ("Functional programming", "property-based-testing"),
+    ("Functional programming", "type-classes-prelude"),
+    ("Frontend & web", "ui-frameworks"),
+    ("Frontend & web", "component-systems"),
+    ("Frontend & web", "design-systems"),
+    ("Frontend & web", "web-performance"),
+    ("Frontend & web", "wasm"),
+    ("Frontend & web", "bundlers"),
+    ("Frontend & web", "css-tooling"),
+    ("Standards & specs", "rfcs"),
+    ("Standards & specs", "w3c-specs"),
+    ("Standards & specs", "oauth-oidc"),
+    ("Standards & specs", "web-platform-specs"),
+    ("Standards & specs", "cryptographic-standards"),
+    ("Knowledge & curation", "awesome-lists"),
+    ("Knowledge & curation", "knowledge-graphs"),
+    ("Knowledge & curation", "learning-resources"),
+    ("Knowledge & curation", "interview-prep"),
+    ("Triage", "unsorted"),
 ]
 
-DOMAIN_BLURB = {
-    "developer-tooling": "Build systems, monorepo tooling, package managers, version managers, formatters, linters.",
-    "web-extraction": "Scraping, crawling, sitemap and link-graph extraction, browser automation.",
-    "knowledge-systems": "Knowledge graphs, ontologies, RAG, retrieval, embeddings, agentic retrieval.",
-    "data-storage": "Databases (relational, vector, graph, hybrid), search indexes, message stores, caches.",
-    "distributed-systems": "Consistency, replication, consensus, idempotency, event sourcing, CRDTs.",
-    "language-runtimes": "Rust, async runtimes, JVM, Node, Bun, Deno, compilers, type systems.",
-    "observability": "Metrics, traces, structured logs, profiling, debugging.",
-    "ai-applications": "LLM application architecture, prompt engineering, agent frameworks, evals, tool-use.",
-    "frontend": "UI frameworks, component systems, accessibility, design systems, web performance.",
-    "infrastructure": "Container orchestration, IaC, CI/CD, Kubernetes, service mesh.",
-    "security": "Authn, authz, secrets, supply-chain, code-signing, cryptography.",
-    "standards": "RFCs, specs, ISO / W3C / IETF / ECMA documents, interop conventions.",
+# Acronym capitalisations for prettier humanised headings.
+_ACRONYMS = {
+    "iac": "IaC", "apm": "APM", "llm": "LLM", "rag": "RAG",
+    "sdks": "SDKs", "cqrs": "CQRS", "rpc": "RPC", "cli": "CLI",
+    "wasm": "WASM", "css": "CSS", "ui": "UI", "rfcs": "RFCs",
+    "w3c": "W3C", "oidc": "OIDC", "oauth": "OAuth", "mcp": "MCP",
+    "kv": "KV", "ci": "CI", "cd": "CD",
 }
+
+
+def humanize(category: str) -> str:
+    words = []
+    for w in category.split("-"):
+        words.append(_ACRONYMS.get(w.lower(), w.capitalize()))
+    return " ".join(words)
 
 
 def parse_table(md_text: str) -> list[dict]:
@@ -79,19 +162,6 @@ def parse_labels(s: str) -> list[str]:
     return [x.strip() for x in s.split(",") if x.strip()]
 
 
-def group_by_domain(rows: list[dict]) -> dict[str, list[dict]]:
-    out: dict[str, list[dict]] = defaultdict(list)
-    for r in rows:
-        labels = parse_labels(r.get("labels", ""))
-        domains_in_row = [l for l in labels if l in DOMAINS]
-        if not domains_in_row:
-            out["unlabeled"].append(r)
-        else:
-            for d in domains_in_row:
-                out[d].append(r)
-    return out
-
-
 def render_repo_row(r: dict) -> str:
     desc = r.get("description", "").strip()
     if len(desc) > 110:
@@ -110,61 +180,77 @@ def render_source_row(r: dict) -> str:
     published = r.get("published", "unknown")
     added = r.get("added", "")
     date_field = published if published != "unknown" else added
-    other_labels = [l for l in parse_labels(r.get("labels", "")) if l not in DOMAINS]
-    return f"| {link} | {typ} | {date_field} | {', '.join(other_labels[:4])} |"
+    labels = ", ".join(parse_labels(r.get("labels", ""))[:4])
+    return f"| {link} | {typ} | {date_field} | {labels} |"
 
 
-def render_category(domain: str, sources: list[dict], tools: list[dict]) -> str:
-    sources_in = [r for r in sources if domain in parse_labels(r.get("labels", ""))]
-    tools_in = [r for r in tools if domain in parse_labels(r.get("labels", ""))]
+def render_repos_section(label: str, repos: list[dict]) -> list[str]:
+    parts = [f"#### {label} ({len(repos)})\n",
+             "| Repo | Language | Stars | Last pushed | Description |",
+             "| :--- | :--- | ---: | :--- | :--- |"]
+    parts.extend(render_repo_row(r) for r in sorted(repos, key=lambda x: int(x.get("stars", 0) or 0), reverse=True))
+    parts.append("")
+    return parts
+
+
+def render_sources_section(label: str, sources: list[dict]) -> list[str]:
+    parts = [f"#### {label} ({len(sources)})\n",
+             "| Title | Type | Date | Labels |",
+             "| :--- | :--- | :--- | :--- |"]
+    parts.extend(render_source_row(r) for r in sorted(sources, key=lambda x: x.get("added", ""), reverse=True))
+    parts.append("")
+    return parts
+
+
+def render_category(category: str, sources: list[dict], tools: list[dict]) -> str:
+    sources_in = [r for r in sources if r.get("category") == category]
+    tools_in = [r for r in tools if r.get("category") == category]
     if not sources_in and not tools_in:
         return ""
 
-    parts = ["---", "", f"### {domain}\n", DOMAIN_BLURB.get(domain, ""), ""]
+    parts = ["---", "", f"## {humanize(category)}", ""]
 
-    if tools_in:
-        tools_sorted = sorted(tools_in, key=lambda r: int(r.get("stars", 0) or 0), reverse=True)
-        parts.append(f"#### Repos ({len(tools_sorted)})\n")
-        parts.append("| Repo | Language | Stars | Last pushed | Description |")
-        parts.append("| :--- | :--- | ---: | :--- | :--- |")
-        parts.extend(render_repo_row(r) for r in tools_sorted)
-        parts.append("")
+    # Sub-headings for repos, by kind
+    by_kind: dict[str, list[dict]] = defaultdict(list)
+    for r in tools_in:
+        by_kind[r.get("kind", "unsorted")].append(r)
+    for kind_label, kind_key in (("Tools", "tool"), ("Libraries", "library"),
+                                 ("Frameworks", "framework"), ("Unsorted", "unsorted")):
+        if by_kind.get(kind_key):
+            parts.extend(render_repos_section(kind_label, by_kind[kind_key]))
 
-    if sources_in:
-        articles = [r for r in sources_in if r.get("type") == "article"]
-        videos = [r for r in sources_in if r.get("type") == "video"]
-        other = [r for r in sources_in if r.get("type") not in ("article", "video")]
-
-        for label, group in (("Articles", articles), ("Videos", videos), ("Other reading", other)):
-            if not group:
-                continue
-            group_sorted = sorted(group, key=lambda r: r.get("added", ""), reverse=True)
-            parts.append(f"#### {label} ({len(group_sorted)})\n")
-            parts.append("| Title | Type | Date | Labels |")
-            parts.append("| :--- | :--- | :--- | :--- |")
-            parts.extend(render_source_row(r) for r in group_sorted)
-            parts.append("")
+    # Sub-headings for sources, by type
+    by_type: dict[str, list[dict]] = defaultdict(list)
+    for r in sources_in:
+        by_type[r.get("type", "article")].append(r)
+    if by_type.get("article"):
+        parts.extend(render_sources_section("Articles", by_type["article"]))
+    if by_type.get("video"):
+        parts.extend(render_sources_section("Videos", by_type["video"]))
+    other_source_types = [t for t in by_type if t not in ("article", "video")]
+    if other_source_types:
+        merged: list[dict] = []
+        for t in other_source_types:
+            merged.extend(by_type[t])
+        parts.extend(render_sources_section("Other reading", merged))
 
     return "\n".join(parts)
 
 
-def render_unlabeled(rows: list[dict]) -> str:
-    if not rows:
-        return ""
-    return (
-        f"\n### Unlabeled\n\n"
-        f"{len(rows)} rows do not yet carry a domain label and need triage. "
-        f"See `INDEX/sources.md` and `INDEX/tools.md` for the full list — "
-        f"any row whose `labels` does not include one of the 12 domain labels "
-        f"lands here.\n"
-    )
+def render_unlabeled(_rows: list[dict]) -> str:
+    return ""
 
 
-def render_toc(domains_with_content: list[str]) -> str:
+def render_toc(categories_with_content: list[str]) -> str:
     lines = []
-    for d in domains_with_content:
-        anchor = d.replace("-", "-")
-        lines.append(f"- [{d}](#{anchor})")
+    last_group = None
+    group_by_cat = {c: g for g, c in CATEGORIES}
+    for c in categories_with_content:
+        g = group_by_cat.get(c, "Triage")
+        if g != last_group:
+            lines.append(f"\n**{g}**\n")
+            last_group = g
+        lines.append(f"- [{humanize(c)}](#{c})")
     return "\n".join(lines)
 
 
@@ -277,18 +363,12 @@ def main() -> int:
 
     # Build category blocks
     cat_blocks: list[str] = []
-    domains_with_content: list[str] = []
-    for d in DOMAINS:
-        block = render_category(d, sources, tools)
+    categories_with_content: list[str] = []
+    for _group, c in CATEGORIES:
+        block = render_category(c, sources, tools)
         if block:
-            cat_blocks.append(f'<a id="{d}"></a>\n\n{block}')
-            domains_with_content.append(d)
-
-    # Unlabeled overflow
-    sources_unlabeled = [r for r in sources if not any(l in DOMAINS for l in parse_labels(r.get("labels", "")))]
-    tools_unlabeled = [r for r in tools if not any(l in DOMAINS for l in parse_labels(r.get("labels", "")))]
-    if sources_unlabeled or tools_unlabeled:
-        cat_blocks.append(render_unlabeled(sources_unlabeled + tools_unlabeled))
+            cat_blocks.append(f'<a id="{c}"></a>\n\n{block}')
+            categories_with_content.append(c)
 
     # Compose
     output_path = Path(args.output)
@@ -302,18 +382,20 @@ def main() -> int:
         "![lint](https://github.com/Executioner1939/awesome-engineering-research/actions/workflows/frontmatter-lint.yml/badge.svg)"
     ))
     base = replace_block(base, "stats", render_stats(len(sources), len(arch_sources), len(tools), len(arch_tools)))
-    base = replace_block(base, "toc", render_toc(domains_with_content))
+    base = replace_block(base, "toc", render_toc(categories_with_content))
     base = replace_block(base, "categories", "\n\n".join(cat_blocks))
     base = replace_block(base, "triage", render_triage_preview(Path(args.triage)) if args.triage else "_no triage_")
     base = replace_block(base, "archived", render_archived_summary(len(arch_sources), len(arch_tools)))
 
     output_path.write_text(base)
     print(f"wrote {output_path} ({output_path.stat().st_size} bytes)")
-    print(f"  domains rendered: {len(domains_with_content)}")
+    print(f"  categories rendered: {len(categories_with_content)}")
     print(f"  sources: {len(sources)} active, {len(arch_sources)} archived")
     print(f"  tools:   {len(tools)} active, {len(arch_tools)} archived")
-    if sources_unlabeled or tools_unlabeled:
-        print(f"  unlabeled overflow: {len(sources_unlabeled)} sources, {len(tools_unlabeled)} tools")
+    unsorted_sources = sum(1 for r in sources if r.get("category") == "unsorted")
+    unsorted_tools = sum(1 for r in tools if r.get("category") == "unsorted")
+    if unsorted_sources or unsorted_tools:
+        print(f"  unsorted: {unsorted_sources} sources, {unsorted_tools} tools")
     return 0
 
 

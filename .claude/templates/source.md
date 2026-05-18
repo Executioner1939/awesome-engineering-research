@@ -17,9 +17,10 @@ applies_to: INDEX/sources.md, _archived/sources.md
 | `title` | string | Human-readable title. |
 | `url` | URL | Canonical URL. If the URL has moved, prefer the canonical / archived form. |
 | `type` | enum | `article \| video \| talk \| book \| paper \| rfc \| podcast \| course \| docs` |
+| `category` | slug | Exactly one value from `TAXONOMY/categories.md`. Determines the README section the row renders under. |
 | `published` | ISO-8601 date or `unknown` | Publication date if known, derived from URL or page metadata. `unknown` allowed. |
 | `added` | ISO-8601 date | Date this row was added to the index. |
-| `labels` | comma-separated slugs | Drawn from `TAXONOMY/domains.md`. At least one. |
+| `labels` | comma-separated slugs | Refinement labels (language, framework specifics). Optional; can be empty. |
 | `status` | enum | `active \| archived \| superseded` |
 | `notes` | string | One-line freeform. Optional. |
 
@@ -32,7 +33,7 @@ applies_to: INDEX/sources.md, _archived/sources.md
 ## Example row
 
 ```markdown
-| src_rethinking-monad-error | Rethinking MonadError | https://typelevel.org/blog/2018/04/13/rethinking-monaderror.html | article | 2018-04-13 | 2018-04 | fp-scala,typelevel,error-handling | active | typelevel blog |
+| src_rethinking-monad-error | Rethinking MonadError | https://typelevel.org/blog/2018/04/13/rethinking-monaderror.html | article | effect-systems | 2018-04-13 | 2018-04 | fp-scala,typelevel,error-handling | active | typelevel blog |
 ```
 
 ## Archived row shape
