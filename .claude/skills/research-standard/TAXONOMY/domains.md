@@ -36,7 +36,7 @@ A topic or row's coarse subject area. Twelve total.
 Sub-area or technology specificity. May appear alongside any domain label. Grouped by family for readability — the labels themselves are flat in row data.
 
 ### Language / runtime
-`rust`, `scala`, `go`, `python`, `typescript`, `javascript`, `java`, `kotlin`, `c`, `cpp`, `elixir`, `ocaml`, `shell`
+`rust`, `scala`, `go`, `python`, `typescript`, `javascript`, `java`, `kotlin`, `c`, `cpp`, `elixir`, `ocaml`, `shell`, `php`, `powershell`
 
 ### Functional-programming heritage
 `fp-scala`, `fp-rust`, `typelevel`, `cats-effect`, `zio`, `scalaz`, `algebraic-effects`, `tagless-final`
@@ -57,16 +57,28 @@ Sub-area or technology specificity. May appear alongside any domain label. Group
 `tracing`, `metrics`, `profiling`, `logging`, `opentelemetry`
 
 ### AI / LLM
-`llm`, `agents`, `rag`, `embeddings`, `mcp`, `tool-use`, `eval`
+`llm`, `agents`, `rag`, `embeddings`, `mcp`, `tool-use`, `eval`, `agent-skills`, `coding-agents`, `prompt-engineering`, `generative-ui`, `spec-driven-development`, `multi-agent`, `knowledge-graph`
 
 ### Compilers / parsing / lang implementation
 `compilers`, `parsers`, `static-analysis`, `serialization`, `kernel-systems`
 
 ### Web / frontend specifics
-`web-perf`, `dom`, `wasm`
+`web-perf`, `dom`, `wasm`, `react`, `react-native`, `svelte`, `data-viz`, `graphics-3d`, `animation`, `cms`
 
 ### Other
-`cli-tooling`, `error-handling`, `interviewing`, `algorithms`
+`cli-tooling`, `error-handling`, `interviewing`, `algorithms`, `math`, `networking`, `http`, `websockets`, `payments`, `notifications`, `media-processing`, `streaming-media`, `diagramming`, `code-review`, `data-cleaning`, `entity-resolution`, `graph-processing`
+
+### Security operations
+`osint`, `pentesting`, `red-team`, `threat-intelligence`, `wordlists`, `dark-web`, `privacy`, `fingerprinting`, `anonymization`, `cryptography`
+
+### Geospatial / sensing
+`geospatial`, `openstreetmap`, `routing`, `photogrammetry`, `remote-sensing`, `drones`, `uav`, `radio-sdr`, `embedded`, `iot`, `mesh-networking`
+
+### Machine learning
+`machine-learning`, `computer-vision`, `object-detection`, `nlp`, `information-extraction`, `ocr`, `quantization`, `model-inference`
+
+### Web extraction detail
+`web-scraping`, `crawling`, `browser-automation`, `anti-bot`, `document-extraction`
 
 ## Curation gaps
 

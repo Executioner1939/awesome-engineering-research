@@ -43,6 +43,8 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `message-queues` | Kafka, RabbitMQ, NATS, Redpanda, Pulsar |
 | `stream-processing` | Flink, Materialize, RisingWave, Bytewax |
 | `multi-model-databases` | SurrealDB, FaunaDB, ArangoDB |
+| `graph-processing` | Distributed graph compute engines: GraphScope, Apache GeaFlow, Giraph, GraphX, Pregel-style systems |
+| `realtime-messaging` | Client-facing push and delivery: Centrifugo, Novu, Soketi, WebSocket/SSE fan-out and notification servers |
 
 ## Language & runtime
 
@@ -94,6 +96,9 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `llm-evaluation` | Inspect, DeepEval, promptfoo, ragas |
 | `prompt-engineering` | Prompt libraries, prompt-as-code |
 | `llm-clients-sdks` | Provider SDKs, unified clients |
+| `coding-agents` | Coding agent harnesses and CLIs: Claude Code-style TUIs, Aider, Claudable, grok-build, account/session tooling |
+| `agent-skills` | Skill, command and plugin packs for agent harnesses: anthropics/skills, wshobson/agents, harness skill graphs |
+| `llm-interfaces` | Chat and generative-UI front ends: Open WebUI, assistant-ui, LibreChat, tool-call rendering components |
 
 ## Infrastructure
 
@@ -106,6 +111,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `monorepo-tooling` | Moon, Nx, Turborepo, Lerna, Yarn workspaces |
 | `container-runtimes` | containerd, runc, gVisor, Firecracker |
 | `package-registries` | Verdaccio, Sonatype Nexus, Harbor |
+| `ci-cd` | Pipeline runners and CI tooling: act, Dagger, Woodpecker, Earthly CI, build caches for CI |
 
 ## Security
 
@@ -119,6 +125,9 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `vulnerability-scanning` | Trivy, Grype, Snyk OSS, Aikido |
 | `cryptography-libs` | ring, age, rage, libsodium bindings, RustCrypto |
 | `network-security` | WireGuard, mTLS tooling, Tailscale, Headscale |
+| `osint-reconnaissance` | Open-source intelligence and recon: SpiderFoot, maigret, subfinder, gau, dark-web and threat-intel collections |
+| `offensive-security` | Pentest and red-team toolkits and payload corpora: SecLists, wordlists, Flipper Zero payloads, AI pentesting agents |
+| `privacy-tooling` | PII redaction, anonymisation, browser-fingerprinting research, telemetry removal: Presidio, FingerprintJS, CreepJS |
 
 ## Developer experience
 
@@ -131,6 +140,8 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `documentation-generators` | mdBook, Docusaurus, MkDocs Material, Astro Starlight |
 | `shells-terminals` | Nushell, Fish, Wezterm, Alacritty, Ghostty |
 | `dotfiles` | Dotfile managers, chezmoi, stow |
+| `diagramming` | D2, Mermaid, Graphviz, Excalidraw, node-based diagram and flow UI libraries |
+| `spec-driven-development` | Spec-first workflows for coding agents: GitHub spec-kit, OpenSpec, Spec Kitty, PRD-to-task pipelines |
 
 ## Functional programming
 
@@ -153,6 +164,9 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `wasm` | WASM toolchains, wasmtime, wasmer, JCO |
 | `bundlers` | esbuild, Vite, Rollup, Turbopack, Rspack |
 | `css-tooling` | Tailwind, PostCSS, UnoCSS, vanilla-extract |
+| `data-visualization` | Vega, D3, visx, deck.gl, Observable Plot, charting grammars |
+| `graphics-3d` | three.js helpers, react-three-fiber/drei, glam, 3D asset collections and graphics math |
+| `animation-libraries` | GSAP, Motion, anime.js, Lottie, scroll and timeline animation |
 
 ## Standards & specs
 
@@ -172,6 +186,58 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `knowledge-graphs` | KG implementations, ontology tooling |
 | `learning-resources` | "build your own", system design primers, paper collections |
 | `interview-prep` | Interview question collections, behavioural prep |
+| `investigative-data` | Open investigative datasets and platforms: OpenSanctions, OpenAleph, FollowTheMoney, EveryPolitician |
+
+## Machine learning
+
+| category | scope |
+|---|---|
+| `computer-vision` | Ultralytics YOLO, anomalib, object detection and segmentation stacks, 3D world models |
+| `information-extraction` | GLiNER, spaCy pipelines, NER and schema-based structured extraction from text |
+| `model-optimization` | Quantization, pruning, abliteration, low-memory inference: AirLLM, llm-compressor, heretic |
+
+## Web extraction
+
+| category | scope |
+|---|---|
+| `web-crawlers` | Crawlee, Scrapy, spider-rs, Firecrawl, crawl orchestration and fetch pipelines |
+| `browser-automation` | Playwright/Puppeteer drivers, headless and anti-detect browsers, FlareSolverr, browser-use |
+| `content-extraction` | trafilatura, newspaper3k, extruct, readability ports, boilerplate and metadata extraction |
+| `document-extraction` | olmOCR, Chunkr, Docling, PDF/Office-to-text conversion for LLM and RAG pipelines |
+
+## Geospatial
+
+| category | scope |
+|---|---|
+| `routing-engines` | OSRM, Valhalla, GraphHopper, OpenTripPlanner |
+| `geospatial-processing` | Apache Sedona, H3, GDAL, remote-sensing and spatial-analysis pipelines |
+| `photogrammetry` | OpenDroneMap, WebODM, OpenSfM, COLMAP, Gaussian-splatting reconstruction pipelines |
+| `mapping-libraries` | MapLibre, Leaflet, CesiumJS, OpenStreetMap tooling and resource collections |
+
+## Embedded & radio
+
+| category | scope |
+|---|---|
+| `embedded-firmware` | Meshtastic, openLRSng, ArduPilot, PX4, ESP32/STM32 device firmware |
+| `radio-sdr` | SDR and RF tooling: ADS-B and AIS receivers, LoRa, SAR, WiFi sensing, SIM/cellular tooling |
+| `uav-drones` | Drone flight stacks, FPV hardware, swarm coordination, UAV resource collections |
+
+## Networking
+
+| category | scope |
+|---|---|
+| `http-clients` | curl, reqwest, hyper, httpx, undici |
+| `network-monitoring` | Sniffnet, ntopng, Wireshark tooling, packet capture and flow analysis |
+
+## Applications & platforms
+
+| category | scope |
+|---|---|
+| `content-management` | Directus, Strapi, Pimcore, Payload, headless CMS and PIM platforms |
+| `payments` | Hyperswitch, Kill Bill, Lago, payment orchestration, billing and ledger platforms |
+| `media-processing` | FFmpeg pipelines, image/video transcoding, streaming servers, transcription, image rendering services |
+| `data-wrangling` | OpenRefine, data cleaning, reconciliation and messy-data transformation |
+| `entity-resolution` | Nomenklatura, Splink, Zingg, record linkage and deduplication |
 
 ## Triage
 
