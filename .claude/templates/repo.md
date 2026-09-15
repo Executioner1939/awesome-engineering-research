@@ -16,12 +16,12 @@ applies_to: INDEX/tools.md, _archived/tools.md
 | `id` | slug | `<owner>-<repo>` lowercased. Stable; never reused. |
 | `full_name` | string | `owner/repo` exact case. |
 | `url` | URL | `https://github.com/owner/repo` |
-| `description` | string | First sentence from the repo description. Truncated to ~120 chars. |
+| `description` | string | One sentence, 60–200 chars, saying what the repo is and what it is for. Seeded from the GitHub description by `star-sweep`, rewritten by the curation step. |
 | `language` | string or empty | Primary language as reported by GitHub. Empty for multi-lang / docs-only repos. |
 | `stars` | integer | Snapshot at last sync. |
 | `last_pushed` | ISO-8601 date | `pushed_at` from the GitHub API. |
 | `category` | slug | Exactly one value from `TAXONOMY/categories.md`. Determines the README section the row renders under. |
-| `kind` | enum | `tool \| library \| framework \| unsorted`. Drives the sub-heading under the category. |
+| `kind` | enum | `tool \| library \| framework \| content \| unsorted`. Drives the sub-heading under the category. `content` = reading material (lists, courses, specs). |
 | `labels` | comma-separated slugs | Refinement labels (language, framework specifics). Optional; can be empty. |
 | `status` | enum | `active \| archived \| superseded` |
 | `notes` | string | One-line freeform. Optional. |

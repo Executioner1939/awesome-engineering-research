@@ -18,6 +18,9 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).parent))
+from taxonomy import KINDS, category_slugs  # noqa: E402
+
 
 REQUIRED_SOURCES = ("id", "title", "url", "type", "added", "labels", "status")
 RECOMMENDED_SOURCES = ("published",)
@@ -52,10 +55,11 @@ def parse_table(text: str) -> list[dict]:
 def collect_taxonomy(path: Path) -> set[str]:
     text = path.read_text()
     # Pull anything in backticks within the file — every label is wrapped in backticks.
-    return set(re.findall(r"`([a-z][a-z0-9-]+)`", text))
+    return set(re.findall(r"`([a-z][a-z0-9-]*)`", text))
 
 
-def lint_kind(rows: list[dict], required: tuple, allowed_labels: set[str], archived: bool) -> list[str]:
+def lint_kind(rows: list[dict], required: tuple, allowed_labels: set[str], archived: bool,
+              allowed_categories: set[str] | None = None, check_kind: bool = False) -> list[str]:
     errors: list[str] = []
     ids_seen: dict[str, int] = {}
     for i, r in enumerate(rows, start=1):
@@ -75,6 +79,13 @@ def lint_kind(rows: list[dict], required: tuple, allowed_labels: set[str], archi
                 errors.append(f"row {i} ({r.get('id','?')}): label `{l}` not in taxonomy")
         if r.get("type") and r["type"] not in ALLOWED_TYPES:
             errors.append(f"row {i} ({r.get('id','?')}): type `{r['type']}` not in {sorted(ALLOWED_TYPES)}")
+        # Active tools rows must carry a valid category + kind. Archived rows are
+        # terminal tombstones; only validate what they do carry.
+        if allowed_categories is not None and "category" in r and (r["category"] or not archived):
+            if r["category"] not in allowed_categories:
+                errors.append(f"row {i} ({r.get('id','?')}): category `{r['category']}` not in categories.md")
+        if check_kind and "kind" in r and (r["kind"] or not archived) and r["kind"] not in KINDS:
+            errors.append(f"row {i} ({r.get('id','?')}): kind `{r['kind']}` not in {list(KINDS)}")
         if archived:
             for col in ARCHIVED_EXTRA:
                 if not r.get(col):
@@ -95,21 +106,24 @@ def main() -> int:
     p.add_argument("--archived-sources", required=True)
     p.add_argument("--archived-tools", required=True)
     p.add_argument("--taxonomy", required=True)
+    p.add_argument("--categories", help="categories.md; when given, `category` and `kind` are validated")
     p.add_argument("--output", required=True)
     args = p.parse_args()
 
     allowed = collect_taxonomy(Path(args.taxonomy))
+    allowed_categories = set(category_slugs(Path(args.categories))) if args.categories else None
 
     errors: list[str] = []
     pairs = (
-        (args.sources, REQUIRED_SOURCES, False, "INDEX/sources.md"),
-        (args.tools, REQUIRED_TOOLS, False, "INDEX/tools.md"),
-        (args.archived_sources, REQUIRED_SOURCES, True, "_archived/sources.md"),
-        (args.archived_tools, REQUIRED_TOOLS, True, "_archived/tools.md"),
+        (args.sources, REQUIRED_SOURCES, False, "INDEX/sources.md", False),
+        (args.tools, REQUIRED_TOOLS, False, "INDEX/tools.md", True),
+        (args.archived_sources, REQUIRED_SOURCES, True, "_archived/sources.md", False),
+        (args.archived_tools, REQUIRED_TOOLS, True, "_archived/tools.md", True),
     )
-    for path, required, archived, label in pairs:
+    for path, required, archived, label, is_tools in pairs:
         rows = parse_table(Path(path).read_text())
-        scoped = lint_kind(rows, required, allowed, archived)
+        scoped = lint_kind(rows, required, allowed, archived,
+                           allowed_categories if is_tools else None, check_kind=is_tools)
         for e in scoped:
             errors.append(f"{label}: {e}")
 

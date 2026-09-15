@@ -23,102 +23,24 @@ from pathlib import Path
 from datetime import date
 
 
-# Fine-grained categories in render order. Source-of-truth lives at
-# .claude/skills/research-standard/TAXONOMY/categories.md; this list must stay
-# in sync with that file.
-CATEGORIES: list[tuple[str, str]] = [
-    # (parent group label, category slug)
-    ("Data plane", "relational-databases"),
-    ("Data plane", "columnar-databases"),
-    ("Data plane", "time-series-databases"),
-    ("Data plane", "vector-databases"),
-    ("Data plane", "graph-databases"),
-    ("Data plane", "document-databases"),
-    ("Data plane", "wide-column-databases"),
-    ("Data plane", "kv-stores"),
-    ("Data plane", "caches"),
-    ("Data plane", "embedded-databases"),
-    ("Data plane", "search-engines"),
-    ("Data plane", "object-stores"),
-    ("Data plane", "message-queues"),
-    ("Data plane", "stream-processing"),
-    ("Data plane", "multi-model-databases"),
-    ("Language & runtime", "async-runtimes"),
-    ("Language & runtime", "effect-systems"),
-    ("Language & runtime", "compilers"),
-    ("Language & runtime", "parsers"),
-    ("Language & runtime", "static-analyzers"),
-    ("Language & runtime", "type-checkers"),
-    ("Language & runtime", "garbage-collectors"),
-    ("Distributed systems", "consensus"),
-    ("Distributed systems", "event-sourcing"),
-    ("Distributed systems", "cqrs"),
-    ("Distributed systems", "workflow-engines"),
-    ("Distributed systems", "service-meshes"),
-    ("Distributed systems", "api-gateways"),
-    ("Distributed systems", "rpc-frameworks"),
-    ("Distributed systems", "service-discovery"),
-    ("Observability", "distributed-tracing"),
-    ("Observability", "metrics"),
-    ("Observability", "logging"),
-    ("Observability", "profiling"),
-    ("Observability", "continuous-profiling"),
-    ("Observability", "apm"),
-    ("Observability", "opentelemetry-libs"),
-    ("AI / LLM", "agent-frameworks"),
-    ("AI / LLM", "llm-app-frameworks"),
-    ("AI / LLM", "rag-retrieval"),
-    ("AI / LLM", "embeddings"),
-    ("AI / LLM", "model-serving"),
-    ("AI / LLM", "mcp-tooling"),
-    ("AI / LLM", "llm-evaluation"),
-    ("AI / LLM", "prompt-engineering"),
-    ("AI / LLM", "llm-clients-sdks"),
-    ("Infrastructure", "container-orchestration"),
-    ("Infrastructure", "iac"),
-    ("Infrastructure", "gitops"),
-    ("Infrastructure", "build-systems"),
-    ("Infrastructure", "monorepo-tooling"),
-    ("Infrastructure", "container-runtimes"),
-    ("Infrastructure", "package-registries"),
-    ("Security", "authentication"),
-    ("Security", "authorization-policy"),
-    ("Security", "secrets-management"),
-    ("Security", "supply-chain-security"),
-    ("Security", "code-signing"),
-    ("Security", "vulnerability-scanning"),
-    ("Security", "cryptography-libs"),
-    ("Security", "network-security"),
-    ("Developer experience", "cli-frameworks"),
-    ("Developer experience", "code-editors"),
-    ("Developer experience", "linters-formatters"),
-    ("Developer experience", "code-review-automation"),
-    ("Developer experience", "documentation-generators"),
-    ("Developer experience", "shells-terminals"),
-    ("Developer experience", "dotfiles"),
-    ("Functional programming", "algebraic-effects"),
-    ("Functional programming", "optics-lenses"),
-    ("Functional programming", "streaming-libs"),
-    ("Functional programming", "property-based-testing"),
-    ("Functional programming", "type-classes-prelude"),
-    ("Frontend & web", "ui-frameworks"),
-    ("Frontend & web", "component-systems"),
-    ("Frontend & web", "design-systems"),
-    ("Frontend & web", "web-performance"),
-    ("Frontend & web", "wasm"),
-    ("Frontend & web", "bundlers"),
-    ("Frontend & web", "css-tooling"),
-    ("Standards & specs", "rfcs"),
-    ("Standards & specs", "w3c-specs"),
-    ("Standards & specs", "oauth-oidc"),
-    ("Standards & specs", "web-platform-specs"),
-    ("Standards & specs", "cryptographic-standards"),
-    ("Knowledge & curation", "awesome-lists"),
-    ("Knowledge & curation", "knowledge-graphs"),
-    ("Knowledge & curation", "learning-resources"),
-    ("Knowledge & curation", "interview-prep"),
-    ("Triage", "unsorted"),
-]
+import sys
+sys.path.insert(0, str(Path(__file__).parent))
+from taxonomy import read_categories  # noqa: E402
+
+# Fine-grained categories in render order, read from the taxonomy file so a
+# category added by the curation step renders without touching this script.
+DEFAULT_CATEGORIES_MD = Path(".claude/skills/research-standard/TAXONOMY/categories.md")
+CATEGORIES: list[tuple[str, str]] = []
+
+
+def load_categories(path: Path) -> list[tuple[str, str]]:
+    cats = [(g, c) for g, c, _ in read_categories(path)]
+    if not cats:
+        raise SystemExit(f"no categories parsed from {path}")
+    if "unsorted" not in {c for _, c in cats}:
+        cats.append(("Triage", "unsorted"))
+    return cats
+
 
 # Acronym capitalisations for prettier humanised headings.
 _ACRONYMS = {
@@ -164,8 +86,8 @@ def parse_labels(s: str) -> list[str]:
 
 def render_repo_row(r: dict) -> str:
     desc = r.get("description", "").strip()
-    if len(desc) > 110:
-        desc = desc[:107] + "..."
+    if len(desc) > 220:
+        desc = desc[:217] + "..."
     link = f"[{r['full_name']}]({r['url']})"
     lang = r.get("language", "") or "—"
     stars = r.get("stars", "0")
@@ -215,7 +137,8 @@ def render_category(category: str, sources: list[dict], tools: list[dict]) -> st
     for r in tools_in:
         by_kind[r.get("kind", "unsorted")].append(r)
     for kind_label, kind_key in (("Tools", "tool"), ("Libraries", "library"),
-                                 ("Frameworks", "framework"), ("Unsorted", "unsorted")):
+                                 ("Frameworks", "framework"), ("Reading & references", "content"),
+                                 ("Unsorted", "unsorted")):
         if by_kind.get(kind_key):
             parts.extend(render_repos_section(kind_label, by_kind[kind_key]))
 
@@ -350,11 +273,15 @@ def main() -> int:
     p.add_argument("--tools", required=True)
     p.add_argument("--template")  # currently unused; reserved
     p.add_argument("--taxonomy")  # currently unused; reserved
+    p.add_argument("--categories", default=str(DEFAULT_CATEGORIES_MD))
     p.add_argument("--triage")
     p.add_argument("--archived-sources", default="_archived/sources.md")
     p.add_argument("--archived-tools", default="_archived/tools.md")
     p.add_argument("--output", required=True)
     args = p.parse_args()
+
+    global CATEGORIES
+    CATEGORIES = load_categories(Path(args.categories))
 
     sources = parse_table(Path(args.sources).read_text())
     tools = parse_table(Path(args.tools).read_text())

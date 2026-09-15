@@ -13,6 +13,8 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  id-token: write
+  actions: write
 
 concurrency:
   group: triage
@@ -48,26 +50,57 @@ jobs:
       - name: Dedupe and classify
         if: steps.feeds.outputs.count != '0'
         uses: anthropics/claude-code-action@v1
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          mode: agent
-          allowed_tools: "Read,Edit,Write,Bash,Skill"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          claude_args: >-
+            --model claude-opus-5
+            --max-turns 80
+            --allowedTools Read,Edit,Write,Bash,Grep,Glob,Skill
           prompt: |
-            Read `/tmp/candidates.jsonl`. For each candidate:
-            1. Skip if it's already present in `INDEX/tools.md` (active or archived) or `TRIAGE.md`.
-            2. Classify the `interest_area` from the candidate's URL, description, topics, language.
-            3. Append a row to the right section of `TRIAGE.md` using the row shape defined in `.claude/skills/new-releases-triage/SKILL.md`.
+            You maintain `TRIAGE.md`, the review queue of newly released tools for the owner of `awesome-engineering-research`. A feed fetcher has written today's candidates to `/tmp/candidates.jsonl` (one JSON object per line). Turn them into queue rows the owner can skim in a minute. This runs unattended: decide everything yourself and finish the whole file.
 
-            Use the `new-releases-triage` skill at `.claude/skills/new-releases-triage/SKILL.md` for the full procedure.
+            <procedure>
+            1. Read `.claude/skills/new-releases-triage/SKILL.md` for the row shape and the interest areas, then read `TRIAGE.md` as it stands.
+            2. For each candidate, skip it if its URL or repo already appears in `INDEX/tools.md`, `_archived/tools.md` or `TRIAGE.md`.
+            3. Classify the remaining candidates into one interest area from the skill, using URL, description, topics and language. Drop candidates that match none of the owner's interest areas.
+            4. Append one row per surviving candidate to the matching section of `TRIAGE.md`, oldest first, exactly in the row shape from the skill. Create a section only if the skill lists that interest area.
+            5. Write `/tmp/triage-summary.md`: one line per interest area with the count added, then a line with the number skipped as duplicates and the number dropped as off-interest.
+            </procedure>
 
-            After processing, write a one-line summary per interest area to `/tmp/triage-summary.md`.
+            <constraints>
+            - Edit only `TRIAGE.md` and `/tmp/triage-summary.md`. Never add rows to `INDEX/`.
+            - Keep existing rows untouched; you only append.
+            - Do not create branches, commits or pull requests; the workflow does that.
+            </constraints>
+
+      - name: Today
+        id: today
+        run: echo "date=$(date +%F)" >> "$GITHUB_OUTPUT"
+
+      - name: Ensure summary exists
+        run: test -f /tmp/triage-summary.md || echo "No candidates appended." > /tmp/triage-summary.md
 
       - name: Open PR if any candidates appended
+        id: pr
         uses: peter-evans/create-pull-request@v7
         with:
           branch: triage/${{ github.run_number }}
           delete-branch: true
-          commit-message: "triage: +N new candidates"
-          title: "triage: ${{ steps.feeds.outputs.count }} candidates surveyed ($(date +%F))"
+          add-paths: |
+            TRIAGE.md
+            _archived/triage-pruned-*.md
+          commit-message: "triage: candidates surveyed ${{ steps.today.outputs.date }}"
+          title: "triage: ${{ steps.feeds.outputs.count }} candidates surveyed (${{ steps.today.outputs.date }})"
           body-path: /tmp/triage-summary.md
           labels: triage,automated,agent-authored
+
+      # PRs created with GITHUB_TOKEN do not trigger pull_request workflows,
+      # so hand the PR to the review gate explicitly.
+      - name: Dispatch auto-review
+        if: steps.pr.outputs.pull-request-number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run auto-review.yml --repo "$GITHUB_REPOSITORY" --ref master -f pr="${{ steps.pr.outputs.pull-request-number }}"

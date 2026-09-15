@@ -1,5 +1,16 @@
 name: star-sweep
 
+# Keeps INDEX/tools.md in sync with the owner's GitHub stars.
+#
+#   fetch stars ─► deterministic diff ─► Claude curates new/unsorted rows
+#     ─► lint gate ─► regenerate README ─► commit straight to master
+#
+# Commits go directly to master on purpose: PRs opened with GITHUB_TOKEN never
+# trigger the pull_request workflows, so the previous PR-based loop stalled
+# (see closed star-sweep/* PRs). The lint gate is the merge check. If lint
+# fails after curation, the curation is reverted and the deterministic sync
+# still lands, so the list never falls behind the stars.
+
 on:
   schedule:
     - cron: "0 7 * * *"  # daily 07:00 UTC
@@ -9,19 +20,32 @@ on:
         description: "Stale threshold (years since last push)"
         type: string
         default: "3"
+      backlog:
+        description: "Existing unsorted rows to curate per run"
+        type: string
+        default: "40"
+      skip_curation:
+        description: "Skip the Claude curation step"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
   pull-requests: write
+  id-token: write
 
 concurrency:
   group: star-sweep
   cancel-in-progress: false
 
+env:
+  GH_USER: Executioner1939
+  TAXONOMY_DIR: .claude/skills/research-standard/TAXONOMY
+
 jobs:
   sweep:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v5
         with:
@@ -31,31 +55,166 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh api users/Executioner1939/starred --paginate \
+          set -euo pipefail
+          gh api "users/${GH_USER}/starred?per_page=100" --paginate \
             --jq '.[] | {full_name, html_url, description, language, stargazers_count, pushed_at, archived, topics, license: (.license.spdx_id // null)}' \
             > /tmp/stars-current.jsonl
-          wc -l /tmp/stars-current.jsonl
+          n=$(wc -l < /tmp/stars-current.jsonl)
+          echo "fetched $n starred repos"
+          if [ "$n" -lt 50 ]; then
+            echo "::error::only $n stars returned; refusing to sweep against a truncated list"
+            exit 1
+          fi
 
       - name: Apply diff
         id: apply
         run: |
+          set -euo pipefail
           python3 .github/scripts/apply-star-sweep.py \
             --stars /tmp/stars-current.jsonl \
             --tools INDEX/tools.md \
             --archived _archived/tools.md \
-            --staleness-years ${{ inputs.staleness_years || 3 }} \
-            --report-md _archived/star-sweep-report-$(date +%F).md
-          echo "added=$(jq -r '.added' /tmp/star-summary.json)" >> "$GITHUB_OUTPUT"
-          echo "removed=$(jq -r '.removed' /tmp/star-summary.json)" >> "$GITHUB_OUTPUT"
-          echo "stale=$(jq -r '.stale' /tmp/star-summary.json)" >> "$GITHUB_OUTPUT"
+            --staleness-years "${{ inputs.staleness_years || 3 }}" \
+            --backlog "${{ inputs.backlog || 40 }}" \
+            --queue /tmp/star-curation-queue.jsonl \
+            --report-md /tmp/star-sweep-report.md
+          for k in added removed restored stale queued total_active total_archived; do
+            echo "$k=$(jq -r ".$k" /tmp/star-summary.json)" >> "$GITHUB_OUTPUT"
+          done
+          if git diff --quiet -- INDEX _archived; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+          # Snapshot the pre-curation state so a bad curation can be rolled back.
+          mkdir -p /tmp/pre-curation
+          cp INDEX/tools.md /tmp/pre-curation/tools.md
+          cp "$TAXONOMY_DIR/categories.md" "$TAXONOMY_DIR/domains.md" /tmp/pre-curation/
 
-      - name: Open PR
-        if: steps.apply.outputs.added != '0' || steps.apply.outputs.removed != '0' || steps.apply.outputs.stale != '0'
-        uses: peter-evans/create-pull-request@v7
+      - name: Load curation prompt
+        id: prompt
+        if: steps.apply.outputs.queued != '0' && inputs.skip_curation != true
+        run: |
+          {
+            echo "text<<PROMPT_EOF"
+            cat .github/prompts/star-curation.md
+            echo "PROMPT_EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Claude curates new and unsorted rows
+        id: curate
+        if: steps.apply.outputs.queued != '0' && inputs.skip_curation != true
+        continue-on-error: true
+        uses: anthropics/claude-code-action@v1
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          branch: star-sweep/${{ github.run_number }}
-          delete-branch: true
-          commit-message: "chore(stars): sync — +${{ steps.apply.outputs.added }} -${{ steps.apply.outputs.removed }}"
-          title: "chore(stars): sync (+${{ steps.apply.outputs.added }} / -${{ steps.apply.outputs.removed }} / stale ${{ steps.apply.outputs.stale }})"
-          body-path: /tmp/star-summary.md
-          labels: star-sweep,automated,agent-authored
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          prompt: ${{ steps.prompt.outputs.text }}
+          claude_args: >-
+            --model claude-opus-5
+            --max-turns 120
+            --allowedTools Read,Write,Edit,Grep,Glob,Bash
+
+      - name: Apply curation and gate on lint
+        id: gate
+        run: |
+          set -uo pipefail
+          lint() {
+            python3 .github/scripts/lint-index.py \
+              --sources INDEX/sources.md --tools INDEX/tools.md \
+              --archived-sources _archived/sources.md --archived-tools _archived/tools.md \
+              --taxonomy "$TAXONOMY_DIR/domains.md" --categories "$TAXONOMY_DIR/categories.md" \
+              --output /tmp/lint-report.md
+          }
+          curation="skipped"
+          if [ -f /tmp/star-curation.json ]; then
+            # Idempotent re-apply in case the agent stopped before applying.
+            python3 .github/scripts/apply-curation.py --decisions /tmp/star-curation.json || true
+            curation="applied"
+          fi
+          if lint; then
+            echo "lint passed"
+          else
+            echo "::warning::lint failed after curation; reverting curation and taxonomy edits"
+            cat /tmp/lint-report.md
+            cp /tmp/pre-curation/tools.md INDEX/tools.md
+            cp /tmp/pre-curation/categories.md /tmp/pre-curation/domains.md "$TAXONOMY_DIR/"
+            curation="reverted"
+            if ! lint; then
+              echo "::error::lint fails even on the deterministic sync"
+              cat /tmp/lint-report.md
+              exit 1
+            fi
+          fi
+          echo "curation=$curation" >> "$GITHUB_OUTPUT"
+          echo "unsorted=$(grep -c '| unsorted | ' INDEX/tools.md || true)" >> "$GITHUB_OUTPUT"
+
+      - name: Regenerate README
+        run: |
+          python3 .github/scripts/regen-readme.py \
+            --sources INDEX/sources.md --tools INDEX/tools.md \
+            --template .claude/templates/README.template.md \
+            --taxonomy "$TAXONOMY_DIR/domains.md" \
+            --categories "$TAXONOMY_DIR/categories.md" \
+            --triage TRIAGE.md --output README.md
+
+      - name: Commit and push
+        id: commit
+        env:
+          ADDED: ${{ steps.apply.outputs.added }}
+          REMOVED: ${{ steps.apply.outputs.removed }}
+          RESTORED: ${{ steps.apply.outputs.restored }}
+          STALE: ${{ steps.apply.outputs.stale }}
+          CURATION: ${{ steps.gate.outputs.curation }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ "$ADDED" != "0" ] || [ "$REMOVED" != "0" ] || [ "$STALE" != "0" ] || [ "$RESTORED" != "0" ]; then
+            cp /tmp/star-sweep-report.md "_archived/star-sweep-report-$(date +%F).md"
+          fi
+          git add INDEX _archived README.md "$TAXONOMY_DIR"
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ "$ADDED" = "0" ] && [ "$REMOVED" = "0" ] && [ "$STALE" = "0" ] && [ "$RESTORED" = "0" ]; then
+            subject="chore(stars): refresh counts, curation=$CURATION"
+          else
+            subject="chore(stars): sync +$ADDED -$REMOVED restored $RESTORED stale $STALE, curation=$CURATION"
+          fi
+          {
+            echo "$subject"
+            echo
+            cat /tmp/star-sweep-report.md
+            if [ -f /tmp/star-curation-report.md ]; then echo; cat /tmp/star-curation-report.md; fi
+          } > /tmp/commit-msg.txt
+          git commit -q -F /tmp/commit-msg.txt
+          for attempt in 1 2 3; do
+            if git push origin HEAD:master; then
+              echo "pushed=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "push rejected (attempt $attempt); rebasing"
+            git pull --rebase origin master
+          done
+          echo "::error::could not push after 3 attempts"
+          exit 1
+
+      - name: Job summary
+        if: always()
+        run: |
+          {
+            echo "## Star sweep"
+            echo
+            echo "| added | removed | restored | stale | curation | still unsorted | pushed |"
+            echo "|---|---|---|---|---|---|---|"
+            echo "| ${{ steps.apply.outputs.added }} | ${{ steps.apply.outputs.removed }} | ${{ steps.apply.outputs.restored }} | ${{ steps.apply.outputs.stale }} | ${{ steps.gate.outputs.curation }} | ${{ steps.gate.outputs.unsorted }} | ${{ steps.commit.outputs.pushed }} |"
+            echo
+            [ -f /tmp/star-sweep-report.md ] && cat /tmp/star-sweep-report.md
+            [ -f /tmp/star-curation-report.md ] && { echo; cat /tmp/star-curation-report.md; }
+            [ -f /tmp/lint-report.md ] && { echo; cat /tmp/lint-report.md; }
+          } >> "$GITHUB_STEP_SUMMARY" || true

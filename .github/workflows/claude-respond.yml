@@ -58,8 +58,13 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          # No explicit mode — the action auto-detects from the event type.
-          # For issue_comment / pull_request_review with @claude, it enters
-          # agent mode against the PR's current branch.
-          allowed_tools: "Read,Edit,Write,Bash,Grep,Glob,Skill"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # No prompt: the action reads the @claude mention from the event and
+          # works on the PR branch. Bot comments (auto-review) must be allowed
+          # explicitly or the action ignores them.
+          allowed_bots: "github-actions[bot]"
           trigger_phrase: "@claude"
+          claude_args: >-
+            --model claude-opus-5
+            --max-turns 60
+            --allowedTools Read,Edit,Write,Bash,Grep,Glob,Skill

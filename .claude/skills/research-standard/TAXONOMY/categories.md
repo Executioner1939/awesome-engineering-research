@@ -5,7 +5,7 @@ type: taxonomy
 status: stable
 confidence: high
 created: 2026-05-18
-updated: 2026-05-18
+updated: 2026-09-15
 ---
 
 # Fine-grained Categories
@@ -17,6 +17,7 @@ The README is rendered with one `## <category>` heading per non-empty category. 
 - **Tools** — repos where `kind = tool` (standalone server, daemon, CLI application)
 - **Libraries** — repos where `kind = library` (embedded dependency)
 - **Frameworks** — repos where `kind = framework` (opinionated structuring dependency)
+- **Reading & references** — repos where `kind = content` (lists, courses, specs; nothing to run or import)
 - **Unsorted** — repos where `kind = unsorted` (heuristic was not confident; awaits `/sort-unsorted`)
 - **Articles** — sources where `type = article`
 - **Videos** — sources where `type = video`
@@ -187,6 +188,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `tool` | Standalone application, daemon, server, or CLI you run | topics `cli`, `daemon`, `application`; description verbs "runs", "serves" |
 | `library` | Embedded dependency consumed by your code | topics `library`, `crate`, `sdk`; description nouns "client", "binding" |
 | `framework` | Opinionated structuring dependency | topics `framework`, `web-framework`; description "build X with", "opinionated" |
+| `content` | Reading material rather than software: awesome lists, courses, books, paper collections, specs, roadmaps | topics `awesome`, `awesome-list`, `learning`, `roadmap`; no build system, mostly markdown |
 | `unsorted` | Heuristic was not confident | default when no clear signal |
 
 The heuristic is intentionally conservative — when in doubt, `unsorted`. The `/sort-unsorted` skill is the cleanup path.
