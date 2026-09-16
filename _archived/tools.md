@@ -4,9 +4,9 @@ title: Archived tools
 type: index
 status: stable
 created: 2026-05-15
-updated: 2026-09-15
+updated: 2026-09-16
 total_active: 0
-total_archived: 63
+total_archived: 65
 ---
 
 # Archived tools
@@ -44,12 +44,14 @@ Repos that are archived on GitHub, removed, or stale (no push in >3 years), or t
 | microsoft-presidio | microsoft/presidio | https://github.com/microsoft/presidio | An open-source framework for detecting, redacting, masking, and anonymizing sensitive data (PII) across text, images, an | Python | 8102 | 2026-05-17 | unsorted | unsorted | developer-tooling,python | archived | 2026-09-15 | user_unstarred |
 | mmenestret-fp-resources | mmenestret/fp-resources | https://github.com/mmenestret/fp-resources | Functional programming great resources |  | 485 | 2020-04-17 |  |  | developer-tooling,fp-scala,scala | archived | 2026-05-17 | stale |
 | nats-io-nats-java | nats-io/nats.java | https://github.com/nats-io/nats.java | Java client for NATS | Java | 661 | 2026-05-12 |  |  | distributed-systems,nats | archived | 2026-05-17 | user_unstarred |
+| neonpangolin-geospatial-intelligence-library | neonpangolin/geospatial-intelligence-library | https://github.com/neonpangolin/geospatial-intelligence-library | Toolbelt of geospatial intelligence resources for digital investigations: imagery archives, geolocation aids and SOCMINT sources. | HTML | 189 | 2022-01-23 | osint-reconnaissance | content | geospatial,osint,security | archived | 2026-09-16 | stale |
 | neueda-awesome-neo4j | neueda/awesome-neo4j | https://github.com/neueda/awesome-neo4j | A curated list of Neo4j resources |  | 558 | 2020-12-09 |  |  | data-storage,graph-db | archived | 2026-05-17 | stale |
 | nrinaudo-scala-best-practices | nrinaudo/scala-best-practices | https://github.com/nrinaudo/scala-best-practices | Collection of best practices for the Scala programming language | CSS | 241 | 2022-12-06 |  |  | language-runtimes | archived | 2026-05-17 | stale |
 | oconnor663-duct-rs | oconnor663/duct.rs | https://github.com/oconnor663/duct.rs | a Rust library for running child processes | Rust | 1025 | 2025-11-18 |  |  | developer-tooling,rust | archived | 2026-05-17 | user_unstarred |
 | octokatherine-readme-so | octokatherine/readme.so | https://github.com/octokatherine/readme.so | An online drag-and-drop editor to easily build READMEs | JavaScript | 4637 | 2026-03-13 |  |  | frontend,typescript | archived | 2026-05-17 | user_unstarred |
 | opactorai-claudable | opactorai/Claudable | https://github.com/opactorai/Claudable | Claudable is an open-source web builder that leverages local CLI agents, such as Claude Code, Codex, Gemini CLI, Qwen Co | TypeScript | 3962 | 2026-04-11 | agent-frameworks | framework | agents,ai-applications,cli-tooling,developer-tooling,llm,typescript | archived | 2026-09-15 | user_unstarred |
 | opencode-ai-opencode | opencode-ai/opencode | https://github.com/opencode-ai/opencode | A powerful AI coding agent | Go | 12586 | 2025-09-18 |  |  | agents,ai-applications,go,llm | archived | 2026-05-17 | repo_archived |
+| openlrsng-openlrsng | openLRSng/openLRSng | https://github.com/openLRSng/openLRSng | Configurable firmware for openLRS long-range radio transmitters and receivers used in RC aircraft. | C | 290 | 2018-11-22 | embedded-firmware | tool | c,drones,embedded,infrastructure,radio-sdr | archived | 2026-09-16 | stale |
 | pablosmedina-ckite | pablosmedina/ckite | https://github.com/pablosmedina/ckite | CKite - A JVM implementation of the Raft distributed consensus algorithm written in Scala | Scala | 216 | 2019-01-08 |  |  | distributed-systems,scala | archived | 2026-05-17 | repo_archived |
 | pawurb-channels-console | pawurb/channels-console | https://github.com/pawurb/channels-console | Real-time monitoring, metrics and logs for Rust channels | Rust | 368 | 2025-11-20 |  |  | observability,rust | archived | 2026-05-17 | repo_archived |
 | precog-matryoshka | precog/matryoshka | https://github.com/precog/matryoshka | Generalized recursion schemes and traversals for Scala | Scala | 821 | 2020-04-01 |  |  | developer-tooling,scala | archived | 2026-05-17 | stale |

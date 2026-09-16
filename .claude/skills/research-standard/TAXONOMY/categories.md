@@ -57,6 +57,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `static-analyzers` | rust-analyzer, clippy, ESLint plugins, Semgrep |
 | `type-checkers` | mypy, pyright, ts-toolbelt |
 | `garbage-collectors` | GC research, ZGC, Shenandoah, ZGC papers |
+| `state-machines` | Statechart and finite-state-machine libraries: XState, Stately, Spring Statemachine, statig, rust-fsm |
 
 ## Distributed systems
 
@@ -70,6 +71,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `api-gateways` | Kong, Tyk, KrakenD, Traefik (gateway mode) |
 | `rpc-frameworks` | gRPC, Twirp, tonic, Tarpc, Cap'n Proto |
 | `service-discovery` | Consul, Eureka, Nacos, mDNS |
+| `distributed-runtimes` | Sidecar and platform runtimes for building distributed applications: Dapr, Akka, Orleans, Service Weaver, Cloudstate |
 
 ## Observability
 
@@ -99,6 +101,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `coding-agents` | Coding agent harnesses and CLIs: Claude Code-style TUIs, Aider, Claudable, grok-build, account/session tooling |
 | `agent-skills` | Skill, command and plugin packs for agent harnesses: anthropics/skills, wshobson/agents, harness skill graphs |
 | `llm-interfaces` | Chat and generative-UI front ends: Open WebUI, assistant-ui, LibreChat, tool-call rendering components |
+| `agent-memory` | Persistent memory layers for agents: Hindsight, Memori, Mem0, Zep, Letta, long-term conversation and execution state |
 
 ## Infrastructure
 
@@ -238,6 +241,9 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `media-processing` | FFmpeg pipelines, image/video transcoding, streaming servers, transcription, image rendering services |
 | `data-wrangling` | OpenRefine, data cleaning, reconciliation and messy-data transformation |
 | `entity-resolution` | Nomenklatura, Splink, Zingg, record linkage and deduplication |
+| `e-commerce` | Headless commerce backends and storefront platforms: Medusa, Saleor, Vendure, Spree, Sylius |
+| `business-intelligence` | Semantic layers and analytics front ends: Cube, Metabase, Superset, Lightdash, metric-layer and embedded-analytics servers |
+| `email-tooling` | Email templating, rendering and delivery: MJML, Maizzle, react-email, Postal, transactional mail libraries |
 
 ## Triage
 

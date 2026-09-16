@@ -57,7 +57,7 @@ Sub-area or technology specificity. May appear alongside any domain label. Group
 `tracing`, `metrics`, `profiling`, `logging`, `opentelemetry`
 
 ### AI / LLM
-`llm`, `agents`, `rag`, `embeddings`, `mcp`, `tool-use`, `eval`, `agent-skills`, `coding-agents`, `prompt-engineering`, `generative-ui`, `spec-driven-development`, `multi-agent`, `knowledge-graph`
+`llm`, `agents`, `rag`, `embeddings`, `mcp`, `tool-use`, `eval`, `agent-skills`, `coding-agents`, `prompt-engineering`, `generative-ui`, `spec-driven-development`, `multi-agent`, `knowledge-graph`, `agent-memory`
 
 ### Compilers / parsing / lang implementation
 `compilers`, `parsers`, `static-analysis`, `serialization`, `kernel-systems`
@@ -66,7 +66,7 @@ Sub-area or technology specificity. May appear alongside any domain label. Group
 `web-perf`, `dom`, `wasm`, `react`, `react-native`, `svelte`, `data-viz`, `graphics-3d`, `animation`, `cms`
 
 ### Other
-`cli-tooling`, `error-handling`, `interviewing`, `algorithms`, `math`, `networking`, `http`, `websockets`, `payments`, `notifications`, `media-processing`, `streaming-media`, `diagramming`, `code-review`, `data-cleaning`, `entity-resolution`, `graph-processing`
+`cli-tooling`, `error-handling`, `interviewing`, `algorithms`, `math`, `networking`, `http`, `websockets`, `payments`, `notifications`, `media-processing`, `streaming-media`, `diagramming`, `code-review`, `data-cleaning`, `entity-resolution`, `graph-processing`, `analytics`, `email`, `e-commerce`, `state-machines`
 
 ### Security operations
 `osint`, `pentesting`, `red-team`, `threat-intelligence`, `wordlists`, `dark-web`, `privacy`, `fingerprinting`, `anonymization`, `cryptography`
