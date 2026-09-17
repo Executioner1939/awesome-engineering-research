@@ -5,7 +5,7 @@ type: taxonomy
 status: stable
 confidence: high
 created: 2026-05-18
-updated: 2026-09-15
+updated: 2026-09-17
 ---
 
 # Fine-grained Categories
@@ -58,6 +58,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `type-checkers` | mypy, pyright, ts-toolbelt |
 | `garbage-collectors` | GC research, ZGC, Shenandoah, ZGC papers |
 | `state-machines` | Statechart and finite-state-machine libraries: XState, Stately, Spring Statemachine, statig, rust-fsm |
+| `concurrency-primitives` | Non-async parallelism and shared-memory building blocks: Rayon, Crossbeam, parking_lot, papaya, lock-free collections |
 
 ## Distributed systems
 
@@ -102,6 +103,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `agent-skills` | Skill, command and plugin packs for agent harnesses: anthropics/skills, wshobson/agents, harness skill graphs |
 | `llm-interfaces` | Chat and generative-UI front ends: Open WebUI, assistant-ui, LibreChat, tool-call rendering components |
 | `agent-memory` | Persistent memory layers for agents: Hindsight, Memori, Mem0, Zep, Letta, long-term conversation and execution state |
+| `design-agents` | Prompt-to-design agents that generate UI mockups, prototypes and decks: Superdesign, open-codesign, v0-style generators |
 
 ## Infrastructure
 
@@ -115,6 +117,8 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `container-runtimes` | containerd, runc, gVisor, Firecracker |
 | `package-registries` | Verdaccio, Sonatype Nexus, Harbor |
 | `ci-cd` | Pipeline runners and CI tooling: act, Dagger, Woodpecker, Earthly CI, build caches for CI |
+| `feature-flags` | Feature flag, remote config and experimentation platforms: Unleash, Flagsmith, GrowthBook, Flipt, OpenFeature |
+| `cloud-cost-management` | FinOps and cost attribution for cloud and Kubernetes spend: Infracost, OpenCost, Kubecost, cloud budget and chargeback tooling |
 
 ## Security
 
@@ -145,6 +149,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `dotfiles` | Dotfile managers, chezmoi, stow |
 | `diagramming` | D2, Mermaid, Graphviz, Excalidraw, node-based diagram and flow UI libraries |
 | `spec-driven-development` | Spec-first workflows for coding agents: GitHub spec-kit, OpenSpec, Spec Kitty, PRD-to-task pipelines |
+| `dev-environments` | Local-to-cluster and reproducible development environments: mirrord, DevSpace, Telepresence, Tilt, devcontainers |
 
 ## Functional programming
 
@@ -180,6 +185,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `oauth-oidc` | OAuth 2.0/2.1, OIDC, PKCE, DPoP |
 | `web-platform-specs` | Fetch, Streams, Service Workers |
 | `cryptographic-standards` | NIST, FIPS, PKCS, IETF crypto |
+| `interop-specs` | Community wire-format, identifier and protocol specs outside the RFC/W3C tracks: CloudEvents, AsyncAPI, ULID, CUID, Standard Webhooks |
 
 ## Knowledge & curation
 

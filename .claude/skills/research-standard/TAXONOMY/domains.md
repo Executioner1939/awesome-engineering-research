@@ -5,7 +5,7 @@ type: taxonomy
 status: stable
 confidence: high
 created: 2026-05-15
-updated: 2026-05-17
+updated: 2026-09-17
 ---
 
 # Subject Domains and Refinement Labels
@@ -51,7 +51,7 @@ Sub-area or technology specificity. May appear alongside any domain label. Group
 `databases`, `kafka`, `rabbitmq`, `nats`, `postgres`, `vector-db`, `graph-db`, `time-series`, `kv-store`, `search`
 
 ### Infrastructure / DevOps
-`kubernetes`, `terraform`, `iac`, `argocd`, `helm`, `ci-cd`, `docker`, `bazel`, `moonrepo`
+`kubernetes`, `terraform`, `iac`, `argocd`, `helm`, `ci-cd`, `docker`, `bazel`, `moonrepo`, `monorepo`, `feature-flags`, `experimentation`, `finops`
 
 ### Observability detail
 `tracing`, `metrics`, `profiling`, `logging`, `opentelemetry`
@@ -66,7 +66,7 @@ Sub-area or technology specificity. May appear alongside any domain label. Group
 `web-perf`, `dom`, `wasm`, `react`, `react-native`, `svelte`, `data-viz`, `graphics-3d`, `animation`, `cms`
 
 ### Other
-`cli-tooling`, `error-handling`, `interviewing`, `algorithms`, `math`, `networking`, `http`, `websockets`, `payments`, `notifications`, `media-processing`, `streaming-media`, `diagramming`, `code-review`, `data-cleaning`, `entity-resolution`, `graph-processing`, `analytics`, `email`, `e-commerce`, `state-machines`
+`cli-tooling`, `error-handling`, `interviewing`, `engineering-management`, `algorithms`, `math`, `networking`, `http`, `websockets`, `payments`, `notifications`, `media-processing`, `streaming-media`, `diagramming`, `code-review`, `data-cleaning`, `entity-resolution`, `graph-processing`, `analytics`, `email`, `e-commerce`, `state-machines`
 
 ### Security operations
 `osint`, `pentesting`, `red-team`, `threat-intelligence`, `wordlists`, `dark-web`, `privacy`, `fingerprinting`, `anonymization`, `cryptography`
