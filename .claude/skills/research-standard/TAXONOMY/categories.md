@@ -59,6 +59,9 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `garbage-collectors` | GC research, ZGC, Shenandoah, ZGC papers |
 | `state-machines` | Statechart and finite-state-machine libraries: XState, Stately, Spring Statemachine, statig, rust-fsm |
 | `concurrency-primitives` | Non-async parallelism and shared-memory building blocks: Rayon, Crossbeam, parking_lot, papaya, lock-free collections |
+| `serialization-formats` | Encoding, codec and cross-language data-exchange libraries: Fory, Protobuf, MessagePack, upickle, scodec |
+| `data-structures` | General-purpose containers and algorithmic data structures: petgraph, fst, rtree2d, bumpalo, immutable collections |
+| `date-time-libraries` | Date, time, calendar and duration handling: chrono, time-rs, ThreeTen, biweekly, tz database wrappers |
 
 ## Distributed systems
 
@@ -73,6 +76,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `rpc-frameworks` | gRPC, Twirp, tonic, Tarpc, Cap'n Proto |
 | `service-discovery` | Consul, Eureka, Nacos, mDNS |
 | `distributed-runtimes` | Sidecar and platform runtimes for building distributed applications: Dapr, Akka, Orleans, Service Weaver, Cloudstate |
+| `identifier-generation` | Coordination-free unique ID generators and their implementations: KSUID, ULID, cuid, nanoid, Snowflake-style IDs |
 
 ## Observability
 
@@ -119,6 +123,8 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `ci-cd` | Pipeline runners and CI tooling: act, Dagger, Woodpecker, Earthly CI, build caches for CI |
 | `feature-flags` | Feature flag, remote config and experimentation platforms: Unleash, Flagsmith, GrowthBook, Flipt, OpenFeature |
 | `cloud-cost-management` | FinOps and cost attribution for cloud and Kubernetes spend: Infracost, OpenCost, Kubecost, cloud budget and chargeback tooling |
+| `container-management` | Day-to-day container and cluster management UIs and TUIs: lazydocker, k9s, Portainer, Lens, ctop |
+| `code-sandboxes` | Isolated execution of untrusted code: Piston, E2B, Judge0, microsandbox, gVisor-backed runners |
 
 ## Security
 
@@ -135,6 +141,8 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `osint-reconnaissance` | Open-source intelligence and recon: SpiderFoot, maigret, subfinder, gau, dark-web and threat-intel collections |
 | `offensive-security` | Pentest and red-team toolkits and payload corpora: SecLists, wordlists, Flipper Zero payloads, AI pentesting agents |
 | `privacy-tooling` | PII redaction, anonymisation, browser-fingerprinting research, telemetry removal: Presidio, FingerprintJS, CreepJS |
+| `runtime-security` | Kernel and runtime threat detection and enforcement: Tetragon, Falco, Tracee, eBPF security observability |
+| `compliance-auditing` | Compliance-as-code and benchmark auditing: InSpec, OpenSCAP, CIS benchmark profiles, control evidence collection |
 
 ## Developer experience
 
@@ -150,6 +158,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `diagramming` | D2, Mermaid, Graphviz, Excalidraw, node-based diagram and flow UI libraries |
 | `spec-driven-development` | Spec-first workflows for coding agents: GitHub spec-kit, OpenSpec, Spec Kitty, PRD-to-task pipelines |
 | `dev-environments` | Local-to-cluster and reproducible development environments: mirrord, DevSpace, Telepresence, Tilt, devcontainers |
+| `notebooks` | Computational notebook environments and kernels: Polynote, Jupyter, Marimo, Zeppelin, nbdev |
 
 ## Functional programming
 
@@ -250,6 +259,8 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `e-commerce` | Headless commerce backends and storefront platforms: Medusa, Saleor, Vendure, Spree, Sylius |
 | `business-intelligence` | Semantic layers and analytics front ends: Cube, Metabase, Superset, Lightdash, metric-layer and embedded-analytics servers |
 | `email-tooling` | Email templating, rendering and delivery: MJML, Maizzle, react-email, Postal, transactional mail libraries |
+| `blockchain-tooling` | Wallet cores, chain clients, indexers and on-chain bot frameworks: wallet-core, Artemis, Rabby, Solana indexers |
+| `low-code-platforms` | Config-driven internal-tool and admin-panel builders: Lowdefy, Appsmith, Budibase, ToolJet |
 
 ## Triage
 

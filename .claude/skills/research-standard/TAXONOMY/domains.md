@@ -36,7 +36,7 @@ A topic or row's coarse subject area. Twelve total.
 Sub-area or technology specificity. May appear alongside any domain label. Grouped by family for readability — the labels themselves are flat in row data.
 
 ### Language / runtime
-`rust`, `scala`, `go`, `python`, `typescript`, `javascript`, `java`, `kotlin`, `c`, `cpp`, `elixir`, `ocaml`, `shell`, `php`, `powershell`
+`rust`, `scala`, `go`, `python`, `typescript`, `javascript`, `java`, `kotlin`, `c`, `cpp`, `elixir`, `ocaml`, `shell`, `php`, `powershell`, `ruby`
 
 ### Functional-programming heritage
 `fp-scala`, `fp-rust`, `typelevel`, `cats-effect`, `zio`, `scalaz`, `algebraic-effects`, `tagless-final`
@@ -60,16 +60,16 @@ Sub-area or technology specificity. May appear alongside any domain label. Group
 `llm`, `agents`, `rag`, `embeddings`, `mcp`, `tool-use`, `eval`, `agent-skills`, `coding-agents`, `prompt-engineering`, `generative-ui`, `spec-driven-development`, `multi-agent`, `knowledge-graph`, `agent-memory`
 
 ### Compilers / parsing / lang implementation
-`compilers`, `parsers`, `static-analysis`, `serialization`, `kernel-systems`
+`compilers`, `parsers`, `static-analysis`, `serialization`, `kernel-systems`, `ebpf`
 
 ### Web / frontend specifics
 `web-perf`, `dom`, `wasm`, `react`, `react-native`, `svelte`, `data-viz`, `graphics-3d`, `animation`, `cms`
 
 ### Other
-`cli-tooling`, `error-handling`, `interviewing`, `engineering-management`, `algorithms`, `math`, `networking`, `http`, `websockets`, `payments`, `notifications`, `media-processing`, `streaming-media`, `diagramming`, `code-review`, `data-cleaning`, `entity-resolution`, `graph-processing`, `analytics`, `email`, `e-commerce`, `state-machines`
+`cli-tooling`, `error-handling`, `interviewing`, `engineering-management`, `algorithms`, `math`, `networking`, `http`, `websockets`, `payments`, `notifications`, `media-processing`, `streaming-media`, `diagramming`, `code-review`, `data-cleaning`, `entity-resolution`, `graph-processing`, `analytics`, `email`, `e-commerce`, `state-machines`, `blockchain`, `low-code`
 
 ### Security operations
-`osint`, `pentesting`, `red-team`, `threat-intelligence`, `wordlists`, `dark-web`, `privacy`, `fingerprinting`, `anonymization`, `cryptography`
+`osint`, `pentesting`, `red-team`, `threat-intelligence`, `wordlists`, `dark-web`, `privacy`, `fingerprinting`, `anonymization`, `cryptography`, `compliance`
 
 ### Geospatial / sensing
 `geospatial`, `openstreetmap`, `routing`, `photogrammetry`, `remote-sensing`, `drones`, `uav`, `radio-sdr`, `embedded`, `iot`, `mesh-networking`
