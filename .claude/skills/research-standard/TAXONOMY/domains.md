@@ -51,7 +51,7 @@ Sub-area or technology specificity. May appear alongside any domain label. Group
 `databases`, `kafka`, `rabbitmq`, `nats`, `postgres`, `vector-db`, `graph-db`, `time-series`, `kv-store`, `search`
 
 ### Infrastructure / DevOps
-`kubernetes`, `terraform`, `iac`, `argocd`, `helm`, `ci-cd`, `docker`, `bazel`, `moonrepo`, `monorepo`, `feature-flags`, `experimentation`, `finops`
+`kubernetes`, `terraform`, `iac`, `argocd`, `helm`, `ci-cd`, `docker`, `bazel`, `moonrepo`, `monorepo`, `feature-flags`, `experimentation`, `finops`, `chaos-engineering`
 
 ### Observability detail
 `tracing`, `metrics`, `profiling`, `logging`, `opentelemetry`
@@ -60,13 +60,13 @@ Sub-area or technology specificity. May appear alongside any domain label. Group
 `llm`, `agents`, `rag`, `embeddings`, `mcp`, `tool-use`, `eval`, `agent-skills`, `coding-agents`, `prompt-engineering`, `generative-ui`, `spec-driven-development`, `multi-agent`, `knowledge-graph`, `agent-memory`
 
 ### Compilers / parsing / lang implementation
-`compilers`, `parsers`, `static-analysis`, `serialization`, `kernel-systems`, `ebpf`
+`compilers`, `parsers`, `static-analysis`, `serialization`, `kernel-systems`, `ebpf`, `macros`
 
 ### Web / frontend specifics
 `web-perf`, `dom`, `wasm`, `react`, `react-native`, `svelte`, `data-viz`, `graphics-3d`, `animation`, `cms`
 
 ### Other
-`cli-tooling`, `error-handling`, `interviewing`, `engineering-management`, `algorithms`, `math`, `networking`, `http`, `websockets`, `payments`, `notifications`, `media-processing`, `streaming-media`, `diagramming`, `code-review`, `data-cleaning`, `entity-resolution`, `graph-processing`, `analytics`, `email`, `e-commerce`, `state-machines`, `blockchain`, `low-code`
+`cli-tooling`, `error-handling`, `interviewing`, `engineering-management`, `algorithms`, `math`, `networking`, `http`, `websockets`, `payments`, `notifications`, `media-processing`, `streaming-media`, `diagramming`, `code-review`, `data-cleaning`, `entity-resolution`, `graph-processing`, `analytics`, `email`, `e-commerce`, `state-machines`, `blockchain`, `low-code`, `testing`, `webhooks`, `healthcare`, `fhir`
 
 ### Security operations
 `osint`, `pentesting`, `red-team`, `threat-intelligence`, `wordlists`, `dark-web`, `privacy`, `fingerprinting`, `anonymization`, `cryptography`, `compliance`

@@ -62,6 +62,8 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `serialization-formats` | Encoding, codec and cross-language data-exchange libraries: Fory, Protobuf, MessagePack, upickle, scodec |
 | `data-structures` | General-purpose containers and algorithmic data structures: petgraph, fst, rtree2d, bumpalo, immutable collections |
 | `date-time-libraries` | Date, time, calendar and duration handling: chrono, time-rs, ThreeTen, biweekly, tz database wrappers |
+| `macros-codegen` | Macro systems and compile-time code generation for user types: derive_more, derive_builder, nutype, syn/quote, proc-macro helpers |
+| `schema-validation` | Runtime validation of data against a schema or invariant set: JSON Schema validators, Zod, Pydantic, Valibot, Cerberus |
 
 ## Distributed systems
 
@@ -125,6 +127,8 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `cloud-cost-management` | FinOps and cost attribution for cloud and Kubernetes spend: Infracost, OpenCost, Kubecost, cloud budget and chargeback tooling |
 | `container-management` | Day-to-day container and cluster management UIs and TUIs: lazydocker, k9s, Portainer, Lens, ctop |
 | `code-sandboxes` | Isolated execution of untrusted code: Piston, E2B, Judge0, microsandbox, gVisor-backed runners |
+| `chaos-engineering` | Fault injection and resilience testing against running systems: chaoskube, Chaos Mesh, LitmusChaos, Toxiproxy, Pumba |
+| `cloud-sdks` | Provider client libraries and API bindings for cloud platforms: google-cloud-java, AWS SDK, Azure SDK, cloud storage and gateway clients |
 
 ## Security
 
@@ -159,6 +163,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `spec-driven-development` | Spec-first workflows for coding agents: GitHub spec-kit, OpenSpec, Spec Kitty, PRD-to-task pipelines |
 | `dev-environments` | Local-to-cluster and reproducible development environments: mirrord, DevSpace, Telepresence, Tilt, devcontainers |
 | `notebooks` | Computational notebook environments and kernels: Polynote, Jupyter, Marimo, Zeppelin, nbdev |
+| `testing-frameworks` | Test runners, fixtures, harnesses and assertion libraries: rstest, pytest, JUnit, Testcontainers, contract-testing tools |
 
 ## Functional programming
 
@@ -239,6 +244,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `embedded-firmware` | Meshtastic, openLRSng, ArduPilot, PX4, ESP32/STM32 device firmware |
 | `radio-sdr` | SDR and RF tooling: ADS-B and AIS receivers, LoRa, SAR, WiFi sensing, SIM/cellular tooling |
 | `uav-drones` | Drone flight stacks, FPV hardware, swarm coordination, UAV resource collections |
+| `hardware-interfaces` | Host-side access to devices and peripherals: jSerialComm, serialport-rs, libusb and hidapi bindings, GPIO and I2C libraries |
 
 ## Networking
 
@@ -246,6 +252,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 |---|---|
 | `http-clients` | curl, reqwest, hyper, httpx, undici |
 | `network-monitoring` | Sniffnet, ntopng, Wireshark tooling, packet capture and flow analysis |
+| `network-protocols` | Low-level packet, socket and protocol implementation libraries: libpnet, smoltcp, quinn, ip4s, etherparse |
 
 ## Applications & platforms
 
@@ -261,6 +268,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `email-tooling` | Email templating, rendering and delivery: MJML, Maizzle, react-email, Postal, transactional mail libraries |
 | `blockchain-tooling` | Wallet cores, chain clients, indexers and on-chain bot frameworks: wallet-core, Artemis, Rabby, Solana indexers |
 | `low-code-platforms` | Config-driven internal-tool and admin-panel builders: Lowdefy, Appsmith, Budibase, ToolJet |
+| `healthcare-platforms` | Health-data interoperability and clinical application platforms: Medplum, HAPI FHIR, OpenEMR, FHIR and HL7 servers and SDKs |
 
 ## Triage
 
