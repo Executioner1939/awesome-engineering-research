@@ -64,6 +64,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `date-time-libraries` | Date, time, calendar and duration handling: chrono, time-rs, ThreeTen, biweekly, tz database wrappers |
 | `macros-codegen` | Macro systems and compile-time code generation for user types: derive_more, derive_builder, nutype, syn/quote, proc-macro helpers |
 | `schema-validation` | Runtime validation of data against a schema or invariant set: JSON Schema validators, Zod, Pydantic, Valibot, Cerberus |
+| `process-management` | Spawning, piping and supervising child processes from code: duct, xshell, commons-exec, subprocess wrappers, process supervisors |
 
 ## Distributed systems
 
@@ -146,6 +147,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `offensive-security` | Pentest and red-team toolkits and payload corpora: SecLists, wordlists, Flipper Zero payloads, AI pentesting agents |
 | `privacy-tooling` | PII redaction, anonymisation, browser-fingerprinting research, telemetry removal: Presidio, FingerprintJS, CreepJS |
 | `runtime-security` | Kernel and runtime threat detection and enforcement: Tetragon, Falco, Tracee, eBPF security observability |
+| `decentralized-identity` | Verifiable credentials, DIDs and self-sovereign identity toolkits: AnonCreds, ACA-Py, Credo-TS, walt.id, Hyperledger Indy tooling |
 | `compliance-auditing` | Compliance-as-code and benchmark auditing: InSpec, OpenSCAP, CIS benchmark profiles, control evidence collection |
 
 ## Developer experience
@@ -164,6 +166,9 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `dev-environments` | Local-to-cluster and reproducible development environments: mirrord, DevSpace, Telepresence, Tilt, devcontainers |
 | `notebooks` | Computational notebook environments and kernels: Polynote, Jupyter, Marimo, Zeppelin, nbdev |
 | `testing-frameworks` | Test runners, fixtures, harnesses and assertion libraries: rstest, pytest, JUnit, Testcontainers, contract-testing tools |
+| `tui-libraries` | Terminal UI rendering primitives for building console interfaces: Ratatui, comfy-table, indicatif, kdam, AppCUI |
+| `dependency-management` | Dependency update, version-bump and lockfile tooling: Renovate, Dependabot, cargo-outdated, cargo-edit, npm-check-updates |
+| `release-automation` | Versioning, changelog generation and artifact publishing: semantic-release, release-please, auto-changelog, git-cliff, sbt-sonatype |
 
 ## Functional programming
 
@@ -253,6 +258,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `http-clients` | curl, reqwest, hyper, httpx, undici |
 | `network-monitoring` | Sniffnet, ntopng, Wireshark tooling, packet capture and flow analysis |
 | `network-protocols` | Low-level packet, socket and protocol implementation libraries: libpnet, smoltcp, quinn, ip4s, etherparse |
+| `http-servers` | Server-side HTTP frameworks, routing DSLs and middleware: Akka HTTP, tower-http, Axum, Actix Web, CORS and compression directives |
 
 ## Applications & platforms
 
@@ -269,6 +275,13 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `blockchain-tooling` | Wallet cores, chain clients, indexers and on-chain bot frameworks: wallet-core, Artemis, Rabby, Solana indexers |
 | `low-code-platforms` | Config-driven internal-tool and admin-panel builders: Lowdefy, Appsmith, Budibase, ToolJet |
 | `healthcare-platforms` | Health-data interoperability and clinical application platforms: Medplum, HAPI FHIR, OpenEMR, FHIR and HL7 servers and SDKs |
+
+## Scientific computing
+
+| category | scope |
+|---|---|
+| `scientific-computing` | Symbolic mathematics, numerics and optimisation: Symbolica, SymPy, arbitrary-precision decimals, metaheuristic and solver libraries |
+| `units-measures` | Physical quantities, units of measure and dimensional analysis: squants, coulomb, JSR-354 Moneta, alchemist, uom |
 
 ## Triage
 

@@ -36,10 +36,10 @@ A topic or row's coarse subject area. Twelve total.
 Sub-area or technology specificity. May appear alongside any domain label. Grouped by family for readability — the labels themselves are flat in row data.
 
 ### Language / runtime
-`rust`, `scala`, `go`, `python`, `typescript`, `javascript`, `java`, `kotlin`, `c`, `cpp`, `elixir`, `ocaml`, `shell`, `php`, `powershell`, `ruby`
+`rust`, `scala`, `go`, `python`, `typescript`, `javascript`, `java`, `kotlin`, `c`, `cpp`, `elixir`, `ocaml`, `shell`, `php`, `powershell`, `ruby`, `haskell`
 
 ### Functional-programming heritage
-`fp-scala`, `fp-rust`, `typelevel`, `cats-effect`, `zio`, `scalaz`, `algebraic-effects`, `tagless-final`
+`functional-programming`, `fp-scala`, `fp-rust`, `typelevel`, `cats-effect`, `zio`, `scalaz`, `algebraic-effects`, `tagless-final`
 
 ### Concurrency / async
 `concurrency`, `async-runtimes`, `tokio`, `loom`, `actor-model`
@@ -69,7 +69,7 @@ Sub-area or technology specificity. May appear alongside any domain label. Group
 `cli-tooling`, `error-handling`, `interviewing`, `engineering-management`, `algorithms`, `math`, `networking`, `http`, `websockets`, `payments`, `notifications`, `media-processing`, `streaming-media`, `diagramming`, `code-review`, `data-cleaning`, `entity-resolution`, `graph-processing`, `analytics`, `email`, `e-commerce`, `state-machines`, `blockchain`, `low-code`, `testing`, `webhooks`, `healthcare`, `fhir`
 
 ### Security operations
-`osint`, `pentesting`, `red-team`, `threat-intelligence`, `wordlists`, `dark-web`, `privacy`, `fingerprinting`, `anonymization`, `cryptography`, `compliance`
+`osint`, `pentesting`, `red-team`, `threat-intelligence`, `wordlists`, `dark-web`, `privacy`, `fingerprinting`, `anonymization`, `cryptography`, `compliance`, `verifiable-credentials`
 
 ### Geospatial / sensing
 `geospatial`, `openstreetmap`, `routing`, `photogrammetry`, `remote-sensing`, `drones`, `uav`, `radio-sdr`, `embedded`, `iot`, `mesh-networking`
