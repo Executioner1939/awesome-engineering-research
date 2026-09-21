@@ -74,6 +74,9 @@ Sub-area or technology specificity. May appear alongside any domain label. Group
 ### Geospatial / sensing
 `geospatial`, `openstreetmap`, `routing`, `photogrammetry`, `remote-sensing`, `drones`, `uav`, `radio-sdr`, `embedded`, `iot`, `mesh-networking`
 
+### Scientific / life sciences
+`bioinformatics`, `genomics`
+
 ### Machine learning
 `machine-learning`, `computer-vision`, `object-detection`, `nlp`, `information-extraction`, `ocr`, `quantization`, `model-inference`
 

@@ -92,6 +92,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `continuous-profiling` | Profiling-as-a-service stacks |
 | `apm` | Datadog, New Relic open-core, Glitchtip |
 | `opentelemetry-libs` | OTel SDKs, instrumentation libraries |
+| `incident-response` | On-call, alerting and runbook automation for operating services: PlayBooks, Grafana OnCall, Keep, Dispatch, alert enrichment and incident workflow tooling |
 
 ## AI / LLM
 
@@ -130,6 +131,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `code-sandboxes` | Isolated execution of untrusted code: Piston, E2B, Judge0, microsandbox, gVisor-backed runners |
 | `chaos-engineering` | Fault injection and resilience testing against running systems: chaoskube, Chaos Mesh, LitmusChaos, Toxiproxy, Pumba |
 | `cloud-sdks` | Provider client libraries and API bindings for cloud platforms: google-cloud-java, AWS SDK, Azure SDK, cloud storage and gateway clients |
+| `backup-recovery` | Scheduled backup, snapshot and restore automation for stateful systems: Velero, gemini, restic, Kanister, VolumeSnapshot operators |
 
 ## Security
 
@@ -282,6 +284,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 |---|---|
 | `scientific-computing` | Symbolic mathematics, numerics and optimisation: Symbolica, SymPy, arbitrary-precision decimals, metaheuristic and solver libraries |
 | `units-measures` | Physical quantities, units of measure and dimensional analysis: squants, coulomb, JSR-354 Moneta, alchemist, uom |
+| `bioinformatics` | Biological and chemical data processing: BioJava, Biopython, htsjdk, sequence alignment, genomics and protein-structure toolkits |
 
 ## Triage
 
