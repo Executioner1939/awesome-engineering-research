@@ -5,7 +5,7 @@ type: taxonomy
 status: stable
 confidence: high
 created: 2026-05-15
-updated: 2026-09-17
+updated: 2026-09-22
 ---
 
 # Subject Domains and Refinement Labels
@@ -36,7 +36,7 @@ A topic or row's coarse subject area. Twelve total.
 Sub-area or technology specificity. May appear alongside any domain label. Grouped by family for readability — the labels themselves are flat in row data.
 
 ### Language / runtime
-`rust`, `scala`, `go`, `python`, `typescript`, `javascript`, `java`, `kotlin`, `c`, `cpp`, `elixir`, `ocaml`, `shell`, `php`, `powershell`, `ruby`, `haskell`
+`rust`, `scala`, `go`, `python`, `typescript`, `javascript`, `java`, `kotlin`, `c`, `cpp`, `csharp`, `elixir`, `ocaml`, `shell`, `php`, `powershell`, `ruby`, `haskell`
 
 ### Functional-programming heritage
 `functional-programming`, `fp-scala`, `fp-rust`, `typelevel`, `cats-effect`, `zio`, `scalaz`, `algebraic-effects`, `tagless-final`
@@ -45,10 +45,10 @@ Sub-area or technology specificity. May appear alongside any domain label. Group
 `concurrency`, `async-runtimes`, `tokio`, `loom`, `actor-model`
 
 ### Distributed-systems patterns
-`event-sourcing`, `cqrs`, `sagas`, `consensus`, `replication`, `idempotency`, `cap-theorem`, `microservices`, `architecture-ddd`, `service-mesh`
+`event-sourcing`, `cqrs`, `sagas`, `consensus`, `replication`, `idempotency`, `cap-theorem`, `microservices`, `architecture-ddd`, `service-mesh`, `fault-tolerance`
 
 ### Data plane
-`databases`, `kafka`, `rabbitmq`, `nats`, `postgres`, `vector-db`, `graph-db`, `time-series`, `kv-store`, `search`
+`databases`, `kafka`, `rabbitmq`, `nats`, `postgres`, `vector-db`, `graph-db`, `time-series`, `kv-store`, `search`, `caching`
 
 ### Infrastructure / DevOps
 `kubernetes`, `terraform`, `iac`, `argocd`, `helm`, `ci-cd`, `docker`, `bazel`, `moonrepo`, `monorepo`, `feature-flags`, `experimentation`, `finops`, `chaos-engineering`

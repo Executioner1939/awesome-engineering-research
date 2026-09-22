@@ -5,7 +5,7 @@ type: taxonomy
 status: stable
 confidence: high
 created: 2026-05-18
-updated: 2026-09-17
+updated: 2026-09-22
 ---
 
 # Fine-grained Categories
@@ -45,6 +45,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `multi-model-databases` | SurrealDB, FaunaDB, ArangoDB |
 | `graph-processing` | Distributed graph compute engines: GraphScope, Apache GeaFlow, Giraph, GraphX, Pregel-style systems |
 | `realtime-messaging` | Client-facing push and delivery: Centrifugo, Novu, Soketi, WebSocket/SSE fan-out and notification servers |
+| `database-migrations` | Schema and data migration runners and their tooling: Flyway, Liquibase, Atlas, golang-migrate, grate |
 
 ## Language & runtime
 
@@ -65,6 +66,8 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `macros-codegen` | Macro systems and compile-time code generation for user types: derive_more, derive_builder, nutype, syn/quote, proc-macro helpers |
 | `schema-validation` | Runtime validation of data against a schema or invariant set: JSON Schema validators, Zod, Pydantic, Valibot, Cerberus |
 | `process-management` | Spawning, piping and supervising child processes from code: duct, xshell, commons-exec, subprocess wrappers, process supervisors |
+| `rules-engines` | Business-rule and decision-table evaluation: Drools, Camunda DMN, json-rules-engine, Clara, decisions4s |
+| `file-formats` | Detecting, identifying and handling file formats and their metadata: Apache Tika, simplemagic, infer, tree_magic, EXIF and container readers |
 
 ## Distributed systems
 
@@ -80,6 +83,8 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `service-discovery` | Consul, Eureka, Nacos, mDNS |
 | `distributed-runtimes` | Sidecar and platform runtimes for building distributed applications: Dapr, Akka, Orleans, Service Weaver, Cloudstate |
 | `identifier-generation` | Coordination-free unique ID generators and their implementations: KSUID, ULID, cuid, nanoid, Snowflake-style IDs |
+| `resilience-patterns` | Circuit breakers, bulkheads, retries, timeouts and rate limiters for fault-tolerant clients: resilience4j, Polly, failsafe, rezilience, backoff |
+| `job-scheduling` | Background job and recurring-task schedulers: Quartz, JobRunr, APScheduler, River, tokio-cron-scheduler |
 
 ## Observability
 
@@ -252,6 +257,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `radio-sdr` | SDR and RF tooling: ADS-B and AIS receivers, LoRa, SAR, WiFi sensing, SIM/cellular tooling |
 | `uav-drones` | Drone flight stacks, FPV hardware, swarm coordination, UAV resource collections |
 | `hardware-interfaces` | Host-side access to devices and peripherals: jSerialComm, serialport-rs, libusb and hidapi bindings, GPIO and I2C libraries |
+| `iot-platforms` | Servers and clients for IoT device telemetry and sensor-data APIs: FROST-Server, OGC SensorThings implementations, ThingsBoard, Eclipse Ditto |
 
 ## Networking
 
