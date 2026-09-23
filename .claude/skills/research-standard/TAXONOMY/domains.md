@@ -66,7 +66,7 @@ Sub-area or technology specificity. May appear alongside any domain label. Group
 `web-perf`, `dom`, `wasm`, `react`, `react-native`, `svelte`, `data-viz`, `graphics-3d`, `animation`, `cms`
 
 ### Other
-`cli-tooling`, `error-handling`, `interviewing`, `engineering-management`, `algorithms`, `math`, `networking`, `http`, `websockets`, `payments`, `notifications`, `media-processing`, `streaming-media`, `diagramming`, `code-review`, `data-cleaning`, `entity-resolution`, `graph-processing`, `analytics`, `email`, `e-commerce`, `state-machines`, `blockchain`, `low-code`, `testing`, `webhooks`, `healthcare`, `fhir`
+`cli-tooling`, `error-handling`, `interviewing`, `engineering-management`, `algorithms`, `math`, `networking`, `http`, `websockets`, `payments`, `notifications`, `media-processing`, `streaming-media`, `diagramming`, `code-review`, `data-cleaning`, `entity-resolution`, `graph-processing`, `analytics`, `email`, `e-commerce`, `state-machines`, `blockchain`, `low-code`, `testing`, `webhooks`, `healthcare`, `fhir`, `fintech`, `market-data`
 
 ### Security operations
 `osint`, `pentesting`, `red-team`, `threat-intelligence`, `wordlists`, `dark-web`, `privacy`, `fingerprinting`, `anonymization`, `cryptography`, `compliance`, `verifiable-credentials`

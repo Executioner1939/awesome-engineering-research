@@ -283,6 +283,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `blockchain-tooling` | Wallet cores, chain clients, indexers and on-chain bot frameworks: wallet-core, Artemis, Rabby, Solana indexers |
 | `low-code-platforms` | Config-driven internal-tool and admin-panel builders: Lowdefy, Appsmith, Budibase, ToolJet |
 | `healthcare-platforms` | Health-data interoperability and clinical application platforms: Medplum, HAPI FHIR, OpenEMR, FHIR and HL7 servers and SDKs |
+| `market-data` | Financial market data access, aggregation and trading infrastructure: borsa, OpenBB, ccxt, QuantLib, exchange and ticker SDKs |
 
 ## Scientific computing
 
