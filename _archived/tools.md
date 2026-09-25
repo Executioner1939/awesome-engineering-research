@@ -4,9 +4,9 @@ title: Archived tools
 type: index
 status: stable
 created: 2026-05-15
-updated: 2026-09-24
+updated: 2026-09-25
 total_active: 0
-total_archived: 65
+total_archived: 66
 ---
 
 # Archived tools
@@ -69,6 +69,7 @@ Repos that are archived on GitHub, removed, or stale (no push in >3 years), or t
 | tiaanduplessis-reading | tiaanduplessis/reading | https://github.com/tiaanduplessis/reading | 📖 |  | 7 | 2020-06-17 |  |  | developer-tooling | archived | 2026-05-17 | repo_archived |
 | utkarshkukreti-speculate-rs | utkarshkukreti/speculate.rs | https://github.com/utkarshkukreti/speculate.rs | An RSpec inspired minimal testing framework for Rust | Rust | 275 | 2023-05-10 |  |  | developer-tooling,rust | archived | 2026-05-17 | stale |
 | utkarshkukreti-speculate.rs | utkarshkukreti/speculate.rs | https://github.com/utkarshkukreti/speculate.rs | An RSpec inspired minimal testing framework for Rust. | Rust | 275 | 2023-05-10 | async-runtimes | unsorted | language-runtimes,rust | archived | 2026-09-15 | stale |
+| vaaaaanquish-awesome-rust-machinelearning | vaaaaanquish/Awesome-Rust-MachineLearning | https://github.com/vaaaaanquish/Awesome-Rust-MachineLearning | Curated list of machine learning in Rust: crates for deep learning, NLP and image processing, plus papers, talks and discussions. | JavaScript | 2270 | 2023-09-25 | awesome-lists | content | ai-applications,machine-learning,rust | archived | 2026-09-25 | stale |
 | vladkopanev-zio-saga | VladKopanev/zio-saga | https://github.com/VladKopanev/zio-saga | Purely Functional Transaction Management In Scala With ZIO | Scala | 230 | 2023-09-14 |  |  | concurrency,distributed-systems,fp-rust,fp-scala,scala | archived | 2026-05-17 | repo_archived |
 | wgmouton-scala-project | wgmouton/scala-project | https://github.com/wgmouton/scala-project |  | Scala | 1 | 2022-08-16 |  |  | developer-tooling,scala | archived | 2026-05-17 | stale |
 | wheaties-twotails | wheaties/TwoTails | https://github.com/wheaties/TwoTails | A Scala compiler plugin for mutual tail recursion | Scala | 88 | 2020-01-13 |  |  | language-runtimes,scala | archived | 2026-05-17 | stale |
