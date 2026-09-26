@@ -4,9 +4,9 @@ title: Archived tools
 type: index
 status: stable
 created: 2026-05-15
-updated: 2026-09-25
+updated: 2026-09-26
 total_active: 0
-total_archived: 66
+total_archived: 67
 ---
 
 # Archived tools
@@ -20,6 +20,7 @@ Repos that are archived on GitHub, removed, or stale (no push in >3 years), or t
 | alexandru-scala-best-practices | alexandru/scala-best-practices | https://github.com/alexandru/scala-best-practices | A collection of Scala best practices |  | 4356 | 2022-11-09 |  |  | developer-tooling | archived | 2026-05-17 | stale |
 | amitkaps-hackermath | amitkaps/hackermath | https://github.com/amitkaps/hackermath | Introduction to Statistics and Basics of Mathematics for Data Science - The Hacker's Way | Jupyter Notebook | 1455 | 2017-11-26 |  |  | developer-tooling,python | archived | 2026-05-17 | stale |
 | aparo-awesome-zio | aparo/awesome-zio | https://github.com/aparo/awesome-zio | A big collection of useful ZIO links | Python | 138 | 2021-12-10 |  |  | developer-tooling,python | archived | 2026-05-17 | stale |
+| assistant-ui-tool-ui | assistant-ui/tool-ui | https://github.com/assistant-ui/tool-ui | UI components for rendering AI tool calls and MCP results inside chat interfaces. | TypeScript | 782 | 2026-08-31 | llm-interfaces | library | ai-applications,frontend,generative-ui,mcp,typescript | archived | 2026-09-26 | repo_archived |
 | cbartosiak-bson-codecs-jsr310 | cbartosiak/bson-codecs-jsr310 | https://github.com/cbartosiak/bson-codecs-jsr310 | BSON codecs for Java 8 Date and Time API (JSR-310) | Java | 21 | 2019-09-02 |  |  | developer-tooling | archived | 2026-05-17 | stale |
 | charithe-flake4j | charithe/flake4j | https://github.com/charithe/flake4j | Java implementation of the Flake decentralized, k-ordered id generation algorithm | Java | 12 | 2018-12-04 |  |  | developer-tooling | archived | 2026-05-17 | stale |
 | dagrs-dev-dagrs | dagrs-dev/dagrs | https://github.com/dagrs-dev/dagrs | High-performance, Rust-based asynchronous task programming framework implementing Flow-Based Programming for scalable di | Rust | 479 | 2026-01-16 |  |  | async-runtimes,concurrency,developer-tooling,rust,web-perf | archived | 2026-05-17 | repo_archived |
