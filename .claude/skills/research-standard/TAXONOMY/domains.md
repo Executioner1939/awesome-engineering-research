@@ -69,7 +69,7 @@ Sub-area or technology specificity. May appear alongside any domain label. Group
 `cli-tooling`, `error-handling`, `interviewing`, `engineering-management`, `algorithms`, `math`, `networking`, `http`, `websockets`, `payments`, `notifications`, `media-processing`, `streaming-media`, `diagramming`, `code-review`, `data-cleaning`, `entity-resolution`, `graph-processing`, `analytics`, `email`, `e-commerce`, `state-machines`, `blockchain`, `low-code`, `testing`, `webhooks`, `healthcare`, `fhir`, `fintech`, `market-data`
 
 ### Security operations
-`osint`, `pentesting`, `red-team`, `threat-intelligence`, `wordlists`, `dark-web`, `privacy`, `fingerprinting`, `anonymization`, `cryptography`, `compliance`, `verifiable-credentials`
+`osint`, `pentesting`, `red-team`, `threat-intelligence`, `wordlists`, `dark-web`, `privacy`, `fingerprinting`, `anonymization`, `cryptography`, `compliance`, `verifiable-credentials`, `reverse-engineering`, `malware-analysis`, `ctf`
 
 ### Geospatial / sensing
 `geospatial`, `openstreetmap`, `routing`, `photogrammetry`, `remote-sensing`, `drones`, `uav`, `radio-sdr`, `embedded`, `iot`, `mesh-networking`
