@@ -4,9 +4,9 @@ title: Archived tools
 type: index
 status: stable
 created: 2026-05-15
-updated: 2026-10-15
+updated: 2026-10-16
 total_active: 0
-total_archived: 68
+total_archived: 69
 ---
 
 # Archived tools
@@ -77,6 +77,7 @@ Repos that are archived on GitHub, removed, or stale (no push in >3 years), or t
 | wheaties-twotails | wheaties/TwoTails | https://github.com/wheaties/TwoTails | A Scala compiler plugin for mutual tail recursion | Scala | 88 | 2020-01-13 |  |  | language-runtimes,scala | archived | 2026-05-17 | stale |
 | wkjagt-awesome-ddd | wkjagt/awesome-ddd | https://github.com/wkjagt/awesome-ddd | A curated list of awesome Domain Driven Design resources inspired by Awesome PHP and Awesome Sysadmin |  | 25 | 2014-07-20 |  |  | architecture-ddd,developer-tooling | archived | 2026-05-17 | stale |
 | xephonhq-awesome-time-series-database | xephonhq/awesome-time-series-database | https://github.com/xephonhq/awesome-time-series-database | :clock7: A curated list of awesome time series databases, benchmarks and papers | JavaScript | 885 | 2023-07-14 | awesome-lists | unsorted | data-storage,databases,typescript | archived | 2026-09-15 | stale |
+| xiphosresearch-exploits | XiphosResearch/exploits | https://github.com/XiphosResearch/exploits | Assorted proof-of-concept exploit scripts from Xiphos research, covering remote code execution, authentication bypass and TR-064 router vulnerabilities. | Python | 1574 | 2023-10-06 | offensive-security | tool | pentesting,php,python,red-team,security | archived | 2026-10-16 | stale |
 | yusufkaraaslan-skill-seekers | yusufkaraaslan/Skill_Seekers | https://github.com/yusufkaraaslan/Skill_Seekers | Convert documentation websites, GitHub repositories, and PDFs into Claude AI skills with automatic conflict detection | Python | 13591 | 2026-05-13 |  |  | ai-applications,llm,python,web-extraction | archived | 2026-05-17 | user_unstarred |
 | zesterer-chumsky | zesterer/chumsky | https://github.com/zesterer/chumsky | [Chumsky has moved to Codeberg!] Write expressive, high-performance parsers with ease | Rust | 4542 | 2026-03-27 |  |  | developer-tooling,parsers,rust,web-perf | archived | 2026-05-17 | repo_archived |
 | zio-archive-zio-jdbc | zio-archive/zio-jdbc | https://github.com/zio-archive/zio-jdbc | A small, idiomatic ZIO interface to JDBC | Scala | 83 | 2024-04-16 |  |  | developer-tooling,scala | archived | 2026-05-17 | repo_archived |

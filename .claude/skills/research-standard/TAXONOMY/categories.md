@@ -5,7 +5,7 @@ type: taxonomy
 status: stable
 confidence: high
 created: 2026-05-18
-updated: 2026-09-22
+updated: 2026-10-16
 ---
 
 # Fine-grained Categories
@@ -156,6 +156,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `runtime-security` | Kernel and runtime threat detection and enforcement: Tetragon, Falco, Tracee, eBPF security observability |
 | `decentralized-identity` | Verifiable credentials, DIDs and self-sovereign identity toolkits: AnonCreds, ACA-Py, Credo-TS, walt.id, Hyperledger Indy tooling |
 | `compliance-auditing` | Compliance-as-code and benchmark auditing: InSpec, OpenSCAP, CIS benchmark profiles, control evidence collection |
+| `reverse-engineering` | Understanding binaries and opaque applications: Ghidra, radare2, Binary Ninja, Frida instrumentation, decompilers, binary diffing, RE agent toolkits |
 
 ## Developer experience
 
@@ -239,6 +240,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `browser-automation` | Playwright/Puppeteer drivers, headless and anti-detect browsers, FlareSolverr, browser-use |
 | `content-extraction` | trafilatura, newspaper3k, extruct, readability ports, boilerplate and metadata extraction |
 | `document-extraction` | olmOCR, Chunkr, Docling, PDF/Office-to-text conversion for LLM and RAG pipelines |
+| `media-downloaders` | Site-specific video, audio and image downloaders: yt-dlp, lux, gallery-dl, you-get, site-specific media fetchers |
 
 ## Geospatial
 
