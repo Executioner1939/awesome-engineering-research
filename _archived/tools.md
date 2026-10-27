@@ -4,9 +4,9 @@ title: Archived tools
 type: index
 status: stable
 created: 2026-05-15
-updated: 2026-10-26
+updated: 2026-10-27
 total_active: 0
-total_archived: 69
+total_archived: 70
 ---
 
 # Archived tools
@@ -32,6 +32,7 @@ Repos that are archived on GitHub, removed, or stale (no push in >3 years), or t
 | google-labs-code-design-md | google-labs-code/design.md | https://github.com/google-labs-code/design.md | A format specification for describing a visual identity to coding agents | TypeScript | 14137 | 2026-05-08 |  |  | agents,ai-applications,standards,typescript | archived | 2026-05-17 | user_unstarred |
 | googlecloudplatform-terraformer | GoogleCloudPlatform/terraformer | https://github.com/GoogleCloudPlatform/terraformer | CLI tool to generate terraform files from existing infrastructure (reverse Terraform) | Go | 14534 | 2026-03-16 |  |  | cli-tooling,developer-tooling,go,infrastructure,kubernetes,terraform | archived | 2026-05-17 | repo_archived |
 | gsd-build-get-shit-done | gsd-build/get-shit-done | https://github.com/gsd-build/get-shit-done | A light-weight and powerful meta-prompting, context engineering and spec-driven development system for Claude Code by TÂ | JavaScript | 62725 | 2026-05-31 | llm-app-frameworks | unsorted | ai-applications,llm,standards,typescript | archived | 2026-09-15 | repo_archived |
+| hellgrenj-rumpel | hellgrenj/Rumpel | https://github.com/hellgrenj/Rumpel | Consumer-driven contract testing for JSON APIs that records what a consumer relies on and automatically verifies the provider against it. | C# | 100 | 2023-10-27 | testing-frameworks | tool | csharp,developer-tooling,http,testing | archived | 2026-10-27 | stale |
 | hishamhm-htop | hishamhm/htop | https://github.com/hishamhm/htop | htop is an interactive text-mode process viewer for Unix systems | C | 5903 | 2020-11-17 |  |  | developer-tooling | archived | 2026-05-17 | repo_archived |
 | hjacobs-kubernetes-failure-stories | hjacobs/kubernetes-failure-stories | https://github.com/hjacobs/kubernetes-failure-stories | Compilation of public failure/horror stories related to Kubernetes | HTML | 6208 | 2020-08-23 |  |  | infrastructure,kubernetes | archived | 2026-05-17 | repo_archived |
 | inconshreveable-ngrok | inconshreveable/ngrok | https://github.com/inconshreveable/ngrok | Unified ingress for developers | Go | 24460 | 2024-04-26 |  |  | developer-tooling,go | archived | 2026-05-17 | repo_archived |
