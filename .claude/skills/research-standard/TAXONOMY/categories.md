@@ -231,6 +231,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `computer-vision` | Ultralytics YOLO, anomalib, object detection and segmentation stacks, 3D world models |
 | `information-extraction` | GLiNER, spaCy pipelines, NER and schema-based structured extraction from text |
 | `model-optimization` | Quantization, pruning, abliteration, low-memory inference: AirLLM, llm-compressor, heretic |
+| `motion-generation` | Generative models for human, character and humanoid-robot motion: Kimodo, MotionBricks, motion diffusion models, latent motion priors, text-to-motion and pose-constrained synthesis |
 
 ## Web extraction
 

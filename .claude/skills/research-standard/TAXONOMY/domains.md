@@ -78,7 +78,7 @@ Sub-area or technology specificity. May appear alongside any domain label. Group
 `bioinformatics`, `genomics`
 
 ### Machine learning
-`machine-learning`, `computer-vision`, `object-detection`, `nlp`, `information-extraction`, `ocr`, `quantization`, `model-inference`
+`machine-learning`, `computer-vision`, `object-detection`, `nlp`, `information-extraction`, `ocr`, `quantization`, `model-inference`, `motion-generation`, `robotics`
 
 ### Web extraction detail
 `web-scraping`, `crawling`, `browser-automation`, `anti-bot`, `document-extraction`
