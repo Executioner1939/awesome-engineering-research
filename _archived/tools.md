@@ -4,9 +4,9 @@ title: Archived tools
 type: index
 status: stable
 created: 2026-05-15
-updated: 2026-11-12
+updated: 2026-11-13
 total_active: 0
-total_archived: 71
+total_archived: 72
 ---
 
 # Archived tools
@@ -60,6 +60,7 @@ Repos that are archived on GitHub, removed, or stale (no push in >3 years), or t
 | pawurb-channels-console | pawurb/channels-console | https://github.com/pawurb/channels-console | Real-time monitoring, metrics and logs for Rust channels | Rust | 368 | 2025-11-20 |  |  | observability,rust | archived | 2026-05-17 | repo_archived |
 | precog-matryoshka | precog/matryoshka | https://github.com/precog/matryoshka | Generalized recursion schemes and traversals for Scala | Scala | 821 | 2020-04-01 |  |  | developer-tooling,scala | archived | 2026-05-17 | stale |
 | priivacy-ai-spec-kitty | Priivacy-ai/spec-kitty | https://github.com/Priivacy-ai/spec-kitty | Spec-Driven Development for serious software developers | Python | 1235 | 2026-05-17 | unsorted | unsorted | agents,ai-applications,llm,python,standards | archived | 2026-09-15 | user_unstarred |
+| redpanda-data-redpanda | redpanda-data/redpanda | https://github.com/redpanda-data/redpanda | Redpanda is a streaming data platform for developers | C++ | 12681 | 2026-11-12 | message-queues | tool | distributed-systems,go,infrastructure,kafka,kubernetes,microservices | archived | 2026-11-13 | repo_archived |
 | rklaehn-radixtree | rklaehn/radixtree | https://github.com/rklaehn/radixtree | A fast and generic immutable radix tree for scala | Scala | 98 | 2019-09-24 |  |  | developer-tooling,scala | archived | 2026-05-17 | stale |
 | robinstickel-awesome-design-principles | robinstickel/awesome-design-principles | https://github.com/robinstickel/awesome-design-principles | ✨ A curated list of awesome design principles |  | 747 | 2021-01-11 |  |  | developer-tooling | archived | 2026-05-17 | stale |
 | saschagrunert-git-journal | saschagrunert/git-journal | https://github.com/saschagrunert/git-journal | The Git Commit Message and Changelog Generation Framework :book: | Rust | 645 | 2023-01-20 |  |  | developer-tooling,rust | archived | 2026-05-17 | stale |
