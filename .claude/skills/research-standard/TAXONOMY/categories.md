@@ -5,7 +5,7 @@ type: taxonomy
 status: stable
 confidence: high
 created: 2026-05-18
-updated: 2026-10-16
+updated: 2026-11-17
 ---
 
 # Fine-grained Categories
@@ -251,6 +251,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `geospatial-processing` | Apache Sedona, H3, GDAL, remote-sensing and spatial-analysis pipelines |
 | `photogrammetry` | OpenDroneMap, WebODM, OpenSfM, COLMAP, Gaussian-splatting reconstruction pipelines |
 | `mapping-libraries` | MapLibre, Leaflet, CesiumJS, OpenStreetMap tooling and resource collections |
+| `geospatial-data` | Catalogues of geospatial data sources and public data services: basemap and tile endpoints, elevation and satellite imagery providers, OpenStreetMap extracts, national open-data portals |
 
 ## Embedded & radio
 
@@ -295,6 +296,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `scientific-computing` | Symbolic mathematics, numerics and optimisation: Symbolica, SymPy, arbitrary-precision decimals, metaheuristic and solver libraries |
 | `units-measures` | Physical quantities, units of measure and dimensional analysis: squants, coulomb, JSR-354 Moneta, alchemist, uom |
 | `bioinformatics` | Biological and chemical data processing: BioJava, Biopython, htsjdk, sequence alignment, genomics and protein-structure toolkits |
+| `computational-geometry` | Geometric algorithms and their implementations: CGAL, GEOS, Delaunay triangulation and Voronoi diagrams, convex hulls, robust geometric predicates |
 
 ## Triage
 
