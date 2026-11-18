@@ -4,9 +4,9 @@ title: Archived tools
 type: index
 status: stable
 created: 2026-05-15
-updated: 2026-11-17
+updated: 2026-11-18
 total_active: 0
-total_archived: 72
+total_archived: 74
 ---
 
 # Archived tools
@@ -21,6 +21,8 @@ Repos that are archived on GitHub, removed, or stale (no push in >3 years), or t
 | amitkaps-hackermath | amitkaps/hackermath | https://github.com/amitkaps/hackermath | Introduction to Statistics and Basics of Mathematics for Data Science - The Hacker's Way | Jupyter Notebook | 1455 | 2017-11-26 |  |  | developer-tooling,python | archived | 2026-05-17 | stale |
 | aparo-awesome-zio | aparo/awesome-zio | https://github.com/aparo/awesome-zio | A big collection of useful ZIO links | Python | 138 | 2021-12-10 |  |  | developer-tooling,python | archived | 2026-05-17 | stale |
 | assistant-ui-tool-ui | assistant-ui/tool-ui | https://github.com/assistant-ui/tool-ui | UI components for rendering AI tool calls and MCP results inside chat interfaces. | TypeScript | 782 | 2026-08-31 | llm-interfaces | library | ai-applications,frontend,generative-ui,mcp,typescript | archived | 2026-09-26 | repo_archived |
+| brandonhimpfen-awesome-open-source-drone-firmware | brandonhimpfen/awesome-open-source-drone-firmware | https://github.com/brandonhimpfen/awesome-open-source-drone-firmware | Curated list of open-source drone firmware, flight controllers and UAV development tooling. | Python | 27 | 2026-09-06 | uav-drones | content | drones,embedded,infrastructure,uav | archived | 2026-11-18 | user_unstarred |
+| brandonhimpfen-awesome-swarm-drones | brandonhimpfen/awesome-swarm-drones | https://github.com/brandonhimpfen/awesome-swarm-drones | Curated list of tools, papers and frameworks for swarm drones, multi-UAV systems and coordinated aerial robotics. | Python | 13 | 2026-09-06 | uav-drones | content | algorithms,drones,infrastructure,uav | archived | 2026-11-18 | user_unstarred |
 | calesthio-openmontage | calesthio/OpenMontage | https://github.com/calesthio/OpenMontage | Agentic video production system with 12 pipelines and 700+ skill files that turn a coding assistant into a video editing and generation studio. | Python | 78015 | 2026-11-03 | media-processing | tool | agent-skills,agents,ai-applications,media-processing,python | archived | 2026-11-08 | user_unstarred |
 | cbartosiak-bson-codecs-jsr310 | cbartosiak/bson-codecs-jsr310 | https://github.com/cbartosiak/bson-codecs-jsr310 | BSON codecs for Java 8 Date and Time API (JSR-310) | Java | 21 | 2019-09-02 |  |  | developer-tooling | archived | 2026-05-17 | stale |
 | charithe-flake4j | charithe/flake4j | https://github.com/charithe/flake4j | Java implementation of the Flake decentralized, k-ordered id generation algorithm | Java | 12 | 2018-12-04 |  |  | developer-tooling | archived | 2026-05-17 | stale |
