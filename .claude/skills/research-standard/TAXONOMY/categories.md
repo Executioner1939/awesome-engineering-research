@@ -5,7 +5,7 @@ type: taxonomy
 status: stable
 confidence: high
 created: 2026-05-18
-updated: 2026-11-17
+updated: 2026-11-19
 ---
 
 # Fine-grained Categories
@@ -232,6 +232,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `information-extraction` | GLiNER, spaCy pipelines, NER and schema-based structured extraction from text |
 | `model-optimization` | Quantization, pruning, abliteration, low-memory inference: AirLLM, llm-compressor, heretic |
 | `motion-generation` | Generative models for human, character and humanoid-robot motion: Kimodo, MotionBricks, motion diffusion models, latent motion priors, text-to-motion and pose-constrained synthesis |
+| `generative-3d` | Generative models and agents that produce 3D geometry from text or images: TRELLIS, text-to-cad, Hunyuan3D, TripoSR, mesh and parametric-CAD synthesis |
 
 ## Web extraction
 

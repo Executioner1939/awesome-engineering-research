@@ -5,7 +5,7 @@ type: taxonomy
 status: stable
 confidence: high
 created: 2026-05-15
-updated: 2026-09-22
+updated: 2026-11-19
 ---
 
 # Subject Domains and Refinement Labels
@@ -78,7 +78,7 @@ Sub-area or technology specificity. May appear alongside any domain label. Group
 `bioinformatics`, `genomics`
 
 ### Machine learning
-`machine-learning`, `computer-vision`, `object-detection`, `nlp`, `information-extraction`, `ocr`, `quantization`, `model-inference`, `motion-generation`, `robotics`
+`machine-learning`, `computer-vision`, `object-detection`, `nlp`, `information-extraction`, `ocr`, `quantization`, `model-inference`, `motion-generation`, `robotics`, `generative-3d`
 
 ### Web extraction detail
 `web-scraping`, `crawling`, `browser-automation`, `anti-bot`, `document-extraction`
