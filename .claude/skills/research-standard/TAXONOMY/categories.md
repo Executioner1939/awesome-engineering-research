@@ -5,7 +5,7 @@ type: taxonomy
 status: stable
 confidence: high
 created: 2026-05-18
-updated: 2026-11-19
+updated: 2026-11-20
 ---
 
 # Fine-grained Categories
@@ -202,6 +202,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `data-visualization` | Vega, D3, visx, deck.gl, Observable Plot, charting grammars |
 | `graphics-3d` | three.js helpers, react-three-fiber/drei, glam, 3D asset collections and graphics math |
 | `animation-libraries` | GSAP, Motion, anime.js, Lottie, scroll and timeline animation |
+| `vector-graphics` | 2D vector rendering and rasterisation: Anti-Grain Geometry, Skia, Cairo, resvg, tiny-skia, lyon, path stroking and scanline rasterisers |
 
 ## Standards & specs
 
@@ -298,6 +299,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `units-measures` | Physical quantities, units of measure and dimensional analysis: squants, coulomb, JSR-354 Moneta, alchemist, uom |
 | `bioinformatics` | Biological and chemical data processing: BioJava, Biopython, htsjdk, sequence alignment, genomics and protein-structure toolkits |
 | `computational-geometry` | Geometric algorithms and their implementations: CGAL, GEOS, Delaunay triangulation and Voronoi diagrams, convex hulls, robust geometric predicates |
+| `physics-simulation` | Rigid-body physics engines and physical simulation: Box2D and Box3D, Bullet and ammo.js, Rapier, N-body gravitational and particle simulations |
 
 ## Triage
 
