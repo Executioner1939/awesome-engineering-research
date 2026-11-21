@@ -4,9 +4,9 @@ title: Archived tools
 type: index
 status: stable
 created: 2026-05-15
-updated: 2026-11-20
+updated: 2026-11-21
 total_active: 0
-total_archived: 74
+total_archived: 75
 ---
 
 # Archived tools
@@ -74,6 +74,7 @@ Repos that are archived on GitHub, removed, or stale (no push in >3 years), or t
 | terrastruct-d2 | terrastruct/d2 | https://github.com/terrastruct/d2 | D2 is a modern diagram scripting language that turns text to diagrams | Go | 23706 | 2026-04-24 | async-runtimes | unsorted | developer-tooling,go,language-runtimes | archived | 2026-09-15 | user_unstarred |
 | terrateamio-terrateam | terrateamio/terrateam | https://github.com/terrateamio/terrateam | Terrateam is open-source GitOps infrastructure orchestration | OCaml | 1226 | 2026-05-17 | gitops | tool | infrastructure,terraform | archived | 2026-09-15 | user_unstarred |
 | tiaanduplessis-reading | tiaanduplessis/reading | https://github.com/tiaanduplessis/reading | 📖 |  | 7 | 2020-06-17 |  |  | developer-tooling | archived | 2026-05-17 | repo_archived |
+| timokoesters-nbodysim | timokoesters/nbodysim | https://github.com/timokoesters/nbodysim | Realtime 3D n-body gravitational simulator in Rust that integrates particles on the GPU via wgpu and loads scenarios from config files. | Rust | 511 | 2021-11-04 | physics-simulation | tool | frontend,graphics-3d,math,rust | archived | 2026-11-21 | stale |
 | utkarshkukreti-speculate-rs | utkarshkukreti/speculate.rs | https://github.com/utkarshkukreti/speculate.rs | An RSpec inspired minimal testing framework for Rust | Rust | 275 | 2023-05-10 |  |  | developer-tooling,rust | archived | 2026-05-17 | stale |
 | utkarshkukreti-speculate.rs | utkarshkukreti/speculate.rs | https://github.com/utkarshkukreti/speculate.rs | An RSpec inspired minimal testing framework for Rust. | Rust | 275 | 2023-05-10 | async-runtimes | unsorted | language-runtimes,rust | archived | 2026-09-15 | stale |
 | vaaaaanquish-awesome-rust-machinelearning | vaaaaanquish/Awesome-Rust-MachineLearning | https://github.com/vaaaaanquish/Awesome-Rust-MachineLearning | Curated list of machine learning in Rust: crates for deep learning, NLP and image processing, plus papers, talks and discussions. | JavaScript | 2270 | 2023-09-25 | awesome-lists | content | ai-applications,machine-learning,rust | archived | 2026-09-25 | stale |

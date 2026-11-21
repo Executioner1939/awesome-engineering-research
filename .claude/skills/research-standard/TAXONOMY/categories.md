@@ -5,7 +5,7 @@ type: taxonomy
 status: stable
 confidence: high
 created: 2026-05-18
-updated: 2026-11-20
+updated: 2026-11-21
 ---
 
 # Fine-grained Categories
@@ -203,6 +203,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `graphics-3d` | three.js helpers, react-three-fiber/drei, glam, 3D asset collections and graphics math |
 | `animation-libraries` | GSAP, Motion, anime.js, Lottie, scroll and timeline animation |
 | `vector-graphics` | 2D vector rendering and rasterisation: Anti-Grain Geometry, Skia, Cairo, resvg, tiny-skia, lyon, path stroking and scanline rasterisers |
+| `realtime-rendering` | Real-time GPU rendering engines and renderer-level graphics techniques: Vulkan and wgpu renderers, ray and path tracers, impostor and LOD systems, shadow and lighting pipelines, game-engine render backends |
 
 ## Standards & specs
 
