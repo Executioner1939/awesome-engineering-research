@@ -10,8 +10,8 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 <!-- BEGIN: stats -->
 - **Sources:** 294 active, 44 archived
-- **Repos:** 641 active, 75 archived
-- **Last regenerated:** 2026-11-21
+- **Repos:** 643 active, 75 archived
+- **Last regenerated:** 2026-11-22
 <!-- END: stats -->
 
 ---
@@ -259,16 +259,16 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [PeerDB-io/peerdb](https://github.com/PeerDB-io/peerdb) | Go | 3322 | 2026-11-21 | Fast, Simple and a cost effective tool to replicate data from Postgres to Data Warehouses, Queues and Storage |
+| [PeerDB-io/peerdb](https://github.com/PeerDB-io/peerdb) | Go | 3322 | 2026-11-22 | Fast, Simple and a cost effective tool to replicate data from Postgres to Data Warehouses, Queues and Storage |
 | [GoogleCloudPlatform/cloudsql-upgrade](https://github.com/GoogleCloudPlatform/cloudsql-upgrade) | — | 7 | 2025-07-14 | The tool simplifies upgrading your Cloud SQL databases to newer major versions (MySQL 5.7 to 8.0 and PostgreSQL 9.6/10/1 |
 
 #### Libraries (4)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [diesel-rs/diesel](https://github.com/diesel-rs/diesel) | Rust | 14289 | 2026-11-21 | A safe, extensible ORM and Query Builder for Rust |
-| [apache/datafusion](https://github.com/apache/datafusion) | Rust | 9631 | 2026-11-21 | Apache DataFusion SQL Query Engine |
-| [JetBrains/Exposed](https://github.com/JetBrains/Exposed) | Kotlin | 9305 | 2026-11-20 | Kotlin SQL Framework |
+| [diesel-rs/diesel](https://github.com/diesel-rs/diesel) | Rust | 14288 | 2026-11-21 | A safe, extensible ORM and Query Builder for Rust |
+| [apache/datafusion](https://github.com/apache/datafusion) | Rust | 9638 | 2026-11-22 | Apache DataFusion SQL Query Engine |
+| [JetBrains/Exposed](https://github.com/JetBrains/Exposed) | Kotlin | 9304 | 2026-11-20 | Kotlin SQL Framework |
 | [diesel-rs/diesel_async](https://github.com/diesel-rs/diesel_async) | Rust | 829 | 2026-11-11 | Diesel async connection implementation |
 
 #### Articles (2)
@@ -289,14 +289,14 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [ClickHouse/ClickHouse](https://github.com/ClickHouse/ClickHouse) | C++ | 51052 | 2026-11-21 | ClickHouse® is a real-time analytics database management system |
+| [ClickHouse/ClickHouse](https://github.com/ClickHouse/ClickHouse) | C++ | 51062 | 2026-11-22 | ClickHouse® is a real-time analytics database management system |
 | [ClickHouse/clickhouse-operator](https://github.com/ClickHouse/clickhouse-operator) | Go | 322 | 2026-11-20 | Official Kubernetes Operator for ClickHouse® |
 
 #### Libraries (3)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [pola-rs/polars](https://github.com/pola-rs/polars) | Rust | 40416 | 2026-11-21 | Extremely fast Query Engine for DataFrames, written in Rust |
+| [pola-rs/polars](https://github.com/pola-rs/polars) | Rust | 40431 | 2026-11-22 | Extremely fast Query Engine for DataFrames, written in Rust |
 | [ClickHouse/clickhouse-rs](https://github.com/ClickHouse/clickhouse-rs) | Rust | 569 | 2026-11-19 | Official typed Rust client for ClickHouse, with async row streaming over HTTP and derive-based schema mapping. |
 | [delta-io/delta-kernel-rs](https://github.com/delta-io/delta-kernel-rs) | Rust | 380 | 2026-11-21 | Native Rust implementation of the Delta Lake protocol, giving any query engine a correct table reader and writer. |
 
@@ -311,8 +311,8 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [GreptimeTeam/greptimedb](https://github.com/GreptimeTeam/greptimedb) | Rust | 6824 | 2026-11-21 | The open-source Observability 2.0 database |
-| [apache/iotdb](https://github.com/apache/iotdb) | Java | 6437 | 2026-11-21 | Time-series database for IoT and industrial telemetry, with a device-oriented data model, columnar TsFile storage and SQL-like queries. |
+| [GreptimeTeam/greptimedb](https://github.com/GreptimeTeam/greptimedb) | Rust | 6825 | 2026-11-22 | The open-source Observability 2.0 database |
+| [apache/iotdb](https://github.com/apache/iotdb) | Java | 6439 | 2026-11-22 | Time-series database for IoT and industrial telemetry, with a device-oriented data model, columnar TsFile storage and SQL-like queries. |
 
 #### Articles (4)
 
@@ -334,8 +334,8 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [milvus-io/milvus](https://github.com/milvus-io/milvus) | Go | 46712 | 2026-11-21 | Cloud-native vector database for billion-scale ANN search, with HNSW and DiskANN indexes, hybrid filtering and a distributed storage-compute split. |
-| [qdrant/qdrant](https://github.com/qdrant/qdrant) | Rust | 35653 | 2026-11-20 | Vector search engine and database written in Rust, with HNSW indexing, payload filtering and hybrid search for retrieval and recommendation workloads. |
+| [milvus-io/milvus](https://github.com/milvus-io/milvus) | Go | 46718 | 2026-11-21 | Cloud-native vector database for billion-scale ANN search, with HNSW and DiskANN indexes, hybrid filtering and a distributed storage-compute split. |
+| [qdrant/qdrant](https://github.com/qdrant/qdrant) | Rust | 35661 | 2026-11-20 | Vector search engine and database written in Rust, with HNSW indexing, payload filtering and hybrid search for retrieval and recommendation workloads. |
 
 #### Libraries (1)
 
@@ -354,9 +354,9 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [FalkorDB/FalkorDB](https://github.com/FalkorDB/FalkorDB) | C | 10500 | 2026-11-21 | A super fast Graph Database uses GraphBLAS under the hood for its sparse adjacency matrix graph representation |
-| [memgraph/memgraph](https://github.com/memgraph/memgraph) | C++ | 4668 | 2026-11-21 | In-memory graph database with openCypher support, streaming ingestion from Kafka and a bundled algorithm library, aimed at real-time analytics and GraphRAG. |
-| [typedb/typedb](https://github.com/typedb/typedb) | Rust | 4524 | 2026-11-19 | Strongly-typed database with a polymorphic schema and built-in reasoning, modelling entities, relations and rules rather than rows. |
+| [FalkorDB/FalkorDB](https://github.com/FalkorDB/FalkorDB) | C | 10502 | 2026-11-22 | A super fast Graph Database uses GraphBLAS under the hood for its sparse adjacency matrix graph representation |
+| [memgraph/memgraph](https://github.com/memgraph/memgraph) | C++ | 4668 | 2026-11-22 | In-memory graph database with openCypher support, streaming ingestion from Kafka and a bundled algorithm library, aimed at real-time analytics and GraphRAG. |
+| [typedb/typedb](https://github.com/typedb/typedb) | Rust | 4525 | 2026-11-19 | Strongly-typed database with a polymorphic schema and built-in reasoning, modelling entities, relations and rules rather than rows. |
 | [thatdot/quine](https://github.com/thatdot/quine) | Scala | 366 | 2026-11-20 | Streaming graph database that builds a graph from event streams and fires standing Cypher queries as matching subgraphs appear. |
 | [memgraph/memgraph-docker-extension](https://github.com/memgraph/memgraph-docker-extension) | Dockerfile | 17 | 2026-10-26 | Docker extension for Memgraph, MAGE and Memgraph Lab |
 | [memgraph/best-practices](https://github.com/memgraph/best-practices) | Cypher | 15 | 2026-07-08 | The shortest path to a successful project with Memgraph |
@@ -398,9 +398,9 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [redis/redis](https://github.com/redis/redis) | C | 77584 | 2026-11-19 | For developers, who are building real-time data-driven applications, Redis is the preferred, fastest, and most feature-r |
-| [etcd-io/etcd](https://github.com/etcd-io/etcd) | Go | 52645 | 2026-11-20 | Distributed reliable key-value store for the most critical data of a distributed system |
-| [dragonflydb/dragonfly](https://github.com/dragonflydb/dragonfly) | C++ | 31898 | 2026-11-20 | A modern replacement for Redis and Memcached |
+| [redis/redis](https://github.com/redis/redis) | C | 77679 | 2026-11-22 | For developers, who are building real-time data-driven applications, Redis is the preferred, fastest, and most feature-r |
+| [etcd-io/etcd](https://github.com/etcd-io/etcd) | Go | 52647 | 2026-11-20 | Distributed reliable key-value store for the most critical data of a distributed system |
+| [dragonflydb/dragonfly](https://github.com/dragonflydb/dragonfly) | C++ | 31902 | 2026-11-22 | A modern replacement for Redis and Memcached |
 
 #### Articles (4)
 
@@ -429,7 +429,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [hit-box/hitbox](https://github.com/hit-box/hitbox) | Rust | 154 | 2026-11-21 | Async caching framework for Rust with Tower middleware, stale-while-revalidate and dogpile protection over pluggable Moka, Redis or FeOxDB backends. |
+| [hit-box/hitbox](https://github.com/hit-box/hitbox) | Rust | 154 | 2026-11-22 | Async caching framework for Rust with Tower middleware, stale-while-revalidate and dogpile protection over pluggable Moka, Redis or FeOxDB backends. |
 
 
 <a id="search-engines"></a>
@@ -442,15 +442,15 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [meilisearch/meilisearch](https://github.com/meilisearch/meilisearch) | Rust | 59951 | 2026-11-20 | A lightning-fast search engine API bringing AI-powered hybrid search to your sites and applications |
-| [typesense/typesense](https://github.com/typesense/typesense) | C++ | 27165 | 2026-11-20 | Open Source alternative to Algolia + Pinecone and an Easier-to-Use alternative to ElasticSearch ⚡ 🔍 ✨ Fast, typo toleran |
+| [meilisearch/meilisearch](https://github.com/meilisearch/meilisearch) | Rust | 59960 | 2026-11-20 | A lightning-fast search engine API bringing AI-powered hybrid search to your sites and applications |
+| [typesense/typesense](https://github.com/typesense/typesense) | C++ | 27164 | 2026-11-20 | Open Source alternative to Algolia + Pinecone and an Easier-to-Use alternative to ElasticSearch ⚡ 🔍 ✨ Fast, typo toleran |
 | [valeriansaliou/sonic](https://github.com/valeriansaliou/sonic) | Rust | 21389 | 2026-11-10 | 🦔 Fast, lightweight & schema-less search backend |
 
 #### Libraries (1)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [quickwit-oss/tantivy](https://github.com/quickwit-oss/tantivy) | Rust | 16463 | 2026-11-18 | Tantivy is a full-text search engine library inspired by Apache Lucene and written in Rust |
+| [quickwit-oss/tantivy](https://github.com/quickwit-oss/tantivy) | Rust | 16464 | 2026-11-18 | Tantivy is a full-text search engine library inspired by Apache Lucene and written in Rust |
 
 #### Articles (1)
 
@@ -469,8 +469,8 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [ceph/ceph](https://github.com/ceph/ceph) | C++ | 17252 | 2026-11-21 | Ceph is a distributed object, block, and file storage platform |
-| [GoogleCloudPlatform/gcsfuse](https://github.com/GoogleCloudPlatform/gcsfuse) | Go | 2322 | 2026-11-20 | FUSE adapter that mounts a Google Cloud Storage bucket as a local file system, so ordinary tools can read and write objects. |
+| [ceph/ceph](https://github.com/ceph/ceph) | C++ | 17255 | 2026-11-22 | Ceph is a distributed object, block, and file storage platform |
+| [GoogleCloudPlatform/gcsfuse](https://github.com/GoogleCloudPlatform/gcsfuse) | Go | 2322 | 2026-11-22 | FUSE adapter that mounts a Google Cloud Storage bucket as a local file system, so ordinary tools can read and write objects. |
 
 #### Articles (1)
 
@@ -490,7 +490,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
 | [nsqio/nsq](https://github.com/nsqio/nsq) | Go | 25781 | 2026-08-11 | Realtime distributed messaging platform with no central broker, offering per-topic queues, at-least-once delivery and horizontal scaling. |
-| [nats-io/nats-server](https://github.com/nats-io/nats-server) | Go | 21092 | 2026-11-20 | High-Performance server for NATS.io, the cloud and edge native messaging system |
+| [nats-io/nats-server](https://github.com/nats-io/nats-server) | Go | 21108 | 2026-11-20 | High-Performance server for NATS.io, the cloud and edge native messaging system |
 | [pravega/pravega](https://github.com/pravega/pravega) | Java | 1997 | 2025-03-02 | Distributed storage system that treats an unbounded stream as the primitive, with auto-scaling segments and exactly-once appends. |
 | [nats-io/nats.java](https://github.com/nats-io/nats.java) | Java | 687 | 2026-11-17 | Java client for NATS |
 | [rabbitmq/rabbitmq-stream-java-client](https://github.com/rabbitmq/rabbitmq-stream-java-client) | Java | 75 | 2026-11-20 | RabbitMQ Stream Java Client |
@@ -519,9 +519,9 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [debezium/debezium](https://github.com/debezium/debezium) | Java | 13366 | 2026-11-21 | Change data capture for a variety of databases |
-| [risingwavelabs/risingwave](https://github.com/risingwavelabs/risingwave) | Rust | 9426 | 2026-11-21 | Event streaming platform for agentic AI |
-| [arkflow-rs/arkflow](https://github.com/arkflow-rs/arkflow) | Rust | 1317 | 2026-11-21 | High performance Rust stream processing engine seamlessly integrates AI capabilities, providing powerful real-time data |
+| [debezium/debezium](https://github.com/debezium/debezium) | Java | 13367 | 2026-11-22 | Change data capture for a variety of databases |
+| [risingwavelabs/risingwave](https://github.com/risingwavelabs/risingwave) | Rust | 9425 | 2026-11-21 | Event streaming platform for agentic AI |
+| [arkflow-rs/arkflow](https://github.com/arkflow-rs/arkflow) | Rust | 1319 | 2026-11-22 | High performance Rust stream processing engine seamlessly integrates AI capabilities, providing powerful real-time data |
 | [SeaQL/sea-streamer](https://github.com/SeaQL/sea-streamer) | Rust | 370 | 2026-11-17 | 🌊 Stream processing toolkit for Redis & Kafka |
 
 
@@ -535,7 +535,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [alibaba/GraphScope](https://github.com/alibaba/GraphScope) | C++ | 3564 | 2026-09-23 | One-stop graph computing system from Alibaba, unifying graph analytics, interactive Gremlin queries and graph neural networks at scale. |
+| [alibaba/GraphScope](https://github.com/alibaba/GraphScope) | C++ | 3563 | 2026-09-23 | One-stop graph computing system from Alibaba, unifying graph analytics, interactive Gremlin queries and graph neural networks at scale. |
 | [apache/geaflow](https://github.com/apache/geaflow) | Java | 807 | 2026-11-18 | Distributed streaming graph computing engine from Apache, running incremental graph traversals over continuously changing data. |
 
 
@@ -549,8 +549,8 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [novuhq/novu](https://github.com/novuhq/novu) | TypeScript | 40397 | 2026-11-21 | Notification infrastructure that orchestrates email, SMS, push and in-app inbox delivery from a single workflow API. |
-| [centrifugal/centrifugo](https://github.com/centrifugal/centrifugo) | Go | 11011 | 2026-11-21 | Language-agnostic real-time messaging server delivering pub/sub over WebSocket, SSE and WebTransport as a self-hosted Pusher alternative. |
+| [novuhq/novu](https://github.com/novuhq/novu) | TypeScript | 40408 | 2026-11-22 | Notification infrastructure that orchestrates email, SMS, push and in-app inbox delivery from a single workflow API. |
+| [centrifugal/centrifugo](https://github.com/centrifugal/centrifugo) | Go | 11016 | 2026-11-22 | Language-agnostic real-time messaging server delivering pub/sub over WebSocket, SSE and WebTransport as a self-hosted Pusher alternative. |
 | [edgurgel/poxa](https://github.com/edgurgel/poxa) | Elixir | 1087 | 2024-06-30 | Open-source Pusher-protocol server written in Elixir, drop-in compatible with Pusher client libraries for WebSocket pub/sub and presence channels. |
 
 
@@ -577,10 +577,10 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [tokio-rs/tokio](https://github.com/tokio-rs/tokio) | Rust | 33753 | 2026-11-21 | A runtime for writing reliable asynchronous applications with Rust |
-| [smol-rs/smol](https://github.com/smol-rs/smol) | Rust | 5124 | 2026-10-26 | A small and fast async runtime for Rust |
+| [tokio-rs/tokio](https://github.com/tokio-rs/tokio) | Rust | 33767 | 2026-11-21 | A runtime for writing reliable asynchronous applications with Rust |
+| [smol-rs/smol](https://github.com/smol-rs/smol) | Rust | 5125 | 2026-10-26 | A small and fast async runtime for Rust |
 | [tokio-rs/console](https://github.com/tokio-rs/console) | Rust | 4619 | 2026-08-08 | a debugger for async rust! |
-| [tower-rs/tower](https://github.com/tower-rs/tower) | Rust | 4346 | 2026-06-22 | Rust abstraction for asynchronous request-response services, with composable middleware for timeouts, retries, load balancing and rate limiting. |
+| [tower-rs/tower](https://github.com/tower-rs/tower) | Rust | 4350 | 2026-06-22 | Rust abstraction for asynchronous request-response services, with composable middleware for timeouts, retries, load balancing and rate limiting. |
 
 #### Articles (8)
 
@@ -614,12 +614,12 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
 | [zio/zio](https://github.com/zio/zio) | Scala | 4436 | 2026-11-20 | ZIO — A type-safe, composable library for async and concurrent programming in Scala |
-| [zio/zio-http](https://github.com/zio/zio-http) | Scala | 878 | 2026-11-21 | A next-generation Scala framework for building scalable, correct, and efficient HTTP clients and servers |
+| [zio/zio-http](https://github.com/zio/zio-http) | Scala | 878 | 2026-11-22 | A next-generation Scala framework for building scalable, correct, and efficient HTTP clients and servers |
 | [getkyo/kyo](https://github.com/getkyo/kyo) | Scala | 824 | 2026-11-19 | Toolkit for Scala Development |
 | [zio/zio-prelude](https://github.com/zio/zio-prelude) | Scala | 472 | 2026-11-21 | A lightweight, distinctly Scala take on functional abstractions, with tight ZIO integration |
-| [zio/zio-json](https://github.com/zio/zio-json) | Scala | 429 | 2026-11-21 | Fast, secure JSON library with tight ZIO integration |
+| [zio/zio-json](https://github.com/zio/zio-json) | Scala | 429 | 2026-11-22 | Fast, secure JSON library with tight ZIO integration |
 | [zio/zio-kafka](https://github.com/zio/zio-kafka) | Scala | 365 | 2026-11-21 | A fast Kafka client for ZIO and ZIO Streams |
-| [zio/zio-config](https://github.com/zio/zio-config) | Scala | 243 | 2026-11-21 | Easily use and document any config from anywhere in ZIO apps |
+| [zio/zio-config](https://github.com/zio/zio-config) | Scala | 243 | 2026-11-22 | Easily use and document any config from anywhere in ZIO apps |
 | [zio/zio-intellij](https://github.com/zio/zio-intellij) | Scala | 228 | 2026-11-07 | A companion IntelliJ IDEA plugin for the ZIO library ecosystem |
 | [zio/zio-logging](https://github.com/zio/zio-logging) | Scala | 190 | 2026-11-21 | Powerful logging for ZIO 2.0 applications, with compatibility with many logging backends out-of-the-box |
 | [zio/zio-redis](https://github.com/zio/zio-redis) | Scala | 136 | 2026-11-21 | A ZIO-based redis client |
@@ -665,9 +665,9 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [carbon-language/carbon-lang](https://github.com/carbon-language/carbon-lang) | C++ | 33968 | 2026-11-21 | Carbon Language's main repository: documents, design, implementation, and related tools |
-| [scala/scala](https://github.com/scala/scala) | Scala | 14542 | 2026-11-16 | Scala 2 compiler and standard library |
-| [scala/scala3](https://github.com/scala/scala3) | Scala | 6339 | 2026-11-20 | The Scala 3 compiler, also known as Dotty |
+| [carbon-language/carbon-lang](https://github.com/carbon-language/carbon-lang) | C++ | 33969 | 2026-11-22 | Carbon Language's main repository: documents, design, implementation, and related tools |
+| [scala/scala](https://github.com/scala/scala) | Scala | 14543 | 2026-11-16 | Scala 2 compiler and standard library |
+| [scala/scala3](https://github.com/scala/scala3) | Scala | 6339 | 2026-11-21 | The Scala 3 compiler, also known as Dotty |
 
 #### Libraries (1)
 
@@ -731,10 +731,10 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [google/libphonenumber](https://github.com/google/libphonenumber) | C++ | 18359 | 2026-11-19 | Google's common Java, C++ and JavaScript library for parsing, formatting, and validating international phone numbers |
+| [google/libphonenumber](https://github.com/google/libphonenumber) | C++ | 18361 | 2026-11-19 | Google's common Java, C++ and JavaScript library for parsing, formatting, and validating international phone numbers |
 | [Marwes/combine](https://github.com/Marwes/combine) | Rust | 1370 | 2026-10-15 | A parser combinator library for Rust |
 | [com-lihaoyi/fastparse](https://github.com/com-lihaoyi/fastparse) | Scala | 1134 | 2026-08-20 | Parser-combinator library for Scala that turns concise grammars into fast macro-generated parsers, with good error reporting and streaming input. |
-| [keichi/binary-parser](https://github.com/keichi/binary-parser) | TypeScript | 957 | 2026-11-20 | A blazing-fast declarative parser builder for binary data |
+| [keichi/binary-parser](https://github.com/keichi/binary-parser) | TypeScript | 957 | 2026-11-22 | A blazing-fast declarative parser builder for binary data |
 | [scodec/scodec](https://github.com/scodec/scodec) | Scala | 819 | 2026-09-08 | Scala combinator library for working with binary data |
 | [typelevel/jawn](https://github.com/typelevel/jawn) | Scala | 436 | 2026-11-19 | Jawn is for parsing jay-sawn (JSON) |
 | [ada-url/rust](https://github.com/ada-url/rust) | Rust | 123 | 2026-11-06 | Rust bindings for the Ada URL parser, a WHATWG-compliant implementation used for fast URL parsing and normalisation. |
@@ -761,8 +761,8 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [ast-grep/ast-grep](https://github.com/ast-grep/ast-grep) | Rust | 16651 | 2026-11-21 | ⚡A CLI tool for code structural search, lint and rewriting |
-| [millionco/react-doctor](https://github.com/millionco/react-doctor) | TypeScript | 15176 | 2026-11-21 | CLI that runs deterministic checks over a React codebase for state, effect, performance, accessibility and security issues, with CI and coding-agent skill modes. |
+| [ast-grep/ast-grep](https://github.com/ast-grep/ast-grep) | Rust | 16657 | 2026-11-21 | ⚡A CLI tool for code structural search, lint and rewriting |
+| [millionco/react-doctor](https://github.com/millionco/react-doctor) | TypeScript | 15178 | 2026-11-22 | CLI that runs deterministic checks over a React codebase for state, effect, performance, accessibility and security issues, with CI and coding-agent skill modes. |
 | [est31/cargo-udeps](https://github.com/est31/cargo-udeps) | Rust | 2149 | 2026-10-22 | Cargo subcommand that builds a project and reports dependencies declared in Cargo.toml but never actually used. |
 
 
@@ -776,7 +776,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [microsoft/pyright](https://github.com/microsoft/pyright) | Python | 15753 | 2026-11-20 | Static Type Checker for Python |
+| [microsoft/pyright](https://github.com/microsoft/pyright) | Python | 15755 | 2026-11-20 | Static Type Checker for Python |
 
 
 <a id="garbage-collectors"></a>
@@ -803,7 +803,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [statelyai/xstate](https://github.com/statelyai/xstate) | TypeScript | 30527 | 2026-11-21 | State machine and statechart library for JavaScript and TypeScript that models complex application logic as actors with explicit transitions. |
+| [statelyai/xstate](https://github.com/statelyai/xstate) | TypeScript | 30531 | 2026-11-22 | State machine and statechart library for JavaScript and TypeScript that models complex application logic as actors with explicit transitions. |
 | [KStateMachine/kstatemachine](https://github.com/KStateMachine/kstatemachine) | Kotlin | 516 | 2026-11-18 | Kotlin Multiplatform library for hierarchical state machines and statecharts, with a DSL for states, transitions and coroutine-driven side effects. |
 
 
@@ -817,8 +817,8 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [rayon-rs/rayon](https://github.com/rayon-rs/rayon) | Rust | 13482 | 2026-10-27 | Data-parallelism library for Rust that converts sequential iterator chains into work-stealing parallel ones with a one-word change. |
-| [crossbeam-rs/crossbeam](https://github.com/crossbeam-rs/crossbeam) | Rust | 8647 | 2026-11-01 | Concurrency toolkit for Rust: channels, scoped threads, epoch-based memory reclamation and lock-free data structures. |
+| [rayon-rs/rayon](https://github.com/rayon-rs/rayon) | Rust | 13493 | 2026-10-27 | Data-parallelism library for Rust that converts sequential iterator chains into work-stealing parallel ones with a one-word change. |
+| [crossbeam-rs/crossbeam](https://github.com/crossbeam-rs/crossbeam) | Rust | 8653 | 2026-11-21 | Concurrency toolkit for Rust: channels, scoped threads, epoch-based memory reclamation and lock-free data structures. |
 | [JCTools/JCTools](https://github.com/JCTools/JCTools) | Java | 3888 | 2026-11-11 | Lock-free and wait-free queues and maps for the JVM, with single- and multi-producer variants benchmarked for low-latency messaging paths. |
 | [ibraheemdev/papaya](https://github.com/ibraheemdev/papaya) | Rust | 963 | 2026-08-21 | Concurrent hash map for Rust tuned for read-heavy workloads, with lock-free reads backed by epoch-based reclamation and a std-like API. |
 
@@ -833,8 +833,8 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [apache/fory](https://github.com/apache/fory) | Java | 4584 | 2026-11-17 | Multi-language serialization framework using JIT-generated codecs and zero-copy layouts to move idiomatic objects between Java, Python, Go, Rust and JavaScript. |
-| [facet-rs/facet](https://github.com/facet-rs/facet) | Rust | 2590 | 2026-11-21 | Runtime reflection system for Rust that derives one type description and reuses it for serialization, deserialization and pretty printing. |
+| [apache/fory](https://github.com/apache/fory) | Java | 4586 | 2026-11-17 | Multi-language serialization framework using JIT-generated codecs and zero-copy layouts to move idiomatic objects between Java, Python, Go, Rust and JavaScript. |
+| [facet-rs/facet](https://github.com/facet-rs/facet) | Rust | 2591 | 2026-11-22 | Runtime reflection system for Rust that derives one type description and reuses it for serialization, deserialization and pretty printing. |
 | [json4s/json4s](https://github.com/json4s/json4s) | Scala | 1485 | 2026-11-20 | Scala JSON library offering a single AST and DSL shared across Jackson and native backends, with extraction to case classes. |
 | [zalando/problem](https://github.com/zalando/problem) | Java | 952 | 2026-07-24 | Java library implementing application/problem+json (RFC 7807), giving HTTP APIs a standard, extensible JSON representation for error responses. |
 | [com-lihaoyi/upickle](https://github.com/com-lihaoyi/upickle) | Scala | 768 | 2026-02-27 | Dependency-free JSON and MessagePack serialization library for Scala that derives readers and writers for case classes at compile time. |
@@ -852,10 +852,10 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [petgraph/petgraph](https://github.com/petgraph/petgraph) | Rust | 4061 | 2026-11-21 | Graph data structures for Rust — adjacency list, matrix and stable variants — with traversal, shortest-path and other standard graph algorithms. |
-| [fitzgen/bumpalo](https://github.com/fitzgen/bumpalo) | Rust | 2388 | 2026-11-13 | Fast bump-allocation arena for Rust that hands out objects from a growing chunk and frees them all at once. |
-| [BurntSushi/fst](https://github.com/BurntSushi/fst) | Rust | 2124 | 2024-09-25 | Rust library representing very large sets and maps as finite state transducers, supporting fuzzy and regex queries over memory-mapped data. |
-| [plokhotnyuk/rtree2d](https://github.com/plokhotnyuk/rtree2d) | Scala | 145 | 2026-11-20 | Immutable 2D R-tree for Scala offering fast nearest-neighbour and intersection queries in both plane and spherical coordinates. |
+| [petgraph/petgraph](https://github.com/petgraph/petgraph) | Rust | 4060 | 2026-11-21 | Graph data structures for Rust — adjacency list, matrix and stable variants — with traversal, shortest-path and other standard graph algorithms. |
+| [fitzgen/bumpalo](https://github.com/fitzgen/bumpalo) | Rust | 2390 | 2026-11-13 | Fast bump-allocation arena for Rust that hands out objects from a growing chunk and frees them all at once. |
+| [BurntSushi/fst](https://github.com/BurntSushi/fst) | Rust | 2123 | 2024-09-25 | Rust library representing very large sets and maps as finite state transducers, supporting fuzzy and regex queries over memory-mapped data. |
+| [plokhotnyuk/rtree2d](https://github.com/plokhotnyuk/rtree2d) | Scala | 145 | 2026-11-22 | Immutable 2D R-tree for Scala offering fast nearest-neighbour and intersection queries in both plane and spherical coordinates. |
 
 
 <a id="date-time-libraries"></a>
@@ -868,10 +868,10 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [chronotope/chrono](https://github.com/chronotope/chrono) | Rust | 3959 | 2026-09-07 | Date and time library for Rust, with time-zone-aware and naive types, parsing and formatting, and calendar-correct duration arithmetic. |
-| [time-rs/time](https://github.com/time-rs/time) | Rust | 1364 | 2026-10-16 | Date and time library for Rust with a no-std core, offering civil dates, UTC and offset-aware timestamps, and formatting and parsing. |
+| [chronotope/chrono](https://github.com/chronotope/chrono) | Rust | 3965 | 2026-09-07 | Date and time library for Rust, with time-zone-aware and naive types, parsing and formatting, and calendar-correct duration arithmetic. |
+| [time-rs/time](https://github.com/time-rs/time) | Rust | 1370 | 2026-10-16 | Date and time library for Rust with a no-std core, offering civil dates, UTC and offset-aware timestamps, and formatting and parsing. |
 | [ThreeTen/threeten-extra](https://github.com/ThreeTen/threeten-extra) | Java | 427 | 2026-11-20 | Additional date and time classes complementing java.time: intervals, extra chronologies, Days and Months amounts, and quarter-based calendars. |
-| [mangstadt/biweekly](https://github.com/mangstadt/biweekly) | Java | 348 | 2026-11-21 | Java library for reading and writing iCalendar data, covering the classic .ics format plus the xCal and jCal representations. |
+| [mangstadt/biweekly](https://github.com/mangstadt/biweekly) | Java | 348 | 2026-11-22 | Java library for reading and writing iCalendar data, covering the classic .ics format plus the xCal and jCal representations. |
 
 
 <a id="macros-codegen"></a>
@@ -956,7 +956,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [databendlabs/openraft](https://github.com/databendlabs/openraft) | Rust | 2128 | 2026-11-21 | rust raft with improvements |
+| [databendlabs/openraft](https://github.com/databendlabs/openraft) | Rust | 2129 | 2026-11-22 | rust raft with improvements |
 
 #### Articles (1)
 
@@ -1009,9 +1009,9 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [apache/incubator-seata](https://github.com/apache/incubator-seata) | Java | 26004 | 2026-11-21 | :fire: Seata is an easy-to-use, high-performance, open source distributed transaction solution |
-| [temporalio/temporal](https://github.com/temporalio/temporal) | Go | 24527 | 2026-11-21 | Durable execution service that runs workflows and activities as replayable code, surviving process crashes, retries and long waits. |
-| [apache/dolphinscheduler](https://github.com/apache/dolphinscheduler) | Java | 14560 | 2026-11-21 | Distributed data-orchestration platform with a low-code DAG editor for scheduling, monitoring and retrying large workflow pipelines. |
+| [apache/incubator-seata](https://github.com/apache/incubator-seata) | Java | 26004 | 2026-11-22 | :fire: Seata is an easy-to-use, high-performance, open source distributed transaction solution |
+| [temporalio/temporal](https://github.com/temporalio/temporal) | Go | 24543 | 2026-11-22 | Durable execution service that runs workflows and activities as replayable code, surviving process crashes, retries and long waits. |
+| [apache/dolphinscheduler](https://github.com/apache/dolphinscheduler) | Java | 14563 | 2026-11-22 | Distributed data-orchestration platform with a low-code DAG editor for scheduling, monitoring and retrying large workflow pipelines. |
 
 
 <a id="service-meshes"></a>
@@ -1088,9 +1088,9 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [dapr/dapr](https://github.com/dapr/dapr) | Go | 26212 | 2026-11-19 | Sidecar runtime giving services portable building blocks for pub/sub, state, secrets, service invocation and workflow across cloud and edge. |
-| [akka/akka-core](https://github.com/akka/akka-core) | Scala | 13293 | 2026-11-20 | Actor-model toolkit for the JVM for building elastic, resilient distributed applications, with clustering, persistence and back-pressured streams. |
-| [helidon-io/helidon](https://github.com/helidon-io/helidon) | Java | 3845 | 2026-11-20 | Java microservices runtime offering both a lightweight functional SE API and a MicroProfile implementation, built on virtual threads. |
+| [dapr/dapr](https://github.com/dapr/dapr) | Go | 26213 | 2026-11-19 | Sidecar runtime giving services portable building blocks for pub/sub, state, secrets, service invocation and workflow across cloud and edge. |
+| [akka/akka-core](https://github.com/akka/akka-core) | Scala | 13292 | 2026-11-20 | Actor-model toolkit for the JVM for building elastic, resilient distributed applications, with clustering, persistence and back-pressured streams. |
+| [helidon-io/helidon](https://github.com/helidon-io/helidon) | Java | 3847 | 2026-11-20 | Java microservices runtime offering both a lightweight functional SE API and a MicroProfile implementation, built on virtual threads. |
 | [tqwewe/kameo](https://github.com/tqwewe/kameo) | Rust | 1403 | 2026-11-09 | Fault-tolerant actor framework for Rust on top of Tokio, with supervision, typed message passing and actors that can be spread across nodes. |
 
 
@@ -1134,7 +1134,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [kubernetes-sigs/kueue](https://github.com/kubernetes-sigs/kueue) | Go | 3180 | 2026-11-20 | Kubernetes controller that queues and admits batch Jobs against per-team resource quotas, deciding when a workload starts, waits for capacity or is preempted. |
+| [kubernetes-sigs/kueue](https://github.com/kubernetes-sigs/kueue) | Go | 3182 | 2026-11-22 | Kubernetes controller that queues and admits batch Jobs against per-team resource quotas, deciding when a workload starts, waits for capacity or is preempted. |
 
 #### Libraries (1)
 
@@ -1153,7 +1153,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [open-telemetry/opentelemetry-operator](https://github.com/open-telemetry/opentelemetry-operator) | Go | 1776 | 2026-11-21 | Kubernetes Operator for OpenTelemetry Collector |
+| [open-telemetry/opentelemetry-operator](https://github.com/open-telemetry/opentelemetry-operator) | Go | 1777 | 2026-11-22 | Kubernetes Operator for OpenTelemetry Collector |
 | [hypertrace/hypertrace](https://github.com/hypertrace/hypertrace) | Shell | 517 | 2025-03-14 | An open source distributed tracing & observability platform |
 
 
@@ -1180,8 +1180,8 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [SigNoz/signoz](https://github.com/SigNoz/signoz) | TypeScript | 32690 | 2026-11-21 | OpenTelemetry-native observability platform that puts logs, metrics and traces behind one UI, with APM, distributed tracing and infra monitoring. |
-| [coroot/coroot](https://github.com/coroot/coroot) | Go | 8027 | 2026-11-19 | Coroot is an open-source observability and APM tool with AI-powered Root Cause Analysis |
+| [SigNoz/signoz](https://github.com/SigNoz/signoz) | TypeScript | 32704 | 2026-11-22 | OpenTelemetry-native observability platform that puts logs, metrics and traces behind one UI, with APM, distributed tracing and infra monitoring. |
+| [coroot/coroot](https://github.com/coroot/coroot) | Go | 8029 | 2026-11-19 | Coroot is an open-source observability and APM tool with AI-powered Root Cause Analysis |
 
 
 <a id="incident-response"></a>
@@ -1207,29 +1207,29 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [karpathy/autoresearch](https://github.com/karpathy/autoresearch) | Python | 100369 | 2026-03-26 | Harness for AI agents that autonomously run and evaluate training experiments on single-GPU nanochat models. |
+| [karpathy/autoresearch](https://github.com/karpathy/autoresearch) | Python | 100409 | 2026-03-26 | Harness for AI agents that autonomously run and evaluate training experiments on single-GPU nanochat models. |
 | [TinyAGI/tinyagi](https://github.com/TinyAGI/tinyagi) | TypeScript | 3635 | 2026-03-30 | Self-hosted orchestrator running multiple teams of AI agents in isolated workspaces, reachable from Discord, WhatsApp, Telegram or a web dashboard. |
 | [trevin-creator/autoresearch-mlx](https://github.com/trevin-creator/autoresearch-mlx) | Python | 1891 | 2026-07-02 | Apple Silicon port of Karpathy's autoresearch, running autonomous AI research loops locally on MLX instead of PyTorch. |
-| [Cloudgeni-ai/opengeni](https://github.com/Cloudgeni-ai/opengeni) | TypeScript | 225 | 2026-11-21 | Self-hostable agent runtime with durable, replayable sessions, human approval gates and governed credentials inside managed sandboxes. |
+| [Cloudgeni-ai/opengeni](https://github.com/Cloudgeni-ai/opengeni) | TypeScript | 225 | 2026-11-22 | Self-hostable agent runtime with durable, replayable sessions, human approval gates and governed credentials inside managed sandboxes. |
 
 #### Libraries (2)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [browserbase/stagehand](https://github.com/browserbase/stagehand) | TypeScript | 26109 | 2026-11-21 | The SDK For Browser Agents |
+| [browserbase/stagehand](https://github.com/browserbase/stagehand) | TypeScript | 26113 | 2026-11-21 | The SDK For Browser Agents |
 | [hyperledger-labs/acapy-java-client](https://github.com/hyperledger-labs/acapy-java-client) | Java | 20 | 2023-12-14 | Aries Cloud Agent Python Java Client Library |
 
 #### Frameworks (8)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) | Python | 45226 | 2026-11-20 | Build resilient agents |
-| [getzep/graphiti](https://github.com/getzep/graphiti) | Python | 32976 | 2026-11-20 | Build Real-Time Knowledge Graphs for AI Agents |
-| [google/adk-python](https://github.com/google/adk-python) | Python | 22295 | 2026-11-21 | Google's code-first Python toolkit for building, evaluating and deploying multi-agent LLM systems, with a runtime, tool layer and deployment paths. |
-| [coze-dev/coze-studio](https://github.com/coze-dev/coze-studio) | TypeScript | 21823 | 2026-07-29 | An AI agent development platform with all-in-one visual tools, simplifying agent creation, debugging, and deployment lik |
-| [docker/docker-agent](https://github.com/docker/docker-agent) | Go | 4696 | 2026-11-21 | AI Agent Builder and Runtime by Docker Engineering |
+| [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) | Python | 45263 | 2026-11-22 | Build resilient agents |
+| [getzep/graphiti](https://github.com/getzep/graphiti) | Python | 32997 | 2026-11-20 | Build Real-Time Knowledge Graphs for AI Agents |
+| [google/adk-python](https://github.com/google/adk-python) | Python | 22311 | 2026-11-21 | Google's code-first Python toolkit for building, evaluating and deploying multi-agent LLM systems, with a runtime, tool layer and deployment paths. |
+| [coze-dev/coze-studio](https://github.com/coze-dev/coze-studio) | TypeScript | 21824 | 2026-07-29 | An AI agent development platform with all-in-one visual tools, simplifying agent creation, debugging, and deployment lik |
+| [docker/docker-agent](https://github.com/docker/docker-agent) | Go | 4698 | 2026-11-22 | AI Agent Builder and Runtime by Docker Engineering |
 | [langchain-ai/langgraphjs](https://github.com/langchain-ai/langgraphjs) | TypeScript | 3422 | 2026-11-20 | Framework to build resilient language agents as graphs |
-| [liquidos-ai/AutoAgents](https://github.com/liquidos-ai/AutoAgents) | Rust | 790 | 2026-11-15 | Rust framework for building, deploying and coordinating multiple LLM agents with typed tools and pluggable runtimes. |
+| [liquidos-ai/AutoAgents](https://github.com/liquidos-ai/AutoAgents) | Rust | 792 | 2026-11-15 | Rust framework for building, deploying and coordinating multiple LLM agents with typed tools and pluggable runtimes. |
 | [memgraph/skills](https://github.com/memgraph/skills) | Shell | 16 | 2026-11-19 | Agent skills that should help you build awesome stuff with Memgraph |
 
 
@@ -1243,10 +1243,10 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [langchain-ai/langchain](https://github.com/langchain-ai/langchain) | Python | 149997 | 2026-11-21 | The agent engineering platform |
-| [langchain-ai/langchainjs](https://github.com/langchain-ai/langchainjs) | TypeScript | 18354 | 2026-11-20 | The agent engineering platform |
-| [langchain-ai/open-swe](https://github.com/langchain-ai/open-swe) | Python | 11245 | 2026-11-21 | An Open-Source Asynchronous Coding Agent |
-| [0xPlaygrounds/rig](https://github.com/0xPlaygrounds/rig) | Rust | 9212 | 2026-11-20 | Rust framework for building LLM applications, with typed model clients, embeddings, vector-store adapters and agent pipelines. |
+| [langchain-ai/langchain](https://github.com/langchain-ai/langchain) | Python | 149979 | 2026-11-22 | The agent engineering platform |
+| [langchain-ai/langchainjs](https://github.com/langchain-ai/langchainjs) | TypeScript | 18357 | 2026-11-20 | The agent engineering platform |
+| [langchain-ai/open-swe](https://github.com/langchain-ai/open-swe) | Python | 11249 | 2026-11-22 | An Open-Source Asynchronous Coding Agent |
+| [0xPlaygrounds/rig](https://github.com/0xPlaygrounds/rig) | Rust | 9219 | 2026-11-22 | Rust framework for building LLM applications, with typed model clients, embeddings, vector-store adapters and agent pipelines. |
 
 
 <a id="rag-retrieval"></a>
@@ -1259,7 +1259,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [VectifyAI/PageIndex](https://github.com/VectifyAI/PageIndex) | Python | 40656 | 2026-11-21 | Reasoning-based document index that builds a hierarchical tree over long PDFs so agents retrieve by navigating structure instead of vector similarity. |
+| [VectifyAI/PageIndex](https://github.com/VectifyAI/PageIndex) | Python | 40736 | 2026-11-21 | Reasoning-based document index that builds a hierarchical tree over long PDFs so agents retrieve by navigating structure instead of vector similarity. |
 
 
 <a id="model-serving"></a>
@@ -1272,7 +1272,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [exo-explore/exo](https://github.com/exo-explore/exo) | Python | 48518 | 2026-11-06 | Run frontier AI locally |
+| [exo-explore/exo](https://github.com/exo-explore/exo) | Python | 48541 | 2026-11-06 | Run frontier AI locally |
 
 
 <a id="mcp-tooling"></a>
@@ -1285,12 +1285,12 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [oraios/serena](https://github.com/oraios/serena) | Python | 31572 | 2026-11-19 | MCP server that gives coding agents language-server-backed semantic code search and symbol-level editing across a whole repository. |
-| [zilliztech/claude-context](https://github.com/zilliztech/claude-context) | TypeScript | 12715 | 2026-11-12 | MCP server that indexes a codebase into a vector store so coding agents retrieve semantically relevant code instead of grepping the tree. |
-| [Jpisnice/shadcn-ui-mcp-server](https://github.com/Jpisnice/shadcn-ui-mcp-server) | TypeScript | 3099 | 2026-10-03 | A mcp server to allow LLMS gain context about shadcn ui component structure,usage and installation,compaitable with reac |
+| [oraios/serena](https://github.com/oraios/serena) | Python | 31603 | 2026-11-19 | MCP server that gives coding agents language-server-backed semantic code search and symbol-level editing across a whole repository. |
+| [zilliztech/claude-context](https://github.com/zilliztech/claude-context) | TypeScript | 12717 | 2026-11-12 | MCP server that indexes a codebase into a vector store so coding agents retrieve semantically relevant code instead of grepping the tree. |
+| [Jpisnice/shadcn-ui-mcp-server](https://github.com/Jpisnice/shadcn-ui-mcp-server) | TypeScript | 3100 | 2026-10-03 | A mcp server to allow LLMS gain context about shadcn ui component structure,usage and installation,compaitable with reac |
 | [modelcontextprotocol/kotlin-sdk](https://github.com/modelcontextprotocol/kotlin-sdk) | Kotlin | 1490 | 2026-11-20 | The official Kotlin SDK for Model Context Protocol servers and clients |
 | [ref-tools/ref-tools-mcp](https://github.com/ref-tools/ref-tools-mcp) | TypeScript | 1186 | 2026-11-06 | MCP server that searches public and private library documentation and returns only the relevant excerpts, keeping a coding agent's context window small. |
-| [bartolli/codanna](https://github.com/bartolli/codanna) | Rust | 764 | 2026-10-11 | Local code intelligence MCP server and CLI for AI coding agents |
+| [bartolli/codanna](https://github.com/bartolli/codanna) | Rust | 764 | 2026-11-21 | Local code intelligence MCP server and CLI for AI coding agents |
 | [bahdotsh/indxr](https://github.com/bahdotsh/indxr) | Rust | 73 | 2026-04-07 | Codebase indexer and MCP server that builds a browsable knowledge wiki of a repository so coding agents retrieve context instead of scanning files. |
 | [stakpak/mcp](https://github.com/stakpak/mcp) | JavaScript | 18 | 2026-07-04 | Lightweight MCP server to give you access to the Stakpak API |
 | [AikidoSec/aikido-claude-plugin](https://github.com/AikidoSec/aikido-claude-plugin) | — | 17 | 2026-11-20 | Claude Code plugin that wires in the Aikido MCP server to scan code you write for vulnerabilities and secrets and pull findings from your security feed. |
@@ -1299,7 +1299,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [MCP-UI-Org/mcp-ui](https://github.com/MCP-UI-Org/mcp-ui) | TypeScript | 5275 | 2026-09-16 | SDK for serving and rendering interactive UI components over the Model Context Protocol, so MCP servers can return widgets instead of plain text. |
+| [MCP-UI-Org/mcp-ui](https://github.com/MCP-UI-Org/mcp-ui) | TypeScript | 5277 | 2026-09-16 | SDK for serving and rendering interactive UI components over the Model Context Protocol, so MCP servers can return widgets instead of plain text. |
 
 
 <a id="llm-evaluation"></a>
@@ -1312,7 +1312,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [promptfoo/promptfoo](https://github.com/promptfoo/promptfoo) | TypeScript | 27516 | 2026-11-21 | Declarative test runner for prompts, agents and RAG pipelines, with model comparison, red-teaming scans and CI integration. |
+| [promptfoo/promptfoo](https://github.com/promptfoo/promptfoo) | TypeScript | 27540 | 2026-11-22 | Declarative test runner for prompts, agents and RAG pipelines, with model comparison, red-teaming scans and CI integration. |
 | [ojwwalters/retrieved-but-not-read](https://github.com/ojwwalters/retrieved-but-not-read) | Python | 1 | 2026-10-15 | Benchmark data and grading harness from a study of why search-augmented LLMs fail to use retrieved evidence, built on post-cutoff temporal facts. |
 
 
@@ -1326,9 +1326,9 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [f/prompts.chat](https://github.com/f/prompts.chat) | HTML | 178142 | 2026-11-21 | Community collection of prompts for ChatGPT, Claude and Gemini, browsable on the web and self-hostable for a team. |
-| [x1xhlol/system-prompts-and-models-of-ai-tools](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools) | — | 144796 | 2026-10-12 | Archive of published and leaked system prompts from Cursor, Devin, Claude Code, v0 and other commercial AI coding tools. |
-| [anthropics/prompt-eng-interactive-tutorial](https://github.com/anthropics/prompt-eng-interactive-tutorial) | Jupyter Notebook | 39607 | 2026-08-28 | Anthropic's hands-on tutorial teaching prompt engineering for Claude through progressively harder notebook exercises. |
+| [f/prompts.chat](https://github.com/f/prompts.chat) | HTML | 178251 | 2026-11-22 | Community collection of prompts for ChatGPT, Claude and Gemini, browsable on the web and self-hostable for a team. |
+| [x1xhlol/system-prompts-and-models-of-ai-tools](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools) | — | 144809 | 2026-10-12 | Archive of published and leaked system prompts from Cursor, Devin, Claude Code, v0 and other commercial AI coding tools. |
+| [anthropics/prompt-eng-interactive-tutorial](https://github.com/anthropics/prompt-eng-interactive-tutorial) | Jupyter Notebook | 39646 | 2026-08-28 | Anthropic's hands-on tutorial teaching prompt engineering for Claude through progressively harder notebook exercises. |
 
 
 <a id="coding-agents"></a>
@@ -1341,13 +1341,13 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [earendil-works/pi](https://github.com/earendil-works/pi) | TypeScript | 123154 | 2026-11-21 | Agent toolkit with a unified LLM API, an agent loop, a TUI and a coding agent CLI you can embed in your own tools. |
-| [xai-org/grok-build](https://github.com/xai-org/grok-build) | Rust | 27822 | 2026-09-29 | xAI's coding agent harness and fullscreen terminal UI, mouse-interactive and extensible with custom tools. |
-| [generalaction/emdash](https://github.com/generalaction/emdash) | TypeScript | 6289 | 2026-11-20 | Desktop environment for running several coding agents in parallel, each isolated in its own git worktree or container, across any provider. |
-| [realiti4/claude-swap](https://github.com/realiti4/claude-swap) | Python | 4875 | 2026-11-19 | CLI and TUI for juggling multiple Claude Code accounts, rotating on rate limits and tracking usage across parallel sessions. |
-| [anymorph-ai/Claudable](https://github.com/anymorph-ai/Claudable) | TypeScript | 4052 | 2026-04-11 | Open-source web app builder that drives local CLI coding agents such as Claude Code, Codex and Gemini CLI to build and deploy products. |
-| [CoderLuii/HolyClaude](https://github.com/CoderLuii/HolyClaude) | Dockerfile | 2678 | 2026-11-18 | Dockerised AI coding workstation bundling Claude Code and other agent CLIs with a web UI, headless browser and developer tooling. |
-| [stakpak/agent](https://github.com/stakpak/agent) | Rust | 1887 | 2026-07-06 | DevOps agent that runs on your machines to ship code and keep services healthy, handling infrastructure chores autonomously. |
+| [earendil-works/pi](https://github.com/earendil-works/pi) | TypeScript | 123303 | 2026-11-22 | Agent toolkit with a unified LLM API, an agent loop, a TUI and a coding agent CLI you can embed in your own tools. |
+| [xai-org/grok-build](https://github.com/xai-org/grok-build) | Rust | 27826 | 2026-09-29 | xAI's coding agent harness and fullscreen terminal UI, mouse-interactive and extensible with custom tools. |
+| [generalaction/emdash](https://github.com/generalaction/emdash) | TypeScript | 6291 | 2026-11-20 | Desktop environment for running several coding agents in parallel, each isolated in its own git worktree or container, across any provider. |
+| [realiti4/claude-swap](https://github.com/realiti4/claude-swap) | Python | 4897 | 2026-11-21 | CLI and TUI for juggling multiple Claude Code accounts, rotating on rate limits and tracking usage across parallel sessions. |
+| [anymorph-ai/Claudable](https://github.com/anymorph-ai/Claudable) | TypeScript | 4050 | 2026-04-11 | Open-source web app builder that drives local CLI coding agents such as Claude Code, Codex and Gemini CLI to build and deploy products. |
+| [CoderLuii/HolyClaude](https://github.com/CoderLuii/HolyClaude) | Dockerfile | 2680 | 2026-11-22 | Dockerised AI coding workstation bundling Claude Code and other agent CLIs with a web UI, headless browser and developer tooling. |
+| [stakpak/agent](https://github.com/stakpak/agent) | Rust | 1886 | 2026-07-06 | DevOps agent that runs on your machines to ship code and keep services healthy, handling infrastructure chores autonomously. |
 | [Danau5tin/multi-agent-coding-system](https://github.com/Danau5tin/multi-agent-coding-system) | Python | 1477 | 2025-11-03 | Multi-agent coding harness where an orchestrator delegates to explorer and coder subagents with shared context; ranked #13 on Stanford's Terminal Bench. |
 | [langtalks/swe-agent](https://github.com/langtalks/swe-agent) | Python | 646 | 2026-03-28 | LangGraph multi-agent system that pairs a researcher agent with developer agents to plan and implement code changes end to end. |
 | [jahwag/clem](https://github.com/jahwag/clem) | Go | 31 | 2026-08-08 | Docker Compose stack that keeps persistent teams of Claude Code agents looping on engineering work 24/7 on any Linux host. |
@@ -1363,31 +1363,31 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [affaan-m/ECC](https://github.com/affaan-m/ECC) | JavaScript | 308162 | 2026-11-20 | Skill, instinct and memory pack that tunes coding-agent harnesses such as Claude Code, Codex and Cursor for research-first development. |
-| [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | JavaScript | 114355 | 2026-11-21 | Design guidance for AI coding agents: one skill, 24 commands and 61 deterministic detector rules that catch generic AI-generated frontend design. |
-| [OpenMontageInc/OpenMontage](https://github.com/OpenMontageInc/OpenMontage) | Python | 82050 | 2026-11-16 | Skill and pipeline pack that turns a coding agent into a video production studio, covering research, scripting, asset generation, editing and Remotion rendering. |
-| [yusufkaraaslan/Skill_Seekers](https://github.com/yusufkaraaslan/Skill_Seekers) | Python | 15352 | 2026-11-16 | Pipeline that converts documentation sites, GitHub repos and PDFs into Claude agent skills, flagging conflicts between the skills it generates. |
-| [parcadei/Continuous-Claude-v3](https://github.com/parcadei/Continuous-Claude-v3) | Python | 3951 | 2026-11-16 | Claude Code extension pack of skills, sub-agents and hooks that persists session state in ledgers and handoffs so context survives compaction. |
+| [affaan-m/ECC](https://github.com/affaan-m/ECC) | JavaScript | 308717 | 2026-11-20 | Skill, instinct and memory pack that tunes coding-agent harnesses such as Claude Code, Codex and Cursor for research-first development. |
+| [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | JavaScript | 114823 | 2026-11-22 | Design guidance for AI coding agents: one skill, 24 commands and 61 deterministic detector rules that catch generic AI-generated frontend design. |
+| [OpenMontageInc/OpenMontage](https://github.com/OpenMontageInc/OpenMontage) | Python | 82306 | 2026-11-16 | Skill and pipeline pack that turns a coding agent into a video production studio, covering research, scripting, asset generation, editing and Remotion rendering. |
+| [yusufkaraaslan/Skill_Seekers](https://github.com/yusufkaraaslan/Skill_Seekers) | Python | 15357 | 2026-11-16 | Pipeline that converts documentation sites, GitHub repos and PDFs into Claude agent skills, flagging conflicts between the skills it generates. |
+| [parcadei/Continuous-Claude-v3](https://github.com/parcadei/Continuous-Claude-v3) | Python | 3950 | 2026-11-16 | Claude Code extension pack of skills, sub-agents and hooks that persists session state in ledgers and handoffs so context survives compaction. |
 | [Tiger3807861189/J-Space-Cognition-Suite](https://github.com/Tiger3807861189/J-Space-Cognition-Suite) | Python | 2951 | 2026-09-14 | Inference-time control suite of agent skills for deep reasoning, long-horizon work, verification and recovery across coding harnesses. |
-| [GWUDCAP/cc-sessions](https://github.com/GWUDCAP/cc-sessions) | JavaScript | 1538 | 2025-12-17 | Opinionated Claude Code workflow installed as hooks and commands, enforcing task discipline and discussion-before-implementation. |
+| [GWUDCAP/cc-sessions](https://github.com/GWUDCAP/cc-sessions) | JavaScript | 1537 | 2025-12-17 | Opinionated Claude Code workflow installed as hooks and commands, enforcing task discipline and discussion-before-implementation. |
 
 #### Reading & references (19)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [mattpocock/skills](https://github.com/mattpocock/skills) | Shell | 329488 | 2026-11-19 | Matt Pocock's personal agent skills for real engineering work, published straight from his .agents directory. |
-| [anthropics/skills](https://github.com/anthropics/skills) | Python | 198324 | 2026-11-16 | Anthropic's public Agent Skills repository, with reference skills for documents, frontend design and other common agent tasks. |
-| [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill) | JavaScript | 76533 | 2026-09-14 | Coding-agent skill that runs a multi-phase security audit of a codebase and emits machine-readable findings, each independently verified before it is reported. |
-| [wshobson/agents](https://github.com/wshobson/agents) | Python | 42766 | 2026-11-21 | Marketplace of subagents, skills and plugins for Claude Code, Codex, Cursor, OpenCode and other coding harnesses. |
-| [anthropics/financial-services](https://github.com/anthropics/financial-services) | Python | 41430 | 2026-11-12 | Reference Claude agents, skills and data connectors for investment banking, equity research, private equity and wealth-management workflows. |
-| [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | JavaScript | 34647 | 2026-11-20 | Vercel's official collection of agent skills, packaging its framework and platform conventions for coding agents to follow. |
-| [agentskills/agentskills](https://github.com/agentskills/agentskills) | Python | 27499 | 2026-11-04 | Specification and documentation for the Agent Skills format, defining how portable skill packages are structured and loaded by agent harnesses. |
-| [EveryInc/compound-engineering-plugin](https://github.com/EveryInc/compound-engineering-plugin) | TypeScript | 26178 | 2026-11-20 | Plugin for Claude Code, Codex and Cursor that packages the Compound Engineering workflow as reusable planning, review and learning commands. |
-| [google/skills](https://github.com/google/skills) | Python | 24508 | 2026-11-21 | Agent skills for Google products and technologies, packaging Google Cloud and developer-platform conventions for agent harnesses. |
+| [mattpocock/skills](https://github.com/mattpocock/skills) | Shell | 330187 | 2026-11-19 | Matt Pocock's personal agent skills for real engineering work, published straight from his .agents directory. |
+| [anthropics/skills](https://github.com/anthropics/skills) | Python | 198824 | 2026-11-16 | Anthropic's public Agent Skills repository, with reference skills for documents, frontend design and other common agent tasks. |
+| [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill) | JavaScript | 76922 | 2026-09-14 | Coding-agent skill that runs a multi-phase security audit of a codebase and emits machine-readable findings, each independently verified before it is reported. |
+| [wshobson/agents](https://github.com/wshobson/agents) | Python | 42787 | 2026-11-22 | Marketplace of subagents, skills and plugins for Claude Code, Codex, Cursor, OpenCode and other coding harnesses. |
+| [anthropics/financial-services](https://github.com/anthropics/financial-services) | Python | 41453 | 2026-11-12 | Reference Claude agents, skills and data connectors for investment banking, equity research, private equity and wealth-management workflows. |
+| [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | JavaScript | 34717 | 2026-11-20 | Vercel's official collection of agent skills, packaging its framework and platform conventions for coding agents to follow. |
+| [agentskills/agentskills](https://github.com/agentskills/agentskills) | Python | 27525 | 2026-11-04 | Specification and documentation for the Agent Skills format, defining how portable skill packages are structured and loaded by agent harnesses. |
+| [EveryInc/compound-engineering-plugin](https://github.com/EveryInc/compound-engineering-plugin) | TypeScript | 26187 | 2026-11-20 | Plugin for Claude Code, Codex and Cursor that packages the Compound Engineering workflow as reusable planning, review and learning commands. |
+| [google/skills](https://github.com/google/skills) | Python | 24538 | 2026-11-22 | Agent skills for Google products and technologies, packaging Google Cloud and developer-platform conventions for agent harnesses. |
 | [ChrisWiles/claude-code-showcase](https://github.com/ChrisWiles/claude-code-showcase) | JavaScript | 6091 | 2026-01-06 | Reference Claude Code project configuration showing hooks, skills, subagents, slash commands and GitHub Actions workflows wired together. |
 | [vijaythecoder/awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents) | — | 4409 | 2025-10-30 | Pack of Claude Code sub-agent definitions arranged as an orchestrated development team, with role-specific agents for architecture, framework work and review. |
-| [davepoon/buildwithclaude](https://github.com/davepoon/buildwithclaude) | Python | 3782 | 2026-11-20 | Searchable hub collecting community Claude skills, sub-agents, commands, hooks and plugin marketplaces for Claude Code, Claude Desktop and the Agent SDK. |
-| [antonbabenko/terraform-skill](https://github.com/antonbabenko/terraform-skill) | — | 2482 | 2026-11-19 | Claude Code skill encoding Terraform and OpenTofu practice: module design, testing, CI/CD wiring and production patterns. |
+| [davepoon/buildwithclaude](https://github.com/davepoon/buildwithclaude) | Python | 3788 | 2026-11-22 | Searchable hub collecting community Claude skills, sub-agents, commands, hooks and plugin marketplaces for Claude Code, Claude Desktop and the Agent SDK. |
+| [antonbabenko/terraform-skill](https://github.com/antonbabenko/terraform-skill) | — | 2483 | 2026-11-19 | Claude Code skill encoding Terraform and OpenTofu practice: module design, testing, CI/CD wiring and production patterns. |
 | [lst97/claude-code-sub-agents](https://github.com/lst97/claude-code-sub-agents) | — | 1713 | 2025-08-15 | Collection of specialised Claude Code subagent definitions covering full-stack development roles, from API design to code review. |
 | [zhsama/claude-sub-agent](https://github.com/zhsama/claude-sub-agent) | — | 594 | 2025-08-08 | Workflow system of Claude Code sub-agent definitions that chains planning, development and validation agents through a spec-driven development cycle. |
 | [TheBushidoCollective/han](https://github.com/TheBushidoCollective/han) | TypeScript | 201 | 2026-11-10 | Curated marketplace of Claude Code plugins that package professional software-development practice as installable commands and skills. |
@@ -1406,22 +1406,22 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [open-webui/open-webui](https://github.com/open-webui/open-webui) | Python | 159200 | 2026-11-21 | Self-hosted chat interface for Ollama and OpenAI-compatible models, with RAG, tools, MCP and multi-user management. |
-| [craft-ai-agents/craft-agents-oss](https://github.com/craft-ai-agents/craft-agents-oss) | TypeScript | 7336 | 2026-11-18 | Desktop agent workspace from the Craft team, built on the Claude Agent SDK, with parallel sessions, shareable runs and a document-centric UI. |
+| [open-webui/open-webui](https://github.com/open-webui/open-webui) | Python | 159258 | 2026-11-22 | Self-hosted chat interface for Ollama and OpenAI-compatible models, with RAG, tools, MCP and multi-user management. |
+| [craft-ai-agents/craft-agents-oss](https://github.com/craft-ai-agents/craft-agents-oss) | TypeScript | 7337 | 2026-11-18 | Desktop agent workspace from the Craft team, built on the Claude Agent SDK, with parallel sessions, shareable runs and a document-centric UI. |
 
 #### Libraries (3)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [ag-ui-protocol/ag-ui](https://github.com/ag-ui-protocol/ag-ui) | Python | 20950 | 2026-11-20 | Agent-User Interaction protocol with SDKs for streaming agent state, tool calls and generative UI between backends and frontend applications. |
-| [thesysdev/openui](https://github.com/thesysdev/openui) | TypeScript | 15388 | 2026-11-21 | Open standard and runtime for generative UI, letting agents stream structured interface components instead of plain text. |
-| [assistant-ui/assistant-ui](https://github.com/assistant-ui/assistant-ui) | TypeScript | 13359 | 2026-11-21 | React component library for AI chat interfaces, with streaming, tool-call rendering and shadcn and Radix primitives. |
+| [ag-ui-protocol/ag-ui](https://github.com/ag-ui-protocol/ag-ui) | Python | 21124 | 2026-11-21 | Agent-User Interaction protocol with SDKs for streaming agent state, tool calls and generative UI between backends and frontend applications. |
+| [thesysdev/openui](https://github.com/thesysdev/openui) | TypeScript | 15417 | 2026-11-22 | Open standard and runtime for generative UI, letting agents stream structured interface components instead of plain text. |
+| [assistant-ui/assistant-ui](https://github.com/assistant-ui/assistant-ui) | TypeScript | 13371 | 2026-11-22 | React component library for AI chat interfaces, with streaming, tool-call rendering and shadcn and Radix primitives. |
 
 #### Frameworks (1)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [CopilotKit/CopilotKit](https://github.com/CopilotKit/CopilotKit) | TypeScript | 38858 | 2026-11-21 | Frontend stack for embedding agents in React, Angular and mobile apps, with generative-UI components and the AG-UI protocol it originated. |
+| [CopilotKit/CopilotKit](https://github.com/CopilotKit/CopilotKit) | TypeScript | 38879 | 2026-11-22 | Frontend stack for embedding agents in React, Angular and mobile apps, with generative-UI components and the AG-UI protocol it originated. |
 
 
 <a id="agent-memory"></a>
@@ -1434,8 +1434,8 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight) | Python | 62374 | 2026-11-21 | Agent memory service with Python and TypeScript clients that distils past conversations and tool runs into memory an agent can learn from. |
-| [MemoriLabs/Memori](https://github.com/MemoriLabs/Memori) | Python | 17602 | 2026-10-03 | LLM-agnostic memory layer that turns agent conversations and execution traces into structured, persistent state on data infrastructure you already run. |
+| [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight) | Python | 62591 | 2026-11-21 | Agent memory service with Python and TypeScript clients that distils past conversations and tool runs into memory an agent can learn from. |
+| [MemoriLabs/Memori](https://github.com/MemoriLabs/Memori) | Python | 17599 | 2026-10-03 | LLM-agnostic memory layer that turns agent conversations and execution traces into structured, persistent state on data infrastructure you already run. |
 
 
 <a id="design-agents"></a>
@@ -1448,8 +1448,8 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [OpenCoworkAI/open-codesign](https://github.com/OpenCoworkAI/open-codesign) | TypeScript | 8249 | 2026-11-10 | Local-first desktop app that turns a prompt into prototypes, slides or PDFs, using your own Claude, OpenAI, Gemini or Ollama credentials. |
-| [superdesigndev/superdesign](https://github.com/superdesigndev/superdesign) | TypeScript | 7633 | 2026-06-29 | Open-source design agent for VS Code, Cursor and Windsurf that generates UI mockups, components and wireframes from natural-language prompts. |
+| [OpenCoworkAI/open-codesign](https://github.com/OpenCoworkAI/open-codesign) | TypeScript | 8250 | 2026-11-21 | Local-first desktop app that turns a prompt into prototypes, slides or PDFs, using your own Claude, OpenAI, Gemini or Ollama credentials. |
+| [superdesigndev/superdesign](https://github.com/superdesigndev/superdesign) | TypeScript | 7635 | 2026-06-29 | Open-source design agent for VS Code, Cursor and Windsurf that generates UI mockups, components and wireframes from natural-language prompts. |
 
 
 <a id="container-orchestration"></a>
@@ -1462,25 +1462,25 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes) | Go | 129308 | 2026-11-21 | Production-Grade Container Scheduling and Management |
-| [helm/helm](https://github.com/helm/helm) | Go | 30459 | 2026-11-20 | Package manager for Kubernetes that templates, versions, installs and rolls back application manifests as reusable charts. |
-| [kedacore/keda](https://github.com/kedacore/keda) | Go | 10734 | 2026-11-21 | Kubernetes autoscaler that drives pod counts from external event sources such as queue depth, topic lag, cron or database queries, including scale to zero. |
-| [stakater/Reloader](https://github.com/stakater/Reloader) | Go | 10586 | 2026-11-20 | A Kubernetes controller to watch changes in ConfigMap and Secrets and do rolling upgrades on Pods with their associated |
-| [kubernetes-sigs/external-dns](https://github.com/kubernetes-sigs/external-dns) | Go | 9160 | 2026-11-19 | Configure external DNS servers dynamically from Kubernetes resources |
-| [k0sproject/k0s](https://github.com/k0sproject/k0s) | Go | 6601 | 2026-11-21 | Single-binary Kubernetes distribution with no host OS dependencies, aimed at edge, bare metal and embedded clusters. |
-| [karmada-io/karmada](https://github.com/karmada-io/karmada) | Go | 5771 | 2026-11-19 | Kubernetes-native control plane that schedules and propagates workloads across many clusters and clouds behind a single API. |
+| [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes) | Go | 129355 | 2026-11-21 | Production-Grade Container Scheduling and Management |
+| [helm/helm](https://github.com/helm/helm) | Go | 30460 | 2026-11-20 | Package manager for Kubernetes that templates, versions, installs and rolls back application manifests as reusable charts. |
+| [kedacore/keda](https://github.com/kedacore/keda) | Go | 10735 | 2026-11-22 | Kubernetes autoscaler that drives pod counts from external event sources such as queue depth, topic lag, cron or database queries, including scale to zero. |
+| [stakater/Reloader](https://github.com/stakater/Reloader) | Go | 10587 | 2026-11-20 | A Kubernetes controller to watch changes in ConfigMap and Secrets and do rolling upgrades on Pods with their associated |
+| [kubernetes-sigs/external-dns](https://github.com/kubernetes-sigs/external-dns) | Go | 9161 | 2026-11-22 | Configure external DNS servers dynamically from Kubernetes resources |
+| [k0sproject/k0s](https://github.com/k0sproject/k0s) | Go | 6611 | 2026-11-21 | Single-binary Kubernetes distribution with no host OS dependencies, aimed at edge, bare metal and embedded clusters. |
+| [karmada-io/karmada](https://github.com/karmada-io/karmada) | Go | 5773 | 2026-11-19 | Kubernetes-native control plane that schedules and propagates workloads across many clusters and clouds behind a single API. |
 | [devspace-sh/devspace](https://github.com/devspace-sh/devspace) | Go | 5248 | 2026-11-19 | Developer workflow CLI for Kubernetes that builds, deploys and hot-reloads your services directly inside a cluster. |
 | [doitintl/kube-no-trouble](https://github.com/doitintl/kube-no-trouble) | Go | 3700 | 2026-09-17 | Scans live clusters, manifests and Helm releases for Kubernetes APIs deprecated or removed in a target version, so upgrades do not break workloads. |
-| [kubernetes-sigs/kro](https://github.com/kubernetes-sigs/kro) | Go | 3099 | 2026-11-16 | Kubernetes Resource Orchestrator that groups related resources behind a single custom API with declarative dependency ordering. |
+| [kubernetes-sigs/kro](https://github.com/kubernetes-sigs/kro) | Go | 3100 | 2026-11-22 | Kubernetes Resource Orchestrator that groups related resources behind a single custom API with declarative dependency ordering. |
 | [kubernetes-sigs/gateway-api](https://github.com/kubernetes-sigs/gateway-api) | Go | 3053 | 2026-11-20 | Repository for the next iteration of composite service (e.g |
 | [kubernetes/git-sync](https://github.com/kubernetes/git-sync) | Shell | 2748 | 2026-11-02 | A sidecar app which clones a git repo and keeps it in sync with the upstream |
 | [kubernetes-sigs/ingress2gateway](https://github.com/kubernetes-sigs/ingress2gateway) | Go | 1060 | 2026-11-17 | Convert Ingress resources to Gateway API resources |
 | [argoproj-labs/argocd-operator](https://github.com/argoproj-labs/argocd-operator) | Go | 891 | 2026-11-14 | A Kubernetes operator for managing Argo CD clusters |
-| [gianlucam76/k8s-cleaner](https://github.com/gianlucam76/k8s-cleaner) | Go | 835 | 2026-11-21 | Cleaner is a Kubernetes controller that identifies unused or unhealthy resources, helping you maintain a streamlined and |
+| [gianlucam76/k8s-cleaner](https://github.com/gianlucam76/k8s-cleaner) | Go | 834 | 2026-11-21 | Cleaner is a Kubernetes controller that identifies unused or unhealthy resources, helping you maintain a streamlined and |
 | [squat/generic-device-plugin](https://github.com/squat/generic-device-plugin) | Go | 419 | 2026-11-16 | Kubernetes device plugin that advertises arbitrary Linux devices, such as serial ports, FUSE or video devices, so pods can request them. |
 | [DevOps-Nirvana/Kubernetes-Volume-Autoscaler](https://github.com/DevOps-Nirvana/Kubernetes-Volume-Autoscaler) | Python | 318 | 2024-05-30 | Kubernetes controller that watches Prometheus disk metrics and grows PersistentVolumeClaims automatically before they run out of space. |
 | [nats-io/nack](https://github.com/nats-io/nack) | Go | 262 | 2026-11-16 | Kubernetes controllers that manage NATS JetStream streams, consumers and accounts as custom resources. |
-| [kubernetes-sigs/gwctl](https://github.com/kubernetes-sigs/gwctl) | Go | 135 | 2026-11-08 | gwctl is a command-line tool for managing and understanding Gateway API resources in your Kubernetes cluster |
+| [kubernetes-sigs/gwctl](https://github.com/kubernetes-sigs/gwctl) | Go | 135 | 2026-11-21 | gwctl is a command-line tool for managing and understanding Gateway API resources in your Kubernetes cluster |
 
 #### Articles (6)
 
@@ -1504,11 +1504,11 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [hashicorp/terraform](https://github.com/hashicorp/terraform) | Go | 50302 | 2026-11-20 | Terraform enables you to safely and predictably create, change, and improve infrastructure |
-| [opentofu/opentofu](https://github.com/opentofu/opentofu) | Go | 30948 | 2026-11-21 | OpenTofu lets you declaratively manage your cloud infrastructure |
-| [gruntwork-io/terragrunt](https://github.com/gruntwork-io/terragrunt) | Go | 9933 | 2026-11-21 | Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale |
-| [runatlantis/atlantis](https://github.com/runatlantis/atlantis) | Go | 9366 | 2026-11-21 | Terraform pull request automation that runs plan and apply from PR comments, with locking and approval gates so state changes stay reviewable. |
-| [diggerhq/digger](https://github.com/diggerhq/digger) | Go | 5074 | 2026-11-19 | Digger is an open source IaC orchestration tool |
+| [hashicorp/terraform](https://github.com/hashicorp/terraform) | Go | 50303 | 2026-11-20 | Terraform enables you to safely and predictably create, change, and improve infrastructure |
+| [opentofu/opentofu](https://github.com/opentofu/opentofu) | Go | 30953 | 2026-11-21 | OpenTofu lets you declaratively manage your cloud infrastructure |
+| [gruntwork-io/terragrunt](https://github.com/gruntwork-io/terragrunt) | Go | 9934 | 2026-11-22 | Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale |
+| [runatlantis/atlantis](https://github.com/runatlantis/atlantis) | Go | 9366 | 2026-11-22 | Terraform pull request automation that runs plan and apply from PR comments, with locking and approval gates so state changes stay reviewable. |
+| [diggerhq/digger](https://github.com/diggerhq/digger) | Go | 5077 | 2026-11-19 | Digger is an open source IaC orchestration tool |
 | [tfutils/tfenv](https://github.com/tfutils/tfenv) | Shell | 4993 | 2026-07-01 | Terraform version manager that installs multiple Terraform releases side by side and switches between them per directory from a .terraform-version file. |
 | [terraform-docs/terraform-docs](https://github.com/terraform-docs/terraform-docs) | Go | 4843 | 2026-11-12 | Generate documentation from Terraform modules in various output formats |
 | [antonbabenko/pre-commit-terraform](https://github.com/antonbabenko/pre-commit-terraform) | Shell | 3788 | 2026-11-17 | Collection of pre-commit hooks for Terraform repositories: formatting, validation, docs generation, linting and security scanning before a commit lands. |
@@ -1539,8 +1539,8 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [argoproj/argo-cd](https://github.com/argoproj/argo-cd) | Go | 24670 | 2026-11-20 | Declarative Continuous Deployment for Kubernetes |
-| [akuity/kargo](https://github.com/akuity/kargo) | Go | 3803 | 2026-11-20 | Continuous promotion engine for GitOps that models environments as stages and automates moving verified artifacts through them alongside Argo CD. |
+| [argoproj/argo-cd](https://github.com/argoproj/argo-cd) | Go | 24673 | 2026-11-22 | Declarative Continuous Deployment for Kubernetes |
+| [akuity/kargo](https://github.com/akuity/kargo) | Go | 3804 | 2026-11-22 | Continuous promotion engine for GitOps that models environments as stages and automates moving verified artifacts through them alongside Argo CD. |
 | [terramate-io/terramate](https://github.com/terramate-io/terramate) | Go | 3649 | 2026-11-09 | Open-source Infrastructure as Code (IaC) orchestration platform: GitOps workflows, orchestration, code generation, obser |
 | [argoproj/argo-rollouts](https://github.com/argoproj/argo-rollouts) | Go | 3626 | 2026-11-20 | Progressive Delivery for Kubernetes |
 | [argoproj-labs/argocd-autopilot](https://github.com/argoproj-labs/argocd-autopilot) | Go | 1129 | 2025-12-16 | CLI that bootstraps Argo CD onto a cluster and manages the GitOps repository layout for applications and projects, so the installation manages itself. |
@@ -1560,9 +1560,9 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [casey/just](https://github.com/casey/just) | Rust | 36786 | 2026-11-15 | Command runner that keeps project recipes in a justfile, in the spirit of make but without the build-system and dependency semantics. |
-| [moonrepo/moon](https://github.com/moonrepo/moon) | Rust | 4195 | 2026-11-20 | A build system and monorepo management tool for the web ecosystem, written in Rust |
-| [kunobi-ninja/kache](https://github.com/kunobi-ninja/kache) | Rust | 1605 | 2026-11-21 | Content-addressed build cache for Rust and C/C++ that shares artifacts through local hardlinks and S3 instead of copying them. |
+| [casey/just](https://github.com/casey/just) | Rust | 36799 | 2026-11-15 | Command runner that keeps project recipes in a justfile, in the spirit of make but without the build-system and dependency semantics. |
+| [moonrepo/moon](https://github.com/moonrepo/moon) | Rust | 4195 | 2026-11-22 | A build system and monorepo management tool for the web ecosystem, written in Rust |
+| [kunobi-ninja/kache](https://github.com/kunobi-ninja/kache) | Rust | 1606 | 2026-11-22 | Content-addressed build cache for Rust and C/C++ that shares artifacts through local hardlinks and S3 instead of copying them. |
 
 #### Articles (2)
 
@@ -1609,7 +1609,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [terralist/terralist](https://github.com/terralist/terralist) | Go | 526 | 2026-11-21 | Private Terraform registry for modules and providers, managed through a REST API and backed by Git or object storage. |
+| [terralist/terralist](https://github.com/terralist/terralist) | Go | 527 | 2026-11-21 | Private Terraform registry for modules and providers, managed through a REST API and backed by Git or object storage. |
 | [MatthewJohn/terrareg](https://github.com/MatthewJohn/terrareg) | Go | 348 | 2026-11-18 | Self-hosted Terraform module registry with a web UI, Git integration and per-module analysis of inputs, security findings and usage. |
 
 #### Articles (1)
@@ -1629,8 +1629,8 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [nektos/act](https://github.com/nektos/act) | Go | 72758 | 2026-11-19 | Runs GitHub Actions workflows locally in Docker containers, so a pipeline can be tested without pushing commits. |
-| [Swatinem/rust-cache](https://github.com/Swatinem/rust-cache) | TypeScript | 1973 | 2026-11-16 | GitHub Action that caches Cargo registry and target directories with sensible keys and cleanup, cutting Rust CI build times. |
+| [nektos/act](https://github.com/nektos/act) | Go | 72763 | 2026-11-19 | Runs GitHub Actions workflows locally in Docker containers, so a pipeline can be tested without pushing commits. |
+| [Swatinem/rust-cache](https://github.com/Swatinem/rust-cache) | TypeScript | 1974 | 2026-11-16 | GitHub Action that caches Cargo registry and target directories with sensible keys and cleanup, cutting Rust CI build times. |
 
 
 <a id="feature-flags"></a>
@@ -1643,9 +1643,9 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [Unleash/unleash](https://github.com/Unleash/unleash) | TypeScript | 14339 | 2026-11-20 | Self-hosted feature flag platform with activation strategies, gradual rollouts, variants and SDKs for most server and client languages. |
-| [growthbook/growthbook](https://github.com/growthbook/growthbook) | TypeScript | 8639 | 2026-11-21 | Warehouse-native feature flagging and A/B testing platform that runs experiment analysis directly against your existing data warehouse. |
-| [Flagsmith/flagsmith](https://github.com/Flagsmith/flagsmith) | Python | 8279 | 2026-11-21 | Feature flag and remote config platform with segments, multivariate tests and client SDKs, run self-hosted or as a managed service. |
+| [Unleash/unleash](https://github.com/Unleash/unleash) | TypeScript | 14337 | 2026-11-20 | Self-hosted feature flag platform with activation strategies, gradual rollouts, variants and SDKs for most server and client languages. |
+| [growthbook/growthbook](https://github.com/growthbook/growthbook) | TypeScript | 8645 | 2026-11-22 | Warehouse-native feature flagging and A/B testing platform that runs experiment analysis directly against your existing data warehouse. |
+| [Flagsmith/flagsmith](https://github.com/Flagsmith/flagsmith) | Python | 8576 | 2026-11-21 | Feature flag and remote config platform with segments, multivariate tests and client SDKs, run self-hosted or as a managed service. |
 
 
 <a id="cloud-cost-management"></a>
@@ -1658,8 +1658,8 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [infracost/infracost](https://github.com/infracost/infracost) | Go | 12627 | 2026-11-20 | Estimates the cost delta of Terraform changes and posts the breakdown into pull requests, so cloud spend is reviewed before merge. |
-| [opencost/opencost](https://github.com/opencost/opencost) | Go | 6826 | 2026-11-20 | CNCF project that allocates Kubernetes workload and cloud spend down to namespace, pod and label using Prometheus metrics. |
+| [infracost/infracost](https://github.com/infracost/infracost) | Go | 12628 | 2026-11-20 | Estimates the cost delta of Terraform changes and posts the breakdown into pull requests, so cloud spend is reviewed before merge. |
+| [opencost/opencost](https://github.com/opencost/opencost) | Go | 6828 | 2026-11-20 | CNCF project that allocates Kubernetes workload and cloud spend down to namespace, pod and label using Prometheus metrics. |
 
 
 <a id="container-management"></a>
@@ -1672,8 +1672,8 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [jesseduffield/lazydocker](https://github.com/jesseduffield/lazydocker) | Go | 53401 | 2026-11-15 | Terminal UI for Docker and docker-compose that shows container state, logs and resource stats and runs common maintenance actions from one keyboard-driven view. |
-| [hcavarsan/kftray](https://github.com/hcavarsan/kftray) | Rust | 1580 | 2026-11-21 | GUI and TUI manager for kubectl port-forwards, adding reverse tunnels, HTTP traffic inspection and git-backed configuration. |
+| [jesseduffield/lazydocker](https://github.com/jesseduffield/lazydocker) | Go | 53402 | 2026-11-15 | Terminal UI for Docker and docker-compose that shows container state, logs and resource stats and runs common maintenance actions from one keyboard-driven view. |
+| [hcavarsan/kftray](https://github.com/hcavarsan/kftray) | Rust | 1580 | 2026-11-22 | GUI and TUI manager for kubectl port-forwards, adding reverse tunnels, HTTP traffic inspection and git-backed configuration. |
 
 
 <a id="code-sandboxes"></a>
@@ -1718,7 +1718,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [googleapis/google-cloud-java](https://github.com/googleapis/google-cloud-java) | Java | 2112 | 2026-11-21 | Official Java client libraries for Google Cloud services, covering Storage, BigQuery, Pub/Sub, Datastore and the rest of the API surface. |
+| [googleapis/google-cloud-java](https://github.com/googleapis/google-cloud-java) | Java | 2112 | 2026-11-22 | Official Java client libraries for Google Cloud services, covering Storage, BigQuery, Pub/Sub, Datastore and the rest of the API surface. |
 | [doriordan/skuber](https://github.com/doriordan/skuber) | Scala | 332 | 2026-08-29 | Scala client library for the Kubernetes API, with typed resource models and a non-blocking, Akka-based request layer. |
 
 
@@ -1732,7 +1732,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [FairwindsOps/gemini](https://github.com/FairwindsOps/gemini) | Go | 437 | 2026-11-20 | Kubernetes operator that schedules and retains CSI VolumeSnapshot backups of PersistentVolumeClaims and restores them into new claims. |
+| [FairwindsOps/gemini](https://github.com/FairwindsOps/gemini) | Go | 437 | 2026-11-22 | Kubernetes operator that schedules and retains CSI VolumeSnapshot backups of PersistentVolumeClaims and restores them into new claims. |
 
 
 <a id="authentication"></a>
@@ -1745,16 +1745,16 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [keycloak/keycloak](https://github.com/keycloak/keycloak) | Java | 37994 | 2026-11-21 | Open Source Identity and Access Management For Modern Applications and Services |
-| [goauthentik/authentik](https://github.com/goauthentik/authentik) | Python | 26403 | 2026-11-21 | The authentication glue you need |
-| [zitadel/zitadel](https://github.com/zitadel/zitadel) | Go | 15626 | 2026-11-20 | ZITADEL - Identity infrastructure, simplified for you |
+| [keycloak/keycloak](https://github.com/keycloak/keycloak) | Java | 37997 | 2026-11-22 | Open Source Identity and Access Management For Modern Applications and Services |
+| [goauthentik/authentik](https://github.com/goauthentik/authentik) | Python | 26414 | 2026-11-22 | The authentication glue you need |
+| [zitadel/zitadel](https://github.com/zitadel/zitadel) | Go | 15632 | 2026-11-20 | ZITADEL - Identity infrastructure, simplified for you |
 | [ory/kratos](https://github.com/ory/kratos) | Go | 13962 | 2026-07-29 | Headless identity and user-management server covering registration, login, passkeys, OIDC, SAML, magic links and MFA through its own APIs. |
-| [kanidm/kanidm](https://github.com/kanidm/kanidm) | Rust | 5583 | 2026-11-19 | Kanidm: A simple, secure, and fast identity management platform |
+| [kanidm/kanidm](https://github.com/kanidm/kanidm) | Rust | 5585 | 2026-11-19 | Kanidm: A simple, secure, and fast identity management platform |
 | [ory/oathkeeper](https://github.com/ory/oathkeeper) | Go | 3610 | 2026-07-27 | A cloud native Identity & Access Proxy / API (IAP) and Access Control Decision API that authenticates, authorizes, and m |
 | [keycloakify/keycloakify](https://github.com/keycloakify/keycloakify) | TypeScript | 2628 | 2026-10-21 | 🔏 Keycloak theming for the modern web |
 | [thomasdarimont/keycloak-extension-playground](https://github.com/thomasdarimont/keycloak-extension-playground) | Java | 723 | 2025-01-15 | Simple project environment for creating custom Keycloak extensions |
 | [p2-inc/keycloak-magic-link](https://github.com/p2-inc/keycloak-magic-link) | Java | 433 | 2026-11-16 | Magic Link Authentication for Keycloak |
-| [daniel-frak/keycloak-user-migration](https://github.com/daniel-frak/keycloak-user-migration) | Java | 374 | 2026-11-21 | A Keycloak plugin for migrating users from legacy systems |
+| [daniel-frak/keycloak-user-migration](https://github.com/daniel-frak/keycloak-user-migration) | Java | 374 | 2026-11-22 | A Keycloak plugin for migrating users from legacy systems |
 | [cooperlyt/keycloak-phone-provider](https://github.com/cooperlyt/keycloak-phone-provider) | Java | 358 | 2025-03-04 | A Keycloak provider for phone and SMS |
 
 #### Libraries (2)
@@ -1781,10 +1781,10 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [open-policy-agent/opa](https://github.com/open-policy-agent/opa) | Go | 12504 | 2026-11-21 | Open Policy Agent (OPA) is an open source, general-purpose policy engine |
-| [kyverno/kyverno](https://github.com/kyverno/kyverno) | Go | 8369 | 2026-11-20 | Unified Policy as Code |
-| [authzed/spicedb](https://github.com/authzed/spicedb) | Go | 7233 | 2026-11-20 | Google Zanzibar-inspired database that stores relationship tuples and answers fine-grained permission checks with consistency guarantees. |
-| [permitio/opal](https://github.com/permitio/opal) | Python | 5524 | 2026-11-16 | Policy and data administration, distribution, and real-time updates on top of Policy Agents (OPA, Cedar, ...) |
+| [open-policy-agent/opa](https://github.com/open-policy-agent/opa) | Go | 12505 | 2026-11-21 | Open Policy Agent (OPA) is an open source, general-purpose policy engine |
+| [kyverno/kyverno](https://github.com/kyverno/kyverno) | Go | 8370 | 2026-11-22 | Unified Policy as Code |
+| [authzed/spicedb](https://github.com/authzed/spicedb) | Go | 7235 | 2026-11-22 | Google Zanzibar-inspired database that stores relationship tuples and answers fine-grained permission checks with consistency guarantees. |
+| [permitio/opal](https://github.com/permitio/opal) | Python | 5526 | 2026-11-16 | Policy and data administration, distribution, and real-time updates on top of Policy Agents (OPA, Cedar, ...) |
 | [kyverno/policy-reporter](https://github.com/kyverno/policy-reporter) | Go | 394 | 2026-11-20 | Monitoring and Observability Tool for the PolicyReport CRD with an optional UI |
 | [GoogleCloudPlatform/jit-groups](https://github.com/GoogleCloudPlatform/jit-groups) | Java | 291 | 2026-11-17 | Self-service just-in-time access management for Google Cloud, letting users request time-bound membership of IAM groups through an approval workflow. |
 | [kyverno/policy-reporter-ui](https://github.com/kyverno/policy-reporter-ui) | Go | 68 | 2026-11-13 | Web UI for Kyverno Policy Reporter, browsing policy violations, per-namespace results and cluster compliance from PolicyReport resources. |
@@ -1806,7 +1806,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [renovatebot/renovate](https://github.com/renovatebot/renovate) | TypeScript | 23218 | 2026-11-21 | Home of the Renovate CLI: Cross-platform Dependency Automation by Mend.io |
+| [renovatebot/renovate](https://github.com/renovatebot/renovate) | TypeScript | 23221 | 2026-11-22 | Home of the Renovate CLI: Cross-platform Dependency Automation by Mend.io |
 
 
 <a id="vulnerability-scanning"></a>
@@ -1819,20 +1819,20 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [aquasecurity/trivy](https://github.com/aquasecurity/trivy) | Go | 39592 | 2026-11-20 | Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more |
-| [projectdiscovery/nuclei](https://github.com/projectdiscovery/nuclei) | Go | 33169 | 2026-11-21 | Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML |
-| [gitleaks/gitleaks](https://github.com/gitleaks/gitleaks) | Go | 31239 | 2026-10-28 | Scanner that finds hardcoded secrets in git history, working trees and CI pipelines using configurable regex and entropy rules. |
-| [prowler-cloud/prowler](https://github.com/prowler-cloud/prowler) | Python | 15299 | 2026-11-20 | Cloud security scanner that audits AWS, Azure, GCP and Kubernetes against CIS benchmarks and compliance frameworks, reporting hardening gaps. |
+| [aquasecurity/trivy](https://github.com/aquasecurity/trivy) | Go | 39613 | 2026-11-20 | Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more |
+| [projectdiscovery/nuclei](https://github.com/projectdiscovery/nuclei) | Go | 33195 | 2026-11-22 | Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML |
+| [gitleaks/gitleaks](https://github.com/gitleaks/gitleaks) | Go | 31253 | 2026-10-28 | Scanner that finds hardcoded secrets in git history, working trees and CI pipelines using configurable regex and entropy rules. |
+| [prowler-cloud/prowler](https://github.com/prowler-cloud/prowler) | Python | 15301 | 2026-11-20 | Cloud security scanner that audits AWS, Azure, GCP and Kubernetes against CIS benchmarks and compliance frameworks, reporting hardening gaps. |
 | [aquasecurity/tfsec](https://github.com/aquasecurity/tfsec) | Go | 7058 | 2026-03-25 | Tfsec is now part of Trivy |
-| [opencve/opencve](https://github.com/opencve/opencve) | Python | 2973 | 2026-11-16 | Self-hosted CVE intelligence platform that ingests NVD and MITRE feeds and alerts on new or updated vulnerabilities matching your vendors and products. |
-| [aquasecurity/trivy-operator](https://github.com/aquasecurity/trivy-operator) | Go | 2011 | 2026-11-18 | Kubernetes-native security toolkit |
+| [opencve/opencve](https://github.com/opencve/opencve) | Python | 2974 | 2026-11-16 | Self-hosted CVE intelligence platform that ingests NVD and MITRE feeds and alerts on new or updated vulnerabilities matching your vendors and products. |
+| [aquasecurity/trivy-operator](https://github.com/aquasecurity/trivy-operator) | Go | 2013 | 2026-11-18 | Kubernetes-native security toolkit |
 | [CVEProject/cve-services](https://github.com/CVEProject/cve-services) | JavaScript | 271 | 2026-11-18 | Source of the CVE Services API that CNAs use to reserve CVE IDs and to publish, update and query records in the official CVE registry. |
 
 #### Reading & references (1)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [opencve/opencve-kb](https://github.com/opencve/opencve-kb) | — | 36 | 2026-11-21 | Knowledge base repository that centralises the CVE records OpenCVE serves, versioned in git and kept in sync with upstream vulnerability feeds. |
+| [opencve/opencve-kb](https://github.com/opencve/opencve-kb) | — | 36 | 2026-11-22 | Knowledge base repository that centralises the CVE records OpenCVE serves, versioned in git and kept in sync with upstream vulnerability feeds. |
 
 
 <a id="cryptography-libs"></a>
@@ -1851,7 +1851,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [openssl/openssl](https://github.com/openssl/openssl) | C | 31500 | 2026-11-21 | General-purpose TLS and cryptography library with command-line tooling, implementing SSL/TLS, X.509 and the common cipher and hash suites. |
+| [openssl/openssl](https://github.com/openssl/openssl) | C | 31508 | 2026-11-22 | General-purpose TLS and cryptography library with command-line tooling, implementing SSL/TLS, X.509 and the common cipher and hash suites. |
 | [VirgilSecurity/virgil-e3kit-js](https://github.com/VirgilSecurity/virgil-e3kit-js) | TypeScript | 61 | 2024-05-28 | JavaScript and TypeScript SDK that adds end-to-end encryption to chat apps, handling key management, multi-device, group and stream encryption. |
 
 #### Articles (3)
@@ -1873,7 +1873,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [cert-manager/cert-manager](https://github.com/cert-manager/cert-manager) | Go | 14165 | 2026-11-20 | Kubernetes controller that issues and renews X.509 certificates from Let's Encrypt, Vault or a private CA and keeps them current as Secrets. |
+| [cert-manager/cert-manager](https://github.com/cert-manager/cert-manager) | Go | 14166 | 2026-11-22 | Kubernetes controller that issues and renews X.509 certificates from Let's Encrypt, Vault or a private CA and keeps them current as Secrets. |
 | [deggja/netfetch](https://github.com/deggja/netfetch) | Go | 448 | 2026-03-13 | CLI that scans Kubernetes clusters for missing or ineffective network policies and scores namespaces by how exposed their workloads are. |
 
 #### Articles (3)
@@ -1895,18 +1895,18 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [soxoj/maigret](https://github.com/soxoj/maigret) | Python | 41114 | 2026-11-21 | Collects a dossier on a person by checking a username against 3000+ sites and extracting whatever profile metadata it finds. |
-| [smicallef/spiderfoot](https://github.com/smicallef/spiderfoot) | Python | 24804 | 2026-04-13 | OSINT automation server that runs hundreds of reconnaissance modules to map an attack surface and enrich threat intelligence. |
-| [laramies/theHarvester](https://github.com/laramies/theHarvester) | Python | 18379 | 2026-11-16 | OSINT recon CLI that enumerates a target domain's emails, subdomains, hostnames and employee names from public search engines and API sources. |
-| [Datalux/Osintgram](https://github.com/Datalux/Osintgram) | Python | 15716 | 2026-10-30 | Interactive shell for analysing public Instagram accounts: followers, tagged photos, contact details and location history. |
-| [projectdiscovery/subfinder](https://github.com/projectdiscovery/subfinder) | Go | 14842 | 2026-11-21 | Passive subdomain enumeration CLI that queries dozens of public sources to map a domain's attack surface. |
+| [soxoj/maigret](https://github.com/soxoj/maigret) | Python | 41166 | 2026-11-22 | Collects a dossier on a person by checking a username against 3000+ sites and extracting whatever profile metadata it finds. |
+| [smicallef/spiderfoot](https://github.com/smicallef/spiderfoot) | Python | 24839 | 2026-04-13 | OSINT automation server that runs hundreds of reconnaissance modules to map an attack surface and enrich threat intelligence. |
+| [laramies/theHarvester](https://github.com/laramies/theHarvester) | Python | 18383 | 2026-11-22 | OSINT recon CLI that enumerates a target domain's emails, subdomains, hostnames and employee names from public search engines and API sources. |
+| [Datalux/Osintgram](https://github.com/Datalux/Osintgram) | Python | 15765 | 2026-10-30 | Interactive shell for analysing public Instagram accounts: followers, tagged photos, contact details and location history. |
+| [projectdiscovery/subfinder](https://github.com/projectdiscovery/subfinder) | Go | 14845 | 2026-11-22 | Passive subdomain enumeration CLI that queries dozens of public sources to map a domain's attack surface. |
 | [jofpin/trape](https://github.com/jofpin/trape) | Python | 9086 | 2024-06-20 | People-tracking research tool that fingerprints and geolocates visitors, used to demonstrate OSINT and social-engineering exposure. |
-| [DedSecInside/TorBot](https://github.com/DedSecInside/TorBot) | Python | 5220 | 2026-11-12 | OSINT crawler for Tor hidden services that maps onion links and extracts page metadata, emails and phone numbers. |
-| [lc/gau](https://github.com/lc/gau) | Go | 5178 | 2026-10-12 | Fetches every known URL for a domain from the Wayback Machine, Common Crawl and AlienVault OTX for recon and fuzzing. |
+| [DedSecInside/TorBot](https://github.com/DedSecInside/TorBot) | Python | 5223 | 2026-11-12 | OSINT crawler for Tor hidden services that maps onion links and extracts page metadata, emails and phone numbers. |
+| [lc/gau](https://github.com/lc/gau) | Go | 5179 | 2026-10-12 | Fetches every known URL for a domain from the Wayback Machine, Common Crawl and AlienVault OTX for recon and fuzzing. |
 | [kpcyrd/sn0int](https://github.com/kpcyrd/sn0int) | Rust | 2569 | 2026-09-20 | Semi-automatic OSINT framework that runs sandboxed Lua modules against a local entity database, with a package manager for scripts. |
 | [IvanGlinkin/Fast-Google-Dorks-Scan](https://github.com/IvanGlinkin/Fast-Google-Dorks-Scan) | Shell | 1744 | 2025-07-10 | Automated Google dorking script that enumerates admin panels, exposed file types and path traversal candidates for a target site. |
 | [MikeMeliz/TorCrawl.py](https://github.com/MikeMeliz/TorCrawl.py) | Python | 550 | 2026-06-29 | Crawls and extracts regular or onion web pages through the Tor network for investigative work. |
-| [zuxu4n/Rosint](https://github.com/zuxu4n/Rosint) | JavaScript | 282 | 2026-11-11 | Reddit user intelligence tool that profiles an account's posting history, subreddits and activity patterns. |
+| [zuxu4n/Rosint](https://github.com/zuxu4n/Rosint) | JavaScript | 283 | 2026-11-11 | Reddit user intelligence tool that profiles an account's posting history, subreddits and activity patterns. |
 | [thumpersecure/Telespotter](https://github.com/thumpersecure/Telespotter) | Rust | 87 | 2026-09-01 | Searches phone numbers across Google, Bing, DuckDuckGo and Dehashed, pulling names, locations and usernames out of the results. |
 
 #### Libraries (1)
@@ -1919,10 +1919,10 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [jivoi/awesome-osint](https://github.com/jivoi/awesome-osint) | — | 31300 | 2026-11-18 | Curated list of open-source intelligence resources covering people search, domain and IP recon, social media, and dark-web tooling. |
-| [edoardottt/awesome-hacker-search-engines](https://github.com/edoardottt/awesome-hacker-search-engines) | Shell | 11542 | 2026-11-13 | Curated list of search engines used in recon and bug bounty work: host, DNS, certificate, code, credential-leak, CVE and threat-intelligence lookups. |
-| [fastfire/deepdarkCTI](https://github.com/fastfire/deepdarkCTI) | — | 7527 | 2026-11-20 | Collection of cyber threat intelligence sources drawn from deep and dark web forums, markets and chat channels. |
-| [Astrosp/Awesome-OSINT-List](https://github.com/Astrosp/Awesome-OSINT-List) | Shell | 4682 | 2026-11-17 | Curated catalogue of OSINT tools for reconnaissance, reverse search, red teaming and trust-and-safety work. |
+| [jivoi/awesome-osint](https://github.com/jivoi/awesome-osint) | — | 31324 | 2026-11-21 | Curated list of open-source intelligence resources covering people search, domain and IP recon, social media, and dark-web tooling. |
+| [edoardottt/awesome-hacker-search-engines](https://github.com/edoardottt/awesome-hacker-search-engines) | Shell | 11544 | 2026-11-13 | Curated list of search engines used in recon and bug bounty work: host, DNS, certificate, code, credential-leak, CVE and threat-intelligence lookups. |
+| [fastfire/deepdarkCTI](https://github.com/fastfire/deepdarkCTI) | — | 7529 | 2026-11-20 | Collection of cyber threat intelligence sources drawn from deep and dark web forums, markets and chat channels. |
+| [Astrosp/Awesome-OSINT-List](https://github.com/Astrosp/Awesome-OSINT-List) | Shell | 4686 | 2026-11-17 | Curated catalogue of OSINT tools for reconnaissance, reverse search, red teaming and trust-and-safety work. |
 | [apurvsinghgautam/dark-web-osint-tools](https://github.com/apurvsinghgautam/dark-web-osint-tools) | — | 2691 | 2026-08-07 | Curated list of OSINT tools and search engines for investigating dark web services and marketplaces. |
 | [mxm0z/awesome-sec-s3](https://github.com/mxm0z/awesome-sec-s3) | — | 438 | 2025-12-30 | Curated list of tools for discovering and enumerating exposed AWS S3 buckets, from bucket-name brute forcers to public-leak scanners. |
 
@@ -1937,25 +1937,25 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [usestrix/strix](https://github.com/usestrix/strix) | Python | 76881 | 2026-11-19 | Open-source agents that run dynamic application penetration tests and report the vulnerabilities they can actually exploit. |
-| [FrancescoStabile/numasec](https://github.com/FrancescoStabile/numasec) | TypeScript | 848 | 2026-05-08 | CLI AI agent for security testing that drives recon, DAST and exploitation tooling over MCP for appsec, red-team and bug-bounty workflows. |
-| [RocketGod-git/flipper-zero-rf-jammer](https://github.com/RocketGod-git/flipper-zero-rf-jammer) | C | 824 | 2026-11-20 | Flipper Zero application that transmits on configurable sub-GHz frequencies and modulation presets, for RF interference testing on hardware you own. |
+| [usestrix/strix](https://github.com/usestrix/strix) | Python | 76999 | 2026-11-19 | Open-source agents that run dynamic application penetration tests and report the vulnerabilities they can actually exploit. |
+| [FrancescoStabile/numasec](https://github.com/FrancescoStabile/numasec) | TypeScript | 847 | 2026-05-08 | CLI AI agent for security testing that drives recon, DAST and exploitation tooling over MCP for appsec, red-team and bug-bounty workflows. |
+| [RocketGod-git/flipper-zero-rf-jammer](https://github.com/RocketGod-git/flipper-zero-rf-jammer) | C | 824 | 2026-11-22 | Flipper Zero application that transmits on configurable sub-GHz frequencies and modulation presets, for RF interference testing on hardware you own. |
 | [ZerkerEOD/krakenhashes](https://github.com/ZerkerEOD/krakenhashes) | Go | 410 | 2026-11-16 | Distributed password-cracking platform that coordinates Hashcat across GPU agents, with job scheduling, potfile reuse and a web dashboard. |
 
 #### Reading & references (10)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [Hack-with-Github/Awesome-Hacking](https://github.com/Hack-with-Github/Awesome-Hacking) | — | 126152 | 2026-10-27 | Index of awesome lists for hackers, penetration testers and security researchers, spanning fuzzing, reversing and bug bounty. |
-| [danielmiessler/SecLists](https://github.com/danielmiessler/SecLists) | PHP | 74873 | 2026-11-21 | Collection of wordlists, fuzzing payloads, default credentials and sensitive-data patterns used throughout security assessments. |
-| [enaqx/awesome-pentest](https://github.com/enaqx/awesome-pentest) | — | 27812 | 2026-07-25 | Curated list of penetration testing tools and resources, organised by phase and target: recon, network, web, wireless, exploitation and reporting. |
-| [vitalysim/Awesome-Hacking-Resources](https://github.com/vitalysim/Awesome-Hacking-Resources) | — | 17663 | 2026-05-21 | Curated collection of learning resources for offensive security: CTF practice, exploit and buffer-overflow tutorials, privilege escalation and reverse engineering. |
-| [carpedm20/awesome-hacking](https://github.com/carpedm20/awesome-hacking) | — | 17556 | 2024-06-02 | Curated list of hacking tutorials, tools and resources spanning reverse engineering, exploitation, forensics and CTF practice. |
+| [Hack-with-Github/Awesome-Hacking](https://github.com/Hack-with-Github/Awesome-Hacking) | — | 126227 | 2026-10-27 | Index of awesome lists for hackers, penetration testers and security researchers, spanning fuzzing, reversing and bug bounty. |
+| [danielmiessler/SecLists](https://github.com/danielmiessler/SecLists) | PHP | 74888 | 2026-11-22 | Collection of wordlists, fuzzing payloads, default credentials and sensitive-data patterns used throughout security assessments. |
+| [enaqx/awesome-pentest](https://github.com/enaqx/awesome-pentest) | — | 27818 | 2026-07-25 | Curated list of penetration testing tools and resources, organised by phase and target: recon, network, web, wireless, exploitation and reporting. |
+| [vitalysim/Awesome-Hacking-Resources](https://github.com/vitalysim/Awesome-Hacking-Resources) | — | 17664 | 2026-05-21 | Curated collection of learning resources for offensive security: CTF practice, exploit and buffer-overflow tutorials, privilege escalation and reverse engineering. |
+| [carpedm20/awesome-hacking](https://github.com/carpedm20/awesome-hacking) | — | 17564 | 2024-06-02 | Curated list of hacking tutorials, tools and resources spanning reverse engineering, exploitation, forensics and CTF practice. |
 | [jekil/awesome-hacking](https://github.com/jekil/awesome-hacking) | Python | 4070 | 2026-11-18 | Curated catalogue of hacking tools grouped by task (CTF, code auditing, exploitation, forensics, malware analysis), also cloneable as one toolset via submodules. |
 | [xajkep/wordlists](https://github.com/xajkep/wordlists) | Python | 953 | 2026-11-05 | Large corpus of infosec wordlists and regex patterns for discovery, fuzzing, payload generation and recon, with scripts to assemble them. |
 | [nagwww/s3-leaks](https://github.com/nagwww/s3-leaks) | Python | 464 | 2026-08-20 | Collection of documented S3 bucket misconfigurations and the techniques used to discover and exploit them. |
 | [drtychai/wordlists](https://github.com/drtychai/wordlists) | — | 249 | 2024-06-25 | Aggregated wordlists pulled from common tools for discovery, enumeration, fuzzing and exploitation. |
-| [bad-antics/nullsec-flipper-suite](https://github.com/bad-antics/nullsec-flipper-suite) | Python | 94 | 2026-03-11 | Collection of 430+ Flipper Zero files: BadUSB payloads, SubGHz captures, IR remotes and NFC and RFID dumps. |
+| [bad-antics/nullsec-flipper-suite](https://github.com/bad-antics/nullsec-flipper-suite) | Python | 95 | 2026-03-11 | Collection of 430+ Flipper Zero files: BadUSB payloads, SubGHz captures, IR remotes and NFC and RFID dumps. |
 
 
 <a id="privacy-tooling"></a>
@@ -1968,21 +1968,21 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [Raphire/Win11Debloat](https://github.com/Raphire/Win11Debloat) | PowerShell | 63438 | 2026-11-15 | PowerShell script that removes pre-installed apps, disables telemetry and applies privacy and UI tweaks on Windows 10 and 11. |
-| [abrahamjuliot/creepjs](https://github.com/abrahamjuliot/creepjs) | TypeScript | 2555 | 2026-06-11 | Browser fingerprinting research harness that surfaces device, engine and lie-detection signals to test anti-fingerprinting defences. |
+| [Raphire/Win11Debloat](https://github.com/Raphire/Win11Debloat) | PowerShell | 63527 | 2026-11-15 | PowerShell script that removes pre-installed apps, disables telemetry and applies privacy and UI tweaks on Windows 10 and 11. |
+| [abrahamjuliot/creepjs](https://github.com/abrahamjuliot/creepjs) | TypeScript | 2558 | 2026-06-11 | Browser fingerprinting research harness that surfaces device, engine and lie-detection signals to test anti-fingerprinting defences. |
 | [arcadesdude/BRU](https://github.com/arcadesdude/BRU) | PowerShell | 556 | 2026-01-05 | PowerShell GUI utility that removes factory bloatware and provisioned Store apps from Windows 7 through 11, with common targets preselected. |
 
 #### Libraries (1)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [fingerprintjs/fingerprintjs](https://github.com/fingerprintjs/fingerprintjs) | TypeScript | 28783 | 2026-11-05 | Browser fingerprinting library that derives a stable visitor identifier from device and browser signals for fraud detection. |
+| [fingerprintjs/fingerprintjs](https://github.com/fingerprintjs/fingerprintjs) | TypeScript | 28788 | 2026-11-05 | Browser fingerprinting library that derives a stable visitor identifier from device and browser signals for fraud detection. |
 
 #### Frameworks (1)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [data-privacy-stack/presidio](https://github.com/data-privacy-stack/presidio) | Python | 11994 | 2026-11-19 | Framework for detecting, redacting and anonymising PII across text, images and structured data using NLP and pattern recognisers. |
+| [data-privacy-stack/presidio](https://github.com/data-privacy-stack/presidio) | Python | 11999 | 2026-11-22 | Framework for detecting, redacting and anonymising PII across text, images and structured data using NLP and pattern recognisers. |
 
 
 <a id="runtime-security"></a>
@@ -1995,7 +1995,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [cilium/tetragon](https://github.com/cilium/tetragon) | C | 5195 | 2026-11-21 | eBPF-based runtime security observability for Kubernetes, recording process, file and network events in kernel space and enforcing policy at the syscall level. |
+| [cilium/tetragon](https://github.com/cilium/tetragon) | C | 5199 | 2026-11-21 | eBPF-based runtime security observability for Kubernetes, recording process, file and network events in kernel space and enforcing policy at the syscall level. |
 
 
 <a id="decentralized-identity"></a>
@@ -2008,7 +2008,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [walt-id/waltid-identity](https://github.com/walt-id/waltid-identity) | Kotlin | 329 | 2026-11-21 | Identity and wallet stack with SDKs and hosted services for issuing, verifying and storing W3C verifiable credentials and mDoc documents. |
+| [walt-id/waltid-identity](https://github.com/walt-id/waltid-identity) | Kotlin | 329 | 2026-11-22 | Identity and wallet stack with SDKs and hosted services for issuing, verifying and storing W3C verifiable credentials and mDoc documents. |
 | [openwallet-foundation/bifold-wallet](https://github.com/openwallet-foundation/bifold-wallet) | TypeScript | 204 | 2026-11-04 | Extensible React Native digital wallet for holding and presenting verifiable credentials, usable as the base for a branded identity wallet. |
 | [openwallet-foundation/acapy-vc-authn-oidc](https://github.com/openwallet-foundation/acapy-vc-authn-oidc) | Python | 157 | 2026-11-20 | OpenID Connect identity provider that authenticates users by requesting proof from their Aries verifiable credentials, bridging wallets into ordinary OIDC logins. |
 | [bcgov/indy-tails-server](https://github.com/bcgov/indy-tails-server) | Python | 29 | 2026-11-21 | Server that stores and serves Hyperledger Indy tails files, so credential issuers can publish revocation registries without hosting them themselves. |
@@ -2054,7 +2054,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [morluto/rea](https://github.com/morluto/rea) | TypeScript | 472309 | 2026-11-21 | MCP server and agent skill pack for reverse engineering, driving Ghidra and Hopper to analyse native binaries, app behaviour and runtime traces from a coding agent. |
+| [morluto/rea](https://github.com/morluto/rea) | TypeScript | 473642 | 2026-11-22 | MCP server and agent skill pack for reverse engineering, driving Ghidra and Hopper to analyse native binaries, app behaviour and runtime traces from a coding agent. |
 
 
 <a id="cli-frameworks"></a>
@@ -2067,7 +2067,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [clap-rs/clap](https://github.com/clap-rs/clap) | Rust | 16903 | 2026-11-20 | A full featured, fast Command Line Argument Parser for Rust |
+| [clap-rs/clap](https://github.com/clap-rs/clap) | Rust | 16906 | 2026-11-20 | A full featured, fast Command Line Argument Parser for Rust |
 | [ksk001100/seahorse](https://github.com/ksk001100/seahorse) | Rust | 306 | 2026-05-07 | A minimal CLI framework written in Rust |
 | [mgrachev/update-informer](https://github.com/mgrachev/update-informer) | Rust | 229 | 2026-11-16 | Rust library that checks crates.io, GitHub or PyPI in the background and tells users of your CLI or GUI when a newer version is available. |
 
@@ -2082,7 +2082,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [zed-industries/zed](https://github.com/zed-industries/zed) | Rust | 95465 | 2026-11-21 | Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sit |
+| [zed-industries/zed](https://github.com/zed-industries/zed) | Rust | 95511 | 2026-11-22 | Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sit |
 | [opral/flashtype](https://github.com/opral/flashtype) | TypeScript | 300 | 2026-09-26 | Markdown editor built to sit alongside Claude Code and Codex, editing the documents your coding agents write. |
 
 
@@ -2096,7 +2096,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [terraform-linters/tflint](https://github.com/terraform-linters/tflint) | Go | 5858 | 2026-11-21 | A Pluggable Terraform Linter |
+| [terraform-linters/tflint](https://github.com/terraform-linters/tflint) | Go | 5858 | 2026-11-22 | A Pluggable Terraform Linter |
 | [ayarotsky/diesel-guard](https://github.com/ayarotsky/diesel-guard) | Rust | 122 | 2026-11-16 | Linter for dangerous Postgres migration patterns in Diesel and SQLx |
 
 #### Articles (1)
@@ -2116,8 +2116,8 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [alibaba/open-code-review](https://github.com/alibaba/open-code-review) | Go | 54982 | 2026-11-21 | Code review service combining deterministic rule pipelines with an LLM agent to post line-level findings, shipping rulesets for NPE, thread-safety, XSS and SQL injection. |
-| [mattzcarey/shippie](https://github.com/mattzcarey/shippie) | TypeScript | 2531 | 2026-10-21 | Extendable code review and QA agent that comments on pull requests and runs as a CI step or MCP-connected tool. |
+| [alibaba/open-code-review](https://github.com/alibaba/open-code-review) | Go | 55294 | 2026-11-22 | Code review service combining deterministic rule pipelines with an LLM agent to post line-level findings, shipping rulesets for NPE, thread-safety, XSS and SQL injection. |
+| [mattzcarey/shippie](https://github.com/mattzcarey/shippie) | TypeScript | 2533 | 2026-10-21 | Extendable code review and QA agent that comments on pull requests and runs as a CI step or MCP-connected tool. |
 
 
 <a id="documentation-generators"></a>
@@ -2130,7 +2130,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [octokatherine/readme.so](https://github.com/octokatherine/readme.so) | JavaScript | 4634 | 2026-03-13 | Drag-and-drop online editor for assembling project READMEs from prewritten markdown sections, with live preview and export. |
+| [octokatherine/readme.so](https://github.com/octokatherine/readme.so) | JavaScript | 4635 | 2026-03-13 | Drag-and-drop online editor for assembling project READMEs from prewritten markdown sections, with live preview and export. |
 | [event-catalog/eventcatalog](https://github.com/event-catalog/eventcatalog) | TypeScript | 2975 | 2026-11-20 | Documentation site generator for event-driven architectures, cataloguing domains, services, events and schemas from AsyncAPI and OpenAPI definitions. |
 
 #### Libraries (1)
@@ -2150,14 +2150,14 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [wavetermdev/waveterm](https://github.com/wavetermdev/waveterm) | Go | 22727 | 2026-11-19 | An open-source, AI-integrated, cross-platform terminal for seamless workflows |
-| [direnv/direnv](https://github.com/direnv/direnv) | Go | 15559 | 2026-11-16 | Shell extension that loads and unloads environment variables per directory from an .envrc file, keeping project config out of your profile. |
+| [wavetermdev/waveterm](https://github.com/wavetermdev/waveterm) | Go | 22728 | 2026-11-19 | An open-source, AI-integrated, cross-platform terminal for seamless workflows |
+| [direnv/direnv](https://github.com/direnv/direnv) | Go | 15561 | 2026-11-16 | Shell extension that loads and unloads environment variables per directory from an .envrc file, keeping project config out of your profile. |
 
 #### Libraries (2)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [ratatui/ratatui](https://github.com/ratatui/ratatui) | Rust | 23378 | 2026-11-21 | A Rust crate for cooking up terminal user interfaces (TUIs) 👨‍🍳🐀 https://ratatui.rs |
+| [ratatui/ratatui](https://github.com/ratatui/ratatui) | Rust | 23391 | 2026-11-22 | A Rust crate for cooking up terminal user interfaces (TUIs) 👨‍🍳🐀 https://ratatui.rs |
 | [zhiburt/tabled](https://github.com/zhiburt/tabled) | Rust | 2372 | 2026-11-12 | Rust library that renders structs and enums as formatted terminal tables, with derive-based columns, styling and layout control. |
 
 #### Articles (2)
@@ -2178,20 +2178,20 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [d2lang/d2](https://github.com/d2lang/d2) | Go | 25878 | 2026-11-21 | Diagram scripting language and renderer that turns declarative text into architecture, sequence and entity diagrams. |
+| [d2lang/d2](https://github.com/d2lang/d2) | Go | 25889 | 2026-11-22 | Diagram scripting language and renderer that turns declarative text into architecture, sequence and entity diagrams. |
 | [philippemerle/KubeDiagrams](https://github.com/philippemerle/KubeDiagrams) | JavaScript | 2737 | 2026-11-08 | Generates Kubernetes architecture diagrams from manifests, kustomizations, Helm charts, helmfiles or live cluster state. |
 
 #### Libraries (1)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [xyflow/xyflow](https://github.com/xyflow/xyflow) | TypeScript | 39107 | 2026-11-19 | React and Svelte libraries for node-based UIs such as flowcharts, pipeline editors and graph canvases, customisable out of the box. |
+| [xyflow/xyflow](https://github.com/xyflow/xyflow) | TypeScript | 39113 | 2026-11-19 | React and Svelte libraries for node-based UIs such as flowcharts, pipeline editors and graph canvases, customisable out of the box. |
 
 #### Reading & references (1)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) | HTML | 69625 | 2026-11-19 | 38 editorial diagram templates in self-contained HTML and SVG, for coding agents that need figures without Mermaid defaults. |
+| [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) | HTML | 70120 | 2026-11-22 | 38 editorial diagram templates in self-contained HTML and SVG, for coding agents that need figures without Mermaid defaults. |
 
 
 <a id="spec-driven-development"></a>
@@ -2204,16 +2204,16 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [github/spec-kit](https://github.com/github/spec-kit) | Python | 150899 | 2026-11-20 | GitHub's toolkit for spec-driven development, generating the specs, plans and tasks that coding agents then implement. |
-| [Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec) | TypeScript | 75410 | 2026-11-20 | Spec-driven development workflow for AI coding assistants, keeping change proposals and specs in the repo as the source of truth. |
-| [Pimzino/claude-code-spec-workflow](https://github.com/Pimzino/claude-code-spec-workflow) | TypeScript | 3854 | 2025-09-07 | Spec-driven workflow for Claude Code that walks a feature from requirements to design, tasks and implementation, plus a shorter report-analyse-fix bug loop. |
-| [spec-kitty/spec-kitty](https://github.com/spec-kitty/spec-kitty) | Python | 1736 | 2026-11-21 | Spec-driven development workflow for coding agents, with a Kanban dashboard, git worktrees and auto-merge across Claude, Cursor and Codex. |
+| [github/spec-kit](https://github.com/github/spec-kit) | Python | 151000 | 2026-11-20 | GitHub's toolkit for spec-driven development, generating the specs, plans and tasks that coding agents then implement. |
+| [Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec) | TypeScript | 75453 | 2026-11-22 | Spec-driven development workflow for AI coding assistants, keeping change proposals and specs in the repo as the source of truth. |
+| [Pimzino/claude-code-spec-workflow](https://github.com/Pimzino/claude-code-spec-workflow) | TypeScript | 3852 | 2025-09-07 | Spec-driven workflow for Claude Code that walks a feature from requirements to design, tasks and implementation, plus a shorter report-analyse-fix bug loop. |
+| [spec-kitty/spec-kitty](https://github.com/spec-kitty/spec-kitty) | Python | 1737 | 2026-11-22 | Spec-driven development workflow for coding agents, with a Kanban dashboard, git worktrees and auto-merge across Claude, Cursor and Codex. |
 
 #### Reading & references (1)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [snarktank/ai-dev-tasks](https://github.com/snarktank/ai-dev-tasks) | — | 7797 | 2025-11-05 | Markdown prompt workflow that turns a feature idea into a PRD and then a task list, which coding agents work through one checked item at a time. |
+| [snarktank/ai-dev-tasks](https://github.com/snarktank/ai-dev-tasks) | — | 7795 | 2025-11-05 | Markdown prompt workflow that turns a feature idea into a PRD and then a task list, which coding agents work through one checked item at a time. |
 
 
 <a id="dev-environments"></a>
@@ -2226,9 +2226,9 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [metalbear-co/mirrord](https://github.com/metalbear-co/mirrord) | Rust | 5425 | 2026-11-20 | Runs a local process as if it were a pod in a remote Kubernetes cluster, mirroring env vars, DNS, outgoing network and incoming traffic. |
+| [metalbear-co/mirrord](https://github.com/metalbear-co/mirrord) | Rust | 5426 | 2026-11-22 | Runs a local process as if it were a pod in a remote Kubernetes cluster, mirroring env vars, DNS, outgoing network and incoming traffic. |
 | [txn2/kubefwd](https://github.com/txn2/kubefwd) | Go | 4188 | 2026-11-17 | Bulk port-forwards Kubernetes services to your workstation and maps them in /etc/hosts, so local code can call cluster services by their in-cluster names. |
-| [kubenetworks/kubevpn](https://github.com/kubenetworks/kubevpn) | Go | 1370 | 2026-11-21 | Connects a workstation to a Kubernetes cluster network so local processes can reach cluster services, and intercepts cluster traffic back to locally running code. |
+| [kubenetworks/kubevpn](https://github.com/kubenetworks/kubevpn) | Go | 1370 | 2026-11-22 | Connects a workstation to a Kubernetes cluster network so local processes can reach cluster services, and intercepts cluster traffic back to locally running code. |
 
 
 <a id="notebooks"></a>
@@ -2261,7 +2261,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [la10736/rstest](https://github.com/la10736/rstest) | Rust | 1606 | 2026-11-11 | Fixture-based test framework for Rust, adding dependency-injected fixtures and table-driven parameterised cases to #[test]. |
+| [la10736/rstest](https://github.com/la10736/rstest) | Rust | 1606 | 2026-11-22 | Fixture-based test framework for Rust, adding dependency-injected fixtures and table-driven parameterised cases to #[test]. |
 
 #### Frameworks (1)
 
@@ -2280,7 +2280,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [Nukesor/comfy-table](https://github.com/Nukesor/comfy-table) | Rust | 1418 | 2026-11-17 | Rust library for rendering styled terminal tables, with automatic content wrapping, dynamic column sizing and UTF-8 border presets. |
+| [Nukesor/comfy-table](https://github.com/Nukesor/comfy-table) | Rust | 1419 | 2026-11-17 | Rust library for rendering styled terminal tables, with automatic content wrapping, dynamic column sizing and UTF-8 border presets. |
 | [FGRibreau/spinners](https://github.com/FGRibreau/spinners) | Rust | 600 | 2026-11-19 | Rust library offering 60+ ready-made terminal spinner animations for reporting progress in command-line programs. |
 | [clitic/kdam](https://github.com/clitic/kdam) | Rust | 248 | 2026-01-06 | Console progress bar library for Rust in the style of tqdm and rich.progress, with nested bars, spinners and customisable rendering. |
 
@@ -2288,7 +2288,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [gdt050579/AppCUI-rs](https://github.com/gdt050579/AppCUI-rs) | Rust | 407 | 2026-11-21 | Cross-platform Rust framework for text-based user interfaces, pairing a low-level console engine with widgets like windows, menus and dialogs. |
+| [gdt050579/AppCUI-rs](https://github.com/gdt050579/AppCUI-rs) | Rust | 407 | 2026-11-22 | Cross-platform Rust framework for text-based user interfaces, pairing a low-level console engine with widgets like windows, menus and dialogs. |
 
 
 <a id="dependency-management"></a>
@@ -2301,7 +2301,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [kbknapp/cargo-outdated](https://github.com/kbknapp/cargo-outdated) | Rust | 1429 | 2026-11-20 | Cargo subcommand that reports which direct and transitive Rust dependencies have newer versions available, separating compatible bumps from breaking ones. |
+| [kbknapp/cargo-outdated](https://github.com/kbknapp/cargo-outdated) | Rust | 1429 | 2026-11-21 | Cargo subcommand that reports which direct and transitive Rust dependencies have newer versions available, separating compatible bumps from breaking ones. |
 
 
 <a id="release-automation"></a>
@@ -2328,7 +2328,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [optics-dev/Monocle](https://github.com/optics-dev/Monocle) | Scala | 1701 | 2026-11-19 | Optics library for Scala |
+| [optics-dev/Monocle](https://github.com/optics-dev/Monocle) | Scala | 1701 | 2026-11-22 | Optics library for Scala |
 
 
 <a id="streaming-libs"></a>
@@ -2365,9 +2365,9 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [arrow-kt/arrow](https://github.com/arrow-kt/arrow) | Kotlin | 6589 | 2026-11-21 | Functional companion library for Kotlin: typed errors and the Raise DSL, optics, immutable data helpers and structured-concurrency combinators. |
+| [arrow-kt/arrow](https://github.com/arrow-kt/arrow) | Kotlin | 6589 | 2026-11-22 | Functional companion library for Kotlin: typed errors and the Raise DSL, optics, immutable data helpers and structured-concurrency combinators. |
 | [typelevel/spire](https://github.com/typelevel/spire) | Scala | 1773 | 2026-11-18 | Numeric type classes and number types for Scala — rationals, intervals, quaternions and generic, fast arithmetic abstractions. |
-| [rust-num/num-traits](https://github.com/rust-num/num-traits) | Rust | 981 | 2026-07-07 | Numeric traits for generic mathematics in Rust, abstracting integers, floats and their operations behind shared interfaces. |
+| [rust-num/num-traits](https://github.com/rust-num/num-traits) | Rust | 980 | 2026-07-07 | Numeric traits for generic mathematics in Rust, abstracting integers, floats and their operations behind shared interfaces. |
 | [but212/rustica](https://github.com/but212/rustica) | Rust | 18 | 2026-11-17 | Functional programming library for Rust offering typeclass-style abstractions such as functors, monads and monad transformers. |
 
 #### Articles (51)
@@ -2437,8 +2437,8 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [DioxusLabs/dioxus](https://github.com/DioxusLabs/dioxus) | Rust | 39868 | 2026-11-13 | Rust framework for building fullstack web, desktop and mobile apps from one component tree, with SSR and hot reload. |
-| [JetBrains/compose-multiplatform](https://github.com/JetBrains/compose-multiplatform) | Kotlin | 19490 | 2026-11-21 | Declarative Kotlin UI framework that shares one Compose codebase across desktop, Android, iOS and the web. |
+| [DioxusLabs/dioxus](https://github.com/DioxusLabs/dioxus) | Rust | 39880 | 2026-11-22 | Rust framework for building fullstack web, desktop and mobile apps from one component tree, with SSR and hot reload. |
+| [JetBrains/compose-multiplatform](https://github.com/JetBrains/compose-multiplatform) | Kotlin | 19493 | 2026-11-21 | Declarative Kotlin UI framework that shares one Compose codebase across desktop, Android, iOS and the web. |
 
 #### Articles (4)
 
@@ -2460,8 +2460,8 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [longbridge/gpui-kit](https://github.com/longbridge/gpui-kit) | Rust | 21143 | 2026-11-21 | Cross-platform desktop UI component kit for Rust, built on the GPUI framework that powers the Zed editor. |
-| [lodev09/react-native-true-sheet](https://github.com/lodev09/react-native-true-sheet) | TypeScript | 2107 | 2026-11-20 | React Native bottom sheet component backed by the platform's own sheet presentation on iOS and Android. |
+| [longbridge/gpui-kit](https://github.com/longbridge/gpui-kit) | Rust | 21190 | 2026-11-22 | Cross-platform desktop UI component kit for Rust, built on the GPUI framework that powers the Zed editor. |
+| [lodev09/react-native-true-sheet](https://github.com/lodev09/react-native-true-sheet) | TypeScript | 2109 | 2026-11-21 | React Native bottom sheet component backed by the platform's own sheet presentation on iOS and Android. |
 
 
 <a id="design-systems"></a>
@@ -2474,8 +2474,8 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md) | — | 128503 | 2026-10-28 | Collection of DESIGN.md files distilled from well-known brand design systems, for steering coding agents toward a consistent UI. |
-| [google-labs-code/design.md](https://github.com/google-labs-code/design.md) | TypeScript | 28998 | 2026-11-18 | Specification for DESIGN.md, a file that gives coding agents a persistent, structured description of a product's visual identity and design system. |
+| [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md) | — | 128617 | 2026-10-28 | Collection of DESIGN.md files distilled from well-known brand design systems, for steering coding agents toward a consistent UI. |
+| [google-labs-code/design.md](https://github.com/google-labs-code/design.md) | TypeScript | 29028 | 2026-11-18 | Specification for DESIGN.md, a file that gives coding agents a persistent, structured description of a product's visual identity and design system. |
 
 #### Articles (2)
 
@@ -2508,7 +2508,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [visgl/deck.gl](https://github.com/visgl/deck.gl) | TypeScript | 14794 | 2026-11-21 | WebGL2 visualisation framework for large geospatial datasets, composing layered maps, point clouds and trip animations. |
+| [visgl/deck.gl](https://github.com/visgl/deck.gl) | TypeScript | 14798 | 2026-11-22 | WebGL2 visualisation framework for large geospatial datasets, composing layered maps, point clouds and trip animations. |
 
 
 <a id="graphics-3d"></a>
@@ -2521,10 +2521,10 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [pmndrs/drei](https://github.com/pmndrs/drei) | JavaScript | 10182 | 2026-11-17 | Collection of helpers, abstractions and hooks for react-three-fiber: cameras, controls, loaders and materials. |
-| [kripken/ammo.js](https://github.com/kripken/ammo.js) | C++ | 4603 | 2026-09-22 | Emscripten port of the Bullet physics engine to JavaScript and WebAssembly, giving browser 3D scenes rigid-body dynamics and collision detection. |
-| [bitshifter/glam-rs](https://github.com/bitshifter/glam-rs) | Rust | 2100 | 2026-11-08 | Fast linear algebra library for games and graphics in Rust, with SIMD-accelerated vector, matrix and quaternion types. |
-| [pmndrs/three-stdlib](https://github.com/pmndrs/three-stdlib) | JavaScript | 862 | 2026-06-26 | Stand-alone, transpilation-free port of the three.js examples - loaders, controls and post-processing - for Node and browsers. |
+| [pmndrs/drei](https://github.com/pmndrs/drei) | JavaScript | 10186 | 2026-11-17 | Collection of helpers, abstractions and hooks for react-three-fiber: cameras, controls, loaders and materials. |
+| [kripken/ammo.js](https://github.com/kripken/ammo.js) | C++ | 4604 | 2026-09-22 | Emscripten port of the Bullet physics engine to JavaScript and WebAssembly, giving browser 3D scenes rigid-body dynamics and collision detection. |
+| [bitshifter/glam-rs](https://github.com/bitshifter/glam-rs) | Rust | 2099 | 2026-11-08 | Fast linear algebra library for games and graphics in Rust, with SIMD-accelerated vector, matrix and quaternion types. |
+| [pmndrs/three-stdlib](https://github.com/pmndrs/three-stdlib) | JavaScript | 863 | 2026-06-26 | Stand-alone, transpilation-free port of the three.js examples - loaders, controls and post-processing - for Node and browsers. |
 
 #### Reading & references (1)
 
@@ -2543,7 +2543,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [greensock/GSAP](https://github.com/greensock/GSAP) | JavaScript | 31020 | 2026-11-04 | JavaScript animation platform for timeline-based motion, scroll-driven effects and SVG animation across browsers. |
+| [greensock/GSAP](https://github.com/greensock/GSAP) | JavaScript | 31059 | 2026-11-04 | JavaScript animation platform for timeline-based motion, scroll-driven effects and SVG animation across browsers. |
 
 
 <a id="vector-graphics"></a>
@@ -2569,7 +2569,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [SamG-Coder/SmartImposter](https://github.com/SamG-Coder/SmartImposter) | Rust | 160 | 2026-11-20 | Hardware ray-traced forest and whole-Earth renderer in Rust and Vulkan, drawing distant plants as parallax octahedral impostors evaluated on RTX cores. |
+| [SamG-Coder/SmartImposter](https://github.com/SamG-Coder/SmartImposter) | Rust | 161 | 2026-11-20 | Hardware ray-traced forest and whole-Earth renderer in Rust and Vulkan, drawing distant plants as parallax octahedral impostors evaluated on RTX cores. |
 
 
 <a id="rfcs"></a>
@@ -2653,10 +2653,10 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 | :--- | :--- | ---: | :--- | :--- |
 | [ulid/spec](https://github.com/ulid/spec) | — | 10857 | 2024-07-20 | Canonical specification for ULID, a 128-bit lexicographically sortable identifier in Crockford base32, designed as a UUID replacement. |
 | [cloudevents/spec](https://github.com/cloudevents/spec) | Python | 5961 | 2026-11-20 | CNCF specification for describing event data in a common envelope, with bindings for HTTP, Kafka, AMQP, MQTT and several SDKs. |
-| [asyncapi/spec](https://github.com/asyncapi/spec) | JavaScript | 5343 | 2026-10-27 | Specification for describing event-driven APIs in a machine-readable document, covering channels, messages and bindings for Kafka, MQTT, AMQP and WebSockets. |
+| [asyncapi/spec](https://github.com/asyncapi/spec) | JavaScript | 5344 | 2026-10-27 | Specification for describing event-driven APIs in a machine-readable document, covering channels, messages and bindings for Kafka, MQTT, AMQP and WebSockets. |
 | [standard-webhooks/standard-webhooks](https://github.com/standard-webhooks/standard-webhooks) | Java | 1809 | 2026-11-19 | Open specification for sending and verifying webhooks, covering payload shape, signatures and replay protection, with reference libraries. |
-| [OpenSLO/OpenSLO](https://github.com/OpenSLO/OpenSLO) | Makefile | 1544 | 2026-11-17 | Vendor-neutral specification for declaring service level objectives, indicators and error budgets as version-controlled YAML. |
-| [ocsf/ocsf-schema](https://github.com/ocsf/ocsf-schema) | — | 917 | 2026-11-20 | Schema definitions for the Open Cybersecurity Schema Framework, a vendor-neutral taxonomy for normalising security events, findings and audit logs. |
+| [OpenSLO/OpenSLO](https://github.com/OpenSLO/OpenSLO) | Makefile | 1545 | 2026-11-17 | Vendor-neutral specification for declaring service level objectives, indicators and error budgets as version-controlled YAML. |
+| [ocsf/ocsf-schema](https://github.com/ocsf/ocsf-schema) | — | 918 | 2026-11-20 | Schema definitions for the Open Cybersecurity Schema Framework, a vendor-neutral taxonomy for normalising security events, findings and audit logs. |
 | [CVEProject/cve-schema](https://github.com/CVEProject/cve-schema) | HTML | 459 | 2026-01-30 | JSON schema and documentation for the CVE record format, defining how vulnerability records are structured and published by CNAs. |
 
 
@@ -2670,29 +2670,29 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [sindresorhus/awesome](https://github.com/sindresorhus/awesome) | — | 540331 | 2026-09-02 | Root index of the awesome-list ecosystem, linking curated lists across languages, platforms and engineering disciplines. |
-| [awesomedata/awesome-public-datasets](https://github.com/awesomedata/awesome-public-datasets) | — | 80232 | 2026-11-20 | Topic-centric index of high-quality open datasets across science, government, finance and social data. |
-| [josephmisiti/awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning) | Python | 74868 | 2026-11-12 | Curated list of machine learning frameworks, libraries and software, organised by programming language. |
-| [rust-unofficial/awesome-rust](https://github.com/rust-unofficial/awesome-rust) | Rust | 60706 | 2026-11-21 | Curated index of Rust libraries, applications and learning resources, organised by problem domain. |
-| [ashishpatel26/500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) | Python | 40219 | 2026-11-06 | Curated catalogue of 500 AI agent use cases by industry, each linked to an open-source implementation. |
-| [e2b-dev/awesome-ai-agents](https://github.com/e2b-dev/awesome-ai-agents) | — | 31018 | 2026-08-21 | Curated list of autonomous AI agents and agent platforms, from the AutoGPT generation through current frameworks and commercial products. |
-| [Arindam200/awesome-ai-apps](https://github.com/Arindam200/awesome-ai-apps) | Python | 16773 | 2026-11-16 | Collection of runnable example AI applications — RAG pipelines, agents, MCP integrations and workflows — with full source for each use case. |
-| [mfornos/awesome-microservices](https://github.com/mfornos/awesome-microservices) | — | 14586 | 2026-08-20 | Curated list of microservice architecture principles, patterns and technologies, organised by platform, language and infrastructure concern. |
-| [dhamaniasad/awesome-postgres](https://github.com/dhamaniasad/awesome-postgres) | — | 12194 | 2026-11-05 | Curated list of PostgreSQL extensions, tooling, hosting options, client libraries and learning material across the ecosystem. |
-| [lauris/awesome-scala](https://github.com/lauris/awesome-scala) | Python | 9268 | 2024-09-20 | Community-maintained list of Scala libraries, frameworks and tools organised by problem area, from web stacks to functional programming. |
-| [MrNeRF/awesome-3D-gaussian-splatting](https://github.com/MrNeRF/awesome-3D-gaussian-splatting) | HTML | 9008 | 2026-10-04 | Curated tracker of 3D Gaussian Splatting papers, code releases, datasets and viewers, kept in step with the research output. |
-| [grpc-ecosystem/awesome-grpc](https://github.com/grpc-ecosystem/awesome-grpc) | — | 8380 | 2025-10-28 | Curated list of gRPC resources: implementations across languages, gateways, tooling, talks and protocol buffer ecosystem projects. |
+| [sindresorhus/awesome](https://github.com/sindresorhus/awesome) | — | 540878 | 2026-09-02 | Root index of the awesome-list ecosystem, linking curated lists across languages, platforms and engineering disciplines. |
+| [awesomedata/awesome-public-datasets](https://github.com/awesomedata/awesome-public-datasets) | — | 80243 | 2026-11-22 | Topic-centric index of high-quality open datasets across science, government, finance and social data. |
+| [josephmisiti/awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning) | Python | 74881 | 2026-11-21 | Curated list of machine learning frameworks, libraries and software, organised by programming language. |
+| [rust-unofficial/awesome-rust](https://github.com/rust-unofficial/awesome-rust) | Rust | 60726 | 2026-11-22 | Curated index of Rust libraries, applications and learning resources, organised by problem domain. |
+| [ashishpatel26/500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) | Python | 40505 | 2026-11-06 | Curated catalogue of 500 AI agent use cases by industry, each linked to an open-source implementation. |
+| [e2b-dev/awesome-ai-agents](https://github.com/e2b-dev/awesome-ai-agents) | — | 31025 | 2026-08-21 | Curated list of autonomous AI agents and agent platforms, from the AutoGPT generation through current frameworks and commercial products. |
+| [Arindam200/awesome-ai-apps](https://github.com/Arindam200/awesome-ai-apps) | Python | 16774 | 2026-11-16 | Collection of runnable example AI applications — RAG pipelines, agents, MCP integrations and workflows — with full source for each use case. |
+| [mfornos/awesome-microservices](https://github.com/mfornos/awesome-microservices) | — | 14587 | 2026-08-20 | Curated list of microservice architecture principles, patterns and technologies, organised by platform, language and infrastructure concern. |
+| [dhamaniasad/awesome-postgres](https://github.com/dhamaniasad/awesome-postgres) | — | 12196 | 2026-11-05 | Curated list of PostgreSQL extensions, tooling, hosting options, client libraries and learning material across the ecosystem. |
+| [lauris/awesome-scala](https://github.com/lauris/awesome-scala) | Python | 9269 | 2024-09-20 | Community-maintained list of Scala libraries, frameworks and tools organised by problem area, from web stacks to functional programming. |
+| [MrNeRF/awesome-3D-gaussian-splatting](https://github.com/MrNeRF/awesome-3D-gaussian-splatting) | HTML | 9009 | 2026-10-04 | Curated tracker of 3D Gaussian Splatting papers, code releases, datasets and viewers, kept in step with the research output. |
+| [grpc-ecosystem/awesome-grpc](https://github.com/grpc-ecosystem/awesome-grpc) | — | 8381 | 2025-10-28 | Curated list of gRPC resources: implementations across languages, gateways, tooling, talks and protocol buffer ecosystem projects. |
 | [shuaibiyy/awesome-tf](https://github.com/shuaibiyy/awesome-tf) | — | 6687 | 2026-11-16 | Curated list of Terraform and OpenTofu resources: modules, providers, testing and policy tools, CI integrations and learning material. |
-| [korfuri/awesome-monorepo](https://github.com/korfuri/awesome-monorepo) | — | 5898 | 2024-08-16 | Curated list of monorepo build tools, version-control tooling and write-ups on how large organisations run a single repository. |
-| [sacridini/Awesome-Geospatial](https://github.com/sacridini/Awesome-Geospatial) | — | 5381 | 2026-11-18 | Long-running curated list of geospatial tooling and resources, spanning GIS libraries, earth-observation data, spatial analysis and remote-sensing machine learning. |
+| [korfuri/awesome-monorepo](https://github.com/korfuri/awesome-monorepo) | — | 5899 | 2024-08-16 | Curated list of monorepo build tools, version-control tooling and write-ups on how large organisations run a single repository. |
+| [sacridini/Awesome-Geospatial](https://github.com/sacridini/Awesome-Geospatial) | — | 5383 | 2026-11-18 | Long-running curated list of geospatial tooling and resources, spanning GIS libraries, earth-observation data, spatial analysis and remote-sensing machine learning. |
 | [phodal/awesome-iot](https://github.com/phodal/awesome-iot) | Python | 4635 | 2026-11-17 | Curated list of IoT frameworks, libraries, operating systems and cloud platforms, organised across the device, gateway and backend layers. |
-| [denji/awesome-http-benchmark](https://github.com/denji/awesome-http-benchmark) | — | 3788 | 2026-11-17 | Curated list of HTTP load-testing and benchmarking tools, from wrk and vegeta to HTTP/2 and HTTP/3 capable clients, plus REST debugging utilities. |
+| [denji/awesome-http-benchmark](https://github.com/denji/awesome-http-benchmark) | — | 3789 | 2026-11-17 | Curated list of HTTP load-testing and benchmarking tools, from wrk and vegeta to HTTP/2 and HTTP/3 capable clients, plus REST debugging utilities. |
 | [xyflow/awesome-node-based-uis](https://github.com/xyflow/awesome-node-based-uis) | — | 3711 | 2025-06-29 | Curated list of node-based UI resources: graph and flow editor libraries, visual programming environments, and write-ups on building node editors. |
 | [mcxiaoke/awesome-kotlin](https://github.com/mcxiaoke/awesome-kotlin) | — | 2883 | 2026-11-03 | Curated list of Kotlin frameworks, libraries, tools and learning material, maintained with a regularly regenerated index by category. |
 | [ramnes/awesome-mongodb](https://github.com/ramnes/awesome-mongodb) | — | 2684 | 2026-11-06 | Curated list of MongoDB resources: drivers, ODMs, admin and migration tools, hosting options, books and talks. |
 | [akuity/awesome-argo](https://github.com/akuity/awesome-argo) | — | 2511 | 2026-09-18 | Curated index of the Argo ecosystem: CD, Workflows, Events and Rollouts plus the extensions, integrations and talks around them. |
 | [vonzosten/awesome-LangGraph](https://github.com/vonzosten/awesome-LangGraph) | JavaScript | 2044 | 2026-10-15 | Index of the LangChain and LangGraph ecosystem: core concepts, templates, tooling and example multi-agent projects. |
-| [zed-industries/awesome-gpui](https://github.com/zed-industries/awesome-gpui) | Python | 1752 | 2026-11-21 | Curated list of applications, components and learning material built with GPUI, the GPU-accelerated Rust UI framework behind the Zed editor. |
+| [zed-industries/awesome-gpui](https://github.com/zed-industries/awesome-gpui) | Python | 1757 | 2026-11-22 | Curated list of applications, components and learning material built with GPUI, the GPU-accelerated Rust UI framework behind the Zed editor. |
 | [bradAGI/awesome-cli-coding-agents](https://github.com/bradAGI/awesome-cli-coding-agents) | Python | 1491 | 2026-11-20 | Curated directory of terminal-native AI coding agents and the harnesses that run them, covering open-source CLIs, platform agents and parallel runners. |
 | [passy/awesome-recursion-schemes](https://github.com/passy/awesome-recursion-schemes) | — | 1318 | 2024-04-25 | Curated list of papers, talks, libraries and tutorials on recursion schemes, from catamorphisms and anamorphisms to their use in real functional codebases. |
 | [jbmusso/awesome-graph](https://github.com/jbmusso/awesome-graph) | — | 1277 | 2026-02-26 | Curated list of graph databases, graph computing frameworks, query languages and client drivers, from Neo4j and JanusGraph to Gremlin tooling. |
@@ -2713,14 +2713,14 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) | Python | 151462 | 2026-11-20 | Turns a codebase with its docs, SQL schemas and PDFs into a queryable knowledge graph using deterministic AST parsing, exposed as a coding-agent skill. |
-| [abhigyanpatwari/GitNexus](https://github.com/abhigyanpatwari/GitNexus) | TypeScript | 48709 | 2026-11-21 | Client-side code intelligence engine that builds a queryable knowledge graph of a repository entirely in the browser. |
+| [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) | Python | 151848 | 2026-11-21 | Turns a codebase with its docs, SQL schemas and PDFs into a queryable knowledge graph using deterministic AST parsing, exposed as a coding-agent skill. |
+| [abhigyanpatwari/GitNexus](https://github.com/abhigyanpatwari/GitNexus) | TypeScript | 48728 | 2026-11-22 | Client-side code intelligence engine that builds a queryable knowledge graph of a repository entirely in the browser. |
 
 #### Reading & references (1)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [GoogleCloudPlatform/knowledge-catalog](https://github.com/GoogleCloudPlatform/knowledge-catalog) | TypeScript | 9697 | 2026-11-21 | Tools, agents and samples for Google Cloud Knowledge Catalog, which builds a metadata knowledge graph over structured and unstructured data. |
+| [GoogleCloudPlatform/knowledge-catalog](https://github.com/GoogleCloudPlatform/knowledge-catalog) | TypeScript | 9717 | 2026-11-21 | Tools, agents and samples for Google Cloud Knowledge Catalog, which builds a metadata knowledge graph over structured and unstructured data. |
 
 
 <a id="learning-resources"></a>
@@ -2733,23 +2733,23 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [codecrafters-io/build-your-own-x](https://github.com/codecrafters-io/build-your-own-x) | Markdown | 564310 | 2026-11-19 | Collection of step-by-step guides for rebuilding technologies from scratch: databases, git, compilers, shells and more. |
-| [donnemartin/system-design-primer](https://github.com/donnemartin/system-design-primer) | Python | 378701 | 2026-09-15 | Guide to designing large-scale systems, with worked examples, diagrams and Anki decks for system design interviews. |
-| [papers-we-love/papers-we-love](https://github.com/papers-we-love/papers-we-love) | Shell | 111717 | 2026-10-28 | Repository of computer science papers worth reading, organised by topic and used as the reading list for local chapters. |
-| [binhnguyennus/awesome-scalability](https://github.com/binhnguyennus/awesome-scalability) | — | 75924 | 2026-01-04 | Reading list of engineering blog posts and papers on the patterns behind scalable, reliable, large-scale systems. |
-| [shanraisshan/claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice) | HTML | 69283 | 2026-11-21 | Worked examples and best practices for moving from ad-hoc prompting to disciplined agentic engineering with Claude Code. |
-| [anthropics/claude-cookbooks](https://github.com/anthropics/claude-cookbooks) | Jupyter Notebook | 54939 | 2026-11-20 | Notebooks and recipes from Anthropic showing practical Claude patterns: tool use, retrieval, vision and evaluation. |
-| [kelseyhightower/kubernetes-the-hard-way](https://github.com/kelseyhightower/kubernetes-the-hard-way) | — | 50751 | 2025-04-10 | Manual walkthrough of bootstrapping a Kubernetes cluster component by component, with no scripts or installers. |
-| [DovAmir/awesome-design-patterns](https://github.com/DovAmir/awesome-design-patterns) | — | 49846 | 2024-10-25 | Curated list of software and architecture design patterns, from Gang of Four classics to cloud and microservice patterns. |
-| [karanpratapsingh/system-design](https://github.com/karanpratapsingh/system-design) | — | 46982 | 2026-10-18 | Course-style notes on designing systems at scale, covering storage, caching, messaging and interview preparation. |
-| [huggingface/agents-course](https://github.com/huggingface/agents-course) | MDX | 35257 | 2026-11-17 | Hugging Face course on building LLM agents, working through smolagents, LangGraph and LlamaIndex with hands-on units and evaluations. |
-| [dwmkerr/hacker-laws](https://github.com/dwmkerr/hacker-laws) | HTML | 27358 | 2026-11-20 | Reference collection of the laws, theories and principles developers cite — Conway, Brooks, Hyrum, Goodhart — each with a short explanation. |
+| [codecrafters-io/build-your-own-x](https://github.com/codecrafters-io/build-your-own-x) | Markdown | 564651 | 2026-11-19 | Collection of step-by-step guides for rebuilding technologies from scratch: databases, git, compilers, shells and more. |
+| [donnemartin/system-design-primer](https://github.com/donnemartin/system-design-primer) | Python | 378785 | 2026-09-15 | Guide to designing large-scale systems, with worked examples, diagrams and Anki decks for system design interviews. |
+| [papers-we-love/papers-we-love](https://github.com/papers-we-love/papers-we-love) | Shell | 111740 | 2026-10-28 | Repository of computer science papers worth reading, organised by topic and used as the reading list for local chapters. |
+| [binhnguyennus/awesome-scalability](https://github.com/binhnguyennus/awesome-scalability) | — | 75951 | 2026-01-04 | Reading list of engineering blog posts and papers on the patterns behind scalable, reliable, large-scale systems. |
+| [shanraisshan/claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice) | HTML | 69307 | 2026-11-22 | Worked examples and best practices for moving from ad-hoc prompting to disciplined agentic engineering with Claude Code. |
+| [anthropics/claude-cookbooks](https://github.com/anthropics/claude-cookbooks) | Jupyter Notebook | 55027 | 2026-11-20 | Notebooks and recipes from Anthropic showing practical Claude patterns: tool use, retrieval, vision and evaluation. |
+| [kelseyhightower/kubernetes-the-hard-way](https://github.com/kelseyhightower/kubernetes-the-hard-way) | — | 50759 | 2025-04-10 | Manual walkthrough of bootstrapping a Kubernetes cluster component by component, with no scripts or installers. |
+| [DovAmir/awesome-design-patterns](https://github.com/DovAmir/awesome-design-patterns) | — | 49855 | 2024-10-25 | Curated list of software and architecture design patterns, from Gang of Four classics to cloud and microservice patterns. |
+| [karanpratapsingh/system-design](https://github.com/karanpratapsingh/system-design) | — | 46992 | 2026-10-18 | Course-style notes on designing systems at scale, covering storage, caching, messaging and interview preparation. |
+| [huggingface/agents-course](https://github.com/huggingface/agents-course) | MDX | 35302 | 2026-11-17 | Hugging Face course on building LLM agents, working through smolagents, LangGraph and LlamaIndex with hands-on units and evaluations. |
+| [dwmkerr/hacker-laws](https://github.com/dwmkerr/hacker-laws) | HTML | 27357 | 2026-11-20 | Reference collection of the laws, theories and principles developers cite — Conway, Brooks, Hyrum, Goodhart — each with a short explanation. |
+| [stefan-jansen/machine-learning-for-trading](https://github.com/stefan-jansen/machine-learning-for-trading) | Jupyter Notebook | 21943 | 2026-11-22 | Notebooks for the book Machine Learning for Trading, running from data sourcing and feature engineering through backtesting to live execution. |
 | [NirDiamant/agents-towards-production](https://github.com/NirDiamant/agents-towards-production) | Jupyter Notebook | 21936 | 2026-11-15 | Code-first tutorials for taking GenAI agents from prototype to production, covering orchestration, memory, observability, evaluation and deployment. |
-| [stefan-jansen/machine-learning-for-trading](https://github.com/stefan-jansen/machine-learning-for-trading) | Jupyter Notebook | 21931 | 2026-11-21 | Notebooks for the book Machine Learning for Trading, running from data sourcing and feature engineering through backtesting to live execution. |
 | [hmemcpy/milewski-ctfp-pdf](https://github.com/hmemcpy/milewski-ctfp-pdf) | TeX | 11714 | 2026-07-10 | Community-typeset PDF and LaTeX source of Bartosz Milewski's Category Theory for Programmers, which teaches category theory to working programmers. |
-| [ryanburgess/engineer-manager](https://github.com/ryanburgess/engineer-manager) | JavaScript | 10739 | 2026-11-02 | Curated link collection for engineering managers covering one-on-ones, hiring, performance, career ladders and team-building. |
-| [ykdojo/claude-code-tips](https://github.com/ykdojo/claude-code-tips) | JavaScript | 10363 | 2026-09-25 | Collection of 45+ practical Claude Code tips from basics to advanced, plus a status line script and a plugin of everyday dev skills. |
-| [sathishvj/awesome-gcp-certifications](https://github.com/sathishvj/awesome-gcp-certifications) | — | 4500 | 2026-03-30 | Collection of study material, practice questions and exam notes for Google Cloud certifications, organised per certification track. |
+| [ryanburgess/engineer-manager](https://github.com/ryanburgess/engineer-manager) | JavaScript | 10738 | 2026-11-02 | Curated link collection for engineering managers covering one-on-ones, hiring, performance, career ladders and team-building. |
+| [ykdojo/claude-code-tips](https://github.com/ykdojo/claude-code-tips) | JavaScript | 10364 | 2026-09-25 | Collection of 45+ practical Claude Code tips from basics to advanced, plus a status line script and a plugin of everyday dev skills. |
+| [sathishvj/awesome-gcp-certifications](https://github.com/sathishvj/awesome-gcp-certifications) | — | 4501 | 2026-03-30 | Collection of study material, practice questions and exam notes for Google Cloud certifications, organised per certification track. |
 | [ZoranPandovski/al-go-rithms](https://github.com/ZoranPandovski/al-go-rithms) | Jupyter Notebook | 1372 | 2024-06-18 | Community collection of classic algorithms and data structures implemented side by side in dozens of programming languages. |
 | [mxm0z/awesome-intelligence-writing](https://github.com/mxm0z/awesome-intelligence-writing) | — | 641 | 2025-12-04 | Curated collection of manuals, standards, books and training material on intelligence writing and analytic reporting, including threat-intel products. |
 | [ZoranPandovski/design-patterns](https://github.com/ZoranPandovski/design-patterns) | Java | 394 | 2024-12-13 | Gang-of-Four design patterns implemented side by side in Java, Python, JavaScript, C++, PHP and other languages for comparison. |
@@ -2884,15 +2884,15 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [opensanctions/opensanctions](https://github.com/opensanctions/opensanctions) | Python | 880 | 2026-11-20 | Crawlers and pipelines behind an open database of international sanctions targets, politically exposed persons and related companies. |
-| [openaleph/openaleph](https://github.com/openaleph/openaleph) | JavaScript | 165 | 2026-11-16 | Investigative data platform that stores large document and entity collections and makes them searchable for collaborative research. |
+| [opensanctions/opensanctions](https://github.com/opensanctions/opensanctions) | Python | 880 | 2026-11-22 | Crawlers and pipelines behind an open database of international sanctions targets, politically exposed persons and related companies. |
+| [openaleph/openaleph](https://github.com/openaleph/openaleph) | JavaScript | 167 | 2026-11-16 | Investigative data platform that stores large document and entity collections and makes them searchable for collaborative research. |
 | [opensanctions/everypolitician.org](https://github.com/opensanctions/everypolitician.org) | TypeScript | 26 | 2026-11-16 | Site and dataset mapping political office-holders across countries, published as reusable structured data. |
 
 #### Libraries (1)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [opensanctions/followthemoney](https://github.com/opensanctions/followthemoney) | Python | 120 | 2026-11-20 | Data model and toolkit for investigative entity graphs, used by OpenSanctions, OpenAleph and other financial-crime tools. |
+| [opensanctions/followthemoney](https://github.com/opensanctions/followthemoney) | Python | 121 | 2026-11-20 | Data model and toolkit for investigative entity graphs, used by OpenSanctions, OpenAleph and other financial-crime tools. |
 
 
 <a id="computer-vision"></a>
@@ -2901,17 +2901,18 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 ## Computer Vision
 
-#### Tools (1)
+#### Tools (2)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [NVlabs/PointWorld](https://github.com/NVlabs/PointWorld) | Python | 577 | 2026-05-17 | NVIDIA research release for scaling point-based 3D world models used in in-the-wild robotic manipulation. |
+| [toyxyz/toyxyz_RGBMocap](https://github.com/toyxyz/toyxyz_RGBMocap) | Python | 2954 | 2026-11-22 | Native Windows app for markerless motion capture from RGB video, running ExMR, FlowHMR and GVHMR with contact correction, humanoid retargeting and FBX/VMD export. |
+| [NVlabs/PointWorld](https://github.com/NVlabs/PointWorld) | Python | 578 | 2026-05-17 | NVIDIA research release for scaling point-based 3D world models used in in-the-wild robotic manipulation. |
 
 #### Libraries (2)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [ultralytics/ultralytics](https://github.com/ultralytics/ultralytics) | Python | 63641 | 2026-11-21 | YOLO model family and training toolkit for object detection, segmentation, classification, pose estimation and tracking. |
+| [ultralytics/ultralytics](https://github.com/ultralytics/ultralytics) | Python | 63664 | 2026-11-22 | YOLO model family and training toolkit for object detection, segmentation, classification, pose estimation and tracking. |
 | [open-edge-platform/anomalib](https://github.com/open-edge-platform/anomalib) | Python | 6416 | 2026-11-20 | Anomaly detection library for images, bundling current algorithms with experiment tracking and edge inference through OpenVINO. |
 
 #### Reading & references (3)
@@ -2933,8 +2934,8 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [urchade/GLiNER](https://github.com/urchade/GLiNER) | Python | 4284 | 2026-11-11 | Lightweight named-entity recognition model that extracts arbitrary entity types from text given only their labels. |
-| [fastino-ai/GLiNER2](https://github.com/fastino-ai/GLiNER2) | Python | 2491 | 2026-11-20 | Schema-based information extraction model that unifies entity recognition, classification and structured field extraction in one pass. |
+| [urchade/GLiNER](https://github.com/urchade/GLiNER) | Python | 4287 | 2026-11-11 | Lightweight named-entity recognition model that extracts arbitrary entity types from text given only their labels. |
+| [fastino-ai/GLiNER2](https://github.com/fastino-ai/GLiNER2) | Python | 2492 | 2026-11-20 | Schema-based information extraction model that unifies entity recognition, classification and structured field extraction in one pass. |
 
 
 <a id="model-optimization"></a>
@@ -2947,13 +2948,13 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [p-e-w/heretic](https://github.com/p-e-w/heretic) | Python | 42446 | 2026-11-19 | Automatic abliteration tool that removes refusal behaviour from transformer language models without retraining them. |
+| [p-e-w/heretic](https://github.com/p-e-w/heretic) | Python | 42563 | 2026-11-19 | Automatic abliteration tool that removes refusal behaviour from transformer language models without retraining them. |
 
 #### Libraries (1)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [lyogavin/airllm](https://github.com/lyogavin/airllm) | Jupyter Notebook | 42809 | 2026-11-21 | Layer-by-layer inference scheduler that runs 70B-parameter language models on a single 4GB GPU. |
+| [lyogavin/airllm](https://github.com/lyogavin/airllm) | Jupyter Notebook | 42919 | 2026-11-22 | Layer-by-layer inference scheduler that runs 70B-parameter language models on a single 4GB GPU. |
 
 
 <a id="motion-generation"></a>
@@ -2966,8 +2967,8 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [nv-tlabs/kimodo](https://github.com/nv-tlabs/kimodo) | Python | 4320 | 2026-10-15 | Kinematic motion diffusion model from NVIDIA that generates 3D human and robot motion from text prompts plus keyframe, path and end-effector constraints. |
-| [NVlabs/motionbricks](https://github.com/NVlabs/motionbricks) | Python | 1558 | 2026-10-26 | Modular latent generative model that animates characters and humanoid robots in real time by filling in motion between recent poses and target poses. |
+| [nv-tlabs/kimodo](https://github.com/nv-tlabs/kimodo) | Python | 4336 | 2026-10-15 | Kinematic motion diffusion model from NVIDIA that generates 3D human and robot motion from text prompts plus keyframe, path and end-effector constraints. |
+| [NVlabs/motionbricks](https://github.com/NVlabs/motionbricks) | Python | 1590 | 2026-10-26 | Modular latent generative model that animates characters and humanoid robots in real time by filling in motion between recent poses and target poses. |
 
 
 <a id="generative-3d"></a>
@@ -2980,8 +2981,8 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [earthtojake/text-to-cad](https://github.com/earthtojake/text-to-cad) | Python | 27038 | 2026-11-21 | CLI and coding-agent plugin that turns prompts into parametric CAD, writing build123d Python scripts and exporting STEP, STL, GLB or 3MF parts and assemblies. |
-| [microsoft/TRELLIS.2](https://github.com/microsoft/TRELLIS.2) | Python | 13131 | 2026-07-10 | Microsoft's 4B-parameter image-to-3D generative model, encoding assets as sparse voxel latents to produce high-resolution meshes with PBR materials. |
+| [earthtojake/text-to-cad](https://github.com/earthtojake/text-to-cad) | Python | 27119 | 2026-11-22 | CLI and coding-agent plugin that turns prompts into parametric CAD, writing build123d Python scripts and exporting STEP, STL, GLB or 3MF parts and assemblies. |
+| [microsoft/TRELLIS.2](https://github.com/microsoft/TRELLIS.2) | Python | 13150 | 2026-07-10 | Microsoft's 4B-parameter image-to-3D generative model, encoding assets as sparse voxel latents to produce high-resolution meshes with PBR materials. |
 
 
 <a id="web-crawlers"></a>
@@ -2994,21 +2995,21 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) | TypeScript | 205827 | 2026-11-21 | Crawl, scrape and search API that turns websites into clean markdown or structured data for LLM and RAG pipelines. |
-| [instaloader/instaloader](https://github.com/instaloader/instaloader) | Python | 13975 | 2026-11-01 | Python CLI and library that downloads Instagram posts, stories and profile metadata, including whole accounts, hashtags and saved feeds. |
+| [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) | TypeScript | 206695 | 2026-11-22 | Crawl, scrape and search API that turns websites into clean markdown or structured data for LLM and RAG pipelines. |
+| [instaloader/instaloader](https://github.com/instaloader/instaloader) | Python | 13984 | 2026-11-01 | Python CLI and library that downloads Instagram posts, stories and profile metadata, including whole accounts, hashtags and saved feeds. |
 
 #### Libraries (2)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [apify/crawlee](https://github.com/apify/crawlee) | TypeScript | 26510 | 2026-11-21 | Node.js crawling library with request queues, proxy rotation and storage, working across Playwright, Puppeteer, Cheerio and raw HTTP. |
-| [spider-rs/spider](https://github.com/spider-rs/spider) | Rust | 2856 | 2026-11-20 | Low-latency web crawling library in Rust for collecting page data at scale, with optional headless Chrome rendering. |
+| [apify/crawlee](https://github.com/apify/crawlee) | TypeScript | 26517 | 2026-11-22 | Node.js crawling library with request queues, proxy rotation and storage, working across Playwright, Puppeteer, Cheerio and raw HTTP. |
+| [spider-rs/spider](https://github.com/spider-rs/spider) | Rust | 2857 | 2026-11-20 | Low-latency web crawling library in Rust for collecting page data at scale, with optional headless Chrome rendering. |
 
 #### Reading & references (1)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [scrapfly/scrapfly-scrapers](https://github.com/scrapfly/scrapfly-scrapers) | Python | 1133 | 2026-11-21 | Collection of example Python scrapers for 40+ popular sites, each with a scrape guide and sample dataset, built on the Scrapfly SDK and asyncio. |
+| [scrapfly/scrapfly-scrapers](https://github.com/scrapfly/scrapfly-scrapers) | Python | 1133 | 2026-11-22 | Collection of example Python scrapers for 40+ popular sites, each with a scrape guide and sample dataset, built on the Scrapfly SDK and asyncio. |
 
 
 <a id="browser-automation"></a>
@@ -3021,16 +3022,16 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [h4ckf0r0day/obscura](https://github.com/h4ckf0r0day/obscura) | Rust | 36828 | 2026-11-20 | Headless browser built for AI agents and scraping, driving Chrome over CDP with anti-detection defaults. |
-| [FlareSolverr/FlareSolverr](https://github.com/FlareSolverr/FlareSolverr) | Python | 16274 | 2026-10-24 | Proxy server that solves Cloudflare and anti-bot challenges in a real browser and hands the cleared session back to your scraper. |
-| [daijro/camoufox](https://github.com/daijro/camoufox) | C++ | 13537 | 2026-11-19 | Firefox fork with patched fingerprinting surfaces, driven through Playwright for scraping sites that block headless browsers. |
-| [jo-inc/camofox-browser](https://github.com/jo-inc/camofox-browser) | JavaScript | 12439 | 2026-11-10 | Stealth headless browser for AI agents that drops into Puppeteer or Playwright and clears bot-detection and Cloudflare checks. |
+| [h4ckf0r0day/obscura](https://github.com/h4ckf0r0day/obscura) | Rust | 36971 | 2026-11-22 | Headless browser built for AI agents and scraping, driving Chrome over CDP with anti-detection defaults. |
+| [FlareSolverr/FlareSolverr](https://github.com/FlareSolverr/FlareSolverr) | Python | 16282 | 2026-10-24 | Proxy server that solves Cloudflare and anti-bot challenges in a real browser and hands the cleared session back to your scraper. |
+| [daijro/camoufox](https://github.com/daijro/camoufox) | C++ | 13567 | 2026-11-22 | Firefox fork with patched fingerprinting surfaces, driven through Playwright for scraping sites that block headless browsers. |
+| [jo-inc/camofox-browser](https://github.com/jo-inc/camofox-browser) | JavaScript | 12451 | 2026-11-10 | Stealth headless browser for AI agents that drops into Puppeteer or Playwright and clears bot-detection and Cloudflare checks. |
 
 #### Libraries (1)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [browser-use/browser-use](https://github.com/browser-use/browser-use) | Python | 121658 | 2026-11-21 | Python library that lets LLM agents drive a real browser, turning page state into observations and model output into actions. |
+| [browser-use/browser-use](https://github.com/browser-use/browser-use) | Python | 121741 | 2026-11-22 | Python library that lets LLM agents drive a real browser, turning page state into observations and model output into actions. |
 
 
 <a id="content-extraction"></a>
@@ -3043,7 +3044,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [adbar/trafilatura](https://github.com/adbar/trafilatura) | Python | 7157 | 2026-11-20 | Python library and CLI that extracts main text, comments and metadata from web pages for corpus and RAG pipelines. |
+| [adbar/trafilatura](https://github.com/adbar/trafilatura) | Python | 7161 | 2026-11-20 | Python library and CLI that extracts main text, comments and metadata from web pages for corpus and RAG pipelines. |
 
 #### Libraries (2)
 
@@ -3063,14 +3064,14 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [allenai/olmocr](https://github.com/allenai/olmocr) | Python | 19839 | 2026-03-25 | Toolkit that linearises PDFs into clean, reading-order text for LLM training sets and retrieval pipelines. |
+| [allenai/olmocr](https://github.com/allenai/olmocr) | Python | 19841 | 2026-03-25 | Toolkit that linearises PDFs into clean, reading-order text for LLM training sets and retrieval pipelines. |
 | [lumina-ai-inc/chunkr](https://github.com/lumina-ai-inc/chunkr) | Rust | 4154 | 2026-09-09 | Document ingestion service that segments complex PDFs with vision models and emits chunked, RAG-ready text and layout data. |
 
 #### Libraries (1)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [yfedoseev/office_oxide](https://github.com/yfedoseev/office_oxide) | Rust | 174 | 2026-11-19 | Fast Rust library for reading and writing DOCX, XLSX and PPTX files, with bindings for Python, Go, JS, C# and WASM. |
+| [yfedoseev/office_oxide](https://github.com/yfedoseev/office_oxide) | Rust | 175 | 2026-11-19 | Fast Rust library for reading and writing DOCX, XLSX and PPTX files, with bindings for Python, Go, JS, C# and WASM. |
 
 
 <a id="media-downloaders"></a>
@@ -3083,7 +3084,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [iawia002/lux](https://github.com/iawia002/lux) | Go | 31854 | 2026-03-29 | Go CLI and library that extracts and downloads video from YouTube, Bilibili, iQiyi, Tumblr and dozens of other sites, with parallel segment fetching. |
+| [iawia002/lux](https://github.com/iawia002/lux) | Go | 31855 | 2026-03-29 | Go CLI and library that extracts and downloads video from YouTube, Bilibili, iQiyi, Tumblr and dozens of other sites, with parallel segment fetching. |
 
 
 <a id="routing-engines"></a>
@@ -3096,8 +3097,8 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [Project-OSRM/osrm-backend](https://github.com/Project-OSRM/osrm-backend) | C++ | 8234 | 2026-11-21 | High-performance routing engine for OpenStreetMap data, serving shortest paths, isochrones and map matching over HTTP. |
-| [valhalla/valhalla](https://github.com/valhalla/valhalla) | C++ | 6475 | 2026-11-21 | Tiled routing engine for OpenStreetMap supporting multi-modal directions, isochrones and time-distance matrices. |
+| [Project-OSRM/osrm-backend](https://github.com/Project-OSRM/osrm-backend) | C++ | 8236 | 2026-11-22 | High-performance routing engine for OpenStreetMap data, serving shortest paths, isochrones and map matching over HTTP. |
+| [valhalla/valhalla](https://github.com/valhalla/valhalla) | C++ | 6479 | 2026-11-21 | Tiled routing engine for OpenStreetMap supporting multi-modal directions, isochrones and time-distance matrices. |
 
 
 <a id="geospatial-processing"></a>
@@ -3110,22 +3111,22 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [google/earthengine-api](https://github.com/google/earthengine-api) | JavaScript | 3501 | 2026-11-20 | Official Python and JavaScript client libraries for Google Earth Engine, used to run planetary-scale raster and satellite-imagery analysis from code. |
-| [HydroniumLabs/h3o](https://github.com/HydroniumLabs/h3o) | Rust | 548 | 2026-11-02 | Pure Rust implementation of Uber's H3 hexagonal geospatial indexing system, with no C bindings. |
+| [google/earthengine-api](https://github.com/google/earthengine-api) | JavaScript | 3502 | 2026-11-20 | Official Python and JavaScript client libraries for Google Earth Engine, used to run planetary-scale raster and satellite-imagery analysis from code. |
+| [HydroniumLabs/h3o](https://github.com/HydroniumLabs/h3o) | Rust | 549 | 2026-11-02 | Pure Rust implementation of Uber's H3 hexagonal geospatial indexing system, with no C bindings. |
 
 #### Frameworks (2)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [apache/sedona](https://github.com/apache/sedona) | Java | 2431 | 2026-11-21 | Cluster computing framework that adds spatial types, indexes and SQL to Spark and Flink for large-scale geospatial analysis. |
-| [developmentseed/titiler](https://github.com/developmentseed/titiler) | Python | 1210 | 2026-11-18 | FastAPI modules for standing up dynamic raster tile services over Cloud Optimized GeoTIFFs and STAC items, built on rasterio and GDAL. |
+| [apache/sedona](https://github.com/apache/sedona) | Java | 2432 | 2026-11-22 | Cluster computing framework that adds spatial types, indexes and SQL to Spark and Flink for large-scale geospatial analysis. |
+| [developmentseed/titiler](https://github.com/developmentseed/titiler) | Python | 1210 | 2026-11-21 | FastAPI modules for standing up dynamic raster tile services over Cloud Optimized GeoTIFFs and STAC items, built on rasterio and GDAL. |
 
 #### Reading & references (2)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
 | [pka/awesome-georust](https://github.com/pka/awesome-georust) | — | 418 | 2026-03-01 | Curated index of the Rust geospatial ecosystem: geometry and projection crates, GIS format readers, spatial indexes, geocoding, routing and map rendering. |
-| [allenai/olmoearth_projects](https://github.com/allenai/olmoearth_projects) | Python | 89 | 2026-11-10 | Model configurations, platform tooling and tutorials for applying AI2's OlmoEarth foundation model to remote sensing tasks. |
+| [allenai/olmoearth_projects](https://github.com/allenai/olmoearth_projects) | Python | 89 | 2026-11-22 | Model configurations, platform tooling and tutorials for applying AI2's OlmoEarth foundation model to remote sensing tasks. |
 
 
 <a id="photogrammetry"></a>
@@ -3138,18 +3139,18 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [OpenDroneMap/ODM](https://github.com/OpenDroneMap/ODM) | Python | 6625 | 2026-11-13 | Command-line photogrammetry toolkit that turns drone, balloon or kite imagery into orthophotos, point clouds, 3D models and DEMs. |
-| [WebODM/WebODM](https://github.com/WebODM/WebODM) | Python | 4286 | 2026-11-17 | Web interface and processing server for OpenDroneMap, managing aerial imagery projects, tasks and generated map products. |
+| [OpenDroneMap/ODM](https://github.com/OpenDroneMap/ODM) | Python | 6632 | 2026-11-13 | Command-line photogrammetry toolkit that turns drone, balloon or kite imagery into orthophotos, point clouds, 3D models and DEMs. |
+| [WebODM/WebODM](https://github.com/WebODM/WebODM) | Python | 4288 | 2026-11-17 | Web interface and processing server for OpenDroneMap, managing aerial imagery projects, tasks and generated map products. |
 | [freddewitt/CorbeauSplat](https://github.com/freddewitt/CorbeauSplat) | Python | 184 | 2026-10-22 | End-to-end Gaussian splatting pipeline for Apple Silicon, taking raw video or photos to a trained, viewable 3D scene. |
 | [qianmingduowan/Sat3DGen](https://github.com/qianmingduowan/Sat3DGen) | Python | 147 | 2026-08-25 | Research code for generating street-level 3D scenes from a single satellite image, from the ICLR 2026 paper. |
-| [WebODM/ODX](https://github.com/WebODM/ODX) | Python | 114 | 2026-11-08 | Faster fork of OpenDroneMap that generates maps, point clouds, 3D models and DEMs from aerial and ground imagery. |
-| [OpenSfM/OpenSfM](https://github.com/OpenSfM/OpenSfM) | Python | 110 | 2026-11-03 | Structure-from-motion pipeline that reconstructs camera poses and sparse 3D geometry from unordered image collections. |
+| [WebODM/ODX](https://github.com/WebODM/ODX) | Python | 115 | 2026-11-08 | Faster fork of OpenDroneMap that generates maps, point clouds, 3D models and DEMs from aerial and ground imagery. |
+| [OpenSfM/OpenSfM](https://github.com/OpenSfM/OpenSfM) | Python | 112 | 2026-11-03 | Structure-from-motion pipeline that reconstructs camera poses and sparse 3D geometry from unordered image collections. |
 
 #### Frameworks (1)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [nerfstudio-project/nerfstudio](https://github.com/nerfstudio-project/nerfstudio) | Python | 12234 | 2025-07-29 | Modular framework and CLI for training, viewing and exporting NeRF and Gaussian-splatting reconstructions, with a real-time web viewer. |
+| [nerfstudio-project/nerfstudio](https://github.com/nerfstudio-project/nerfstudio) | Python | 12238 | 2025-07-29 | Modular framework and CLI for training, viewing and exporting NeRF and Gaussian-splatting reconstructions, with a real-time web viewer. |
 
 
 <a id="mapping-libraries"></a>
@@ -3196,7 +3197,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [meshtastic/firmware](https://github.com/meshtastic/firmware) | C++ | 8618 | 2026-11-21 | Firmware for Meshtastic LoRa radios, forming off-grid encrypted mesh networks for text and position sharing. |
+| [meshtastic/firmware](https://github.com/meshtastic/firmware) | C++ | 8619 | 2026-11-22 | Firmware for Meshtastic LoRa radios, forming off-grid encrypted mesh networks for text and position sharing. |
 
 
 <a id="radio-sdr"></a>
@@ -3209,11 +3210,11 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [ruvnet/RuView](https://github.com/ruvnet/RuView) | Rust | 104724 | 2026-11-21 | Turns commodity WiFi radios into spatial sensing: presence detection, pose estimation and vital-sign monitoring without cameras. |
+| [ruvnet/RuView](https://github.com/ruvnet/RuView) | Rust | 104789 | 2026-11-22 | Turns commodity WiFi radios into spatial sensing: presence detection, pose estimation and vital-sign monitoring without cameras. |
 | [RocketGod-git/ProtoPirate](https://github.com/RocketGod-git/ProtoPirate) | C | 751 | 2026-10-15 | Flipper Zero app that decodes and analyses rolling-code sub-GHz key-fob protocols from Chrysler, Ford, VW and other automotive families, receive-only by default. |
-| [osmocom/pysim](https://github.com/osmocom/pysim) | Python | 614 | 2026-11-19 | Python tool for exploring and programming SIM, USIM and ISIM cards, reading and writing the 3GPP file system. |
+| [osmocom/pysim](https://github.com/osmocom/pysim) | Python | 615 | 2026-11-19 | Python tool for exploring and programming SIM, USIM and ISIM cards, reading and writing the 3GPP file system. |
 | [portapack-mayhem/MayhemHub](https://github.com/portapack-mayhem/MayhemHub) | TypeScript | 286 | 2026-03-14 | Browser-based control panel for HackRF/PortaPack devices: flash firmware, manage the SD card and drive the radio over WebSerial without installing anything. |
-| [KaraZajac/KAT](https://github.com/KaraZajac/KAT) | Rust | 117 | 2026-11-21 | Terminal RF toolkit for capturing, decoding and replaying automotive keyfob signals with HackRF or RTL-SDR hardware, for authorised vehicle security research. |
+| [KaraZajac/KAT](https://github.com/KaraZajac/KAT) | Rust | 117 | 2026-11-22 | Terminal RF toolkit for capturing, decoding and replaying automotive keyfob signals with HackRF or RTL-SDR hardware, for authorised vehicle security research. |
 
 #### Libraries (1)
 
@@ -3240,7 +3241,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [Matthias84/awesome-flying-fpv](https://github.com/Matthias84/awesome-flying-fpv) | — | 730 | 2026-03-06 | Curated list of free software and open hardware for building remote-controlled copters and fixed-wing planes. |
+| [Matthias84/awesome-flying-fpv](https://github.com/Matthias84/awesome-flying-fpv) | — | 731 | 2026-03-06 | Curated list of free software and open hardware for building remote-controlled copters and fixed-wing planes. |
 | [janesmae/awesome-drones](https://github.com/janesmae/awesome-drones) | — | 679 | 2026-09-01 | Curated list of drone resources covering flight controllers, simulators, SDKs and research references. |
 | [Ibtisam-Mohammad/awesome-defense](https://github.com/Ibtisam-Mohammad/awesome-defense) | Python | 40 | 2026-08-31 | Curated list of open-source resources for physical defence: unmanned systems, sensing, geospatial intelligence and command-and-control. |
 | [awelist/awesome-open-source-drone-firmware](https://github.com/awelist/awesome-open-source-drone-firmware) | Python | 27 | 2026-09-06 | Curated list of open-source drone firmware and flight-controller stacks, plus the ground-station and simulation tooling around them. |
@@ -3270,7 +3271,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [FraunhoferIOSB/FROST-Server](https://github.com/FraunhoferIOSB/FROST-Server) | Java | 232 | 2026-11-21 | Complete server implementation of the OGC SensorThings API, storing and serving IoT sensor observations over a standard REST and MQTT interface. |
+| [FraunhoferIOSB/FROST-Server](https://github.com/FraunhoferIOSB/FROST-Server) | Java | 232 | 2026-11-22 | Complete server implementation of the OGC SensorThings API, storing and serving IoT sensor observations over a standard REST and MQTT interface. |
 
 #### Libraries (1)
 
@@ -3289,13 +3290,13 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [curl/curl](https://github.com/curl/curl) | C | 43623 | 2026-11-21 | Command-line client and C library for transferring data over HTTP, FTP, SMTP, MQTT and dozens of other protocols. |
+| [curl/curl](https://github.com/curl/curl) | C | 43669 | 2026-11-22 | Command-line client and C library for transferring data over HTTP, FTP, SMTP, MQTT and dozens of other protocols. |
 
 #### Libraries (1)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [softwaremill/sttp](https://github.com/softwaremill/sttp) | Scala | 1506 | 2026-11-21 | Scala HTTP client with a typed request description that runs on many backends, synchronous, async, or effect-typed with ZIO or cats-effect. |
+| [softwaremill/sttp](https://github.com/softwaremill/sttp) | Scala | 1506 | 2026-11-22 | Scala HTTP client with a typed request description that runs on many backends, synchronous, async, or effect-typed with ZIO or cats-effect. |
 
 
 <a id="network-monitoring"></a>
@@ -3308,7 +3309,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [GyulyVGC/sniffnet](https://github.com/GyulyVGC/sniffnet) | Rust | 43178 | 2026-11-20 | Cross-platform desktop app for monitoring network traffic, charting live captures by protocol, host and geolocation. |
+| [GyulyVGC/sniffnet](https://github.com/GyulyVGC/sniffnet) | Rust | 43219 | 2026-11-22 | Cross-platform desktop app for monitoring network traffic, charting live captures by protocol, host and geolocation. |
 
 
 <a id="network-protocols"></a>
@@ -3338,7 +3339,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
 | [akka/akka-http](https://github.com/akka/akka-http) | Scala | 1349 | 2026-11-12 | Streaming-first HTTP server and client toolkit built on Akka Streams, with a composable routing DSL plus HTTP/2 and WebSocket support. |
-| [tower-rs/tower-http](https://github.com/tower-rs/tower-http) | Rust | 944 | 2026-11-21 | Collection of Tower middleware for HTTP clients and servers in Rust: tracing, compression, CORS, timeouts, authorisation and static file serving. |
+| [tower-rs/tower-http](https://github.com/tower-rs/tower-http) | Rust | 952 | 2026-11-21 | Collection of Tower middleware for HTTP clients and servers in Rust: tracing, compression, CORS, timeouts, authorisation and static file serving. |
 | [lomigmegard/akka-http-cors](https://github.com/lomigmegard/akka-http-cors) | Scala | 251 | 2026-03-27 | Akka HTTP directives implementing the W3C CORS specification, adding preflight handling and origin validation to Scala routes. |
 
 
@@ -3352,14 +3353,14 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [directus/directus](https://github.com/directus/directus) | TypeScript | 38615 | 2026-11-20 | Headless CMS and admin platform that wraps an existing SQL database with instant REST and GraphQL APIs, auth and a data studio. |
-| [brightbeanxyz/brightbean-studio](https://github.com/brightbeanxyz/brightbean-studio) | Python | 2662 | 2026-11-17 | Self-hostable social media management dashboard for scheduling, publishing and tracking content across a dozen platforms. |
+| [directus/directus](https://github.com/directus/directus) | TypeScript | 38620 | 2026-11-20 | Headless CMS and admin platform that wraps an existing SQL database with instant REST and GraphQL APIs, auth and a data studio. |
+| [brightbeanxyz/brightbean-studio](https://github.com/brightbeanxyz/brightbean-studio) | Python | 2665 | 2026-11-17 | Self-hostable social media management dashboard for scheduling, publishing and tracking content across a dozen platforms. |
 
 #### Frameworks (1)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [pimcore/pimcore](https://github.com/pimcore/pimcore) | PHP | 3891 | 2026-11-21 | PHP framework for product information, master data and digital experience management, combining PIM, DAM, CMS and commerce. |
+| [pimcore/pimcore](https://github.com/pimcore/pimcore) | PHP | 3891 | 2026-11-22 | PHP framework for product information, master data and digital experience management, combining PIM, DAM, CMS and commerce. |
 
 
 <a id="payments"></a>
@@ -3372,8 +3373,8 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [juspay/hyperswitch](https://github.com/juspay/hyperswitch) | Rust | 45859 | 2026-11-21 | Composable payments switch that routes transactions across gateways, vaults and fraud providers behind one API. |
-| [getlago/lago](https://github.com/getlago/lago) | Go | 10908 | 2026-11-19 | Usage-based billing platform that meters events, applies subscription and pricing logic, and drives invoicing, payments and revenue analytics. |
+| [juspay/hyperswitch](https://github.com/juspay/hyperswitch) | Rust | 45870 | 2026-11-22 | Composable payments switch that routes transactions across gateways, vaults and fraud providers behind one API. |
+| [getlago/lago](https://github.com/getlago/lago) | Go | 10909 | 2026-11-19 | Usage-based billing platform that meters events, applies subscription and pricing logic, and drives invoicing, payments and revenue analytics. |
 | [killbill/killbill](https://github.com/killbill/killbill) | Java | 5862 | 2026-11-21 | Subscription billing and payment platform with a plugin architecture, covering catalogs, invoicing, dunning and gateway routing. |
 | [solana-foundation/pay](https://github.com/solana-foundation/pay) | Rust | 1810 | 2026-11-09 | CLI for agentic payments over the x402, MPP and AP2 protocols, letting agents settle per-call charges for any API. |
 
@@ -3388,23 +3389,23 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [Zackriya-Solutions/meetily](https://github.com/Zackriya-Solutions/meetily) | Rust | 32938 | 2026-11-14 | Self-hosted meeting assistant that transcribes and diarises audio locally with Whisper or Parakeet and summarises it through Ollama. |
-| [ImageMagick/ImageMagick](https://github.com/ImageMagick/ImageMagick) | C | 17906 | 2026-11-21 | Image manipulation suite with command-line tools and C APIs for converting, editing and compositing across 200-plus image formats. |
-| [h2non/imaginary](https://github.com/h2non/imaginary) | Go | 6092 | 2025-11-08 | HTTP microservice for on-the-fly image processing — resize, crop, rotate, watermark and format conversion — backed by libvips. |
-| [OvenMediaLabs/OvenMediaEngine](https://github.com/OvenMediaLabs/OvenMediaEngine) | C++ | 3307 | 2026-11-18 | Sub-second latency live streaming server that ingests RTMP or SRT and delivers WebRTC and Low-Latency HLS at scale. |
-| [openinary/openinary](https://github.com/openinary/openinary) | TypeScript | 430 | 2026-11-20 | Self-hostable image and video transformation service with URL-based operations, backed by S3 or Cloudflare R2. |
+| [Zackriya-Solutions/meetily](https://github.com/Zackriya-Solutions/meetily) | Rust | 32962 | 2026-11-14 | Self-hosted meeting assistant that transcribes and diarises audio locally with Whisper or Parakeet and summarises it through Ollama. |
+| [ImageMagick/ImageMagick](https://github.com/ImageMagick/ImageMagick) | C | 17912 | 2026-11-22 | Image manipulation suite with command-line tools and C APIs for converting, editing and compositing across 200-plus image formats. |
+| [h2non/imaginary](https://github.com/h2non/imaginary) | Go | 6093 | 2025-11-08 | HTTP microservice for on-the-fly image processing — resize, crop, rotate, watermark and format conversion — backed by libvips. |
+| [OvenMediaLabs/OvenMediaEngine](https://github.com/OvenMediaLabs/OvenMediaEngine) | C++ | 3308 | 2026-11-18 | Sub-second latency live streaming server that ingests RTMP or SRT and delivers WebRTC and Low-Latency HLS at scale. |
+| [openinary/openinary](https://github.com/openinary/openinary) | TypeScript | 431 | 2026-11-20 | Self-hostable image and video transformation service with URL-based operations, backed by S3 or Cloudflare R2. |
 
 #### Libraries (1)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [kane50613/takumi](https://github.com/kane50613/takumi) | Rust | 3219 | 2026-11-21 | Renders Open Graph images and paged PDFs from JSX, HTML and CSS without a headless browser, on Node, Workers or Rust. |
+| [kane50613/takumi](https://github.com/kane50613/takumi) | Rust | 3217 | 2026-11-22 | Renders Open Graph images and paged PDFs from JSX, HTML and CSS without a headless browser, on Node, Workers or Rust. |
 
 #### Frameworks (1)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [GStreamer/gstreamer](https://github.com/GStreamer/gstreamer) | C | 3373 | 2026-11-21 | Pipeline-based multimedia framework that links source, codec, filter and sink elements into graphs for playback, transcoding, capture and streaming. |
+| [GStreamer/gstreamer](https://github.com/GStreamer/gstreamer) | C | 3374 | 2026-11-22 | Pipeline-based multimedia framework that links source, codec, filter and sink elements into graphs for playback, transcoding, capture and streaming. |
 
 
 <a id="data-wrangling"></a>
@@ -3436,7 +3437,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [opensanctions/nomenklatura](https://github.com/opensanctions/nomenklatura) | Python | 273 | 2026-11-16 | Framework and CLI for integrating FollowTheMoney entity streams from many sources, with deduplication and record linkage. |
+| [opensanctions/nomenklatura](https://github.com/opensanctions/nomenklatura) | Python | 274 | 2026-11-16 | Framework and CLI for integrating FollowTheMoney entity streams from many sources, with deduplication and record linkage. |
 
 
 <a id="e-commerce"></a>
@@ -3449,7 +3450,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [medusajs/medusa](https://github.com/medusajs/medusa) | TypeScript | 37351 | 2026-11-21 | Modular headless commerce platform for Node.js, with composable modules for carts, orders, payments, fulfilment and an admin UI. |
+| [medusajs/medusa](https://github.com/medusajs/medusa) | TypeScript | 37367 | 2026-11-21 | Modular headless commerce platform for Node.js, with composable modules for carts, orders, payments, fulfilment and an admin UI. |
 
 
 <a id="business-intelligence"></a>
@@ -3462,7 +3463,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [cube-js/cube](https://github.com/cube-js/cube) | Rust | 21270 | 2026-11-21 | Semantic layer that defines metrics once and serves them over SQL, REST and GraphQL to BI tools, embedded analytics and LLM agents. |
+| [cube-js/cube](https://github.com/cube-js/cube) | Rust | 21275 | 2026-11-22 | Semantic layer that defines metrics once and serves them over SQL, REST and GraphQL to BI tools, embedded analytics and LLM agents. |
 | [DataJunction/dj](https://github.com/DataJunction/dj) | Python | 167 | 2026-11-20 | Metrics platform that defines metrics once as a semantic layer over your warehouses and compiles them to SQL for downstream query engines. |
 
 
@@ -3482,7 +3483,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [mjmlio/mjml](https://github.com/mjmlio/mjml) | JavaScript | 18300 | 2026-11-20 | Markup language and compiler that turns component-based templates into responsive email HTML that survives legacy mail clients. |
+| [mjmlio/mjml](https://github.com/mjmlio/mjml) | JavaScript | 18301 | 2026-11-20 | Markup language and compiler that turns component-based templates into responsive email HTML that survives legacy mail clients. |
 
 
 <a id="blockchain-tooling"></a>
@@ -3495,13 +3496,13 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [RabbyHub/Rabby](https://github.com/RabbyHub/Rabby) | TypeScript | 1940 | 2026-11-20 | Browser-extension wallet for Ethereum and EVM chains, with automatic network switching and pre-signing transaction risk checks. |
+| [RabbyHub/Rabby](https://github.com/RabbyHub/Rabby) | TypeScript | 1941 | 2026-11-20 | Browser-extension wallet for Ethereum and EVM chains, with automatic network switching and pre-signing transaction risk checks. |
 
 #### Libraries (1)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [trustwallet/wallet-core](https://github.com/trustwallet/wallet-core) | C++ | 3597 | 2026-11-19 | Cross-platform C++ wallet library handling key derivation, address formats and transaction signing across many blockchains, with Kotlin, Swift and WASM bindings. |
+| [trustwallet/wallet-core](https://github.com/trustwallet/wallet-core) | C++ | 3598 | 2026-11-19 | Cross-platform C++ wallet library handling key derivation, address formats and transaction signing across many blockchains, with Kotlin, Swift and WASM bindings. |
 
 #### Frameworks (2)
 
@@ -3534,13 +3535,13 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [medplum/medplum](https://github.com/medplum/medplum) | TypeScript | 2809 | 2026-11-21 | Headless healthcare platform with a FHIR server, auth and React component library for building HIPAA-compliant clinical apps. |
+| [medplum/medplum](https://github.com/medplum/medplum) | TypeScript | 2812 | 2026-11-22 | Headless healthcare platform with a FHIR server, auth and React component library for building HIPAA-compliant clinical apps. |
 
 #### Libraries (1)
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [hapifhir/hapi-fhir](https://github.com/hapifhir/hapi-fhir) | Java | 2449 | 2026-11-21 | Java implementation of the HL7 FHIR standard, providing typed resource models plus client and server components for health data exchange. |
+| [hapifhir/hapi-fhir](https://github.com/hapifhir/hapi-fhir) | Java | 2450 | 2026-11-21 | Java implementation of the HL7 FHIR standard, providing typed resource models plus client and server components for health data exchange. |
 
 
 <a id="market-data"></a>
@@ -3553,7 +3554,7 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [openbq-org/OpenBB](https://github.com/openbq-org/OpenBB) | Python | 75618 | 2026-11-18 | Python data platform that unifies equity, crypto, options, economics and fixed-income providers behind one API for analysts, quants and AI agents. |
+| [openbq-org/OpenBB](https://github.com/openbq-org/OpenBB) | Python | 75639 | 2026-11-18 | Python data platform that unifies equity, crypto, options, economics and fixed-income providers behind one API for analysts, quants and AI agents. |
 | [borsaorg/borsa](https://github.com/borsaorg/borsa) | Rust | 24 | 2025-11-16 | Async Rust SDK that orchestrates market data across pluggable providers, merging historical and streaming feeds for stocks and crypto behind one API. |
 
 
@@ -3567,8 +3568,8 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 
 | Repo | Language | Stars | Last pushed | Description |
 | :--- | :--- | ---: | :--- | :--- |
-| [symbolica-dev/symbolica](https://github.com/symbolica-dev/symbolica) | Rust | 1015 | 2026-11-21 | Computer algebra library for Rust and Python that manipulates large symbolic expressions, matches patterns and generates optimised numerical code. |
-| [neogenie/fastnum](https://github.com/neogenie/fastnum) | Rust | 263 | 2026-06-11 | Fixed-size decimal number types for Rust that do exact base-10 arithmetic without heap allocation, for money and other precision-sensitive values. |
+| [symbolica-dev/symbolica](https://github.com/symbolica-dev/symbolica) | Rust | 1015 | 2026-11-22 | Computer algebra library for Rust and Python that manipulates large symbolic expressions, matches patterns and generates optimised numerical code. |
+| [neogenie/fastnum](https://github.com/neogenie/fastnum) | Rust | 264 | 2026-06-11 | Fixed-size decimal number types for Rust that do exact base-10 arithmetic without heap allocation, for money and other precision-sensitive values. |
 
 #### Frameworks (1)
 
@@ -3612,6 +3613,12 @@ A curated and machine-maintained reading + tools corpus covering distributed sys
 ---
 
 ## Computational Geometry
+
+#### Libraries (1)
+
+| Repo | Language | Stars | Last pushed | Description |
+| :--- | :--- | ---: | :--- | :--- |
+| [larsbrubaker/manifold-rust](https://github.com/larsbrubaker/manifold-rust) | Rust | 38 | 2026-11-20 | Pure Rust port of the Manifold C++ geometry kernel for triangle-mesh booleans, with a second engine that handles non-manifold real-world meshes using exact rational arithmetic. |
 
 #### Reading & references (1)
 
