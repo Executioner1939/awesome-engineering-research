@@ -5,7 +5,7 @@ type: taxonomy
 status: stable
 confidence: high
 created: 2026-05-18
-updated: 2026-11-21
+updated: 2026-11-23
 ---
 
 # Fine-grained Categories
@@ -68,6 +68,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `process-management` | Spawning, piping and supervising child processes from code: duct, xshell, commons-exec, subprocess wrappers, process supervisors |
 | `rules-engines` | Business-rule and decision-table evaluation: Drools, Camunda DMN, json-rules-engine, Clara, decisions4s |
 | `file-formats` | Detecting, identifying and handling file formats and their metadata: Apache Tika, simplemagic, infer, tree_magic, EXIF and container readers |
+| `gpu-compute` | Writing, compiling and scheduling general-purpose GPU code: rust-cuda, rust-gpu, CUDA and SPIR-V compiler backends, compute shaders, async-compute and GPU queue synchronisation, OpenCL and SYCL wrappers |
 
 ## Distributed systems
 
@@ -204,6 +205,7 @@ Empty sub-headings are dropped. Empty categories are dropped.
 | `animation-libraries` | GSAP, Motion, anime.js, Lottie, scroll and timeline animation |
 | `vector-graphics` | 2D vector rendering and rasterisation: Anti-Grain Geometry, Skia, Cairo, resvg, tiny-skia, lyon, path stroking and scanline rasterisers |
 | `realtime-rendering` | Real-time GPU rendering engines and renderer-level graphics techniques: Vulkan and wgpu renderers, ray and path tracers, impostor and LOD systems, shadow and lighting pipelines, game-engine render backends |
+| `xr-vr` | Virtual, augmented and mixed-reality platform APIs and runtimes: OpenXR bindings and loaders, WebXR, OpenVR/SteamVR, headset session, swapchain and pose-tracking abstractions |
 
 ## Standards & specs
 

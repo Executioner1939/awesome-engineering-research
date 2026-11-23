@@ -5,7 +5,7 @@ type: taxonomy
 status: stable
 confidence: high
 created: 2026-05-15
-updated: 2026-11-21
+updated: 2026-11-23
 ---
 
 # Subject Domains and Refinement Labels
@@ -66,7 +66,7 @@ Sub-area or technology specificity. May appear alongside any domain label. Group
 `web-perf`, `dom`, `wasm`, `react`, `react-native`, `svelte`, `data-viz`, `graphics-3d`, `animation`, `cms`
 
 ### Graphics / rendering
-`gpu`, `ray-tracing`, `shaders`
+`gpu`, `ray-tracing`, `shaders`, `vulkan`, `cuda`, `xr`
 
 ### Other
 `cli-tooling`, `error-handling`, `interviewing`, `engineering-management`, `algorithms`, `math`, `networking`, `http`, `websockets`, `payments`, `notifications`, `media-processing`, `streaming-media`, `diagramming`, `code-review`, `data-cleaning`, `entity-resolution`, `graph-processing`, `analytics`, `email`, `e-commerce`, `state-machines`, `blockchain`, `low-code`, `testing`, `webhooks`, `healthcare`, `fhir`, `fintech`, `market-data`
