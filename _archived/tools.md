@@ -4,9 +4,9 @@ title: Archived tools
 type: index
 status: stable
 created: 2026-05-15
-updated: 2026-11-23
+updated: 2026-11-24
 total_active: 0
-total_archived: 75
+total_archived: 76
 ---
 
 # Archived tools
@@ -29,6 +29,7 @@ Repos that are archived on GitHub, removed, or stale (no push in >3 years), or t
 | dagrs-dev-dagrs | dagrs-dev/dagrs | https://github.com/dagrs-dev/dagrs | High-performance, Rust-based asynchronous task programming framework implementing Flow-Based Programming for scalable di | Rust | 479 | 2026-01-16 |  |  | async-runtimes,concurrency,developer-tooling,rust,web-perf | archived | 2026-05-17 | repo_archived |
 | densh-scala-offheap | densh/scala-offheap | https://github.com/densh/scala-offheap | Experimental type-safe off-heap memory for Scala | Scala | 531 | 2019-04-08 |  |  | developer-tooling,scala | archived | 2026-05-17 | repo_archived |
 | diesel-rs-diesel-async | diesel-rs/diesel_async | https://github.com/diesel-rs/diesel_async | Diesel async connection implementation | Rust | 809 | 2026-04-30 |  |  | async-runtimes,concurrency,developer-tooling,rust | archived | 2026-05-17 | user_unstarred |
+| diesel-rs-diesel_async | diesel-rs/diesel_async | https://github.com/diesel-rs/diesel_async | Diesel async connection implementation | Rust | 829 | 2026-11-24 | relational-databases | library | language-runtimes,rust | archived | 2026-11-24 | repo_archived |
 | dylanaraps-pure-bash-bible | dylanaraps/pure-bash-bible | https://github.com/dylanaraps/pure-bash-bible | 📖 A collection of pure bash alternatives to external processes | Shell | 41578 | 2023-11-28 |  |  | developer-tooling | archived | 2026-05-17 | repo_archived |
 | dylanmckay-protocol | dylanmckay/protocol | https://github.com/dylanmckay/protocol | Easy protocol definitions in Rust | Rust | 193 | 2022-09-11 |  |  | developer-tooling,rust | archived | 2026-05-17 | stale |
 | f-prompts-chat | f/prompts.chat | https://github.com/f/prompts.chat | f.k.a | HTML | 162414 | 2026-05-17 |  |  | ai-applications,frontend,llm,typescript | archived | 2026-05-17 | user_unstarred |
