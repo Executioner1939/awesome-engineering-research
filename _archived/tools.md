@@ -4,9 +4,9 @@ title: Archived tools
 type: index
 status: stable
 created: 2026-05-15
-updated: 2026-11-24
+updated: 2026-11-25
 total_active: 0
-total_archived: 76
+total_archived: 77
 ---
 
 # Archived tools
@@ -59,6 +59,7 @@ Repos that are archived on GitHub, removed, or stale (no push in >3 years), or t
 | openbb-finance-openbb | OpenBB-finance/OpenBB | https://github.com/OpenBB-finance/OpenBB | Financial data platform for analysts, quants and AI agents | Python | 73682 | 2026-09-30 | agent-frameworks | framework | agents,ai-applications,python | archived | 2026-10-01 | user_unstarred |
 | opencode-ai-opencode | opencode-ai/opencode | https://github.com/opencode-ai/opencode | A powerful AI coding agent | Go | 12586 | 2025-09-18 |  |  | agents,ai-applications,go,llm | archived | 2026-05-17 | repo_archived |
 | openlrsng-openlrsng | openLRSng/openLRSng | https://github.com/openLRSng/openLRSng | Configurable firmware for openLRS long-range radio transmitters and receivers used in RC aircraft. | C | 290 | 2018-11-22 | embedded-firmware | tool | c,drones,embedded,infrastructure,radio-sdr | archived | 2026-09-16 | stale |
+| openwallet-foundation-bifold-wallet | openwallet-foundation/bifold-wallet | https://github.com/openwallet-foundation/bifold-wallet | Extensible React Native digital wallet for holding and presenting verifiable credentials, usable as the base for a branded identity wallet. | TypeScript | 204 | 2026-11-04 | decentralized-identity | tool | react-native,security,typescript,verifiable-credentials | archived | 2026-11-25 | user_unstarred |
 | pablosmedina-ckite | pablosmedina/ckite | https://github.com/pablosmedina/ckite | CKite - A JVM implementation of the Raft distributed consensus algorithm written in Scala | Scala | 216 | 2019-01-08 |  |  | distributed-systems,scala | archived | 2026-05-17 | repo_archived |
 | pawurb-channels-console | pawurb/channels-console | https://github.com/pawurb/channels-console | Real-time monitoring, metrics and logs for Rust channels | Rust | 368 | 2025-11-20 |  |  | observability,rust | archived | 2026-05-17 | repo_archived |
 | precog-matryoshka | precog/matryoshka | https://github.com/precog/matryoshka | Generalized recursion schemes and traversals for Scala | Scala | 821 | 2020-04-01 |  |  | developer-tooling,scala | archived | 2026-05-17 | stale |
