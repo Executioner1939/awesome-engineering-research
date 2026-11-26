@@ -4,7 +4,7 @@ title: Archived tools
 type: index
 status: stable
 created: 2026-05-15
-updated: 2026-11-25
+updated: 2026-11-26
 total_active: 0
 total_archived: 77
 ---
