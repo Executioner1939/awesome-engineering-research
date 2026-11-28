@@ -4,9 +4,9 @@ title: Archived tools
 type: index
 status: stable
 created: 2026-05-15
-updated: 2026-11-27
+updated: 2026-11-28
 total_active: 0
-total_archived: 77
+total_archived: 79
 ---
 
 # Archived tools
@@ -46,6 +46,7 @@ Repos that are archived on GitHub, removed, or stale (no push in >3 years), or t
 | lampepfl-dotty-macro-examples | lampepfl/dotty-macro-examples | https://github.com/lampepfl/dotty-macro-examples | Various tasks solved via metaprogramming in Dotty | Scala | 136 | 2022-09-12 |  |  | developer-tooling,scala | archived | 2026-05-17 | stale |
 | lemastero-scala-typeclassopedia | lemastero/scala_typeclassopedia | https://github.com/lemastero/scala_typeclassopedia | Abstractions from Category theory with simple description & implementation, links to further resources | Scala | 386 | 2024-12-05 |  |  | developer-tooling,fp-scala,scala | archived | 2026-05-17 | user_unstarred |
 | longbridge-gpui-component | longbridge/gpui-component | https://github.com/longbridge/gpui-component | Rust GUI components for building fantastic cross-platform desktop application by using GPUI | Rust | 11459 | 2026-05-17 | unsorted | unsorted | developer-tooling,rust | archived | 2026-09-15 | user_unstarred |
+| mattzcarey-shippie | mattzcarey/shippie | https://github.com/mattzcarey/shippie | Extendable code review and QA agent that comments on pull requests and runs as a CI step or MCP-connected tool. | TypeScript | 2536 | 2026-10-21 | code-review-automation | tool | agents,ai-applications,code-review,developer-tooling,typescript | archived | 2026-11-28 | user_unstarred |
 | mguenther-idem | mguenther/idem | https://github.com/mguenther/idem | Idem provides decentralized k-ordered ID generation | Java | 14 | 2020-10-13 |  |  | developer-tooling | archived | 2026-05-17 | stale |
 | microsoft-presidio | microsoft/presidio | https://github.com/microsoft/presidio | An open-source framework for detecting, redacting, masking, and anonymizing sensitive data (PII) across text, images, an | Python | 8102 | 2026-05-17 | unsorted | unsorted | developer-tooling,python | archived | 2026-09-15 | user_unstarred |
 | mmenestret-fp-resources | mmenestret/fp-resources | https://github.com/mmenestret/fp-resources | Functional programming great resources |  | 485 | 2020-04-17 |  |  | developer-tooling,fp-scala,scala | archived | 2026-05-17 | stale |
@@ -60,6 +61,7 @@ Repos that are archived on GitHub, removed, or stale (no push in >3 years), or t
 | opencode-ai-opencode | opencode-ai/opencode | https://github.com/opencode-ai/opencode | A powerful AI coding agent | Go | 12586 | 2025-09-18 |  |  | agents,ai-applications,go,llm | archived | 2026-05-17 | repo_archived |
 | openlrsng-openlrsng | openLRSng/openLRSng | https://github.com/openLRSng/openLRSng | Configurable firmware for openLRS long-range radio transmitters and receivers used in RC aircraft. | C | 290 | 2018-11-22 | embedded-firmware | tool | c,drones,embedded,infrastructure,radio-sdr | archived | 2026-09-16 | stale |
 | openwallet-foundation-bifold-wallet | openwallet-foundation/bifold-wallet | https://github.com/openwallet-foundation/bifold-wallet | Extensible React Native digital wallet for holding and presenting verifiable credentials, usable as the base for a branded identity wallet. | TypeScript | 204 | 2026-11-04 | decentralized-identity | tool | react-native,security,typescript,verifiable-credentials | archived | 2026-11-25 | user_unstarred |
+| p-e-w-heretic | p-e-w/heretic | https://github.com/p-e-w/heretic | Automatic abliteration tool that removes refusal behaviour from transformer language models without retraining them. | Python | 43434 | 2026-11-28 | model-optimization | tool | ai-applications,llm,model-inference,python | archived | 2026-11-28 | repo_archived |
 | pablosmedina-ckite | pablosmedina/ckite | https://github.com/pablosmedina/ckite | CKite - A JVM implementation of the Raft distributed consensus algorithm written in Scala | Scala | 216 | 2019-01-08 |  |  | distributed-systems,scala | archived | 2026-05-17 | repo_archived |
 | pawurb-channels-console | pawurb/channels-console | https://github.com/pawurb/channels-console | Real-time monitoring, metrics and logs for Rust channels | Rust | 368 | 2025-11-20 |  |  | observability,rust | archived | 2026-05-17 | repo_archived |
 | precog-matryoshka | precog/matryoshka | https://github.com/precog/matryoshka | Generalized recursion schemes and traversals for Scala | Scala | 821 | 2020-04-01 |  |  | developer-tooling,scala | archived | 2026-05-17 | stale |
